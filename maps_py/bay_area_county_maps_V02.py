@@ -1,3 +1,5 @@
+# using osmnx and matplotlib to plot maps in the San Francisco Bay Area
+
 import osmnx as ox
 import matplotlib.pyplot as plt
 from matplotlib.font_manager import FontProperties, fontManager
