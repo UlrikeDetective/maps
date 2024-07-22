@@ -1,3 +1,5 @@
+# using osmnx and matplotlib to plot maps of four of the Hawaiian Islands
+
 import osmnx as ox
 import matplotlib.pyplot as plt
 from matplotlib.font_manager import FontProperties, fontManager
