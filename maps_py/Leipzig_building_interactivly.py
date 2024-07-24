@@ -2,14 +2,18 @@ import osmnx as ox
 
 # Get the buildings data for a specific place
 gdf_s = ox.features_from_place("Sued, Leipzig, Germany", tags={"building": True})
-
 # Define columns to display in the tooltip
 cols = ["height", "addr:housenumber", "addr:street", "addr:postcode"]
-
 # Explore the data using a different tile provider
 gdf_s.explore(tiles="CartoDB Positron", tooltip=cols)
 
-
+# explore a neighborhood's buildings + street network interactively
+NO = "Nordost, Leipzig, Germany"
+cols = ["height", "addr:housenumber", "addr:street", "addr:postcode"]
+G = ox.graph_from_place(NO, network_type="drive", truncate_by_edge=True)
+gdf = ox.features_from_place(NO, tags={"building": True})
+m = gdf.explore(tiles=tiles, tooltip=cols)
+ox.graph_to_gdfs(G, nodes=False).explore(m=m, color="yellow")
 
 # Common Tile Providers:
 # OpenStreetMap
