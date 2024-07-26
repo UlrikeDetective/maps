@@ -30,7 +30,7 @@ Leip = ox.graph_from_place(
 )
 
 # Plot the graph
-fig, ax = ox.plot_graph(SF, node_size=0, edge_color="b", bgcolor="white", edge_linewidth=0.2)
+fig, ax = ox.plot_graph(Leip, node_size=0, edge_color="b", bgcolor="white", edge_linewidth=0.2)
 ox.graph_to_gdfs(Leip, nodes=False).explore()
 
 import osmnx as ox
