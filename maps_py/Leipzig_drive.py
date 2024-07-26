@@ -5,7 +5,7 @@ import osmnx as ox
 
 np.random.seed(0)
 
-# download/model a street network for some city then visualize it
+# download/model a street network for Leipzig and the suburbs of Leipzig then visualize it - using drive
 Z = ox.graph_from_place("Leipzig, Saxony, Germany", network_type="drive")
 fig, ax = ox.plot_graph(Z, node_size=0.7, bgcolor="w", edge_color="b")
 
