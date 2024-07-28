@@ -1,0 +1,16 @@
+Common Tile Providers:
+1. OpenStreetMap
+2. Stamen Terrain
+3. Stamen Toner
+4. Stamen Watercolor
+5. CartoDB Positron
+6. CartoDB Dark Matter 
+7. OpenTopoMap
+8. Esri World Imagery
+
+Other Tile Providers:
+1. Esri World Street Map
+2. Esri DeLorme
+3. Esri National Geographic
+4. Hike & Bike
+5. NASAGIBS.ViirsEarthAtNight2012
