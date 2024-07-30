@@ -1,5 +1,16 @@
 # Import the GeoPandas library
 import geopandas as gpd
+print(gpd.__version__)
+
+# Query the available built-in datasets in GeoPandas
+available_datasets = gpd.datasets.available
+
+# Print the list of available datasets
+print("Available built-in datasets in GeoPandas:", "\n")
+print(available_datasets, "\n")
+
+# Import the GeoPandas library
+import geopandas as gpd
 
 # Query the location of the data file
 file_name = 'naturalearth_lowres'
