@@ -2,7 +2,7 @@ import plotly.express as px
 import pandas as pd
 
 # Load your custom dataset
-df = pd.read_csv('data.csv')
+df = pd.read_csv('/Users/ulrike_imac_air/projects/maps/OSMnx/examples/data.csv')
 
 # Create the scatter map box
 fig = px.scatter_mapbox(
