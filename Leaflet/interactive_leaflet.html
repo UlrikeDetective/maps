@@ -28,6 +28,11 @@
             <p>This is where you can add content about your website.</p>
         </section>
         <div id="map" style="height: 500px;"></div>
+        var marker = L.marker([51.5, -0.09]).addTo(map);
+marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
     </main>
 
     <footer>
