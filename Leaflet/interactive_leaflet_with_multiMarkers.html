@@ -34,7 +34,7 @@
         <!-- Script to initialize the map and add multiple markers -->
         <script>
             // Initialize the map and set its view to a geographical point with zoom level
-            var map = L.map('map').setView([51.5, -0.09], 13);
+            var map = L.map('map').setView([40.5, -70.09], 5);
 
             // Add OpenStreetMap tile layer to the map
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -53,6 +53,9 @@
 
             var marker4 = L.marker([34.0522, -118.2437]).addTo(map);  // Los Angeles
             marker4.bindPopup("<b>Welcome to Los Angeles!</b><br>City of Angels.");
+
+            var marker5 = L.marker([37.7749, -122.4194]).addTo(map);  // Los Angeles
+            marker4.bindPopup("<b>Welcome to San Francisco!</b><br>City of Tech.");
         </script>
     </main>
 
