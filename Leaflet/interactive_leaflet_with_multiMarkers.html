@@ -1,5 +1,3 @@
- <!--  To do - Add more maps, add markers to the map, style side, add it to my homepage -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +11,7 @@
 <body>
 
     <header>
-        <h1>Welcome to Leaflet.js maps</h1>
+        <h1>Welcome to Leaflet.js Maps</h1>
     </header>
 
     <nav>
@@ -30,66 +28,68 @@
             <p>This is where you can add content about your website.</p>
         </section>
 
-        <!-- Map container -->
-        <div id="map" style="height: 500px;"></div>
+        <!-- First map container -->
+        <div id="map1" style="height: 500px;"></div>
 
-        <!-- Script to initialize the map and add multiple markers -->
+        <!-- Script to initialize the first map and add multiple markers -->
         <script>
-            // Initialize the map and set its view to a geographical point with zoom level
-            var map = L.map('map').setView([48.8566, 2.3522], 7);
+            // Initialize the first map (Europe) and set its view to Paris
+            var map1 = L.map('map1').setView([48.8566, 2.3522], 4);
 
-            // Add OpenStreetMap tile layer to the map
+            // Add OpenStreetMap tile layer to the first map
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
+            }).addTo(map1);
 
-            // Add multiple markers to the map
-            var marker1 = L.marker([51.5, -0.09]).addTo(map);
-            marker1.bindPopup("<b>Hello world!</b><br>I am in London.").openPopup();
+            // Add multiple markers to the first map
+            L.marker([51.5, -0.09]).addTo(map1)
+              .bindPopup("<b>Hello world!</b><br>I am in London.").openPopup();
 
-            var marker2 = L.marker([48.8566, 2.3522]).addTo(map);  // Paris
-            marker2.bindPopup("<b>Welcome to Paris!</b><br>The City of Light.");
+            L.marker([48.8566, 2.3522]).addTo(map1)
+              .bindPopup("<b>Welcome to Paris!</b><br>The City of Light.");
 
-            var marker3 = L.marker([43.48012, -1.55558]).addTo(map);  // Biarritz
-            marker3.bindPopup("<b>Hello from Biarritz!</b><br>Surfing culture in France.");
+            L.marker([43.48012, -1.55558]).addTo(map1)
+              .bindPopup("<b>Hello from Biarritz!</b><br>Surfing culture in France.");
 
-            var marker4 = L.marker([43.26271, -2.92528]).addTo(map);  // Bilbao
-            marker4.bindPopup("<b>Welcome to Bilbao!</b><br>Basque town with a lot of art.");
+            L.marker([43.26271, -2.92528]).addTo(map1)
+              .bindPopup("<b>Welcome to Bilbao!</b><br>Basque town with a lot of art.");
 
-            var marker5 = L.marker([47.55839, 7.57327]).addTo(map);  // Basel
-            marker5.bindPopup("<b>Welcome to Basel!</b><br>World city of art.");
+            L.marker([47.55839, 7.57327]).addTo(map1)
+              .bindPopup("<b>Welcome to Basel!</b><br>World city of art.");
         </script>
-<br>
-             <!-- Map container -->
-        <div id="map" style="height: 500px;"></div>
 
-        <!-- Script to initialize the map and add multiple markers -->
+        <br>
+
+        <!-- Second map container -->
+        <div id="map2" style="height: 500px;"></div>
+
+        <!-- Script to initialize the second map and add multiple markers -->
         <script>
-            // Initialize the map and set its view to a geographical point with zoom level
-            var map = L.map('map').setView([34.0522, -118.2437], 5);
+            // Initialize the second map (USA) and set its view to Los Angeles
+            var map2 = L.map('map2').setView([34.0522, -118.2437], 3);
 
-            // Add OpenStreetMap tile layer to the map
+            // Add OpenStreetMap tile layer to the second map
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
+            }).addTo(map2);
 
-            // Add multiple markers to the map
-            var marker1 = L.marker([37.7749, -122.4194]).addTo(map);
-            marker1.bindPopup("<b>Hello world!</b><br>I am in San Francisco.").openPopup();
+            // Add multiple markers to the second map
+            L.marker([37.7749, -122.4194]).addTo(map2)
+              .bindPopup("<b>Hello world!</b><br>I am in San Francisco.").openPopup();
 
-            var marker2 = L.marker([21.30694, -157.85833]).addTo(map);  // Honolulu
-            marker2.bindPopup("<b>Welcome to Hawaii!</b><br>Island Paradise.");
+            L.marker([21.30694, -157.85833]).addTo(map2)
+              .bindPopup("<b>Welcome to Hawaii!</b><br>Island Paradise.");
 
-            var marker3 = L.marker([40.7128, -74.0060]).addTo(map);  // New York
-            marker3.bindPopup("<b>Hello from New York!</b><br>The Big Apple.");
+            L.marker([40.7128, -74.0060]).addTo(map2)
+              .bindPopup("<b>Hello from New York!</b><br>The Big Apple.");
 
-            var marker4 = L.marker([34.0522, -118.2437]).addTo(map);  // Los Angeles
-            marker4.bindPopup("<b>Welcome to Los Angeles!</b><br>City of Angels.");
+            L.marker([34.0522, -118.2437]).addTo(map2)
+              .bindPopup("<b>Welcome to Los Angeles!</b><br>City of Angels.");
 
-            var marker5 = L.marker([30.4882, -97.7618]).addTo(map);  // Austin
-            marker5.bindPopup("<b>Welcome to Austin!</b><br>City of Texas light?.");
+            L.marker([30.4882, -97.7618]).addTo(map2)
+              .bindPopup("<b>Welcome to Austin!</b><br>City of Texas light.");
         </script>
-     
+
     </main>
 
     <footer>
