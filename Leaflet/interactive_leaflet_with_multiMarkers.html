@@ -36,6 +36,36 @@
         <!-- Script to initialize the map and add multiple markers -->
         <script>
             // Initialize the map and set its view to a geographical point with zoom level
+            var map = L.map('map').setView([48.8566, 2.3522], 7);
+
+            // Add OpenStreetMap tile layer to the map
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            // Add multiple markers to the map
+            var marker1 = L.marker([51.5, -0.09]).addTo(map);
+            marker1.bindPopup("<b>Hello world!</b><br>I am in London.").openPopup();
+
+            var marker2 = L.marker([48.8566, 2.3522]).addTo(map);  // Paris
+            marker2.bindPopup("<b>Welcome to Paris!</b><br>The City of Light.");
+
+            var marker3 = L.marker([43.48012, -1.55558]).addTo(map);  // Biarritz
+            marker3.bindPopup("<b>Hello from Biarritz!</b><br>Surfing culture in France.");
+
+            var marker4 = L.marker([43.26271, -2.92528]).addTo(map);  // Bilbao
+            marker4.bindPopup("<b>Welcome to Bilbao!</b><br>Basque town with a lot of art.");
+
+            var marker5 = L.marker([47.55839, 7.57327]).addTo(map);  // Basel
+            marker5.bindPopup("<b>Welcome to Basel!</b><br>World city of art.");
+        </script>
+<br>
+             <!-- Map container -->
+        <div id="map" style="height: 500px;"></div>
+
+        <!-- Script to initialize the map and add multiple markers -->
+        <script>
+            // Initialize the map and set its view to a geographical point with zoom level
             var map = L.map('map').setView([40.5, -70.09], 2);
 
             // Add OpenStreetMap tile layer to the map
@@ -59,6 +89,7 @@
             var marker5 = L.marker([37.7749, -122.4194]).addTo(map);  // Los Angeles
             marker5.bindPopup("<b>Welcome to San Francisco!</b><br>City of Tech.");
         </script>
+     
     </main>
 
     <footer>
