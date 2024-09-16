@@ -29,9 +29,11 @@ def calculate_distances(coordinates):
     distances = []
     for i in range(len(coordinates) - 1):
         # Calculate distance and round to 2 decimal places (or change as needed)
-        distance = round(geodesic(coordinates[i], coordinates[i+1]).kilometers, 2)
+        distance = round(geodesic(coordinates[i], coordinates[i+1]).kilometers, 1)
         distances.append(distance)
     return distances
+distances = calculate_distances(coordinates)
+print("Rounded distances between cities in kilometers:", distances)
 
 
 def save_image(coordinates, cities):
