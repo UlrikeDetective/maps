@@ -45,7 +45,7 @@ def save_image(coordinates, cities):
     ax.plot(longitudes, latitudes, color="blue", linewidth=2, zorder=3)
     
     for i, city in enumerate(cities):
-        ax.text(longitudes[i] + 0.1, latitudes[i] + 0.1, city, fontsize=9)
+        ax.text(longitudes[i] + 2.9, latitudes[i] + 0.2, city, fontsize=12)
     
     ax.set_facecolor("lightblue")
     
