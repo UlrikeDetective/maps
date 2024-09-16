@@ -25,6 +25,15 @@ def plot_cities(coordinates, cities):
     plt.ylabel("Latitude")
     plt.show()
 
+def calculate_distances(coordinates):
+    distances = []
+    for i in range(len(coordinates) - 1):
+        # Calculate distance and round to 2 decimal places (or change as needed)
+        distance = round(geodesic(coordinates[i], coordinates[i+1]).kilometers, 2)
+        distances.append(distance)
+    return distances
+
+
 def save_image(coordinates, cities):
     fig = plt.figure(figsize=(8, 6))
     ax = fig.add_subplot(111)
