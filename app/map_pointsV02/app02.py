@@ -3,9 +3,9 @@ import numpy as np
 import geopy.distance
 
 cities = [
-    ("City A", (47.6062, -122.3321)),  # Seattle
-    ("City B", (37.7749, -122.4194)),  # San Francisco
-    ("City C", (40.7128, -74.0060)),  # New York City
+    ("Seattle", (47.6062, -122.3321)),  # City A
+    ("San Francisco", (37.7749, -122.4194)),  # City B
+    ("New York City", (40.7128, -74.0060)),  # City C
     # ... add more cities as needed
 ]
 
