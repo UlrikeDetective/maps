@@ -17,7 +17,9 @@ def plot_cities(coordinates, cities):
     for i, city in enumerate(cities):
         plt.text(longitudes[i] + 0.1, latitudes[i] + 0.1, city, fontsize=9)
     
-    plt.plot(longitudes, latitudes, color="blue", linewidth=2, zorder=3)
+    # Draw dotted lines connecting the cities
+    plt.plot(longitudes, latitudes, color="blue", linewidth=2, linestyle=":", zorder=3)
+
     plt.gca().set_facecolor('lightblue')
     plt.grid(True)
     
