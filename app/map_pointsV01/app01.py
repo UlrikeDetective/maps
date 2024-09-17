@@ -18,9 +18,9 @@ def plot_cities(coordinates, cities):
         plt.text(longitudes[i] + 0.1, latitudes[i] + 0.1, city, fontsize=9)
     
     # Draw dotted lines connecting the cities
-    plt.plot(longitudes, latitudes, color="#BED0D0", linewidth=3, linestyle=":", zorder=3)
+    plt.plot(longitudes, latitudes, color="#01393D", linewidth=3, linestyle=":", zorder=3)
 
-    plt.gca().set_facecolor('lightblue')
+    plt.gca().set_facecolor('#58989F')
     plt.grid(True)
     
     plt.xlabel("Longitude")
@@ -41,7 +41,7 @@ def save_image(coordinates, cities):
     
     latitudes, longitudes = zip(*coordinates)
     ax.scatter(longitudes, latitudes, color="#B77651", zorder=5)
-    ax.plot(longitudes, latitudes, color="#01393D", linewidth=2, zorder=3)
+    ax.plot(longitudes, latitudes, color="#01393D", linewidth=3, zorder=3)
     
     for i, city in enumerate(cities):
         ax.text(longitudes[i] + 0.1, latitudes[i] + 0.1, city, fontsize=12)
