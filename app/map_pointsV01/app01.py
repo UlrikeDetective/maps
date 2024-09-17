@@ -59,7 +59,7 @@ def save_image(coordinates, cities):
 def display_image():
     img = Image.open("city_map.png")
     img.show()
-
+#spanish cities
 cities = ["Barcelona, Spain", "Valencia, Spain", "Tarifa, Spain", "Sevilla, Spain", "Cadiz, Spain"]
 coordinates = [get_coordinates(city) for city in cities]
 
