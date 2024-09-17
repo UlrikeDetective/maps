@@ -54,7 +54,7 @@ def save_image(coordinates, cities):
     plt.xlabel("Longitude")
     plt.ylabel("Latitude")
     
-    plt.savefig("city_map.png", bbox_inches='tight')
+    plt.savefig("spain_city_map.png", bbox_inches='tight')
 
 def display_image():
     img = Image.open("city_map.png")
