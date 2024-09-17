@@ -34,9 +34,6 @@ def calculate_distances(coordinates):
         distance = round(geodesic(coordinates[i], coordinates[i+1]).kilometers, 1)
         distances.append(distance)
     return distances
-distances = calculate_distances(coordinates)
-print("Rounded distances between cities in kilometers:", distances)
-
 
 def save_image(coordinates, cities):
     fig = plt.figure(figsize=(8, 6))
@@ -47,22 +44,34 @@ def save_image(coordinates, cities):
     ax.plot(longitudes, latitudes, color="#01393D", linewidth=2, zorder=3)
     
     for i, city in enumerate(cities):
-        ax.text(longitudes[i] + 2.9, latitudes[i] + 0.2, city, fontsize=12)
+        ax.text(longitudes[i] + 0.1, latitudes[i] + 0.1, city, fontsize=12)
     
     ax.set_facecolor("#58989F")
     
     plt.xlabel("Longitude")
     plt.ylabel("Latitude")
     
-    plt.savefig("spain_city_map.png", bbox_inches='tight')
+    plt.savefig("city_map.png", bbox_inches='tight')
 
 def display_image():
     img = Image.open("city_map.png")
     img.show()
-#spanish cities
+
+# Define Spanish cities
 cities = ["Barcelona, Spain", "Valencia, Spain", "Tarifa, Spain", "Sevilla, Spain", "Cadiz, Spain"]
+
+# Fetch GPS coordinates for the cities
 coordinates = [get_coordinates(city) for city in cities]
 
+# Plot cities and connect them with dotted lines
 plot_cities(coordinates, cities)
+
+# Calculate and print distances between cities
+distances = calculate_distances(coordinates)
+print("Rounded distances between cities in kilometers:", distances)
+
+# Save the plotted image as a PNG file
 save_image(coordinates, cities)
+
+# Display the saved image
 display_image()
