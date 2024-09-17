@@ -12,10 +12,10 @@ def plot_cities(coordinates, cities):
     latitudes, longitudes = zip(*coordinates)
     
     plt.figure(figsize=(8, 6))
-    plt.scatter(longitudes, latitudes, color="#6F452D", zorder=7)
+    plt.scatter(longitudes, latitudes, color="#6F452D", zorder=10)
     
     for i, city in enumerate(cities):
-        plt.text(longitudes[i] + 0.1, latitudes[i] + 0.1, city, fontsize=14)
+        plt.text(longitudes[i] + 0.1, latitudes[i] + 0.1, city, fontsize=14, fontface='bold')
     
     # Draw dotted lines connecting the cities
     plt.plot(longitudes, latitudes, color="#01393D", linewidth=3, linestyle=":", zorder=3)
