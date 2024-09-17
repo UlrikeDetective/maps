@@ -15,7 +15,7 @@ def plot_cities(coordinates, cities):
     plt.scatter(longitudes, latitudes, color="#6F452D", zorder=10)
     
     for i, city in enumerate(cities):
-        plt.text(longitudes[i] + 0.1, latitudes[i] + 0.1, city, fontsize=14, fontface='bold')
+        plt.text(longitudes[i] + 0.1, latitudes[i] + 0.1, city, fontsize=14, fontweight='bold')
     
     # Draw dotted lines connecting the cities
     plt.plot(longitudes, latitudes, color="#01393D", linewidth=3, linestyle=":", zorder=3)
@@ -44,7 +44,7 @@ def save_image(coordinates, cities):
     ax.plot(longitudes, latitudes, color="#01393D", linewidth=3, zorder=3)
     
     for i, city in enumerate(cities):
-        ax.text(longitudes[i] + 0.1, latitudes[i] + 0.1, city, fontsize=14, fontface='bold')
+        ax.text(longitudes[i] + 0.1, latitudes[i] + 0.1, city, fontsize=14, fontweight='bold')
     
     ax.set_facecolor("#58989F")
     
