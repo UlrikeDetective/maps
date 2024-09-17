@@ -12,13 +12,13 @@ def plot_cities(coordinates, cities):
     latitudes, longitudes = zip(*coordinates)
     
     plt.figure(figsize=(8, 6))
-    plt.scatter(longitudes, latitudes, color="red", zorder=5)
+    plt.scatter(longitudes, latitudes, color="#6F452D", zorder=7)
     
     for i, city in enumerate(cities):
         plt.text(longitudes[i] + 0.1, latitudes[i] + 0.1, city, fontsize=9)
     
     # Draw dotted lines connecting the cities
-    plt.plot(longitudes, latitudes, color="blue", linewidth=2, linestyle=":", zorder=3)
+    plt.plot(longitudes, latitudes, color="#BED0D0", linewidth=3, linestyle=":", zorder=3)
 
     plt.gca().set_facecolor('lightblue')
     plt.grid(True)
@@ -43,13 +43,13 @@ def save_image(coordinates, cities):
     ax = fig.add_subplot(111)
     
     latitudes, longitudes = zip(*coordinates)
-    ax.scatter(longitudes, latitudes, color="red", zorder=5)
-    ax.plot(longitudes, latitudes, color="blue", linewidth=2, zorder=3)
+    ax.scatter(longitudes, latitudes, color="#B77651", zorder=5)
+    ax.plot(longitudes, latitudes, color="#01393D", linewidth=2, zorder=3)
     
     for i, city in enumerate(cities):
         ax.text(longitudes[i] + 2.9, latitudes[i] + 0.2, city, fontsize=12)
     
-    ax.set_facecolor("lightblue")
+    ax.set_facecolor("#58989F")
     
     plt.xlabel("Longitude")
     plt.ylabel("Latitude")
@@ -60,7 +60,7 @@ def display_image():
     img = Image.open("city_map.png")
     img.show()
 
-cities = ["New York, USA", "London, UK", "Paris, France", "Berlin, Germany"]
+cities = ["Barcelona, Spain", "Valencia, Spain", "Tarifa, Spain", "Sevilla, Spain", "Cadiz, Spain"]
 coordinates = [get_coordinates(city) for city in cities]
 
 plot_cities(coordinates, cities)
