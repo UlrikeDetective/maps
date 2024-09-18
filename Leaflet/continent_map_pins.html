@@ -11,12 +11,12 @@
     <body>
     
         <header>
-            <h1>Custom Marker Icons with Leaflet.js</h1>
+            <h1>Continents</h1>
         </header>
 <body>
 
     <header>
-        <h1>Welcome to Leaflet.js Maps</h1>
+        <h1>Welcome my  stops by continents</h1>
     </header>
 
     <nav>
@@ -29,17 +29,17 @@
 
     <main>
         <section>
-            <h2>About Section</h2>
-            <p>This is where you can add content about your website.</p>
+            <h2>First stop Europe</h2>
+            <p>Stops in Europe - I'm sure I'm missing a lot of stops.</p>
         </section>
 
         <!-- First map container -->
-        <div id="map1" style="height: 500px;"></div>
+        <div id="mapEurope" style="height: 500px;"></div>
 
         <!-- Script to initialize the first map and add multiple markers -->
         <script>
             // Initialize the first map (Europe) and set its view to Paris
-            var map1 = L.map('map1').setView([48.8566, 2.3522], 5);
+            var map1 = L.map('mapEurope').setView([48.8566, 2.3522], 5);
 
             // Create custom icons for markers
             var redIcon = L.icon({
@@ -75,19 +75,19 @@
             }).addTo(map1);
 
             // Add multiple markers to the first map
-            L.marker([51.5, -0.09], { icon: redIcon }).addTo(map1)
+            L.marker([51.5, -0.09], { icon: redIcon }).addTo(mapEurope)
               .bindPopup("<b>Hello world!</b><br>I am in London.").openPopup();
 
-            L.marker([48.8566, 2.3522], { icon: greenIcon }).addTo(map1)
+            L.marker([48.8566, 2.3522], { icon: greenIcon }).addTo(mapEurope)
               .bindPopup("<b>Welcome to Paris!</b><br>The City of Light.");
 
-            L.marker([43.48012, -1.55558], { icon: blueIcon }).addTo(map1)
+            L.marker([43.48012, -1.55558], { icon: blueIcon }).addTo(mapEurope)
               .bindPopup("<b>Hello from Biarritz!</b><br>Surfing culture in France.");
 
-            L.marker([43.26271, -2.92528]).addTo(map1)
+            L.marker([43.26271, -2.92528]).addTo(mapEurope)
               .bindPopup("<b>Welcome to Bilbao!</b><br>Basque town with a lot of art.");
 
-            L.marker([47.55839, 7.57327]).addTo(map1)
+            L.marker([47.55839, 7.57327]).addTo(mapEurope)
               .bindPopup("<b>Welcome to Basel!</b><br>World city of art.");
         </script>
 
