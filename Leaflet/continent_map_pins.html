@@ -72,7 +72,7 @@
             // Add OpenStreetMap tile layer to the first map
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map1);
+            }).addTo(mapEurope);
 
             // Add multiple markers to the first map
             L.marker([51.5, -0.09], { icon: redIcon }).addTo(mapEurope)
@@ -107,7 +107,7 @@
             // Add OpenStreetMap tile layer to the second map
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map2);
+            }).addTo(mapNAmerica);
 
             // Add multiple markers to the second map
             L.marker([37.7749, -122.4194]).addTo(mapNAmerica)
@@ -142,7 +142,7 @@
             // Add OpenStreetMap tile layer to the second map
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map2);
+            }).addTo(mapAsia);
 
             // Add multiple markers to the second map
             L.marker([37.7749, -122.4194]).addTo(mapAsia)
@@ -177,7 +177,7 @@
             // Add OpenStreetMap tile layer to the second map
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map2);
+            }).addTo(mapAfrica);
 
             // Add multiple markers to the second map
             L.marker([37.7749, -122.4194]).addTo(mapAfrica)
