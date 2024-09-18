@@ -200,29 +200,63 @@
 
         <!-- Script to initialize the second map and add multiple markers -->
         <script>
-            // Initialize the second map (USA) and set its view to Los Angeles
-            var mapAfrica = L.map('mapAfrica').setView([34.0522, -118.2437], 4);
+            // Initialize the Africa map (USA)
+            var mapAfrica = L.map('mapAfrica').setView([3.8480, 11.5021], 4);
 
             // Add OpenStreetMap tile layer to the second map
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(mapAfrica);
 
-            // Add multiple markers to the second map
-            L.marker([37.7749, -122.4194]).addTo(mapAfrica)
-              .bindPopup("<b>Hello world!</b><br>I am in San Francisco.").openPopup();
+                       // Casablanca
+            L.marker([33.5731, -7.5898]).addTo(mapAfrica)
+              .bindPopup("<b>Welcome to Casablanca!</b><br>City of Morocco light.");
+            
+            // Fes
+            L.marker([34.0181, -5.0078]).addTo(mapAfrica)
+              .bindPopup("<b>Welcome to Fes!</b><br>Cultural capital of Morocco.");
+            
+            // Tangier
+            L.marker([35.7595, -5.8340]).addTo(mapAfrica)
+              .bindPopup("<b>Welcome to Tangier!</b><br>Port city of Morocco.");
+            
+            // Marrakesh
+            L.marker([31.6295, -7.9811]).addTo(mapAfrica)
+              .bindPopup("<b>Welcome to Marrakesh!</b><br>City of Morocco charm.");
+            
+            // La Gomera
+            L.marker([28.0933, -17.2222]).addTo(mapAfrica)
+              .bindPopup("<b>Welcome to La Gomera!</b><br>Canary Island, Spain.");
+            
+            // Corralejo - Fuerteventura
+            L.marker([28.7280, -13.8671]).addTo(mapAfrica)
+              .bindPopup("<b>Welcome to Corralejo!</b><br>Beach town of Fuerteventura.");
+            
+            // Johannesburg
+            L.marker([-26.2041, 28.0473]).addTo(mapAfrica)
+              .bindPopup("<b>Welcome to Johannesburg!</b><br>Largest city in South Africa.");
+            
+            // Durban
+            L.marker([-29.8587, 31.0218]).addTo(mapAfrica)
+              .bindPopup("<b>Welcome to Durban!</b><br>City of South Africa's coast.");
+            
+            // Gqeberha (formerly Port Elizabeth)
+            L.marker([-33.9610, 25.6144]).addTo(mapAfrica)
+              .bindPopup("<b>Welcome to Gqeberha!</b><br>City of Eastern Cape, South Africa.");
+            
+            // Coffee Bay
+            L.marker([-31.9829, 29.1512]).addTo(mapAfrica)
+              .bindPopup("<b>Welcome to Coffee Bay!</b><br>Coastal village of South Africa.");
+            
+            // Plettenberg Bay
+            L.marker([-34.0527, 23.3716]).addTo(mapAfrica)
+              .bindPopup("<b>Welcome to Plettenberg Bay!</b><br>Resort town of South Africa.");
+            
+            // Cape Town
+            L.marker([-33.9249, 18.4241]).addTo(mapAfrica)
+              .bindPopup("<b>Welcome to Cape Town!</b><br>City of South Africa's coast.");
+            
 
-            L.marker([21.30694, -157.85833]).addTo(mapAfrica)
-              .bindPopup("<b>Welcome to Hawaii!</b><br>Island Paradise.");
-
-            L.marker([40.7128, -74.0060]).addTo(mapAfrica)
-              .bindPopup("<b>Hello from New York!</b><br>The Big Apple.");
-
-            L.marker([34.0522, -118.2437]).addTo(mapAfrica)
-              .bindPopup("<b>Welcome to Los Angeles!</b><br>City of Angels.");
-
-            L.marker([30.4882, -97.7618]).addTo(mapAfrica)
-              .bindPopup("<b>Welcome to Austin!</b><br>City of Texas light.");
         </script>
 
         
