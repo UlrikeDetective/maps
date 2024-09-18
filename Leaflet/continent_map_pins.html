@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Your Page Title</title>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    </head>
+    <body>
+    
+        <header>
+            <h1>Custom Marker Icons with Leaflet.js</h1>
+        </header>
+<body>
+
+    <header>
+        <h1>Welcome to Leaflet.js Maps</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#maps">Maps with Leaflet</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>About Section</h2>
+            <p>This is where you can add content about your website.</p>
+        </section>
+
+        <!-- First map container -->
+        <div id="map1" style="height: 500px;"></div>
+
+        <!-- Script to initialize the first map and add multiple markers -->
+        <script>
+            // Initialize the first map (Europe) and set its view to Paris
+            var map1 = L.map('map1').setView([48.8566, 2.3522], 5);
+
+            // Create custom icons for markers
+            var redIcon = L.icon({
+                iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
+                shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+                iconSize: [25, 41], // size of the icon
+                iconAnchor: [12, 41], // point of the icon which will correspond to marker's location
+                popupAnchor: [1, -34], // point from which the popup should open relative to the iconAnchor
+                shadowSize: [41, 41]  // size of the shadow
+            });
+
+            var greenIcon = L.icon({
+                iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png',
+                shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            });
+
+            var blueIcon = L.icon({
+                iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png',
+                shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            });
+
+            // Add OpenStreetMap tile layer to the first map
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map1);
+
+            // Add multiple markers to the first map
+            L.marker([51.5, -0.09], { icon: redIcon }).addTo(map1)
+              .bindPopup("<b>Hello world!</b><br>I am in London.").openPopup();
+
+            L.marker([48.8566, 2.3522], { icon: greenIcon }).addTo(map1)
+              .bindPopup("<b>Welcome to Paris!</b><br>The City of Light.");
+
+            L.marker([43.48012, -1.55558], { icon: blueIcon }).addTo(map1)
+              .bindPopup("<b>Hello from Biarritz!</b><br>Surfing culture in France.");
+
+            L.marker([43.26271, -2.92528]).addTo(map1)
+              .bindPopup("<b>Welcome to Bilbao!</b><br>Basque town with a lot of art.");
+
+            L.marker([47.55839, 7.57327]).addTo(map1)
+              .bindPopup("<b>Welcome to Basel!</b><br>World city of art.");
+        </script>
+
+        <br>
+
+        <!-- Second map container -->
+        <div id="map2" style="height: 500px;"></div>
+
+        <!-- Script to initialize the second map and add multiple markers -->
+        <script>
+            // Initialize the second map (USA) and set its view to Los Angeles
+            var map2 = L.map('map2').setView([34.0522, -118.2437], 4);
+
+            // Add OpenStreetMap tile layer to the second map
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map2);
+
+            // Add multiple markers to the second map
+            L.marker([37.7749, -122.4194]).addTo(map2)
+              .bindPopup("<b>Hello world!</b><br>I am in San Francisco.").openPopup();
+
+            L.marker([21.30694, -157.85833]).addTo(map2)
+              .bindPopup("<b>Welcome to Hawaii!</b><br>Island Paradise.");
+
+            L.marker([40.7128, -74.0060]).addTo(map2)
+              .bindPopup("<b>Hello from New York!</b><br>The Big Apple.");
+
+            L.marker([34.0522, -118.2437]).addTo(map2)
+              .bindPopup("<b>Welcome to Los Angeles!</b><br>City of Angels.");
+
+            L.marker([30.4882, -97.7618]).addTo(map2)
+              .bindPopup("<b>Welcome to Austin!</b><br>City of Texas light.");
+        </script>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
