@@ -92,14 +92,17 @@
         </script>
 
         <br>
-
+        <section>
+            <h2>Next North America</h2>
+            <p>Stops in North America - Let's go west.</p>
+        </section>
         <!-- Second map container -->
-        <div id="map2" style="height: 500px;"></div>
+        <div id="mapNAmerica" style="height: 500px;"></div>
 
         <!-- Script to initialize the second map and add multiple markers -->
         <script>
             // Initialize the second map (USA) and set its view to Los Angeles
-            var map2 = L.map('map2').setView([34.0522, -118.2437], 4);
+            var map2 = L.map('mapNAmerica').setView([34.0522, -118.2437], 4);
 
             // Add OpenStreetMap tile layer to the second map
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -107,19 +110,19 @@
             }).addTo(map2);
 
             // Add multiple markers to the second map
-            L.marker([37.7749, -122.4194]).addTo(map2)
+            L.marker([37.7749, -122.4194]).addTo(mapNAmerica)
               .bindPopup("<b>Hello world!</b><br>I am in San Francisco.").openPopup();
 
-            L.marker([21.30694, -157.85833]).addTo(map2)
+            L.marker([21.30694, -157.85833]).addTo(mapNAmerica)
               .bindPopup("<b>Welcome to Hawaii!</b><br>Island Paradise.");
 
-            L.marker([40.7128, -74.0060]).addTo(map2)
+            L.marker([40.7128, -74.0060]).addTo(mapNAmerica)
               .bindPopup("<b>Hello from New York!</b><br>The Big Apple.");
 
-            L.marker([34.0522, -118.2437]).addTo(map2)
+            L.marker([34.0522, -118.2437]).addTo(mapNAmerica)
               .bindPopup("<b>Welcome to Los Angeles!</b><br>City of Angels.");
 
-            L.marker([30.4882, -97.7618]).addTo(map2)
+            L.marker([30.4882, -97.7618]).addTo(mapNAmerica)
               .bindPopup("<b>Welcome to Austin!</b><br>City of Texas light.");
         </script>
 
