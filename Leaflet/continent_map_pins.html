@@ -210,8 +210,8 @@
 
         <!-- Script to initialize the second map and add multiple markers -->
         <script>
-            // Initialize the second map (USA) and set its view to Los Angeles
-            var mapAsia = L.map('mapAsia').setView([34.0522, -118.2437], 4);
+            // Initialize the second map (USA) and set its view to Bangkok
+            var mapAsia = L.map('mapAsia').setView([13.7563, 100.5018], 3);
 
             // Add OpenStreetMap tile layer to the second map
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -265,6 +265,47 @@
             // Fulidhoo - Maldives
             L.marker([3.7350, 73.4137]).addTo(mapAsia)
               .bindPopup("<b>Welcome to Fulidhoo!</b><br>Island in the Vaavu Atoll, Maldives.");
+
+                        // Singapore
+            L.marker([1.3521, 103.8198]).addTo(mapAsia)
+              .bindPopup("<b>Welcome to Singapore!</b><br>City-state in Southeast Asia.");
+            
+            // Bangkok - Thailand
+            L.marker([13.7563, 100.5018]).addTo(mapAsia)
+              .bindPopup("<b>Welcome to Bangkok!</b><br>Capital of Thailand.");
+            
+            // Koh Chang - Thailand
+            L.marker([12.0433, 102.3232]).addTo(mapAsia)
+              .bindPopup("<b>Welcome to Koh Chang!</b><br>Island in Thailand.");
+            
+            // Ayutthaya - Thailand
+            L.marker([14.3532, 100.5689]).addTo(mapAsia)
+              .bindPopup("<b>Welcome to Ayutthaya!</b><br>Historic city in Thailand.");
+            
+            // Chiang Mai - Thailand
+            L.marker([18.7883, 98.9853]).addTo(mapAsia)
+              .bindPopup("<b>Welcome to Chiang Mai!</b><br>City in Northern Thailand.");
+            
+            // Chiang Rai - Thailand
+            L.marker([19.9107, 99.8406]).addTo(mapAsia)
+              .bindPopup("<b>Welcome to Chiang Rai!</b><br>City in Northern Thailand.");
+            
+            // Koh Lipe - Thailand
+            L.marker([6.4887, 99.3032]).addTo(mapAsia)
+              .bindPopup("<b>Welcome to Koh Lipe!</b><br>Island in Southern Thailand.");
+            
+            // Koh Lanta - Thailand
+            L.marker([7.6144, 99.1448]).addTo(mapAsia)
+              .bindPopup("<b>Welcome to Koh Lanta!</b><br>Island in Southern Thailand.");
+            
+            // Koh Phi Phi - Thailand
+            L.marker([7.7390, 98.7711]).addTo(mapAsia)
+              .bindPopup("<b>Welcome to Koh Phi Phi!</b><br>Famous island in Thailand.");
+            
+            // Koh Phi Phi Leh - Thailand
+            L.marker([7.6783, 98.7654]).addTo(mapAsia)
+              .bindPopup("<b>Welcome to Koh Phi Phi Leh!</b><br>The Beach were filmed here.");
+
 
 
         </script>
