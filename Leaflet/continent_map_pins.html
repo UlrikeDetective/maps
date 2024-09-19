@@ -102,7 +102,7 @@
         <!-- Script to initialize the second map and add multiple markers -->
         <script>
             // Initialize the second map (USA) and set its view to Los Angeles
-            var mapNAmerica = L.map('mapNAmerica').setView([30.4882, -97.7618], 4);
+            var mapNAmerica = L.map('mapNAmerica').setView([30.4882, -97.7618], 3);
 
             // Add OpenStreetMap tile layer to the second map
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -218,21 +218,38 @@
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(mapAsia);
 
-            // Add multiple markers to the second map
-            L.marker([37.7749, -122.4194]).addTo(mapAsia)
-              .bindPopup("<b>Hello world!</b><br>I am in San Francisco.").openPopup();
+                        // Delhi
+            L.marker([28.6139, 77.2090]).addTo(mapAsia)
+              .bindPopup("<b>Welcome to Delhi!</b><br>Capital city of India.");
+            
+            // Agra
+            L.marker([27.1767, 78.0081]).addTo(mapAsia)
+              .bindPopup("<b>Welcome to Agra!</b><br>Home of the Taj Mahal.");
+            
+            // Jaipur
+            L.marker([26.9124, 75.7873]).addTo(mapAsia)
+              .bindPopup("<b>Welcome to Jaipur!</b><br>Pink City of India.");
+            
+            // Udaipur
+            L.marker([24.5854, 73.7125]).addTo(mapAsia)
+              .bindPopup("<b>Welcome to Udaipur!</b><br>City of Lakes, Rajasthan.");
+            
+            // Ahmedabad
+            L.marker([23.0225, 72.5714]).addTo(mapAsia)
+              .bindPopup("<b>Welcome to Ahmedabad!</b><br>City of Gujarat.");
+            
+            // Mumbai
+            L.marker([19.0760, 72.8777]).addTo(mapAsia)
+              .bindPopup("<b>Welcome to Mumbai!</b><br>Financial capital of India.");
+            
+            // Calangute
+            L.marker([15.5430, 73.7553]).addTo(mapAsia)
+              .bindPopup("<b>Welcome to Calangute!</b><br>Beach town in Goa.");
+            
+            // Palolem Beach
+            L.marker([15.0091, 74.0230]).addTo(mapAsia)
+              .bindPopup("<b>Welcome to Palolem Beach!</b><br>Beautiful beach in Goa.");
 
-            L.marker([21.30694, -157.85833]).addTo(mapAsia)
-              .bindPopup("<b>Welcome to Hawaii!</b><br>Island Paradise.");
-
-            L.marker([40.7128, -74.0060]).addTo(mapAsia)
-              .bindPopup("<b>Hello from New York!</b><br>The Big Apple.");
-
-            L.marker([34.0522, -118.2437]).addTo(mapAsia)
-              .bindPopup("<b>Welcome to Los Angeles!</b><br>City of Angels.");
-
-            L.marker([30.4882, -97.7618]).addTo(mapAsia)
-              .bindPopup("<b>Welcome to Austin!</b><br>City of Texas light.");
         </script>
 
         <br>
