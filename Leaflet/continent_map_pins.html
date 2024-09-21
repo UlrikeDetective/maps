@@ -153,6 +153,14 @@
         popupAnchor: [0, -38]   // Point from which the popup should open relative to the iconAnchor
     });
 
+      var PinBearIcon = L.icon({
+        iconUrl: 'pins/pinBear01.png',  // Path to the redpin image
+        iconSize: [38, 38],     // Size of the icon
+        iconAnchor: [19, 38],   // Point of the icon which will correspond to marker's location
+        popupAnchor: [0, -38]   // Point from which the popup should open relative to the iconAnchor
+    });
+
+
     // Add multiple markers to the second map using the custom icon
     L.marker([37.7749, -122.4194], {icon: redPinIcon}).addTo(mapNAmerica)
       .bindPopup("<b>Hello world!</b><br>I am in San Francisco.").openPopup();
@@ -263,7 +271,7 @@
             }).addTo(mapAsia);
 
                         // Delhi
-            L.marker([28.6139, 77.2090]).addTo(mapAsia)
+            L.marker([28.6139, 77.2090], {icon: PinBearIcon}).addTo(mapAsia)
               .bindPopup("<b>Welcome to Delhi!</b><br>Capital city of India.");
             
             // Agra
