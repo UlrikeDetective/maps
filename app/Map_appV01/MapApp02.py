@@ -45,17 +45,23 @@ def record_entry(widget, app):
 
 def build_app(app):
     # Main box with custom background color
-    main_box = toga.Box(style=Pack(direction=COLUMN, alignment=CENTER, padding=20, background_color='#B7E3E0'))
+    main_box = toga.Box(style=Pack(direction=COLUMN, alignment=CENTER, padding=20, background_color='#B7E3E0', font_size=14))
+
+  # Create a label with custom font and color
+    app.label = toga.Label(
+        "Location Recorder",
+        style=Pack(padding=150, alignment=CENTER, font_family='Inter', font_size=24, color='#B99372')
+    )
 
     # Create a destination input field
-    app.destination_input = toga.TextInput(placeholder="Enter destination", style=Pack(padding=10, width=300, font_family='Inter', font_size=14, color='#E7DAD5'))
+    app.destination_input = toga.TextInput(placeholder="Enter destination", style=Pack(padding=10, width=300, font_family='Inter', font_size=14, color='#242223'))
 
     # Create a dropdown for transportation mode
     transport_options = ['None', 'Foot', 'Bike', 'Public Transportation', 'Taxi', 'Car', 'Flight', 'Train', 'Other']
     app.transport_dropdown = toga.Selection(items=transport_options, style=Pack(padding=10, width=300, font_family='Inter', font_size=14, color='#E7DAD5'))
 
     # Create a dropdown for weather
-    weather_options = ['Hot and Sunny', 'Warm', 'Mild', 'Cool', 'Cold', 'Very Cold']
+    weather_options = ['Hot and Sunny', 'Warm', 'Mild', 'Cool', 'Rainy', 'Cold', 'Very Cold']
     app.weather_dropdown = toga.Selection(items=weather_options, style=Pack(padding=10, width=300, font_family='Inter', font_size=14, color='#E7DAD5'))
 
     # Create a button with custom styles
@@ -68,7 +74,7 @@ def build_app(app):
     # Create a label with custom font and color
     app.label = toga.Label(
         "Click the button to record entry",
-        style=Pack(padding=10, font_family='Inter', font_size=16, color='#B99372')
+        style=Pack(padding=150, alignment=CENTER, font_family='Inter', font_size=16, color='#B99372')
     )
 
     # Add all the widgets to the main box
