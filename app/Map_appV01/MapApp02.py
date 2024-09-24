@@ -14,8 +14,9 @@ def get_location():
         return None, None, None, None
 
 def record_entry(widget, app):
-    # Use the manually entered date or fallback to current date if empty
-    entered_date = app.date_input.value if app.date_input.value else datetime.now().strftime("%Y-%m-%d")
+    # Automatically get the current date and time
+    now = datetime.now()
+    current_time = now.strftime("%Y-%m-%d %H:%M:%S")
     
     # Get location details
     latlng, city, state, country = get_location()
@@ -26,7 +27,7 @@ def record_entry(widget, app):
     weather = app.weather_dropdown.value
 
     # Prepare data to write
-    data = [entered_date, latlng, city, state, country, destination, transport_mode, weather]
+    data = [current_time, latlng, city, state, country, destination, transport_mode, weather]
 
     # Specify CSV file
     csv_file = '/Users/ulrike_imac_air/projects/maps/app/Map_appV01/recorded_data_2024.csv'
@@ -36,11 +37,11 @@ def record_entry(widget, app):
     with open(csv_file, mode='a', newline='') as file:
         writer = csv.writer(file)
         if not file_exists:
-            writer.writerow(['Date', 'Latitude and Longitude', 'City', 'State', 'Country', 'Destination', 'Transportation Mode', 'Weather'])
+            writer.writerow(['Timestamp', 'Latitude and Longitude', 'City', 'State', 'Country', 'Destination', 'Transportation Mode', 'Weather'])
         writer.writerow(data)
 
     # Update label to confirm entry
-    app.label.text = f"Recorded entry for {destination} on {entered_date}"
+    app.label.text = f"Recorded entry for {destination} at {current_time}"
 
 def build_app(app):
     # Create the main container
@@ -56,9 +57,6 @@ def build_app(app):
     # Create a dropdown for weather
     weather_options = ['Hot and Sunny', 'Warm', 'Mild', 'Cool', 'Cold', 'Very Cold']
     app.weather_dropdown = toga.Selection(items=weather_options, style=Pack(padding=10, width=300))
-
-    # Create a text input field for manual date entry (instead of DatePicker)
-    app.date_input = toga.TextInput(placeholder="Enter date (YYYY-MM-DD)", style=Pack(padding=10, width=300))
 
     # Create a button to record entry
     record_button = toga.Button(
@@ -77,7 +75,6 @@ def build_app(app):
     main_box.add(app.destination_input)
     main_box.add(app.transport_dropdown)
     main_box.add(app.weather_dropdown)
-    main_box.add(app.date_input)
     main_box.add(record_button)
     main_box.add(app.label)
 
