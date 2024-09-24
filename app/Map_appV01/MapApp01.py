@@ -1,4 +1,6 @@
 import toga
+from toga.style import Pack
+from toga.style.pack import COLUMN, CENTER
 from datetime import datetime
 import geocoder
 import os
@@ -17,7 +19,7 @@ def record_entry(widget):
     latlng, city, state, country = get_location()
     data = [current_time, latlng, city, state, country]
 
-    csv_file = '/Users/ulrike_imac_air/projects/analysis_my_life/data/daily_activities/recorded_data_2024.csv'
+    csv_file = '/Users/ulrike_imac_air/Downloads/recorded_data_2024.csv'
     file_exists = os.path.isfile(csv_file)
 
     with open(csv_file, mode='a', newline='') as file:
@@ -25,21 +27,36 @@ def record_entry(widget):
         if not file_exists:
             writer.writerow(['Timestamp', 'Latitude and Longitude', 'City', 'State', 'Country'])
         writer.writerow(data)
-        print(f"Recorded: {data}")
         widget.label.text = f"Recorded entry at {current_time}"
 
-def build_app():
-    # Create the main window
-    main_box = toga.Box()
-    button = toga.Button("Record Entry", on_press=record_entry)
-    label = toga.Label("Click the button to record entry")
+def build_app(app):
+    # Create the main container
+    main_box = toga.Box(style=Pack(direction=COLUMN, alignment=CENTER))
 
-    main_box.add(button)
-    main_box.add(label)
+    # Create the button
+    record_button = toga.Button(
+        "Record Entry", 
+        on_press=record_entry,
+        style=Pack(padding=10)
+    )
 
-    # Create a window with a button to trigger recording
-    return toga.App("Daily Activity Recorder", "com.example.activityrecorder", startup=main_box)
+    # Create a label to show messages
+    app.label = toga.Label(
+        "Click the button to record entry",
+        style=Pack(padding=10)
+    )
 
-if __name__ == "__main__":
-    app = build_app()
+    # Add the button and label to the main box
+    main_box.add(record_button)
+    main_box.add(app.label)
+
+    # Set up the main window with content
+    app.main_window.content = main_box
+    app.main_window.show()
+
+def main():
+    return toga.App("Daily Activity Recorder", "com.example.activityrecorder", startup=build_app)
+
+if __name__ == '__main__':
+    app = main()
     app.main_loop()
