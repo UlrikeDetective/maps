@@ -1,10 +1,10 @@
 import toga
-import csv
 from toga.style import Pack
 from toga.style.pack import COLUMN, CENTER
 from datetime import datetime
 import geocoder
 import os
+import csv  # Importing the csv module
 
 def get_location():
     g = geocoder.ip('me')
@@ -13,14 +13,14 @@ def get_location():
     else:
         return None, None, None, None
 
-def record_entry(widget):
+def record_entry(widget, app):  # Add app to access the label
     now = datetime.now()
     current_time = now.strftime("%Y-%m-%d %H:%M:%S")
 
     latlng, city, state, country = get_location()
     data = [current_time, latlng, city, state, country]
 
-    csv_file = '/Users/ulrike_imac_air/Downloads/recorded_data_2024.csv'
+    csv_file = '/Users/ulrike_imac_air/projects/analysis_my_life/data/daily_activities/recorded_data_2024.csv'
     file_exists = os.path.isfile(csv_file)
 
     with open(csv_file, mode='a', newline='') as file:
@@ -28,7 +28,9 @@ def record_entry(widget):
         if not file_exists:
             writer.writerow(['Timestamp', 'Latitude and Longitude', 'City', 'State', 'Country'])
         writer.writerow(data)
-        widget.label.text = f"Recorded entry at {current_time}"
+
+    # Update the label text to show the recorded entry
+    app.label.text = f"Recorded entry at {current_time}"
 
 def build_app(app):
     # Create the main container
@@ -37,7 +39,7 @@ def build_app(app):
     # Create the button
     record_button = toga.Button(
         "Record Entry", 
-        on_press=record_entry,
+        on_press=lambda widget: record_entry(widget, app),  # Pass the app instance
         style=Pack(padding=10)
     )
 
