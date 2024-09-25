@@ -1,6 +1,6 @@
 import toga
 from toga.style import Pack
-from toga.style.pack import COLUMN, CENTER
+from toga.style.pack import COLUMN, LEFT
 from datetime import datetime
 import geocoder
 import os
@@ -44,51 +44,51 @@ def record_entry(widget, app):
 
 def build_app(app):
     # Main box with layout and styling
-    main_box = toga.Box(style=Pack(direction=COLUMN, alignment=CENTER, padding=20, background_color='#B7E3E0'))
+    main_box = toga.Box(style=Pack(direction=COLUMN, alignment=LEFT, padding=20, background_color='#B7E3E0'))
 
     # Title label
     title_label = toga.Label(
         "Location Recorder",
-        style=Pack(padding=(0, 0, 20, 0), alignment=CENTER, font_family='Inter', font_size=24, color='#B99372')
+        style=Pack(padding=(0, 0, 20, 0), alignment=LEFT, font_family='Inter', font_size=24, color='#B99372')
     )
 
     # Section heading for destination
     destination_heading = toga.Label(
         "Destination Information",
-        style=Pack(padding=(10, 0), alignment=CENTER, font_family='Inter', font_size=18, color='#2A6BBD')
+        style=Pack(padding=(10, 0), alignment=LEFT, font_family='Inter', font_size=18, color='#2A6BBD')
     )
 
-    app.destination_input = toga.TextInput(placeholder="Enter destination", style=Pack(padding=10, width=300, font_family='Inter', font_size=14, color='#242223'))
+    app.destination_input = toga.TextInput(placeholder="Enter destination", style=Pack(padding=10, width=300, alignment=LEFT, font_family='Inter', font_size=14, color='#242223'))
 
     # Section heading for transportation mode
     transport_heading = toga.Label(
         "Transportation Mode",
-        style=Pack(padding=(20, 0), alignment=CENTER, font_family='Inter', font_size=18, color='#2A6BBD')
+        style=Pack(padding=(20, 0), alignment=LEFT, font_family='Inter', font_size=18, color='#2A6BBD')
     )
 
     transport_options = ['None', 'Foot', 'Bike', 'Public Transportation', 'Taxi', 'Car', 'Flight', 'Train', 'Other']
-    app.transport_dropdown = toga.Selection(items=transport_options, style=Pack(padding=10, width=300, font_family='Inter', font_size=14, color='#E7DAD5'))
+    app.transport_dropdown = toga.Selection(items=transport_options, style=Pack(padding=10, width=300, alignment=LEFT, font_family='Inter', font_size=14, color='#E7DAD5'))
 
     # Section heading for weather
     weather_heading = toga.Label(
         "Weather Conditions",
-        style=Pack(padding=(20, 0), alignment=CENTER, font_family='Inter', font_size=18, color='#2A6BBD')
+        style=Pack(padding=(20, 0), alignment=LEFT, font_family='Inter', font_size=18, color='#2A6BBD')
     )
 
     weather_options = ['Hot and Sunny', 'Warm', 'Mild', 'Cool', 'Rainy', 'Cold', 'Very Cold']
-    app.weather_dropdown = toga.Selection(items=weather_options, style=Pack(padding=10, width=300, font_family='Inter', font_size=14, color='#E7DAD5'))
+    app.weather_dropdown = toga.Selection(items=weather_options, style=Pack(padding=10, width=300, alignment=LEFT, font_family='Inter', font_size=14, color='#E7DAD5'))
 
     # Record button (opens Save As dialog)
     record_button = toga.Button(
         "Save Entry",
         on_press=lambda widget: record_entry(widget, app),
-        style=Pack(padding=10, background_color='#2A6BBD', color='#E7DAD5', font_size=16, width=200)
+        style=Pack(padding=10, background_color='#2A6BBD', color='#E7DAD5', font_size=16, width=200, alignment=LEFT)
     )
 
     # Confirmation label
     app.label = toga.Label(
         "Click the button to record and save entry",
-        style=Pack(padding=(20, 0), alignment=CENTER, font_family='Inter', font_size=16, color='#B99372')
+        style=Pack(padding=(20, 0), alignment=LEFT, font_family='Inter', font_size=16, color='#B99372')
     )
 
     # Adding the labels and widgets to the main box
