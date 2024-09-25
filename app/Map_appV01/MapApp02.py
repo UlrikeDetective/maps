@@ -25,7 +25,10 @@ def record_entry(widget, app):
 
     data = [current_time, latlng, city, state, country, destination, transport_mode, weather]
 
-    csv_file = '/Users/ulrike_imac_air/projects/maps/app/Map_appV01/recorded_data_2024.csv'
+    # Get the user's default Downloads folder
+    downloads_folder = os.path.join(os.path.expanduser('~'), 'Downloads')
+    csv_file = os.path.join(downloads_folder, 'recorded_data_2024.csv')
+
     file_exists = os.path.isfile(csv_file)
 
     with open(csv_file, mode='a', newline='') as file:
