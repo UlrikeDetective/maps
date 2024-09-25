@@ -25,22 +25,28 @@ def record_entry(widget, app):
 
     data = [current_time, latlng, city, state, country, destination, transport_mode, weather]
 
-    # Open a "Save As" dialog for the user to choose the file location
-    save_path = app.main_window.save_file_dialog("Save CSV file", "recorded_data.csv")
+    # Open a "Save As" dialog using the new SaveFileDialog API
+    async def save_file():
+        save_dialog = toga.SaveFileDialog()
+        save_path = await app.main_window.dialog(save_dialog)
 
-    if save_path:
-        file_exists = os.path.isfile(save_path)
+        if save_path:
+            file_exists = os.path.isfile(save_path)
 
-        # Write the CSV data
-        with open(save_path, mode='a', newline='') as file:
-            writer = csv.writer(file)
-            if not file_exists:
-                writer.writerow(['Timestamp', 'Latitude and Longitude', 'City', 'State', 'Country', 'Destination', 'Transportation Mode', 'Weather'])
-            writer.writerow(data)
+            # Write the CSV data
+            with open(save_path, mode='a', newline='') as file:
+                writer = csv.writer(file)
+                if not file_exists:
+                    writer.writerow(['Timestamp', 'Latitude and Longitude', 'City', 'State', 'Country', 'Destination', 'Transportation Mode', 'Weather'])
+                writer.writerow(data)
 
-        app.label.text = f"Recorded entry for {destination} at {current_time}"
-    else:
-        app.label.text = "Save operation cancelled."
+            app.label.text = f"Recorded entry for {destination} at {current_time}"
+        else:
+            app.label.text = "Save operation cancelled."
+
+    # Run the save dialog as an asynchronous operation
+    app.main_window.run_async(save_file)
+
 
 def build_app(app):
     # Main box with layout and styling
@@ -49,34 +55,34 @@ def build_app(app):
     # Title label
     title_label = toga.Label(
         "Location Recorder",
-        style=Pack(padding=(0, 0, 20, 0), alignment=LEFT, font_family='Inter', font_size=24, color='#B99372')
+        style=Pack(padding=(0, 0, 20, 0), alignment=LEFT, font_family='Helvetica', font_size=24, color='#B99372')
     )
 
     # Section heading for destination
     destination_heading = toga.Label(
         "Destination Information",
-        style=Pack(padding=(10, 0), alignment=LEFT, font_family='Inter', font_size=18, color='#2A6BBD')
+        style=Pack(padding=(10, 0), alignment=LEFT, font_family='Helvetica', font_size=18, color='#2A6BBD')
     )
 
-    app.destination_input = toga.TextInput(placeholder="Enter destination", style=Pack(padding=10, width=300, alignment=LEFT, font_family='Inter', font_size=14, color='#242223'))
+    app.destination_input = toga.TextInput(placeholder="Enter destination", style=Pack(padding=10, width=300, alignment=LEFT, font_family='Helvetica', font_size=14, color='#242223'))
 
     # Section heading for transportation mode
     transport_heading = toga.Label(
         "Transportation Mode",
-        style=Pack(padding=(20, 0), alignment=LEFT, font_family='Inter', font_size=18, color='#2A6BBD')
+        style=Pack(padding=(20, 0), alignment=LEFT, font_family='Helvetica', font_size=18, color='#2A6BBD')
     )
 
     transport_options = ['None', 'Foot', 'Bike', 'Public Transportation', 'Taxi', 'Car', 'Flight', 'Train', 'Other']
-    app.transport_dropdown = toga.Selection(items=transport_options, style=Pack(padding=10, width=300, alignment=LEFT, font_family='Inter', font_size=14, color='#E7DAD5'))
+    app.transport_dropdown = toga.Selection(items=transport_options, style=Pack(padding=10, width=300, alignment=LEFT, font_family='Helvetica', font_size=14, color='#E7DAD5'))
 
     # Section heading for weather
     weather_heading = toga.Label(
         "Weather Conditions",
-        style=Pack(padding=(20, 0), alignment=LEFT, font_family='Inter', font_size=18, color='#2A6BBD')
+        style=Pack(padding=(20, 0), alignment=LEFT, font_family='Helvetica', font_size=18, color='#2A6BBD')
     )
 
     weather_options = ['Hot and Sunny', 'Warm', 'Mild', 'Cool', 'Rainy', 'Cold', 'Very Cold']
-    app.weather_dropdown = toga.Selection(items=weather_options, style=Pack(padding=10, width=300, alignment=LEFT, font_family='Inter', font_size=14, color='#E7DAD5'))
+    app.weather_dropdown = toga.Selection(items=weather_options, style=Pack(padding=10, width=300, alignment=LEFT, font_family='Helvetica', font_size=14, color='#E7DAD5'))
 
     # Record button (opens Save As dialog)
     record_button = toga.Button(
@@ -88,7 +94,7 @@ def build_app(app):
     # Confirmation label
     app.label = toga.Label(
         "Click the button to record and save entry",
-        style=Pack(padding=(20, 0), alignment=LEFT, font_family='Inter', font_size=16, color='#B99372')
+        style=Pack(padding=(20, 0), alignment=LEFT, font_family='Helvetica', font_size=16, color='#B99372')
     )
 
     # Adding the labels and widgets to the main box
