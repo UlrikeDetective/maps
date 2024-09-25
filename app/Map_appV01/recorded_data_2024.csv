@@ -3,3 +3,4 @@ Timestamp,Latitude and Longitude,City,State,Country,Destination,Transportation M
 2024-09-24 13:38:33,"[37.4241, -122.1661]",Stanford,California,US,Stanford University,Bike,Warm
 2024-09-24 13:42:15,"[37.4241, -122.1661]",Stanford,California,US,Stanford,Bike,Hot and Sunny
 2024-09-24 18:50:36,"[32.7939, -96.8319]",Dallas,Texas,US,Adobe,Train,Warm
+2024-09-24 22:25:30,"[37.3394, -121.895]",San Jose,California,US,Palo Alto,Public Transportation,Warm
