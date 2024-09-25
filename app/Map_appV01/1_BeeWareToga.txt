@@ -1,3 +1,19 @@
+1. Set up BeeWare and Toga:
+First, ensure you have Python and BeeWare's tools installed. Install Toga using pip:
+
+bash
+pip install toga
+
+You’ll also need Briefcase for packaging the app later:
+
+bash
+pip install briefcase
+
+2. Create a Basic Toga App:
+Toga works by creating a graphical user interface (GUI). Start by writing a basic Toga application that uses buttons or input fields to call your record_entry function.
+
+Here's how you can start:
+
 import toga
 from toga.style import Pack
 from toga.style.pack import COLUMN, CENTER
@@ -25,7 +41,7 @@ def record_entry(widget, app):
 
     data = [current_time, latlng, city, state, country, destination, transport_mode, weather]
 
-    csv_file = '/Users/ulrike_imac_air/projects/maps/app/Map_appV01/recorded_data_2024.csv'
+    csv_file = '/recorded_data_2024.csv'
     file_exists = os.path.isfile(csv_file)
 
     with open(csv_file, mode='a', newline='') as file:

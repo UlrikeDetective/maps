@@ -1,0 +1,16 @@
+Package with Briefcase:
+Once your app is working, you can package it for different platforms using Briefcase. In your project folder, run:
+
+bash
+briefcase new
+
+Follow the prompts to create a project. Then package and run the app:
+
+bash
+briefcase dev
+
+You can build and package the app for different platforms (macOS, Windows, Linux) using:
+
+bash
+briefcase build
+briefcase run
