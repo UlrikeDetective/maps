@@ -1,5 +1,5 @@
 """
-Simple location recorder. With recordings of place, weather condition and travel mode.
+Record your location, travel mode and current weather.
 """
 
 import toga
@@ -7,7 +7,7 @@ from toga.style import Pack
 from toga.style.pack import COLUMN, ROW
 
 
-class LocationRecoder(toga.App):
+class RecordingYou(toga.App):
     def startup(self):
         """Construct and show the Toga application.
 
@@ -23,4 +23,4 @@ class LocationRecoder(toga.App):
 
 
 def main():
-    return LocationRecoder()
+    return RecordingYou()

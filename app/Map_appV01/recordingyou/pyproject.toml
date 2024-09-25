@@ -1,20 +1,20 @@
 # This project was generated with 0.3.19 using template: https://github.com/beeware/briefcase-template@v0.3.19
 [tool.briefcase]
-project_name = "Location Recoder"
-bundle = "com.example.LocationRecoder24"
+project_name = "RecordingYou"
+bundle = "com.example.recordingyou"
 version = "0.0.1"
-url = "https://LocationRecoder24.example.com/LocationRecoder"
+url = "https://recordingyou.example.com/recordingyou"
 license.file = "LICENSE"
 author = "Ulrike Herold"
-author_email = "herold.ulrike@gmail.com"
+author_email = "UlrikeDetective@outlook.com"
 
-[tool.briefcase.app.LocationRecoder]
-formal_name = "Location Recoder"
-description = "Simple location recorder. With recordings of place, weather condition and travel mode."
+[tool.briefcase.app.recordingyou]
+formal_name = "RecordingYou"
+description = "Record your location, travel mode and current weather."
 long_description = """More details about the app should go here.
 """
 sources = [
-    "src/LocationRecoder",
+    "src/recordingyou",
 ]
 test_sources = [
     "tests",
@@ -26,19 +26,19 @@ test_requires = [
     "pytest",
 ]
 
-[tool.briefcase.app.LocationRecoder.macOS]
+[tool.briefcase.app.recordingyou.macOS]
 universal_build = true
 requires = [
     "toga-cocoa~=0.4.5",
     "std-nslog~=1.0.0",
 ]
 
-[tool.briefcase.app.LocationRecoder.linux]
+[tool.briefcase.app.recordingyou.linux]
 requires = [
     "toga-gtk~=0.4.5",
 ]
 
-[tool.briefcase.app.LocationRecoder.linux.system.debian]
+[tool.briefcase.app.recordingyou.linux.system.debian]
 system_requires = [
     # Needed to compile pycairo wheel
     "libcairo2-dev",
@@ -57,7 +57,7 @@ system_runtime_requires = [
     # "gir1.2-webkit2-4.1",
 ]
 
-[tool.briefcase.app.LocationRecoder.linux.system.rhel]
+[tool.briefcase.app.recordingyou.linux.system.rhel]
 system_requires = [
     # Needed to compile pycairo wheel
     "cairo-gobject-devel",
@@ -76,7 +76,7 @@ system_runtime_requires = [
     # "webkit2gtk3",
 ]
 
-[tool.briefcase.app.LocationRecoder.linux.system.suse]
+[tool.briefcase.app.recordingyou.linux.system.suse]
 system_requires = [
     # Needed to compile pycairo wheel
     "cairo-devel",
@@ -95,7 +95,7 @@ system_runtime_requires = [
     # "libwebkit2gtk3", "typelib(WebKit2)",
 ]
 
-[tool.briefcase.app.LocationRecoder.linux.system.arch]
+[tool.briefcase.app.recordingyou.linux.system.arch]
 system_requires = [
     # Needed to compile pycairo wheel
     "cairo",
@@ -122,7 +122,7 @@ system_runtime_requires = [
     # "webkit2gtk",
 ]
 
-[tool.briefcase.app.LocationRecoder.linux.appimage]
+[tool.briefcase.app.recordingyou.linux.appimage]
 manylinux = "manylinux_2_28"
 
 system_requires = [
@@ -143,24 +143,24 @@ linuxdeploy_plugins = [
     "DEPLOY_GTK_VERSION=3 gtk",
 ]
 
-[tool.briefcase.app.LocationRecoder.linux.flatpak]
+[tool.briefcase.app.recordingyou.linux.flatpak]
 flatpak_runtime = "org.gnome.Platform"
 flatpak_runtime_version = "45"
 flatpak_sdk = "org.gnome.Sdk"
 
-[tool.briefcase.app.LocationRecoder.windows]
+[tool.briefcase.app.recordingyou.windows]
 requires = [
     "toga-winforms~=0.4.5",
 ]
 
 # Mobile deployments
-[tool.briefcase.app.LocationRecoder.iOS]
+[tool.briefcase.app.recordingyou.iOS]
 requires = [
     "toga-iOS~=0.4.5",
     "std-nslog~=1.0.0",
 ]
 
-[tool.briefcase.app.LocationRecoder.android]
+[tool.briefcase.app.recordingyou.android]
 requires = [
     "toga-android~=0.4.5",
 ]
@@ -176,7 +176,7 @@ build_gradle_dependencies = [
 ]
 
 # Web deployments
-[tool.briefcase.app.LocationRecoder.web]
+[tool.briefcase.app.recordingyou.web]
 requires = [
     "toga-web~=0.4.5",
 ]
