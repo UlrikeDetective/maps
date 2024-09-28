@@ -11,9 +11,9 @@ body {
   height: 100%;
 }
 body {
-  background: #11454C;
+  background: #00909E;
 
-  color: #EA8212;
+  color: #CEE5E9;
 }
 
 .ag-canvas {
@@ -51,6 +51,15 @@ body {
   stroke-width: 0.5;
   transition: 0.5s;
 }
+
+.ul {
+    fill: #BFE4EA;
+    fill-opacity: 1;
+    stroke: #78CDE0;
+    stroke-opacity: 1;
+    stroke-width: 0.5;
+    transition: 0.5s;
+  }
 
 @media screen and (max-width: 767px) {
   .ag-canvas {
