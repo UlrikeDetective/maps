@@ -1,3 +1,14 @@
+# python -m venv myenv
+
+# source myenv/bin/activate
+
+# python -m pip install toga
+
+# python /Users/ulrike_imac_air/projects/maps/app/Map_appV01/MapApp02.py
+
+
+
+
 import toga
 from toga.style import Pack
 from toga.style.pack import COLUMN, CENTER
