@@ -46,12 +46,11 @@ nav a:hover {
 }
 
 
-
 .ag-canvas {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 2rem; 
+  margin: 6rem 6rem; 
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
@@ -67,8 +66,8 @@ nav a:hover {
 }
 
 .map-container {
-  margin: 0 2rem; /* Adjusts space on the left and right */
-  padding: 1rem;  /* Optional: adds padding inside the container */
+  margin: 6rem 6rem; /* Adjusts space on the left and right */
+  padding: 3rem;  /* Optional: adds padding inside the container */
   background: #fff; /* Optional: background color for visibility */
   border-radius: 8px; /* Optional: rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
@@ -80,7 +79,7 @@ nav a:hover {
   width: 100%;
   height: auto;
   max-height: 100%;
-  margin-left: 1rem;
+  margin-left: 4rem;
 }
 .ag-canvas_svg path {
   fill: #BFE4EA;
@@ -106,7 +105,7 @@ nav a:hover {
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
     height: auto;
-    padding: 4rem 1rem 1rem;
+    padding: 4rem 4rem 4rem;
   }
 
   .ag-canvas_svg {
