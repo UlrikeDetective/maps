@@ -243,8 +243,6 @@
         createCircleMarker(5.8400, 118.1179, "<b>Welcome to Sandakan!</b><br>City in Sabah, Borneo.");
         createCircleMarker(5.5918, 118.2832, "<b>Welcome to Kinabatangan!</b><br>Wildlife area in Sabah, Borneo.");
 
-
-
         </script>
 
         <br>
@@ -265,54 +263,32 @@
             attribution: '&copy; <a href="https://carto.com/attributions">CARTO</a>'
             }).addTo(mapAfrica);
 
-                       // Casablanca
-            L.marker([33.5731, -7.5898]).addTo(mapAfrica)
-              .bindPopup("<b>Welcome to Casablanca!</b><br>City of Morocco light.");
-            
-            // Fes
-            L.marker([34.0181, -5.0078]).addTo(mapAfrica)
-              .bindPopup("<b>Welcome to Fes!</b><br>Cultural capital of Morocco.");
-            
-            // Tangier
-            L.marker([35.7595, -5.8340]).addTo(mapAfrica)
-              .bindPopup("<b>Welcome to Tangier!</b><br>Port city of Morocco.");
-            
-            // Marrakesh
-            L.marker([31.6295, -7.9811]).addTo(mapAfrica)
-              .bindPopup("<b>Welcome to Marrakesh!</b><br>City of Morocco charm.");
-            
-            // La Gomera
-            L.marker([28.0933, -17.2222]).addTo(mapAfrica)
-              .bindPopup("<b>Welcome to La Gomera!</b><br>Canary Island, Spain.");
-            
-            // Corralejo - Fuerteventura
-            L.marker([28.7280, -13.8671]).addTo(mapAfrica)
-              .bindPopup("<b>Welcome to Corralejo!</b><br>Beach town of Fuerteventura.");
-            
-            // Johannesburg
-            L.marker([-26.2041, 28.0473]).addTo(mapAfrica)
-              .bindPopup("<b>Welcome to Johannesburg!</b><br>Largest city in South Africa.");
-            
-            // Durban
-            L.marker([-29.8587, 31.0218]).addTo(mapAfrica)
-              .bindPopup("<b>Welcome to Durban!</b><br>City of South Africa's coast.");
-            
-            // Gqeberha (formerly Port Elizabeth)
-            L.marker([-33.9610, 25.6144]).addTo(mapAfrica)
-              .bindPopup("<b>Welcome to Gqeberha!</b><br>City of Eastern Cape, South Africa.");
-            
-            // Coffee Bay
-            L.marker([-31.9829, 29.1512]).addTo(mapAfrica)
-              .bindPopup("<b>Welcome to Coffee Bay!</b><br>Coastal village of South Africa.");
-            
-            // Plettenberg Bay
-            L.marker([-34.0527, 23.3716]).addTo(mapAfrica)
-              .bindPopup("<b>Welcome to Plettenberg Bay!</b><br>Resort town of South Africa.");
-            
-            // Cape Town
-            L.marker([-33.9249, 18.4241]).addTo(mapAfrica)
-              .bindPopup("<b>Welcome to Cape Town!</b><br>City of South Africa's coast.");
-            
+        function createCircleMarker(lat, lng, popupText) {
+        const randomColor = getRandomColor();
+        const circleMarker = L.divIcon({
+            className: 'custom-circle-marker',
+            html: `<svg width="20" height="20" viewBox="0 0 20 20">
+                        <circle cx="10" cy="10" r="9" fill="${randomColor}" />
+                    </svg>`,
+            iconSize: [20, 20],
+            iconAnchor: [10, 10]
+        });
+        L.marker([lat, lng], { icon: circleMarker }).addTo(mapAfrica)
+            .bindPopup(popupText);
+    }
+
+        createCircleMarker(33.5731, -7.5898, "<b>Welcome to Casablanca!</b><br>City of Morocco light.");
+        createCircleMarker(34.0181, -5.0078, "<b>Welcome to Fes!</b><br>Cultural capital of Morocco.");
+        createCircleMarker(35.7595, -5.8340, "<b>Welcome to Tangier!</b><br>Port city of Morocco.");
+        createCircleMarker(31.6295, -7.9811, "<b>Welcome to Marrakesh!</b><br>City of Morocco charm.");
+        createCircleMarker(28.0933, -17.2222, "<b>Welcome to La Gomera!</b><br>Canary Island, Spain.");
+        createCircleMarker(28.7280, -13.8671, "<b>Welcome to Corralejo!</b><br>Beach town of Fuerteventura.");
+        createCircleMarker(-26.2041, 28.0473, "<b>Welcome to Johannesburg!</b><br>Largest city in South Africa.");
+        createCircleMarker(-29.8587, 31.0218, "<b>Welcome to Durban!</b><br>City of South Africa's coast.");
+        createCircleMarker(-33.9610, 25.6144, "<b>Welcome to Gqeberha!</b><br>City of Eastern Cape, South Africa.");
+        createCircleMarker(-31.9829, 29.1512, "<b>Welcome to Coffee Bay!</b><br>Coastal village of South Africa.");
+        createCircleMarker(-34.0527, 23.3716, "<b>Welcome to Plettenberg Bay!</b><br>Resort town of South Africa.");
+        createCircleMarker(-33.9249, 18.4241, "<b>Welcome to Cape Town!</b><br>City of South Africa's coast.");
 
         </script>
 
@@ -334,6 +310,20 @@
             attribution: '&copy; <a href="https://carto.com/attributions">CARTO</a>'
             }).addTo(mapOceania);
 
+        function createCircleMarker(lat, lng, popupText) {
+        const randomColor = getRandomColor();
+        const circleMarker = L.divIcon({
+            className: 'custom-circle-marker',
+            html: `<svg width="20" height="20" viewBox="0 0 20 20">
+                        <circle cx="10" cy="10" r="9" fill="${randomColor}" />
+                    </svg>`,
+            iconSize: [20, 20],
+            iconAnchor: [10, 10]
+        });
+        L.marker([lat, lng], { icon: circleMarker }).addTo(mapOceania)
+            .bindPopup(popupText);
+    }
+
         </script>
 
               <br>
@@ -352,7 +342,20 @@
              L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://carto.com/attributions">CARTO</a>'
             }).addTo(mapSAmerica);
-
+           
+        function createCircleMarker(lat, lng, popupText) {
+        const randomColor = getRandomColor();
+        const circleMarker = L.divIcon({
+            className: 'custom-circle-marker',
+            html: `<svg width="20" height="20" viewBox="0 0 20 20">
+                        <circle cx="10" cy="10" r="9" fill="${randomColor}" />
+                    </svg>`,
+            iconSize: [20, 20],
+            iconAnchor: [10, 10]
+        });
+        L.marker([lat, lng], { icon: circleMarker }).addTo(mapSAmerica)
+            .bindPopup(popupText);
+    }
         </script>
 
         
