@@ -37,8 +37,8 @@
         const mapEurope = L.map('map').setView([51.5, -0.09], 5);
         
         // Add a simple base layer
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://carto.com/attributions">CARTO</a>'
         }).addTo(mapEurope);
 
         // Function to generate random colors
@@ -69,205 +69,56 @@
         // Example markers
         createCircleMarker(51.5, -0.09, "<b>Hello world!</b><br>I am in London.");
         createCircleMarker(51.4545, -2.5879, "<b>Hello world!</b><br>I am in Bristol.");
-
-            // Bath
-            L.marker([51.3758, -2.3599], { icon: redIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello world!</b><br>I am in Bath.");
-
-            // Manchester
-            L.marker([53.4808, -2.2426], { icon: redIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello world!</b><br>I am in Manchester.");
-
-            // Liverpool
-            L.marker([53.4084, -2.9916], { icon: redIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello world!</b><br>I am in Liverpool.");
-
-            // Margate
-            L.marker([51.3813, 1.3862], { icon: redIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello world!</b><br>I am in Margate.");
-
-            // Oxford
-            L.marker([51.7520, -1.2577], { icon: redIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello world!</b><br>I am in Oxford.");
-
-            // Isle of Portland
-            L.marker([50.5640, -2.4456], { icon: redIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello world!</b><br>I am on the Isle of Portland.");
-
-            // Brighton
-            L.marker([50.8225, -0.1372], { icon: redIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello world!</b><br>I am in Brighton.");
-
-            // Newcastle upon Tyne
-            L.marker([54.9783, -1.6174], { icon: redIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello world!</b><br>I am in Newcastle upon Tyne.");
-
-            // Edinburgh
-            L.marker([55.9533, -3.1883], { icon: redIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello world!</b><br>I am in Edinburgh.");
-
-            // Glasgow
-            L.marker([55.8642, -4.2518], { icon: redIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello world!</b><br>I am in Glasgow.");
-
-            // Inverness
-            L.marker([57.4778, -4.2247], { icon: redIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello world!</b><br>I am in Inverness.");
-
-            // Orkney Main Island
-            L.marker([58.9784, -2.9611], { icon: redIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello world!</b><br>I am on Orkney Main Island.");
-
-            // North Ronaldsay
-            L.marker([59.3673, -2.4286], { icon: redIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello world!</b><br>I am on North Ronaldsay.");
-
-            // Papa Westray
-            L.marker([59.3519, -2.9001], { icon: redIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello world!</b><br>I am on Papa Westray.");
-
-            // Ullapool
-            L.marker([57.8987, -5.1604], { icon: redIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello world!</b><br>I am in Ullapool.");
-
-            // Mallaig
-            L.marker([57.0050, -5.8280], { icon: redIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello world!</b><br>I am in Mallaig.");
-
-            // Oban
-            L.marker([56.4158, -5.4710], { icon: redIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello world!</b><br>I am in Oban.");
-
-            // Belfast
-            L.marker([54.5973, -5.9301], { icon: redIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello world!</b><br>I am in Belfast.");
-
-            // Londonderry
-            L.marker([55.0067, -7.3183], { icon: redIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello world!</b><br>I am in Londonderry.");
-
-            // Rathlin Island
-            L.marker([55.2894, -6.2035], { icon: redIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello world!</b><br>I am on Rathlin Island.");
-
-            // Dublin
-            L.marker([53.3498, -6.2603], { icon: redIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello world!</b><br>I am in Dublin.");
-
-            // Cork
-            L.marker([51.8985, -8.4756], { icon: redIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello world!</b><br>I am in Cork.");
-
-            // Limerick
-            L.marker([52.6680, -8.6305], { icon: redIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello world!</b><br>I am in Limerick.");
-
-            // Galway
-            L.marker([53.2707, -9.0568], { icon: redIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello world!</b><br>I am in Galway.");
-
-            // Inishmore
-            L.marker([53.1283, -9.6886], { icon: redIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello world!</b><br>I am on Inishmore.");
-
-
-            L.marker([48.8566, 2.3522], { icon: blueIcon }).addTo(mapEurope)
-              .bindPopup("<b>Welcome to Paris!</b><br>The City of Light.");
-
-            L.marker([43.48012, -1.55558], { icon: blueIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello from Biarritz!</b><br>Surfing culture in France.");
-
-            L.marker([43.26271, -2.92528], { icon: orangeIcon }).addTo(mapEurope)
-              .bindPopup("<b>Welcome to Bilbao!</b><br>Basque town with a lot of art.");
-
-            // Madrid
-            L.marker([40.4168, -3.7038], { icon: orangeIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello from Madrid!</b><br>Capital of Spain.");
-
-            // Barcelona
-            L.marker([41.3851, 2.1734], { icon: orangeIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello from Barcelona!</b><br>Famous for art and architecture.");
-
-            // Valencia
-            L.marker([39.4699, -0.3763], { icon: orangeIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello from Valencia!</b><br>Known for its City of Arts and Sciences.");
-
-            // Majorca (Mallorca)
-            L.marker([39.6953, 3.0176], { icon: orangeIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello from Majorca!</b><br>Beautiful island in the Balearics.");
-
-            // Ibiza
-            L.marker([38.9067, 1.4206], { icon: orangeIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello from Ibiza!</b><br>Island famous for its nightlife.");
-
-            // Granada
-            L.marker([37.1773, -3.5986], { icon: orangeIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello from Granada!</b><br>Home of the Alhambra.");
-
-            // Cadiz
-            L.marker([36.5271, -6.2886], { icon: orangeIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello from Cadiz!</b><br>Historic port city.");
-
-            // Tarifa
-            L.marker([36.0131, -5.6060], { icon: orangeIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello from Tarifa!</b><br>Southernmost point of Spain, known for kitesurfing.");
-
-            // Malaga
-            L.marker([36.7213, -4.4214], { icon: orangeIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello from Malaga!</b><br>Port city on the Costa del Sol.");
-
-            // Sevilla
-            L.marker([37.3891, -5.9845], { icon: orangeIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello from Sevilla!</b><br>Capital of Andalusia.");
-
-            // Cordoba
-            L.marker([37.8882, -4.7794], { icon: orangeIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello from Cordoba!</b><br>Famous for its mosque-cathedral.");
-
-            // Almeria
-            L.marker([36.8340, -2.4637], { icon: orangeIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello from Almeria!</b><br>City on the southeastern coast of Spain.");
-
-            // San Sebastian
-            L.marker([43.3183, -1.9812], { icon: orangeIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello from San Sebastian!</b><br>Known for its beaches and cuisine.");
-
-            // Lisbon (Lisboa) - Portugal
-            L.marker([38.7223, -9.1393], { icon: orangeIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello from Lisbon!</b><br>Capital of Portugal.");
-
-            // Salamanca
-            L.marker([40.9701, -5.6635], { icon: orangeIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello from Salamanca!</b><br>Historic university city.");
-
-
-                        // Strasbourg
-            L.marker([48.5734, 7.7521], { icon: blueIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello from Strasbourg!</b><br>Historic city in France.");
-
-            // Marseille
-            L.marker([43.2965, 5.3698], { icon: blueIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello from Marseille!</b><br>Port city in southern France.");
-
-            // Apt
-            L.marker([43.8766, 5.3952], { icon: blueIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello from Apt!</b><br>Charming town in Provence.");
-
-            // Arles
-            L.marker([43.6766, 4.6278], { icon: blueIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello from Arles!</b><br>Famous for Roman monuments.");
-
-            // Nice
-            L.marker([43.7102, 7.2620], { icon: blueIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello from Nice!</b><br>Beautiful city on the French Riviera.");
-
-            // Arcachon
-            L.marker([44.6540, -1.1676], { icon: blueIcon }).addTo(mapEurope)
-              .bindPopup("<b>Hello from Arcachon!</b><br>Seaside town famous for oysters.");
-
-
-            L.marker([47.55839, 7.57327], { icon: goldIcon }).addTo(mapEurope)
-              .bindPopup("<b>Welcome to Basel!</b><br>World city of art.");
+        createCircleMarker(51.3758, -2.3599, "<b>Hello Mr. Darcy!</b><br>I am in Bath.");
+        createCircleMarker(53.4808, -2.2426, "<b>Hello world!</b><br>I am in Manchester.");
+        createCircleMarker(53.4084, -2.9916, "<b>Hello world!</b><br>I am in Liverpool.");
+        createCircleMarker(51.3813, 1.3862, "<b>Hello world!</b><br>I am in Margate.");
+        createCircleMarker(51.7520, -1.2577, "<b>Hello world!</b><br>I am in Oxford.");
+        createCircleMarker(50.5640, -2.4456, "<b>Hello world!</b><br>I am on the Isle of Portland.");
+        createCircleMarker(50.8225, -0.1372, "<b>Hello world!</b><br>I am in Brighton.");
+        createCircleMarker(54.9783, -1.6174, "<b>Hello world!</b><br>I am in Newcastle upon Tyne.");
+        createCircleMarker(55.9533, -3.1883, "<b>Hello world!</b><br>I am in Edinburgh.");
+        createCircleMarker(55.8642, -4.2518, "<b>Hello world!</b><br>I am in Glasgow.");
+        createCircleMarker(57.4778, -4.2247, "<b>Hello world!</b><br>I am in Inverness.");
+        createCircleMarker(58.9784, -2.9611, "<b>Hello world!</b><br>I am on Orkney Main Island.");
+        createCircleMarker(59.3673, -2.4286, "<b>Hello world!</b><br>I am on North Ronaldsay.");
+        createCircleMarker(59.3519, -2.9001, "<b>Hello world!</b><br>I am on Papa Westray.");
+        createCircleMarker(57.8987, -5.1604, "<b>Hello world!</b><br>I am in Ullapool.");
+        createCircleMarker(57.0050, -5.8280, "<b>Hello world!</b><br>I am in Mallaig.");
+        createCircleMarker(56.4158, -5.4710, "<b>Hello world!</b><br>I am in Oban.");
+        createCircleMarker(54.5973, -5.9301, "<b>Hello world!</b><br>I am in Belfast.");
+        createCircleMarker(55.0067, -7.3183, "<b>Hello world!</b><br>I am in Londonderry.");
+        createCircleMarker(55.2894, -6.2035, "<b>Hello world!</b><br>I am on Rathlin Island.");
+        createCircleMarker(53.3498, -6.2603, "<b>Hello world!</b><br>I am in Dublin.");
+        createCircleMarker(51.8985, -8.4756, "<b>Hello world!</b><br>I am in Cork.");
+        createCircleMarker(52.6680, -8.6305, "<b>Hello world!</b><br>I am in Limerick.");
+        createCircleMarker(53.2707, -9.0568, "<b>Hello world!</b><br>I am in Galway.");
+        createCircleMarker(53.1283, -9.6886, "<b>Hello world!</b><br>I am on Inishmore.");
+        createCircleMarker(48.8566, 2.3522, "<b>Welcome to Paris!</b><br>The City of Light.");
+        createCircleMarker(43.48012, -1.55558, "<b>Hello from Biarritz!</b><br>Surfing culture in France.");
+        createCircleMarker(43.26271, -2.92528, "<b>Welcome to Bilbao!</b><br>Basque town with a lot of art.");
+        createCircleMarker(40.4168, -3.7038, "<b>Hello from Madrid!</b><br>Capital of Spain.");
+        createCircleMarker(41.3851, 2.1734, "<b>Hello from Barcelona!</b><br>Famous for art and architecture.");
+        createCircleMarker(39.4699, -0.3763, "<b>Hello from Valencia!</b><br>Known for its City of Arts and Sciences.");
+        createCircleMarker(39.6953, 3.0176, "<b>Hello from Majorca!</b><br>Beautiful island in the Balearics.");
+        createCircleMarker(38.9067, 1.4206, "<b>Hello from Ibiza!</b><br>Island famous for its nightlife.");
+        createCircleMarker(37.1773, -3.5986, "<b>Hello from Granada!</b><br>Home of the Alhambra.");
+        createCircleMarker(36.5271, -6.2886, "<b>Hello from Cadiz!</b><br>Historic port city.");
+        createCircleMarker(36.0131, -5.6060, "<b>Hello from Tarifa!</b><br>Southernmost point of Spain, known for kitesurfing.");
+        createCircleMarker(36.7213, -4.4214, "<b>Hello from Malaga!</b><br>Port city on the Costa del Sol.");
+        createCircleMarker(37.3891, -5.9845, "<b>Hello from Sevilla!</b><br>Capital of Andalusia.");
+        createCircleMarker(37.8882, -4.7794, "<b>Hello from Cordoba!</b><br>Famous for its mosque-cathedral.");
+        createCircleMarker(36.8340, -2.4637, "<b>Hello from Almeria!</b><br>City on the southeastern coast of Spain.");
+        createCircleMarker(43.3183, -1.9812, "<b>Hello from San Sebastian!</b><br>Known for its beaches and cuisine.");
+        createCircleMarker(38.7223, -9.1393, "<b>Hello from Lisbon!</b><br>Capital of Portugal.");
+        createCircleMarker(40.9701, -5.6635, "<b>Hello from Salamanca!</b><br>Historic university city.");
+        createCircleMarker(48.5734, 7.7521, "<b>Hello from Strasbourg!</b><br>Historic city in France.");
+        createCircleMarker(43.2965, 5.3698, "<b>Hello from Marseille!</b><br>Port city in southern France.");
+        createCircleMarker(43.8766, 5.3952, "<b>Hello from Apt!</b><br>Charming town in Provence.");
+        createCircleMarker(43.6766, 4.6278, "<b>Hello from Arles!</b><br>Famous for Roman monuments.");
+        createCircleMarker(43.7102, 7.2620, "<b>Hello from Nice!</b><br>Beautiful city on the French Riviera.");
+        createCircleMarker(44.6540, -1.1676, "<b>Hello from Arcachon!</b><br>Seaside town famous for oysters.");
+        createCircleMarker(47.55839, 7.57327, "<b>Welcome to Basel!</b><br>World city of art.");
         </script>
 
         <br>
