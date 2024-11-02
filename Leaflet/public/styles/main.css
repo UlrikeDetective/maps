@@ -12,30 +12,69 @@ body {
 }
 body {
   background: #f6f6f6;
-
   color: #0d0f0f;
 }
+
+.large-heading {
+  font-family: "Pacifico", cursive; /* Your chosen font */
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4em; /* Adjust this value as needed */
+}
+
+.medium-heading {
+  font-family: "Cutive Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3em;
+}
+.small-heading {
+  font-family: "Cutive Mono", monospace;
+  font-weight: 200;
+  font-style: normal;
+}
+
+nav a {
+  font-family: "Cutive Mono", monospace;
+  font-size: 1.4em; /* Adjust the size as needed */
+  color: #333; /* Change the color as needed */
+  text-decoration: none; /* Remove underline */
+}
+
+nav a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+
 
 .ag-canvas {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin: 0 2rem; 
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-
   position: relative;
   visibility: visible;
-
   width: 100%;
   height: 100%;
-  padding: 3rem 1rem;
+  padding: 8rem 8rem;
   opacity: 1;
   transition: opacity 0.5s;
-
   z-index: -1;
   margin-top: -90px;
 }
+
+.map-container {
+  margin: 0 2rem; /* Adjusts space on the left and right */
+  padding: 1rem;  /* Optional: adds padding inside the container */
+  background: #fff; /* Optional: background color for visibility */
+  border-radius: 8px; /* Optional: rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+}
+
+
 .ag-canvas_svg {
   display: block;
   width: 100%;
@@ -69,6 +108,7 @@ body {
     height: auto;
     padding: 4rem 1rem 1rem;
   }
+
   .ag-canvas_svg {
     max-height: calc(100% - 6rem);
     margin-left: 0;
@@ -85,31 +125,6 @@ input {
   padding: 15px;
   box-sizing: border-box;
   font-size: 14px;
-}
-
-button {
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  outline: 0;
-  background: #152d30;
-  /* float: right;
-  margin-bottom: -100px; */
-  border: 0;
-  padding: 15px;
-  color: #ffffff;
-  font-size: 14px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
-  cursor: pointer;
-}
-
-.total-count {
-  font-family: "Roboto", sans-serif;
-  color: white;
-  position: absolute;
-  padding: 15px;
-  left: 0;
-  bottom: 0;
 }
 
 .custom-circle-marker svg {

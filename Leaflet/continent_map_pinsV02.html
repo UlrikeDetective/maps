@@ -1,48 +1,46 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Map with Random Colored Markers</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <link rel="stylesheet" href="./public/styles/main.css">
+<title>Map with Random Colored Markers</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<link rel="stylesheet" href="./public/styles/main.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Welcome to my travel map!</h1>
-    </header>
+<header>
+    <h1 class="large-heading">Welcome to my travel map!</h1>
+</header>
 
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#maps">Maps with Leaflet</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#maps">Maps with Leaflet</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-    <main>
-        <section>
-            <h2>Europe</h2>
-            <p>Homebase and the continent I traveled the most. From the Azores in the West to Istanbul in the 
-                East. From Tarifa in the South (or Malta) to Stockholm in the North.
-            </p>
-        </section>
 
-        <!-- First map container -->
+<main>
+    <section>
+        <h1 class="medium-heading">Europe</h1>
+        <h3 class="small-heading">Homebase and the continent I traveled the most. From the Azores in the West to Istanbul in the 
+            East. From Tarifa in the South (or Malta) to Stockholm in the North.
+        </h3>
+    </section>
+
+    <!-- First map container -->
+
+<div id="map" style="height: 500px;"></div>
+    <svg id=""map" width=""204" height="100"></svg>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+    // Initialize the map
+    const mapEurope = L.map('map').setView([50.5, -0.09], 4);
     
-    <div id="map" style="height: 500px;"></div>
-        <svg id=""map" width=""204" height="100"></svg>
-    
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script>
-        // Initialize the map
-        const mapEurope = L.map('map').setView([50.5, -0.09], 4);
-        
-        // Add a simple base layer
-        L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://carto.com/attributions">CARTO</a>'
-        }).addTo(mapEurope);
+    // Add a simple base layer
+    L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://carto.com/attributions">CARTO</a>'
+    }).addTo(mapEurope);
 
         // Function to generate random colors
         function getRandomColor() {
@@ -158,8 +156,8 @@
 
         <br>
         <section>
-            <h3>Next North America</h3>
-            <p>Stops in North America - Let's go west.</p>
+            <h1 class="medium-heading">Next North America</h1>
+            <h3 class="small-heading">Stops in North America - Let's go west.</h3>
         </section>
         <!-- Second map container -->
 <div id="mapNAmerica" style="height: 500px;"></div>
@@ -219,8 +217,8 @@
 
         <br>
         <section>
-            <h3>Next Asia</h3>
-            <p>Stops in Asia - Let's go east.</p>
+            <h1 class="medium-heading">Next Asia</h1>
+            <h3 class="small-heading">Stops in Asia - Let's go east.</h3>
         </section>
         <!-- Second map container -->
         <div id="mapAsia" style="height: 500px;"></div>
@@ -284,8 +282,8 @@
 
         <br>
         <section>
-            <h3>Next Africa</h3>
-            <p>Stops in Africa - Let's go to the south.</p>
+            <h1 class="medium-heading">Next Africa</h1>
+            <h3 class="small-heading">Stops in Africa - Let's go to the south.</h3>
         </section>
         <!-- Second map container -->
         <div id="mapAfrica" style="height: 500px;"></div>
@@ -334,8 +332,8 @@
         
         <br>
         <section>
-            <h3>Ozeania</h3>
-            <p>Still on the list as travel destitions</p>
+            <h1 class="medium-heading">Ozeania</h1>
+            <h3 class="small-heading">Still on the list as travel destitions</h3>
         </section>
         <!-- Second map container -->
         <div id="mapOceania" style="height: 500px;"></div>
@@ -367,8 +365,8 @@
 
               <br>
         <section>
-            <h3>South America</h3>
-            <p>Still on the list as travel destitions</p>
+            <h1 class="medium-heading">South America</h1>
+            <h3 class="small-heading">Still on the list as travel destitions</h3>
         </section>
         <!-- Second map container -->
         <div id="mapSAmerica" style="height: 500px;"></div>
@@ -401,7 +399,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2024, your curious traveler Ulrike. All rights reserved.</p>
+        <h3 class="small-heading">&copy; 2024, your curious traveler Ulrike. All rights reserved.</h3>
     </footer>
 
 </body>
