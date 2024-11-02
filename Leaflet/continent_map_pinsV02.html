@@ -30,6 +30,7 @@
         <!-- First map container -->
     
     <div id="map" style="height: 500px;"></div>
+        <svg id=""map" width=""204" height="100"></svg>
     
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
@@ -135,24 +136,9 @@
     var mapNAmerica = L.map('mapNAmerica').setView([30.4882, -97.7618], 3);
 
     // Add OpenStreetMap tile layer to the second map
-    L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://stamen.com">Stamen Design</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+     L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://carto.com/attributions">CARTO</a>'
     }).addTo(mapNAmerica);
-
-    // Define the custom redpin icon
-    var redPinIcon = L.icon({
-        iconUrl: 'redsmallpin.png',  // Path to the redpin image
-        iconSize: [38, 38],     // Size of the icon
-        iconAnchor: [19, 38],   // Point of the icon which will correspond to marker's location
-        popupAnchor: [0, -38]   // Point from which the popup should open relative to the iconAnchor
-    });
-
-      var PinBearIcon = L.icon({
-        iconUrl: 'pins/pinBackpack01.png',  // Path to the redpin image
-        iconSize: [38, 38],     // Size of the icon
-        iconAnchor: [19, 38],   // Point of the icon which will correspond to marker's location
-        popupAnchor: [0, -38]   // Point from which the popup should open relative to the iconAnchor
-    });
 
 
     // Add multiple markers to the second map using the custom icon
@@ -260,8 +246,8 @@
             var mapAsia = L.map('mapAsia').setView([13.7563, 100.5018], 4);
 
             // Add OpenStreetMap tile layer to the second map
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+             L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+             attribution: '&copy; <a href="https://carto.com/attributions">CARTO</a>'
             }).addTo(mapAsia);
 
                         // Delhi
@@ -403,8 +389,8 @@
             var mapAfrica = L.map('mapAfrica').setView([3.8480, 11.5021], 3);
 
             // Add OpenStreetMap tile layer to the second map
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+             L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://carto.com/attributions">CARTO</a>'
             }).addTo(mapAfrica);
 
                        // Casablanca
@@ -472,8 +458,8 @@
             // Initialize the second map (USA) and set its view to Los Angeles
             var mapOceania = L.map('mapOceania').setView([-27.46, 153.2], 3);
          // Add OpenStreetMap tile layer to the second map
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+             L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://carto.com/attributions">CARTO</a>'
             }).addTo(mapOceania);
 
         </script>
@@ -491,8 +477,8 @@
             // Initialize the second map (USA) and set its view to Los Angeles
             var mapSAmerica = L.map('mapSAmerica').setView([-25.3, -57.6], 3);
          // Add OpenStreetMap tile layer to the second map
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+             L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://carto.com/attributions">CARTO</a>'
             }).addTo(mapSAmerica);
 
         </script>
