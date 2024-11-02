@@ -11,9 +11,9 @@ body {
   height: 100%;
 }
 body {
-  background: #00909E;
+  background: #d1ebed;
 
-  color: #CEE5E9;
+  color: #0d0f0f;
 }
 
 .ag-canvas {
@@ -78,7 +78,7 @@ body {
 input {
   font-family: "Roboto", sans-serif;
   outline: 0;
-  background: #0A9195;
+  background: #c1eff1;
   width: 100%;
   border: 0;
   margin: 0 0 15px;
@@ -91,7 +91,7 @@ button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: #1F6F7C;
+  background: #152d30;
   /* float: right;
   margin-bottom: -100px; */
   border: 0;
@@ -110,4 +110,8 @@ button {
   padding: 15px;
   left: 0;
   bottom: 0;
+}
+
+.custom-circle-marker svg {
+  overflow: visible;
 }
