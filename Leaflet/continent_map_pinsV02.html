@@ -34,7 +34,7 @@
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
         // Initialize the map
-        const mapEurope = L.map('map').setView([51.5, -0.09], 5);
+        const mapEurope = L.map('map').setView([50.5, -0.09], 4);
         
         // Add a simple base layer
         L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
@@ -57,7 +57,7 @@
             const circleMarker = L.divIcon({
                 className: 'custom-circle-marker',
                 html: `<svg width="20" height="20" viewBox="0 0 20 20">
-                            <circle cx="10" cy="10" r="10" fill="${randomColor}" />
+                            <circle cx="10" cy="10" r="9" fill="${randomColor}" />
                         </svg>`,
                 iconSize: [20, 20],
                 iconAnchor: [10, 10]
