@@ -19,7 +19,7 @@ body {
   font-family: "Pacifico", cursive; /* Your chosen font */
   font-weight: 400;
   font-style: normal;
-  font-size: 4em; /* Adjust this value as needed */
+  font-size: 6em; /* Adjust this value as needed */
 }
 
 .medium-heading {
@@ -43,6 +43,10 @@ nav a {
 
 nav a:hover {
   color: #007bff; /* Change color on hover */
+}
+
+.leaflet-popup-content {
+  font-family: "Cutive Mono", monospace;
 }
 
 
