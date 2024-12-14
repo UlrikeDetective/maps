@@ -2,6 +2,7 @@ import osmnx as ox
 import geopandas as gpd
 import pandas as pd
 from shapely.geometry import Point, box
+import matplotlib.pyplot as plt  # Ensure matplotlib is imported for plotting
 
 def calculate_walkability_score(location, radius=1000):
     """
@@ -57,3 +58,25 @@ def calculate_walkability_score(location, radius=1000):
 def normalize(value, min_val=0, max_val=100):
     """Normalize value to 0–100 scale"""
     return min(100, max(0, (value - min_val) / (max_val - min_val) * 100))
+
+def main():
+    # Prompt the user to choose input method
+    choice = input("Enter 1 for coordinates, 2 for address: ")
+    if choice == "1":
+        latitude = float(input("Enter latitude: "))
+        longitude = float(input("Enter longitude: "))
+        location = (latitude, longitude)
+    elif choice == "2":
+        address = input("Enter an address: ")
+        location = ox.geocode(address)
+    else:
+        print("Invalid choice. Exiting.")
+        return
+
+    # Calculate walkability score
+    score, metrics = calculate_walkability_score(location)
+    print(f"Walkability Score: {score}")
+    print(metrics)
+
+if __name__ == "__main__":
+    main()
