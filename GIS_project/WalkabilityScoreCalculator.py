@@ -1,8 +1,5 @@
 import osmnx as ox
-import geopandas as gpd
-import pandas as pd
-from shapely.geometry import Point, box
-import matplotlib.pyplot as plt  # Ensure matplotlib is imported for plotting
+import matplotlib.pyplot as plt
 
 def calculate_walkability_score(location, radius=1000):
     """
@@ -14,27 +11,27 @@ def calculate_walkability_score(location, radius=1000):
     # Download street network and amenities
     G = ox.graph_from_point(location, dist=radius, network_type='walk')
     
-    # Get amenities from OSM
-    amenities = ox.geometries_from_point(
-        location, 
+    # Get amenities from OSM using features_from_point
+    amenities = ox.features_from_point(
+        location,
         tags={'amenity': True},
         dist=radius
     )
     
     # Calculate metrics
-    area = radius * radius * 3.14159 / 1000000  # km²
-    
+    area = (radius**2 * 3.14159) / 1e6  # km²
+
     # Street density (km/km²)
-    edge_lengths = ox.utils_graph.get_route_edge_attributes(G, 'length')
+    edge_lengths = [data['length'] for _, _, data in G.edges(data=True)]
     street_density = sum(edge_lengths) / 1000 / area
-    
+
     # Intersection density
     nodes, edges = ox.graph_to_gdfs(G)
-    intersection_density = len(nodes[nodes.street_count > 1]) / area
-    
+    intersection_density = len(nodes[nodes['street_count'] > 1]) / area
+
     # Amenity score
     amenity_score = len(amenities) / area
-    
+
     # Calculate final score (weighted average)
     walkability_score = (
         0.4 * normalize(street_density) +
@@ -56,7 +53,7 @@ def calculate_walkability_score(location, radius=1000):
     }
 
 def normalize(value, min_val=0, max_val=100):
-    """Normalize value to 0–100 scale"""
+    """Normalize value to a 0–100 scale"""
     return min(100, max(0, (value - min_val) / (max_val - min_val) * 100))
 
 def main():

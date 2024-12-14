@@ -1,0 +1,18 @@
+Coordinates: 51.5074, -0.1278 (London)
+Address: "Eiffel Tower, Paris"
+
+Street Address: Include the street name, number, city, and country (optional for well-known locations).
+
+Example: "1600 Amphitheatre Parkway, Mountain View, CA"
+Example: "221B Baker Street, London"
+City and Country: If you don’t have an exact street address.
+
+Example: "Berlin, Germany"
+Example: "New York, USA"
+Landmarks: Famous places or points of interest (only if uniquely identifiable).
+
+Example: "Eiffel Tower, Paris"
+Example: "Statue of Liberty"
+Postal Codes: If the postal code is specific enough to identify the area.
+
+Example: "10115, Berlin, Germany"
