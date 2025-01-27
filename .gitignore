@@ -171,3 +171,13 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 .DS_Store
+# Additional files to ignore
+activate*
+cmark
+pip*
+pyvenv.cfg
+f2py
+pybabel
+python*
+numpy-config
+
