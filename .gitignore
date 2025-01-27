@@ -180,4 +180,23 @@ f2py
 pybabel
 python*
 numpy-config
+dubugpy
+ipython
+ipython3
+jupyter
+jupyter-kernel
+jupyter-kernelspec
+jupyter-migrate
+jupyter-run
+jupyter-troubleshoot
+pygmentize
+ipython.1
+fonttools
+normalizer
+pyftmerge
+pyftsubset
+pyproj
+ttx
+ttx.1
+
 
