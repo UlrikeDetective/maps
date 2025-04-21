@@ -1,0 +1,3 @@
+- use bubble markers
+- use a different color for the markers
+- use only the north of the island of Fuerteventura to plot
