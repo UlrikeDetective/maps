@@ -45,7 +45,7 @@ def plot_earthquakes(quakes, nepal):
     plt.legend()
     plt.show()
 
-def main():
+def get_quakes():
     url = f"{CATALOG_URL}?{urllib.parse.urlencode(params)}"
     quakes = gpd.read_file(url, columns=columns)
 
@@ -60,7 +60,6 @@ def main():
     quakes = quakes[quakes.within(nepal.iloc[0]['geometry'])]
 
     # sort from earliest to latest
-    # localize the datetime to Nepal's datetime
     quakes = quakes.sort_values("time", ascending=True, ignore_index=True)
     quakes["time"] = pd.to_datetime(quakes["time"], unit="ms").dt.tz_localize(
         tz="Asia/Kathmandu",
@@ -70,6 +69,17 @@ def main():
     quakes = quakes.join(
         quakes.get_coordinates().rename(columns=dict(y="latitude", x="longitude"))
     )
+    # Add a marker_size column based on magnitude
+    quakes["marker_size"] = quakes["mag"] ** 2 * 10
+
+    return quakes
+
+def main():
+    quakes = get_quakes()
+    # get the national boundary of Nepal
+    boundary_url = "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/refs/heads/main/releaseData/gbOpen/NPL/ADM0/geoBoundaries-NPL-ADM0.geojson"
+    nepal = gpd.read_file(boundary_url)
+
     plot_earthquakes(quakes, nepal)
 
 if __name__ == "__main__":
