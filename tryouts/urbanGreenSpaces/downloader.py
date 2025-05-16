@@ -30,7 +30,7 @@ def download_osm_buildings(place, output_path, bbox=None):
     Download OSM building footprints for a given place or bounding box.
 
     Parameters:
-    - place (str): e.g. "Mitte, Berlin, Germany"
+    - place (str): e.g. "Mitte, Leipzig, Germany"
     - output_path (str): Where to save the GeoJSON
     - bbox (tuple, optional): (north, south, east, west) to limit the area
     """
