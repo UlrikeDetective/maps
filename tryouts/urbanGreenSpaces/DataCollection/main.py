@@ -4,6 +4,7 @@ from downloader import (download_osm_data,
                         download_demography_data,
                         download_road_network)
 import pandas as pd
+import os
 
 # Example usage:
 if __name__ == '__main__':
@@ -13,7 +14,7 @@ if __name__ == '__main__':
     download_road_network("Leipzig, Germany", "data/Leipzig_roads_highways.geojson")
 
     # Load and process Leipzig population density data for 2024
-    csv_path = "Bevölkerungsbestand_Einwohnerdichte_Stadtbezirke.csv"
+    csv_path = os.path.join(os.path.dirname(__file__), "Bevölkerungsbestand_Einwohnerdichte_Stadtbezirke.csv")
     df = pd.read_csv(csv_path)
     df.columns = [col.strip().replace('\ufeff', '') for col in df.columns]
     # Only keep rows where 'Sachmerkmal' is 'Einwohnerdichte'
