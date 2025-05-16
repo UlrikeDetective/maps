@@ -32,4 +32,4 @@ print(f"✅ Edges saved to: {edges_path}")
 # --- STEP 4: Load the graph back from GraphML ---
 print("🔁 Reloading graph from GraphML...")
 G_loaded = ox.load_graphml(graphml_path)
-print(f"✅ Reloaded graph has {len(G_loaded.nodes)} nodes and {len(G_loaded.edges)} edges"
+print(f"✅ Reloaded graph has {len(G_loaded.nodes)} nodes and {len(G_loaded.edges)} edges")
