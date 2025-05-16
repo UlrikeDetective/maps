@@ -23,6 +23,7 @@ creds.js
 
 # Private Files
 *.json
+*.geojson
 # *.csv
 *.csv.gz
 *.tsv
