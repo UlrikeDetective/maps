@@ -24,10 +24,10 @@ import time
 if __name__ == "__main__":
 
     # --- 1. Load File Paths ---
-    buildings_path = "../DataCollection/data/berlin_mitte_buildings.geojson"
-    greens_path = "../DataCollection/data/berlin_green.geojson"
-    road_path = "../DataCollection/data/berlin_roads_walks.geojson"
-    graphml_path = "../DataCollection/data/berlin_walk.graphml"
+    buildings_path = "../DataCollection/data/leipzig_mitte_buildings.geojson"
+    greens_path = "../DataCollection/data/leipzig_green.geojson"
+    road_path = "../DataCollection/data/leipzig_roads_walks.geojson"
+    graphml_path = "../DataCollection/data/leipzig_walk.graphml"
 
     output_path = "data/green_accessibility.geojson"
 
@@ -40,19 +40,19 @@ if __name__ == "__main__":
     green_nodes_path = os.path.join(temp_dir, "green_nodes.pkl")
 
     # --- 1.5 Clip Datasets ---
-    print("✂️ Clipping roads and green spaces to Berlin-Mitte area...")
+    print("✂️ Clipping roads and green spaces to Leipzig-Mitte area...")
     pp.clip_to_area(
         input_path=road_path,
         clip_mask_path=buildings_path,
-        output_path="data/berlin_mitte_roads.geojson"
+        output_path="data/leipzig_mitte_roads.geojson"
     )
     pp.clip_to_area(
         input_path=greens_path,
         clip_mask_path=buildings_path,
-        output_path="data/berlin_mitte_green.geojson"
+        output_path="data/leipzig_mitte_green.geojson"
     )
 
-    greens_path = "data/berlin_mitte_green.geojson"
+    greens_path = "data/leipzig_mitte_green.geojson"
 
     # --- 2. Sanity Check on File Paths ---
     assert os.path.exists(buildings_path), f"❌ Missing: {buildings_path}"
@@ -145,7 +145,7 @@ if __name__ == "__main__":
 
 
 # ---------------------------- Data Collection ----------------------------
-def download_filtered_road_network(place="Berlin, Germany", output_path="data/berlin_selected_roads.geojson"):
+def download_filtered_road_network(place="Leipzig, Germany", output_path="data/leipzig_selected_roads.geojson"):
     """
     Downloads road network for a place and filters for highways, residential streets, and footpaths.
     """
@@ -176,8 +176,7 @@ def download_filtered_road_network(place="Berlin, Germany", output_path="data/be
         print(f"❌ Failed to download or filter road network: {e}")
 
 
-# ----------------------------
-def download_road_network(place, output_path):
+def download_road_network(place="Leipzig, Germany", output_path="data/leipzig_roads.geojson"):
     """
     Downloads OSM road network for a place and saves it as GeoJSON.
     """
