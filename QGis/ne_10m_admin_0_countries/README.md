@@ -1,117 +1,83 @@
-* How to make a firefly map with QGIS
-💡 If you haven’t used QGIS before, run — don’t walk! You can download it for free here! QGIS is a community-built, open source GIS software which is totally free!
+# How to Make a Firefly Map with QGIS
 
-Step 1: set the scene
-The foundation of a great firefly map is a beautiful, dark basemap. Otherwise, you can find a wide range of pre-built basemaps by:
+💡 **New to QGIS?** Download it for free: [QGIS Official Site](https://qgis.org/). QGIS is a powerful, open-source GIS software—completely free!
 
-Open QGIS and head to the Plugins drop-down menu (top of the screen) and open Manage and Install Plugins.
-Search for QuickMapServices and install this plugin.
-Leave the plugin menu, and open the Web drop-down menu.
-Via QuickMapServices, go through Settings > More Settings > and enable Get contributed pack.
-If you head back to this menu, you’ll now see there’s a host of webmaps available for you to use, including a number of really nice dark options. Some of these require licenses so be mindful of that when using them.
-You can also adapt any basemap’s coloration, brightness and contrast in the layer’s symbology (although again, be mindful of the license terms).
+---
 
-If you have the time — and patience — you can build you own! I’m just going to use country boundaries from Natural Earth to keep things nice and simple (see below).
+## Step 1: Set the Scene
 
-Option 1: Download Natural Earth data manually
-Go to the official Natural Earth website:
-https://www.naturalearthdata.com/downloads/
+A great firefly map starts with a beautiful, dark basemap.
 
-Choose a dataset:
+### Option 1: Use QuickMapServices Plugin
+1. **Open QGIS**
+2. Go to **Plugins > Manage and Install Plugins**
+3. Search for **QuickMapServices** and install it
+4. Go to **Web > QuickMapServices > Settings > More Settings**
+5. Enable **Get contributed pack**
+6. Return to **Web > QuickMapServices** to access a wide range of webmaps (including dark basemaps)
+   - *Note: Some maps require licenses—check before use!*
+7. You can also adjust any basemap’s color, brightness, and contrast in the layer’s symbology
 
-For country boundaries:
-Go to Cultural > Admin 0 – Countries
-(direct link)
+### Option 2: Download Natural Earth Data Manually
+1. Visit [Natural Earth Downloads](https://www.naturalearthdata.com/downloads/)
+2. For country boundaries: **Cultural > Admin 0 – Countries**
+3. Download the **Shapefile (SHP)** version (choose 1:110m for simplicity)
+4. Unzip the folder
+5. In QGIS: **Layer > Add Layer > Add Vector Layer...**
+6. Browse to the `.shp` file and add it
 
-Download the Shapefile (SHP) version — usually available in 1:110m, 1:50m, and 1:10m scales:
+### Option 3: Use QGIS Built-in Data Sources
+- Open **Browser Panel** (View > Panels > Browser)
+- Scroll to **XYZ Tiles** or **Open Data Sources**
+- Or use QuickMapServices for raster basemaps
 
-Smaller scale = less detail = faster to render.
+---
 
-Start with 1:110m to keep it simple and fast.
+## 🔧 Pro Tip: Styling for Firefly Maps
+- **Right-click layer > Properties > Symbology**
+- Set **fill color** to transparent
+- Set **border color** to a bright, glowing color (e.g. neon green `#39FF14`, cyan, yellow)
+- Use **Draw Effects** to add an outer glow for the firefly effect
 
-Unzip the downloaded folder.
+---
 
-In QGIS:
+## Step 2: Add Your Firefly Layer
 
-Go to Layer > Add Layer > Add Vector Layer...
+Let’s add the layer you want to “glow.” Example: UK pub locations from OpenStreetMap.
 
-Browse to the .shp file you unzipped (e.g. ne_110m_admin_0_countries.shp) and add it.
+### Option 1: Use the QuickOSM Plugin *(Recommended)*
+1. **Install QuickOSM Plugin**
+   - Plugins > Manage and Install Plugins…
+   - Search for **QuickOSM** and install
+2. **Download UK Pubs Data**
+   - Vector > QuickOSM > QuickOSM
+   - Set **Key:** `amenity`, **Value:** `pub`, **In:** United Kingdom
+   - Click **Run Query**
+3. **Save the Layer (Optional)**
+   - Right-click the new layer > Export > Save Features As... (e.g. Shapefile or GeoPackage)
 
-✅ Option 2: Use Natural Earth from QGIS’s built-in data sources
-If you prefer not to download manually:
+### Option 2: Use Geofabrik Downloads (Manual)
+1. Go to [Geofabrik Downloads](https://download.geofabrik.de/)
+   - Navigate to Europe > Great Britain
+2. Download the `.osm.pbf` file
+3. Use a tool like `osmconvert` or `osmfilter` to extract pubs, or open in QGIS:
+   - Vector > OpenStreetMap > Import Topology from XML
+   - Use OSM Feature to filter for `amenity=pub`
 
-Open Browser Panel in QGIS (View > Panels > Browser).
-
-Scroll down to XYZ Tiles or Open Data Sources.
-
-Alternatively, use the QuickMapServices plugin (already installed from your guide), but this usually gives raster basemaps, not vector layers like country boundaries.
-
-🔧 Pro Tip: Styling for Firefly Maps
-Once you have the country borders loaded:
-
-Right-click the layer > Properties > Symbology.
-
-Set fill color to transparent.
-
-Set border color to a bright, glowing color (e.g. neon green #39FF14, cyan, or yellow).
-
-Use “Draw Effects” to add an outer glow for that firefly effect.
-
-Step 2: your firefly layer
-Next, add the layer to your map that you want to “glow!” I’m using UK pub locations from OpenStreetMap because… I don’t have to justify myself. (© OpenStreetMap contributors)
-
-So this is what we’re dealing with… there are so many pubs (what a great problem to have) that it’s difficult to make out any spatial patterns. Let’s firefly this up!
-
-
-Option 1: Use the QuickOSM Plugin (Best Option)
-1. Install the QuickOSM Plugin:
-Go to Plugins > Manage and Install Plugins…
-
-Search for QuickOSM and click Install Plugin
-
-2. Download UK Pubs Data:
-Go to Vector > QuickOSM > QuickOSM
-
-In the dialog:
-
-Key: amenity
-
-Value: pub
-
-In: Select United Kingdom (or a specific region if you like)
-
-Click Run Query
-
-This will download all features tagged as amenity=pub in the selected area from OpenStreetMap.
-
-3. Save the Layer (optional):
-Once it appears on the map, you can right-click the new layer > Export > Save Features As... to save it as a shapefile or GeoPackage for later use.
-
-✅ Option 2: Use Geofabrik Downloads (Manual Way)
-If you want a large dataset and prefer working offline:
-
-1. Go to Geofabrik Downloads
-Navigate to Europe > Great Britain
-
-2. Download the .osm.pbf file
-3. Use a tool like osmconvert or osmfilter to extract pubs, or open it in QGIS using:
-Vector > OpenStreetMap > Import Topology from XML
-
-(Then use OSM Feature to filter and extract amenity=pub)
-
-✅ Option 3: Use Overpass Turbo (for smaller datasets)
-If you only want pub data for a smaller region like London or Manchester:
-
-1. Go to Overpass Turbo
+### Option 3: Use Overpass Turbo (For Small Regions)
+1. Go to [Overpass Turbo](https://overpass-turbo.eu/)
 2. Paste this query:
-overpassql
-Copy
-Edit
-[out:json][timeout:25];
-area["name"="United Kingdom"]->.searchArea;
-node["amenity"="pub"](area.searchArea);
-out body;
->;
-out skel qt;
-3. Click Run, then Export > GeoJSON or QGIS
-Then open that file in QGIS.
+   ```overpassql
+   [out:json][timeout:25];
+   area["name"="United Kingdom"]->.searchArea;
+   node["amenity"="pub"](area.searchArea);
+   out body;
+   >;
+   out skel qt;
+   ```
+3. Click **Run**, then **Export > GeoJSON** or **QGIS**
+4. Open the exported file in QGIS
+
+---
+
+Enjoy making your firefly map! ✨
