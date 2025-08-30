@@ -210,4 +210,7 @@ duckdbtryouts/urbanGreenSpaces/data/Leipzig_roads_highways.geojson
 # Parquet files
 .parquet
 
+# Ignore all QGIS and Parquet files
+*.pbf
+*.parquet
 
