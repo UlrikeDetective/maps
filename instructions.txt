@@ -1,5 +1,5 @@
-python3 -m venv maps_env
-source maps_env/bin/activate
+python3 -m venv maps_env311
+source maps_env311/bin/activate
 
 pip install ...
 
