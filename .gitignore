@@ -202,3 +202,12 @@ ttx.1
 
 
 duckdbtryouts/urbanGreenSpaces/data/Leipzig_roads_highways.geojson
+
+# QGIS project files
+.qgs
+.qgz
+
+# Parquet files
+.parquet
+
+
