@@ -22,8 +22,8 @@ node_modules/
 creds.js
 
 # Private Files
-*.json
-*.geojson
+#*.json
+#*.geojson
 # *.csv
 *.csv.gz
 *.tsv
@@ -247,3 +247,29 @@ venv/
 
 .DS_Store
 python
+
+# projects
+.spyderproject
+.spyproject
+.idea
+.ropeproject
+.vscode
+
+*.py~
+.DS_Store
+
+examples/nybb_*.zip
+
+doc/source/savefig
+doc/source/reference
+doc/source/docs/reference/api/*.rst
+
+geopandas.egg-info
+geopandas/version.py
+geopandas/datasets/ne_110m_admin_0_countries.zip
+
+.asv
+doc/source/getting_started/my_file.geojson
+
+.ruff_cache
+.env
