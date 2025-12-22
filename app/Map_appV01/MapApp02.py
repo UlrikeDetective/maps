@@ -1,13 +1,10 @@
-# python -m venv myenv
-
-# source myenv/bin/activate
-
+# python -m venv venv
+# source venv/bin/activate
 # python -m pip install toga
 
-# python /Users/ulrike_imac_air/projects/maps/app/Map_appV01/MapApp02.py
+# or conda activate geo_env
 
-
-
+# python3 /app/Map_appV01/MapApp02.py
 
 import toga
 from toga.style import Pack
@@ -36,9 +33,9 @@ def record_entry(widget, app):
 
     data = [current_time, latlng, city, state, country, destination, transport_mode, weather]
 
-    # Get the user's default Downloads folder
-    downloads_folder = os.path.join(os.path.expanduser('~'), 'Downloads')
-    csv_file = os.path.join(downloads_folder, 'recorded_data_2024.csv')
+    # Get the directory of the current script to create a relative path
+    script_path = os.path.dirname(os.path.abspath(__file__))
+    csv_file = os.path.join(script_path, "Data", "recorded_data.csv")
 
     file_exists = os.path.isfile(csv_file)
 

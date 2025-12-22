@@ -4,4 +4,4 @@ source myenv/bin/activate
 
 python -m pip install toga
 
-python /Users/ulrike_imac_air/projects/maps/app/Map_appV01/MapApp02.py
+python3 /app/Map_appV01/MapApp02.py

@@ -8,3 +8,5 @@ Timestamp,Latitude and Longitude,City,State,Country,Destination,Transportation M
 2024-09-26 11:53:41,"[37.4241, -122.1661]",Stanford,California,US,Stanford,Foot,Warm
 2024-09-27 09:24:20,"[37.4241, -122.1661]",Stanford,California,US,Stanford University,Foot,Hot and Sunny
 2024-09-30 17:53:18,"[20.8895, -156.4743]",Kahului,Hawaii,US,Maui,Flight,Hot and Sunny
+2025-12-22 11:51:39,"[51.3396, 12.3713]",Leipzig,Saxony,DE,Chemnitz,Train,Cool
+2025-12-22 11:52:30,"[51.3396, 12.3713]",Leipzig,Saxony,DE,Oelsnitz,Train,Cool
