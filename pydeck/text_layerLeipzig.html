@@ -1,0 +1,4704 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>pydeck</title>
+        <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.13.0/mapbox-gl.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <script src='https://cdn.jsdelivr.net/npm/@deck.gl/jupyter-widget@~8.8.*/dist/index.js'></script>
+    <style>
+    body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#deck-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#deck-container canvas {
+  z-index: 1;
+  background: none;
+}
+    </style>
+  </head>
+  <body>
+    <div id="deck-container">
+    </div>
+  </body>
+  <script>
+    const container = document.getElementById('deck-container');
+    const jsonInput = {
+  "initialViewState": {
+    "bearing": 0,
+    "latitude": 51.345693,
+    "longitude": 12.380429,
+    "pitch": 45,
+    "zoom": 10
+  },
+  "layers": [
+    {
+      "@@type": "TextLayer",
+      "data": [
+        {
+          "city": "Leipzig",
+          "id": 145,
+          "latitude": 51.361549,
+          "longitude": 12.446576,
+          "name": "Arcus Park"
+        },
+        {
+          "city": "Leipzig",
+          "id": 152,
+          "latitude": 51.340535,
+          "longitude": 12.402015,
+          "name": "Bergstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 154,
+          "latitude": 51.351846,
+          "longitude": 12.286913,
+          "name": "Breitscheidhof"
+        },
+        {
+          "city": "Leipzig",
+          "id": 163,
+          "latitude": 51.376178,
+          "longitude": 12.365034,
+          "name": "Bremer Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 164,
+          "latitude": 51.299188,
+          "longitude": 12.392814,
+          "name": "Dankwartstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 165,
+          "latitude": 51.320852,
+          "longitude": 12.385905,
+          "name": "S-Bahnhof MDR (Bus)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 170,
+          "latitude": 51.327134,
+          "longitude": 12.337815,
+          "name": "Erich-Zeigner-Allee"
+        },
+        {
+          "city": "Leipzig",
+          "id": 192,
+          "latitude": 51.355432,
+          "longitude": 12.286969,
+          "name": "Goetheplatz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 223,
+          "latitude": 51.334239,
+          "longitude": 12.314676,
+          "name": "Gr\u00f6pplerstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 243,
+          "latitude": 51.339061,
+          "longitude": 12.332653,
+          "name": "Lindenau, Nathanaelkirche"
+        },
+        {
+          "city": "Leipzig",
+          "id": 486,
+          "latitude": 51.355178,
+          "longitude": 12.305548,
+          "name": "Lise-Meitner-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 613,
+          "latitude": 51.348684,
+          "longitude": 12.430274,
+          "name": "Louis-F\u00fcrnberg-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 688,
+          "latitude": 51.335053,
+          "longitude": 12.311965,
+          "name": "Morgensternstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 693,
+          "latitude": 51.346746,
+          "longitude": 12.430115,
+          "name": "Reinhardtstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 694,
+          "latitude": 51.346076,
+          "longitude": 12.428112,
+          "name": "Rosmarinweg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 695,
+          "latitude": 51.326086,
+          "longitude": 12.340523,
+          "name": "Schleu\u00dfig, Karlbr\u00fccke"
+        },
+        {
+          "city": "Leipzig",
+          "id": 696,
+          "latitude": 51.353765,
+          "longitude": 12.430238,
+          "name": "Schwantesstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 697,
+          "latitude": 51.339647,
+          "longitude": 12.433015,
+          "name": "St\u00fcnz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 698,
+          "latitude": 51.357421,
+          "longitude": 12.411295,
+          "name": "Taubestr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 701,
+          "latitude": 51.344313,
+          "longitude": 12.274328,
+          "name": "R\u00fcckmarsdorf, Tucholskystr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 702,
+          "latitude": 51.354182,
+          "longitude": 12.28922,
+          "name": "Wilhelm-Winkler-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 703,
+          "latitude": 51.3561,
+          "longitude": 12.409114,
+          "name": "Zittauer Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 704,
+          "latitude": 51.340216,
+          "longitude": 12.431393,
+          "name": "Zweenfurther Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 705,
+          "latitude": 51.34209,
+          "longitude": 12.429752,
+          "name": "Cunnersdorfer Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 712,
+          "latitude": 51.386147,
+          "longitude": 12.455525,
+          "name": "Portitz, Schule"
+        },
+        {
+          "city": "Leipzig",
+          "id": 823,
+          "latitude": 51.399007,
+          "longitude": 12.295227,
+          "name": "Porsche/Tor 2"
+        },
+        {
+          "city": "Leipzig",
+          "id": 851,
+          "latitude": 51.40104,
+          "longitude": 12.284319,
+          "name": "Porsche/Tor 3"
+        },
+        {
+          "city": "Leipzig",
+          "id": 910,
+          "latitude": 51.333358,
+          "longitude": 12.37632,
+          "name": "Ro\u00dfplatz/Gr\u00fcnewaldstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 3639,
+          "latitude": 51.356536,
+          "longitude": 12.430804,
+          "name": "B\u00e4stlein-/Schwantesstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 3744,
+          "latitude": 51.410368,
+          "longitude": 12.295383,
+          "name": "Porsche/Tor 1"
+        },
+        {
+          "city": "Leipzig",
+          "id": 3780,
+          "latitude": 51.373327,
+          "longitude": 12.3273,
+          "name": "Am Viadukt"
+        },
+        {
+          "city": "Leipzig",
+          "id": 3862,
+          "latitude": 51.287308,
+          "longitude": 12.398448,
+          "name": "Bei der Kr\u00e4henh\u00fctte"
+        },
+        {
+          "city": "Leipzig",
+          "id": 3863,
+          "latitude": 51.286673,
+          "longitude": 12.407291,
+          "name": "Johannish\u00f6he"
+        },
+        {
+          "city": "Leipzig",
+          "id": 3865,
+          "latitude": 51.289398,
+          "longitude": 12.390242,
+          "name": "Matzelstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 3866,
+          "latitude": 51.355066,
+          "longitude": 12.370306,
+          "name": "Springerstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 3867,
+          "latitude": 51.286954,
+          "longitude": 12.401963,
+          "name": "Zum D\u00f6litzer Schacht"
+        },
+        {
+          "city": "Leipzig",
+          "id": 10688,
+          "latitude": 51.344649,
+          "longitude": 12.262938,
+          "name": "R\u00fcckmarsdorf, Einkaufspassage"
+        },
+        {
+          "city": "Leipzig",
+          "id": 10750,
+          "latitude": 51.330789,
+          "longitude": 12.413995,
+          "name": "Lipsiusstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 10752,
+          "latitude": 51.371091,
+          "longitude": 12.340483,
+          "name": "M\u00f6ckern, Slevogtstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 10756,
+          "latitude": 51.33109,
+          "longitude": 12.411391,
+          "name": "Holsteinstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 10758,
+          "latitude": 51.330492,
+          "longitude": 12.392386,
+          "name": "Liebigstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 10759,
+          "latitude": 51.332493,
+          "longitude": 12.400586,
+          "name": "Schulze-Boysen-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 10762,
+          "latitude": 51.320893,
+          "longitude": 12.365789,
+          "name": "Fockestr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 10764,
+          "latitude": 51.369797,
+          "longitude": 12.345488,
+          "name": "Erika-von-Brockdorff-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 10767,
+          "latitude": 51.367292,
+          "longitude": 12.372584,
+          "name": "Michael-Kazmierczak-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 10786,
+          "latitude": 51.261695,
+          "longitude": 12.306396,
+          "name": "Hartmannsdorf, Erikenstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 10787,
+          "latitude": 51.32979,
+          "longitude": 12.327287,
+          "name": "Karl-Heine-/Gie\u00dferstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 10788,
+          "latitude": 51.320097,
+          "longitude": 12.317788,
+          "name": "Diezmannstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 10789,
+          "latitude": 51.320293,
+          "longitude": 12.330186,
+          "name": "Adler"
+        },
+        {
+          "city": "Leipzig",
+          "id": 10790,
+          "latitude": 51.328091,
+          "longitude": 12.346195,
+          "name": "Holbeinstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 10791,
+          "latitude": 51.323897,
+          "longitude": 12.343794,
+          "name": "Stieglitzstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 10792,
+          "latitude": 51.251596,
+          "longitude": 12.262586,
+          "name": "Knautnaundorf, Werkstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 10793,
+          "latitude": 51.336498,
+          "longitude": 12.357186,
+          "name": "Marschnerstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 10795,
+          "latitude": 51.332497,
+          "longitude": 12.350592,
+          "name": "Klingerweg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 10796,
+          "latitude": 51.314396,
+          "longitude": 12.315884,
+          "name": "Kurt-Kresse-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 10797,
+          "latitude": 51.315391,
+          "longitude": 12.309987,
+          "name": "Herrmann-Meyer-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 10810,
+          "latitude": 51.321792,
+          "longitude": 12.326191,
+          "name": "Siemensstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 10811,
+          "latitude": 51.343901,
+          "longitude": 12.382078,
+          "name": "Hauptbahnhof/Ostseite"
+        },
+        {
+          "city": "Leipzig",
+          "id": 10813,
+          "latitude": 51.318493,
+          "longitude": 12.34099,
+          "name": "R\u00f6delstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 10814,
+          "latitude": 51.328273,
+          "longitude": 12.322756,
+          "name": "S-Bahnhof Plagwitz (Tram/Bus)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 10815,
+          "latitude": 51.326949,
+          "longitude": 12.324426,
+          "name": "Zollschuppenst."
+        },
+        {
+          "city": "Leipzig",
+          "id": 10817,
+          "latitude": 51.32649,
+          "longitude": 12.327593,
+          "name": "Naumburger Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 10818,
+          "latitude": 51.396712,
+          "longitude": 12.39657,
+          "name": "Messegel\u00e4nde"
+        },
+        {
+          "city": "Leipzig",
+          "id": 10823,
+          "latitude": 51.394884,
+          "longitude": 12.383024,
+          "name": "Georg-Herwegh-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 10824,
+          "latitude": 51.396038,
+          "longitude": 12.388815,
+          "name": "S-Bahnhof Messe (Tram/Bus)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 10827,
+          "latitude": 51.31879,
+          "longitude": 12.347885,
+          "name": "Rochlitzstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 10828,
+          "latitude": 51.32119,
+          "longitude": 12.361391,
+          "name": "Rennbahn"
+        },
+        {
+          "city": "Leipzig",
+          "id": 10856,
+          "latitude": 51.343492,
+          "longitude": 12.44509,
+          "name": "Bahnhof Paunsdorf (Bus)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 10861,
+          "latitude": 51.267391,
+          "longitude": 12.309085,
+          "name": "Hartmannsdorf, Gasthof"
+        },
+        {
+          "city": "Leipzig",
+          "id": 10935,
+          "latitude": 51.249993,
+          "longitude": 12.274895,
+          "name": "Gefrierzentrum"
+        },
+        {
+          "city": "Leipzig",
+          "id": 10937,
+          "latitude": 51.253898,
+          "longitude": 12.27159,
+          "name": "Knautnaundorf, Rundkapellenweg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 10939,
+          "latitude": 51.263391,
+          "longitude": 12.292487,
+          "name": "Abzweig n. Hartmannsdorf"
+        },
+        {
+          "city": "Leipzig",
+          "id": 10980,
+          "latitude": 51.365193,
+          "longitude": 12.385185,
+          "name": "Eutritzscher Zentrum"
+        },
+        {
+          "city": "Leipzig",
+          "id": 10983,
+          "latitude": 51.33051,
+          "longitude": 12.380904,
+          "name": "Bayerischer Bahnhof (Tram/Bus)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 10997,
+          "latitude": 51.300591,
+          "longitude": 12.372593,
+          "name": "Wildpark"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11002,
+          "latitude": 51.307297,
+          "longitude": 12.373587,
+          "name": "Mathildenstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11003,
+          "latitude": 51.303395,
+          "longitude": 12.37419,
+          "name": "Koburger Br\u00fccke"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11004,
+          "latitude": 51.341297,
+          "longitude": 12.367587,
+          "name": "Gottschedstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11005,
+          "latitude": 51.338992,
+          "longitude": 12.362393,
+          "name": "Westplatz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11059,
+          "latitude": 51.342743,
+          "longitude": 12.414195,
+          "name": "Edlichstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11060,
+          "latitude": 51.344845,
+          "longitude": 12.41919,
+          "name": "Gei\u00dflerstr./B\u00fclowviertel"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11061,
+          "latitude": 51.338894,
+          "longitude": 12.403085,
+          "name": "Reudnitz, Koehlerstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11062,
+          "latitude": 51.340029,
+          "longitude": 12.408279,
+          "name": "Wiebelstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11063,
+          "latitude": 51.338169,
+          "longitude": 12.385014,
+          "name": "Johannisplatz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11064,
+          "latitude": 51.339097,
+          "longitude": 12.395189,
+          "name": "Gerichtsweg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11069,
+          "latitude": 51.343712,
+          "longitude": 12.421661,
+          "name": "Annenstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11070,
+          "latitude": 51.343839,
+          "longitude": 12.428074,
+          "name": "Sellerhausen, Emmausstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11071,
+          "latitude": 51.340689,
+          "longitude": 12.35119,
+          "name": "Sportforum S\u00fcd"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11072,
+          "latitude": 51.337392,
+          "longitude": 12.340097,
+          "name": "Angerbr\u00fccke/Stra\u00dfenbahnhof"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11073,
+          "latitude": 51.343296,
+          "longitude": 12.364991,
+          "name": "Leibnizstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11074,
+          "latitude": 51.342297,
+          "longitude": 12.359088999999999,
+          "name": "Waldplatz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11076,
+          "latitude": 51.33249,
+          "longitude": 12.338894,
+          "name": "Felsenkeller"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11077,
+          "latitude": 51.331394,
+          "longitude": 12.333489,
+          "name": "Karl-Heine-/Merseburger Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11078,
+          "latitude": 51.328692,
+          "longitude": 12.336493,
+          "name": "Elster Passage"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11079,
+          "latitude": 51.325295,
+          "longitude": 12.334194,
+          "name": "Markranst\u00e4dter Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11102,
+          "latitude": 51.320893,
+          "longitude": 12.368889,
+          "name": "August-Bebel-/Kurt-Eisner-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11115,
+          "latitude": 51.30419,
+          "longitude": 12.37409,
+          "name": "Leopoldstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11120,
+          "latitude": 51.311498,
+          "longitude": 12.278976,
+          "name": "Gr\u00fcnau-S\u00fcd"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11121,
+          "latitude": 51.314396,
+          "longitude": 12.303186,
+          "name": "Sch\u00f6nauer/Ratzelstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11122,
+          "latitude": 51.332393,
+          "longitude": 12.348891,
+          "name": "Nonnenstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11123,
+          "latitude": 51.419989,
+          "longitude": 12.446489,
+          "name": "Hohenheida, Gasthof"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11124,
+          "latitude": 51.420193,
+          "longitude": 12.452688,
+          "name": "Hohenheida, Am Anger"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11126,
+          "latitude": 51.419597,
+          "longitude": 12.422184,
+          "name": "G\u00f6bschelwitz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11127,
+          "latitude": 51.403689,
+          "longitude": 12.413289,
+          "name": "Seehausen, Schule"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11128,
+          "latitude": 51.406094,
+          "longitude": 12.418687,
+          "name": "Seehausen, Gut Seehausen"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11129,
+          "latitude": 51.331693,
+          "longitude": 12.438392,
+          "name": "Anemonenweg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11130,
+          "latitude": 51.410017,
+          "longitude": 12.419526,
+          "name": "Seehausen, Alte M\u00fchle"
+        },
+        {
+          "city": "Leipzig Gottscheina",
+          "id": 11131,
+          "latitude": 51.425092,
+          "longitude": 12.479192,
+          "name": "Am Ring"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11167,
+          "latitude": 51.306474,
+          "longitude": 12.462068,
+          "name": "Bahnhof Holzhausen (Bus)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11176,
+          "latitude": 51.413579,
+          "longitude": 12.293415,
+          "name": "GVZ Nord/Deutsche Post AG"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11182,
+          "latitude": 51.410586,
+          "longitude": 12.305809,
+          "name": "GVZ Nord/Gro\u00dfmarkt Leipzig"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11198,
+          "latitude": 51.408599,
+          "longitude": 12.302301,
+          "name": "GVZ Nord/Sattlerweg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11199,
+          "latitude": 51.309294,
+          "longitude": 12.272291,
+          "name": "Krakauer Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11200,
+          "latitude": 51.307297,
+          "longitude": 12.266195,
+          "name": "Zschampertaue"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11201,
+          "latitude": 51.311996,
+          "longitude": 12.283688,
+          "name": "Ratzelbogen"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11212,
+          "latitude": 51.31058,
+          "longitude": 12.374488,
+          "name": "Arno-Nitzsche-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11228,
+          "latitude": 51.41313,
+          "longitude": 12.302642,
+          "name": "GVZ Nord/T&S"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11274,
+          "latitude": 51.364392,
+          "longitude": 12.46509,
+          "name": "Heisenbergstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11276,
+          "latitude": 51.364195,
+          "longitude": 12.451989,
+          "name": "Heiterblick, Teslastr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11277,
+          "latitude": 51.367393,
+          "longitude": 12.46059,
+          "name": "Portitzer Allee/S-Bahnhof Heiterblick"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11278,
+          "latitude": 51.355591,
+          "longitude": 12.434194,
+          "name": "Bautzner Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11280,
+          "latitude": 51.348312,
+          "longitude": 12.419951,
+          "name": "Volksgarten"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11284,
+          "latitude": 51.306594,
+          "longitude": 12.260795,
+          "name": "Lausen"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11287,
+          "latitude": 51.301343,
+          "longitude": 12.262387,
+          "name": "Am Sonneneck"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11296,
+          "latitude": 51.307409,
+          "longitude": 12.26058,
+          "name": "Lausen, Buswendestelle"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11318,
+          "latitude": 51.37649,
+          "longitude": 12.394697,
+          "name": "Zschortauer Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11319,
+          "latitude": 51.376191,
+          "longitude": 12.369891,
+          "name": "Franz-Mehring-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11320,
+          "latitude": 51.375791,
+          "longitude": 12.379086,
+          "name": "Gohlis-Nord, Virchowstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11321,
+          "latitude": 51.374895,
+          "longitude": 12.356492,
+          "name": "Olbrichtstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11324,
+          "latitude": 51.375291,
+          "longitude": 12.346091,
+          "name": "Sternsiedlung Nord"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11325,
+          "latitude": 51.376192,
+          "longitude": 12.402491,
+          "name": "Rosenowstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11326,
+          "latitude": 51.378891,
+          "longitude": 12.415393,
+          "name": "Komarowstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11327,
+          "latitude": 51.327595,
+          "longitude": 12.403596,
+          "name": "Riebeck-/St\u00f6tteritzer Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11329,
+          "latitude": 51.335703,
+          "longitude": 12.408001,
+          "name": "Breite Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11330,
+          "latitude": 51.331889,
+          "longitude": 12.405895,
+          "name": "Riebeck-/Oststr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11331,
+          "latitude": 51.346481,
+          "longitude": 12.479,
+          "name": "Sommerfeld"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11332,
+          "latitude": 51.342464,
+          "longitude": 12.398769,
+          "name": "Elsastr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11333,
+          "latitude": 51.352098,
+          "longitude": 12.479095,
+          "name": "Paunsdorfer Allee/Permoserstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11334,
+          "latitude": 51.348856,
+          "longitude": 12.479237,
+          "name": "Paunsdorf Center"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11335,
+          "latitude": 51.325198,
+          "longitude": 12.400964,
+          "name": "Technisches Rathaus"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11336,
+          "latitude": 51.324889,
+          "longitude": 12.41159,
+          "name": "S-Bahnhof St\u00f6tteritz (Tram/Bus)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11337,
+          "latitude": 51.306098,
+          "longitude": 12.396394,
+          "name": "An der M\u00e4rchenwiese"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11338,
+          "latitude": 51.301991,
+          "longitude": 12.396292,
+          "name": "Moritz Hof"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11339,
+          "latitude": 51.309491,
+          "longitude": 12.38699,
+          "name": "Meusdorfer Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11340,
+          "latitude": 51.308894,
+          "longitude": 12.396386,
+          "name": "Triftweg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11341,
+          "latitude": 51.30949,
+          "longitude": 12.377665,
+          "name": "Wiedebachplatz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11342,
+          "latitude": 51.325092,
+          "longitude": 12.378884,
+          "name": "K\u00f6rnerstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11343,
+          "latitude": 51.320691,
+          "longitude": 12.378388,
+          "name": "Kurt-Eisner-/Arthur-Hoffmann-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11344,
+          "latitude": 51.296197,
+          "longitude": 12.396093,
+          "name": "L\u00f6\u00dfnig"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11345,
+          "latitude": 51.32909,
+          "longitude": 12.373408,
+          "name": "Hohe Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11346,
+          "latitude": 51.388696,
+          "longitude": 12.360291,
+          "name": "Siedlerweg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11347,
+          "latitude": 51.39009,
+          "longitude": 12.367795,
+          "name": "Rietzschkegrund"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11348,
+          "latitude": 51.396596,
+          "longitude": 12.369797,
+          "name": "Wiederitzscher Landstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11349,
+          "latitude": 51.389495,
+          "longitude": 12.371286,
+          "name": "Martinsh\u00f6he"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11350,
+          "latitude": 51.32339,
+          "longitude": 12.480493,
+          "name": "Baalsdorf, Baalsdorfer Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11351,
+          "latitude": 51.322794,
+          "longitude": 12.487796,
+          "name": "Baalsdorf, Kirchweg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11352,
+          "latitude": 51.324192,
+          "longitude": 12.467092,
+          "name": "Lintacherstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11353,
+          "latitude": 51.324194,
+          "longitude": 12.472187,
+          "name": "Baalsdorf, Brandiser Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11354,
+          "latitude": 51.393389,
+          "longitude": 12.372795,
+          "name": "Wiederitzsch, Schule"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11355,
+          "latitude": 51.394292,
+          "longitude": 12.373292,
+          "name": "Wiederitzsch, B\u00fcrgerb\u00fcro"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11388,
+          "latitude": 51.378366,
+          "longitude": 12.304648,
+          "name": "Stahmeln"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11389,
+          "latitude": 51.383393,
+          "longitude": 12.281287,
+          "name": "L\u00fctzschena"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11390,
+          "latitude": 51.38077,
+          "longitude": 12.293068,
+          "name": "Stahmelner Allee"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11391,
+          "latitude": 51.37665,
+          "longitude": 12.312886,
+          "name": "Pittlerstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11392,
+          "latitude": 51.371994,
+          "longitude": 12.331197,
+          "name": "Annaberger Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11393,
+          "latitude": 51.374395,
+          "longitude": 12.324231,
+          "name": "Wahren (Rathaus)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11394,
+          "latitude": 51.366842,
+          "longitude": 12.346293,
+          "name": "Dantestr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11395,
+          "latitude": 51.369893,
+          "longitude": 12.337695,
+          "name": "M\u00f6ckernscher Markt"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11396,
+          "latitude": 51.385738,
+          "longitude": 12.273996,
+          "name": "Freirodaer Weg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11397,
+          "latitude": 51.38621,
+          "longitude": 12.267722,
+          "name": "H\u00e4nichen, Bismarckturm"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11398,
+          "latitude": 51.310396,
+          "longitude": 12.310789,
+          "name": "Dreiecksweg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11399,
+          "latitude": 51.304392,
+          "longitude": 12.314187,
+          "name": "Weidenweg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11400,
+          "latitude": 51.323691,
+          "longitude": 12.291155,
+          "name": "Sch\u00f6nauer-L\u00fctzner Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11401,
+          "latitude": 51.324094,
+          "longitude": 12.292791,
+          "name": "Sch\u00f6nau, Wei\u00dfdornstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11402,
+          "latitude": 51.30309,
+          "longitude": 12.270687,
+          "name": "Lausen, \u00c4rztehaus"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11403,
+          "latitude": 51.354792,
+          "longitude": 12.315386,
+          "name": "Rathenaustr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11404,
+          "latitude": 51.300795,
+          "longitude": 12.314186,
+          "name": "Wasserturmweg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11405,
+          "latitude": 51.301409,
+          "longitude": 12.306154,
+          "name": "G\u00e4rtnerei Gro\u00dfzschocher"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11407,
+          "latitude": 51.364137,
+          "longitude": 12.40207,
+          "name": "Mockauer/Volbedingstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11408,
+          "latitude": 51.355092,
+          "longitude": 12.391189,
+          "name": "Apelstr./Historischer Betriebshof"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11409,
+          "latitude": 51.35879,
+          "longitude": 12.395785,
+          "name": "Hamburger Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11410,
+          "latitude": 51.349794,
+          "longitude": 12.377587,
+          "name": "Wilhelm-Liebknecht-Platz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11411,
+          "latitude": 51.353197,
+          "longitude": 12.387387,
+          "name": "Wittenberger Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11412,
+          "latitude": 51.343179,
+          "longitude": 12.383388,
+          "name": "Hauptbahnhof/Wintergartenstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11413,
+          "latitude": 51.368897,
+          "longitude": 12.40659,
+          "name": "Friedrichshafner Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11414,
+          "latitude": 51.372194,
+          "longitude": 12.409794,
+          "name": "D\u00f6ringstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11421,
+          "latitude": 51.403186,
+          "longitude": 12.36732,
+          "name": "Wiederitzsch Nord, Salzhandelsstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11423,
+          "latitude": 51.324491,
+          "longitude": 12.369497,
+          "name": "Schenkendorfstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11426,
+          "latitude": 51.284791,
+          "longitude": 12.394691,
+          "name": "D\u00f6litz, Stra\u00dfenbahnhof"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11428,
+          "latitude": 51.282994,
+          "longitude": 12.39529,
+          "name": "Am Eichwinkel"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11524,
+          "latitude": 51.357192,
+          "longitude": 12.315085,
+          "name": "Am Sportpark"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11525,
+          "latitude": 51.370197,
+          "longitude": 12.314991,
+          "name": "Auensee"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11526,
+          "latitude": 51.347695,
+          "longitude": 12.301491,
+          "name": "Wittestr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11527,
+          "latitude": 51.340494,
+          "longitude": 12.300485,
+          "name": "Ernst-Keil-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11529,
+          "latitude": 51.337495,
+          "longitude": 12.297786,
+          "name": "Plaut-/Schomburgkstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11531,
+          "latitude": 51.372997,
+          "longitude": 12.324374,
+          "name": "Wahren (Am Zuckmantel/Fr.-Bosse-Str.)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11535,
+          "latitude": 51.356192,
+          "longitude": 12.46019,
+          "name": "Ahornstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11536,
+          "latitude": 51.361256,
+          "longitude": 12.470454,
+          "name": "Paunsdorf Nord"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11538,
+          "latitude": 51.352895,
+          "longitude": 12.459195,
+          "name": "Am Vorwerk"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11539,
+          "latitude": 51.345595,
+          "longitude": 12.449987,
+          "name": "Barbarastr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11540,
+          "latitude": 51.345695,
+          "longitude": 12.457589,
+          "name": "Paunsdorf, Stra\u00dfenbahnhof"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11541,
+          "latitude": 51.345594,
+          "longitude": 12.43659,
+          "name": "Ostheimstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11542,
+          "latitude": 51.34639,
+          "longitude": 12.444691,
+          "name": "Paunsdorf, Theodor-Heuss-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11543,
+          "latitude": 51.35879,
+          "longitude": 12.473585,
+          "name": "Hermelinstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11553,
+          "latitude": 51.314602,
+          "longitude": 12.394283,
+          "name": "Richard-Lehmann-/Zwickauer Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11554,
+          "latitude": 51.314992,
+          "longitude": 12.382991,
+          "name": "Altenburger Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11555,
+          "latitude": 51.321591,
+          "longitude": 12.399492,
+          "name": "Deutscher Platz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11556,
+          "latitude": 51.314095,
+          "longitude": 12.406785,
+          "name": "An der Tabaksm\u00fchle"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11557,
+          "latitude": 51.327296,
+          "longitude": 12.388791,
+          "name": "Johannisallee"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11558,
+          "latitude": 51.323562,
+          "longitude": 12.395691,
+          "name": "Deutsche Nationalbibliothek"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11559,
+          "latitude": 51.294491,
+          "longitude": 12.439696,
+          "name": "Meusdorf"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11563,
+          "latitude": 51.314997,
+          "longitude": 12.378486,
+          "name": "Arthur-Hoffmann-/Richard-Lehmann-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11564,
+          "latitude": 51.320698,
+          "longitude": 12.373495,
+          "name": "Karl-Liebknecht-/Kurt-Eisner-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11584,
+          "latitude": 51.332792,
+          "longitude": 12.377542,
+          "name": "H\u00e4rtelstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11652,
+          "latitude": 51.395154,
+          "longitude": 12.394499,
+          "name": "Messeverwaltung"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11653,
+          "latitude": 51.392118,
+          "longitude": 12.397494,
+          "name": "Am alten Flughafen"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11654,
+          "latitude": 51.307297,
+          "longitude": 12.322086,
+          "name": "Martin-Herrmann-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11656,
+          "latitude": 51.33679,
+          "longitude": 12.466494,
+          "name": "M\u00fchlweg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11657,
+          "latitude": 51.337998,
+          "longitude": 12.475485,
+          "name": "Engelsdorf, Arthur-Winkler-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11658,
+          "latitude": 51.334294,
+          "longitude": 12.482397,
+          "name": "Engelsdorf, Gymnasium"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11659,
+          "latitude": 51.33669,
+          "longitude": 12.471984,
+          "name": "Engelsdorf, Ernst-Guhr-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11660,
+          "latitude": 51.399591,
+          "longitude": 12.401484,
+          "name": "Einfahrt Sachsenpark"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11661,
+          "latitude": 51.401592,
+          "longitude": 12.396989,
+          "name": "Sachsenpark"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11683,
+          "latitude": 51.299794,
+          "longitude": 12.261187,
+          "name": "Lausener Bogen"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11685,
+          "latitude": 51.304591,
+          "longitude": 12.260695,
+          "name": "Am Silo"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11689,
+          "latitude": 51.30139,
+          "longitude": 12.269089,
+          "name": "Lausen, Wolkenweg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11692,
+          "latitude": 51.300397,
+          "longitude": 12.319995,
+          "name": "Bismarckstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11695,
+          "latitude": 51.299592,
+          "longitude": 12.287693,
+          "name": "Raiffeisenstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11697,
+          "latitude": 51.296997,
+          "longitude": 12.289487,
+          "name": "Siedlung Florian Geyer"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11699,
+          "latitude": 51.316991,
+          "longitude": 12.278693,
+          "name": "S-Bahnhof Karlsruher Str. (Bus)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11702,
+          "latitude": 51.316593,
+          "longitude": 12.263987,
+          "name": "Am kleinen Feld"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11767,
+          "latitude": 51.345621,
+          "longitude": 12.269683,
+          "name": "R\u00fcckmarsdorf, L\u00f6wen Center"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11768,
+          "latitude": 51.346691,
+          "longitude": 12.258388,
+          "name": "R\u00fcckmarsdorf, Sandberg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11769,
+          "latitude": 51.34339,
+          "longitude": 12.295697,
+          "name": "Zur Kaninchenfarm"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11770,
+          "latitude": 51.344497,
+          "longitude": 12.281893,
+          "name": "R\u00fcckmarsdorf, Zum Bahnhof"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11771,
+          "latitude": 51.340692,
+          "longitude": 12.314783,
+          "name": "Lindenau, Friedhof"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11772,
+          "latitude": 51.342795,
+          "longitude": 12.301784,
+          "name": "Merseburger/Schomburgkstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11775,
+          "latitude": 51.272892,
+          "longitude": 12.311086,
+          "name": "Knauthain, Am Weiher"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11777,
+          "latitude": 51.275497,
+          "longitude": 12.311488,
+          "name": "Knauthain, Sch\u00f6nbergstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11782,
+          "latitude": 51.269793,
+          "longitude": 12.302391,
+          "name": "Thomas-M\u00fcntzer-Siedlung"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11783,
+          "latitude": 51.266895,
+          "longitude": 12.297697,
+          "name": "Am Klucksgraben"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11786,
+          "latitude": 51.401692,
+          "longitude": 12.392583,
+          "name": "Pelzgasse"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11787,
+          "latitude": 51.304992,
+          "longitude": 12.45289,
+          "name": "Zuckelhausen"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11788,
+          "latitude": 51.399174,
+          "longitude": 12.397571,
+          "name": "Seehausener Allee"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11789,
+          "latitude": 51.376529,
+          "longitude": 12.399255,
+          "name": "Gypsbergstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11790,
+          "latitude": 51.409509,
+          "longitude": 12.394039,
+          "name": "Gewerbegebiet Podelwitz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11792,
+          "latitude": 51.312891,
+          "longitude": 12.443297,
+          "name": "Siedlung Waldfrieden"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11821,
+          "latitude": 51.320392,
+          "longitude": 12.256092,
+          "name": "Geschwister-Scholl-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11823,
+          "latitude": 51.318698,
+          "longitude": 12.247491,
+          "name": "Miltitz, Friedhof"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11826,
+          "latitude": 51.316193,
+          "longitude": 12.261591,
+          "name": "Str. am See"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11827,
+          "latitude": 51.320289,
+          "longitude": 12.261394,
+          "name": "Gro\u00dfmiltitzer Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11831,
+          "latitude": 51.292497,
+          "longitude": 12.427987,
+          "name": "Pahlenweg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11900,
+          "latitude": 51.37089,
+          "longitude": 12.430384,
+          "name": "Plei\u00dfenburgwerkst\u00e4tten"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11901,
+          "latitude": 51.32739,
+          "longitude": 12.367485,
+          "name": "Telemannstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11902,
+          "latitude": 51.36659,
+          "longitude": 12.350095,
+          "name": "Seelenbinderstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11903,
+          "latitude": 51.320593,
+          "longitude": 12.381796,
+          "name": "S\u00fcdvorstadt, L\u00f6\u00dfniger Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11905,
+          "latitude": 51.396918,
+          "longitude": 12.399388,
+          "name": "Congress Center"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11906,
+          "latitude": 51.329625,
+          "longitude": 12.366673,
+          "name": "Robert-Schumann-Str. (Ferdinand-Rhode-Str.)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11907,
+          "latitude": 51.36899,
+          "longitude": 12.430788,
+          "name": "Braun-/Heiterblickstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11908,
+          "latitude": 51.377496,
+          "longitude": 12.430189,
+          "name": "Lidicestr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11916,
+          "latitude": 51.286893,
+          "longitude": 12.429591,
+          "name": "Schwarzenbergweg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11929,
+          "latitude": 51.326393,
+          "longitude": 12.436086,
+          "name": "Handwerkerhof"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11950,
+          "latitude": 51.33339,
+          "longitude": 12.418566,
+          "name": "S-Bahnhof Anger-Crottendorf (Bus)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11952,
+          "latitude": 51.332431,
+          "longitude": 12.422442,
+          "name": "Ostfriedhof"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11956,
+          "latitude": 51.318696,
+          "longitude": 12.431191,
+          "name": "St\u00f6tteritz, Holzh\u00e4user Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11958,
+          "latitude": 51.334214,
+          "longitude": 12.413101,
+          "name": "Martinstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11960,
+          "latitude": 51.319291,
+          "longitude": 12.420085,
+          "name": "Rathaus St\u00f6tteritz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11962,
+          "latitude": 51.320096,
+          "longitude": 12.426689,
+          "name": "Kolmstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11964,
+          "latitude": 51.32419,
+          "longitude": 12.414595,
+          "name": "Breslauer Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11968,
+          "latitude": 51.321996,
+          "longitude": 12.418895,
+          "name": "Wei\u00dfestr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 11970,
+          "latitude": 51.334448,
+          "longitude": 12.391788,
+          "name": "Gutenbergplatz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 11972,
+          "latitude": 51.331676,
+          "longitude": 12.395889,
+          "name": "Ostplatz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12013,
+          "latitude": 51.320793,
+          "longitude": 12.493685,
+          "name": "Baalsdorf, Zaucheweg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12015,
+          "latitude": 51.324168,
+          "longitude": 12.525343,
+          "name": "Hirschfeld"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12016,
+          "latitude": 51.309496,
+          "longitude": 12.518091,
+          "name": "Kleinp\u00f6sna"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12017,
+          "latitude": 51.346693,
+          "longitude": 12.519392,
+          "name": "Althen, Oertgering"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12018,
+          "latitude": 51.338789,
+          "longitude": 12.517896,
+          "name": "Althen, Althener Anger"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12020,
+          "latitude": 51.339898,
+          "longitude": 12.522589,
+          "name": "Althen, Freundschaftsring"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12022,
+          "latitude": 51.30259,
+          "longitude": 12.464487,
+          "name": "Walter-Heise-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12023,
+          "latitude": 51.303194,
+          "longitude": 12.441595,
+          "name": "Feldstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12025,
+          "latitude": 51.302097,
+          "longitude": 12.437597,
+          "name": "Schweizer Bogen"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12026,
+          "latitude": 51.366898,
+          "longitude": 12.375988,
+          "name": "Virchow-/Coppistr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12027,
+          "latitude": 51.380096,
+          "longitude": 12.436289,
+          "name": "An den Pferdnerkabeln"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12028,
+          "latitude": 51.352091,
+          "longitude": 12.322485,
+          "name": "Mathiesenstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12031,
+          "latitude": 51.348192,
+          "longitude": 12.493991,
+          "name": "Engelsdorf, Arnoldplatz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12032,
+          "latitude": 51.342794,
+          "longitude": 12.479596,
+          "name": "Engelsdorf, Hans-Weigel-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12033,
+          "latitude": 51.343095,
+          "longitude": 12.486697,
+          "name": "Engelsdorf, Hugo-Aurig-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12034,
+          "latitude": 51.300794,
+          "longitude": 12.266293,
+          "name": "Regenbogen"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12036,
+          "latitude": 51.305595,
+          "longitude": 12.436395,
+          "name": "Str\u00fcmpellstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12038,
+          "latitude": 51.306495,
+          "longitude": 12.438787,
+          "name": "Herzzentrum"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12040,
+          "latitude": 51.340293,
+          "longitude": 12.489284,
+          "name": "Engelsdorf, Klempererstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12041,
+          "latitude": 51.336789,
+          "longitude": 12.487395,
+          "name": "Engelsdorf, Kirchweg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12046,
+          "latitude": 51.346894,
+          "longitude": 12.492887,
+          "name": "Engelsdorf, Sabinenstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12049,
+          "latitude": 51.346395,
+          "longitude": 12.487895,
+          "name": "Engelsdorf, Sternenstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12072,
+          "latitude": 51.307795,
+          "longitude": 12.422085,
+          "name": "Prager/Russenstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12073,
+          "latitude": 51.303796,
+          "longitude": 12.426291,
+          "name": "Probstheida"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12075,
+          "latitude": 51.304111,
+          "longitude": 12.424134,
+          "name": "Probstheida, Buswendestelle"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12076,
+          "latitude": 51.314594,
+          "longitude": 12.411887,
+          "name": "V\u00f6lkerschlachtdenkmal (Tram/Bus)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12078,
+          "latitude": 51.312094,
+          "longitude": 12.416192,
+          "name": "S\u00fcdfriedhof"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12079,
+          "latitude": 51.321045,
+          "longitude": 12.40433,
+          "name": "Altes Messegel\u00e4nde"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12080,
+          "latitude": 51.318067,
+          "longitude": 12.407783,
+          "name": "Naunhofer Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12083,
+          "latitude": 51.328243,
+          "longitude": 12.399539,
+          "name": "Witzgallstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12086,
+          "latitude": 51.30079,
+          "longitude": 12.430686,
+          "name": "Franzosenallee"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12088,
+          "latitude": 51.29749,
+          "longitude": 12.435589,
+          "name": "Roseggerstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12135,
+          "latitude": 51.295308,
+          "longitude": 12.432399,
+          "name": "H\u00f6ltystr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12145,
+          "latitude": 51.339992,
+          "longitude": 12.374497,
+          "name": "Markt"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12146,
+          "latitude": 51.391491,
+          "longitude": 12.335489,
+          "name": "Zur Lindenh\u00f6he"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12147,
+          "latitude": 51.399395,
+          "longitude": 12.341785,
+          "name": "Lindenallee"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12148,
+          "latitude": 51.391394,
+          "longitude": 12.322791,
+          "name": "Sophienstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12149,
+          "latitude": 51.392393,
+          "longitude": 12.333197,
+          "name": "An der Schule"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12150,
+          "latitude": 51.394296,
+          "longitude": 12.336785,
+          "name": "Lindenthal, Kirche"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12151,
+          "latitude": 51.391232,
+          "longitude": 12.327853,
+          "name": "Lindenthaler Hauptstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12152,
+          "latitude": 51.38659,
+          "longitude": 12.349387,
+          "name": "Landsberger/Bahnhofstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12153,
+          "latitude": 51.392833,
+          "longitude": 12.339841,
+          "name": "Lindenthal, An der Windm\u00fchle"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12155,
+          "latitude": 51.33119,
+          "longitude": 12.428895,
+          "name": "Pommernstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12166,
+          "latitude": 51.361692,
+          "longitude": 12.271188,
+          "name": "B\u00f6hlitz-Ehrenberg, Burghausener Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12167,
+          "latitude": 51.345795,
+          "longitude": 12.357192,
+          "name": "Feuerbachstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12168,
+          "latitude": 51.360297,
+          "longitude": 12.285996,
+          "name": "Ludwig-Jahn-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12169,
+          "latitude": 51.36099,
+          "longitude": 12.279885,
+          "name": "Forstweg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12170,
+          "latitude": 51.355695,
+          "longitude": 12.299984,
+          "name": "Barnecker Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12171,
+          "latitude": 51.359291,
+          "longitude": 12.29299,
+          "name": "S\u00fcdstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12172,
+          "latitude": 51.349995,
+          "longitude": 12.309496,
+          "name": "Pfingstweide"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12173,
+          "latitude": 51.351695,
+          "longitude": 12.305986,
+          "name": "Philipp-Reis-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12174,
+          "latitude": 51.349794,
+          "longitude": 12.355086,
+          "name": "Am M\u00fcckenschl\u00f6sschen"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12175,
+          "latitude": 51.358291,
+          "longitude": 12.359786,
+          "name": "Stallbaumstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12199,
+          "latitude": 51.294393,
+          "longitude": 12.320192,
+          "name": "Wasserwerk Windorf"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12201,
+          "latitude": 51.286771,
+          "longitude": 12.313763,
+          "name": "Knauthain, Seumestr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12202,
+          "latitude": 51.295286,
+          "longitude": 12.434994,
+          "name": "Gottfried-Keller-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12203,
+          "latitude": 51.300575,
+          "longitude": 12.32794,
+          "name": "Huttenstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12205,
+          "latitude": 51.30039,
+          "longitude": 12.321486,
+          "name": "Gro\u00dfzschocher, Gerhard-Ellrodt-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12207,
+          "latitude": 51.308392,
+          "longitude": 12.326583,
+          "name": "Arthur-Nagel-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12209,
+          "latitude": 51.304691,
+          "longitude": 12.327391,
+          "name": "Kunzestr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12211,
+          "latitude": 51.315689,
+          "longitude": 12.326093,
+          "name": "Schwartzestr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12213,
+          "latitude": 51.312391,
+          "longitude": 12.325697,
+          "name": "Kleinzschocher, K\u00f6tzschauer Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12217,
+          "latitude": 51.277793,
+          "longitude": 12.30979,
+          "name": "Knautkleeberg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12250,
+          "latitude": 51.331373,
+          "longitude": 12.36594,
+          "name": "Mozartstr. (Ferdinand-Rhode-Str.)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12252,
+          "latitude": 51.302991,
+          "longitude": 12.401185,
+          "name": "Willi-Bredel-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12253,
+          "latitude": 51.333211,
+          "longitude": 12.365171,
+          "name": "W\u00e4chterstr. (Ferdinand-Rhode-Str.)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12263,
+          "latitude": 51.326798,
+          "longitude": 12.441584,
+          "name": "An den Platanen"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12264,
+          "latitude": 51.334492,
+          "longitude": 12.460593,
+          "name": "Hasenheide"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12265,
+          "latitude": 51.339396,
+          "longitude": 12.461393,
+          "name": "Engelsdorf, \u00c4rztehaus"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12266,
+          "latitude": 51.332498,
+          "longitude": 12.457787,
+          "name": "Am Bahndamm"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12267,
+          "latitude": 51.331494,
+          "longitude": 12.436295,
+          "name": "Dr.-Wilhelm-K\u00fclz-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12268,
+          "latitude": 51.331093,
+          "longitude": 12.44139,
+          "name": "M\u00f6lkau, Gemeindeamt"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12269,
+          "latitude": 51.32579,
+          "longitude": 12.452589,
+          "name": "Gottschalkstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12270,
+          "latitude": 51.324597,
+          "longitude": 12.459789,
+          "name": "Bahnhof M\u00f6lkau (Bus)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12271,
+          "latitude": 51.41979,
+          "longitude": 12.442893,
+          "name": "Hohenheida, Lindengasse"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12274,
+          "latitude": 51.404693,
+          "longitude": 12.347391,
+          "name": "Breitenfeld, Parkring"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12276,
+          "latitude": 51.404624,
+          "longitude": 12.359203,
+          "name": "Breitenfeld, Gewerbegebiet"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12281,
+          "latitude": 51.381483,
+          "longitude": 12.355336,
+          "name": "Gohlis, Landsberger Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12282,
+          "latitude": 51.345594,
+          "longitude": 12.371391,
+          "name": "Lortzingstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12283,
+          "latitude": 51.37589,
+          "longitude": 12.361292,
+          "name": "Landsberger/Max-Liebermann-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12284,
+          "latitude": 51.378995,
+          "longitude": 12.358689,
+          "name": "Beyerleinstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12285,
+          "latitude": 51.367291,
+          "longitude": 12.366694,
+          "name": "S-Bahnhof Coppiplatz (Tram/Bus)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12286,
+          "latitude": 51.371389,
+          "longitude": 12.364596,
+          "name": "Viertelsweg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12287,
+          "latitude": 51.359095,
+          "longitude": 12.362488,
+          "name": "Menckestr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12288,
+          "latitude": 51.36259,
+          "longitude": 12.365689,
+          "name": "Georg-Schumann-/Lindenthaler Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12289,
+          "latitude": 51.348598,
+          "longitude": 12.371684,
+          "name": "Zoo"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12290,
+          "latitude": 51.35249,
+          "longitude": 12.373592,
+          "name": "Nordplatz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12316,
+          "latitude": 51.333697,
+          "longitude": 12.324297,
+          "name": "Henriettenstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12318,
+          "latitude": 51.331445,
+          "longitude": 12.318422,
+          "name": "Lindenau, Bushof"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12320,
+          "latitude": 51.336791,
+          "longitude": 12.334986,
+          "name": "Lindenauer Markt"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12324,
+          "latitude": 51.27259,
+          "longitude": 12.27679,
+          "name": "Rehbach"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12327,
+          "latitude": 51.325996,
+          "longitude": 12.301897,
+          "name": "Gr\u00fcnauer Allee (Bus/Tram)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12328,
+          "latitude": 51.324896,
+          "longitude": 12.294987,
+          "name": "Parkallee"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12395,
+          "latitude": 51.313589,
+          "longitude": 12.455588,
+          "name": "Holzhausen, Sophienh\u00f6he"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12396,
+          "latitude": 51.325398,
+          "longitude": 12.452789,
+          "name": "M\u00f6lkau S\u00fcd"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12398,
+          "latitude": 51.312792,
+          "longitude": 12.464596,
+          "name": "K\u00e4rrnerstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12399,
+          "latitude": 51.306575,
+          "longitude": 12.464744,
+          "name": "Holzhausen, S\u00e4chsisches Haus"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12400,
+          "latitude": 51.309792,
+          "longitude": 12.465087,
+          "name": "Holzhausen, Hauptstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12402,
+          "latitude": 51.310195,
+          "longitude": 12.452693,
+          "name": "M\u00f6lkauer Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12403,
+          "latitude": 51.307692,
+          "longitude": 12.457684,
+          "name": "Arthur-Polenz-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12405,
+          "latitude": 51.380275,
+          "longitude": 12.323925,
+          "name": "S-Bahnhof Wahren (Bus)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12406,
+          "latitude": 51.379391,
+          "longitude": 12.331289,
+          "name": "Zeisigweg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12407,
+          "latitude": 51.278992,
+          "longitude": 12.466695,
+          "name": "An den Badeanlagen"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12409,
+          "latitude": 51.28299,
+          "longitude": 12.464085,
+          "name": "Liebertwolkwitzer Markt"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12411,
+          "latitude": 51.387698,
+          "longitude": 12.462095,
+          "name": "Portitz, Cradefelder Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12412,
+          "latitude": 51.396341,
+          "longitude": 12.455633,
+          "name": "Plau\u00dfig, Gewerbegebiet"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12413,
+          "latitude": 51.391295,
+          "longitude": 12.455986,
+          "name": "Plau\u00dfig, Grundstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12414,
+          "latitude": 51.392089,
+          "longitude": 12.454996,
+          "name": "Plau\u00dfig, Plau\u00dfiger Dorfstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12417,
+          "latitude": 51.318995,
+          "longitude": 12.277789,
+          "name": "Kiewer Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12418,
+          "latitude": 51.317193,
+          "longitude": 12.268592,
+          "name": "Plovdiver Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12419,
+          "latitude": 51.311893,
+          "longitude": 12.259392,
+          "name": "Binzer Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12420,
+          "latitude": 51.321194,
+          "longitude": 12.283686,
+          "name": "Am Kirschberg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12421,
+          "latitude": 51.326292,
+          "longitude": 12.266685,
+          "name": "Siriusweg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12422,
+          "latitude": 51.324991,
+          "longitude": 12.272692,
+          "name": "Uranusstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12423,
+          "latitude": 51.32279,
+          "longitude": 12.287388,
+          "name": "Sch\u00f6nauer Ring"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12424,
+          "latitude": 51.325892,
+          "longitude": 12.282587,
+          "name": "Gr\u00fcnau-Nord"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12425,
+          "latitude": 51.320896,
+          "longitude": 12.267995,
+          "name": "Jupiterstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12426,
+          "latitude": 51.323391,
+          "longitude": 12.264297,
+          "name": "Saturnstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12427,
+          "latitude": 51.35779,
+          "longitude": 12.430984,
+          "name": "Braun-/Bautzner Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12428,
+          "latitude": 51.364595,
+          "longitude": 12.438388,
+          "name": "Brahestr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12429,
+          "latitude": 51.366096,
+          "longitude": 12.422786,
+          "name": "Abtnaundorf"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12430,
+          "latitude": 51.365897,
+          "longitude": 12.430786,
+          "name": "St\u00f6hrer-/Braunstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12431,
+          "latitude": 51.369094,
+          "longitude": 12.425092,
+          "name": "Heiterblickstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12432,
+          "latitude": 51.377998,
+          "longitude": 12.436692,
+          "name": "Sosaer Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12433,
+          "latitude": 51.375094,
+          "longitude": 12.432696,
+          "name": "Freiberger Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12434,
+          "latitude": 51.356795,
+          "longitude": 12.427793,
+          "name": "Julian-Marchlewski-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12435,
+          "latitude": 51.361899,
+          "longitude": 12.430674,
+          "name": "Sch\u00f6nefeld Ost (Verbundnetz Gas AG)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12446,
+          "latitude": 51.395658,
+          "longitude": 12.437298,
+          "name": "Plau\u00dfig, Fuchsberg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12530,
+          "latitude": 51.389798,
+          "longitude": 12.319787,
+          "name": "Rudolf-Breitscheid-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12531,
+          "latitude": 51.39229,
+          "longitude": 12.328591,
+          "name": "Lindenthal, Gemeindeamt"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12532,
+          "latitude": 51.38449,
+          "longitude": 12.322089,
+          "name": "Wilhelmstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12533,
+          "latitude": 51.387496,
+          "longitude": 12.321991,
+          "name": "Wilhelm-Pfennig-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12534,
+          "latitude": 51.379089,
+          "longitude": 12.327991,
+          "name": "Buchfinkenweg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12535,
+          "latitude": 51.325997,
+          "longitude": 12.447696,
+          "name": "Schulstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12537,
+          "latitude": 51.386389,
+          "longitude": 12.331194,
+          "name": "\u00c4u\u00dferer Zeisigweg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12539,
+          "latitude": 51.386995,
+          "longitude": 12.325389,
+          "name": "Lange Trift"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12540,
+          "latitude": 51.395029,
+          "longitude": 12.33819,
+          "name": "An der Hufschmiede"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12542,
+          "latitude": 51.282192,
+          "longitude": 12.461287,
+          "name": "Schwarzes Ross"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12543,
+          "latitude": 51.277497,
+          "longitude": 12.469794,
+          "name": "Liebertwolkwitz, St\u00f6rmthaler Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12544,
+          "latitude": 51.291397,
+          "longitude": 12.443996,
+          "name": "Monarchenh\u00fcgel"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12545,
+          "latitude": 51.283692,
+          "longitude": 12.458589,
+          "name": "An der Brauerei"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12547,
+          "latitude": 51.280394,
+          "longitude": 12.46399,
+          "name": "Zur alten Sandgrube"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12550,
+          "latitude": 51.270894,
+          "longitude": 12.482297,
+          "name": "Eulengraben"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12552,
+          "latitude": 51.343792,
+          "longitude": 12.321195,
+          "name": "Diakonissenhaus"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12553,
+          "latitude": 51.347791,
+          "longitude": 12.31399,
+          "name": "Rathaus Leutzsch"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12554,
+          "latitude": 51.341496,
+          "longitude": 12.324489,
+          "name": "Wielandstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12555,
+          "latitude": 51.337397,
+          "longitude": 12.327293,
+          "name": "Georg-Schwarz-/Merseburger Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12556,
+          "latitude": 51.325345,
+          "longitude": 12.263245,
+          "name": "Miltitz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12561,
+          "latitude": 51.350196,
+          "longitude": 12.322089,
+          "name": "Otto-Schmiedt-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12564,
+          "latitude": 51.350291,
+          "longitude": 12.317789,
+          "name": "Paul-Michael-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12567,
+          "latitude": 51.330897,
+          "longitude": 12.310789,
+          "name": "Demmeringstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12568,
+          "latitude": 51.333493,
+          "longitude": 12.306096,
+          "name": "Dr.-Hermann-Duncker-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12599,
+          "latitude": 51.309196,
+          "longitude": 12.369494,
+          "name": "Brand-/Selnecker Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12636,
+          "latitude": 51.323009,
+          "longitude": 12.452996,
+          "name": "Karl-Friedrich-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12645,
+          "latitude": 51.286893,
+          "longitude": 12.465584,
+          "name": "Ro\u00dfstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12690,
+          "latitude": 51.360495,
+          "longitude": 12.38659,
+          "name": "Theresienstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12697,
+          "latitude": 51.359394,
+          "longitude": 12.380491,
+          "name": "Delitzscher/Theresienstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12698,
+          "latitude": 51.352292,
+          "longitude": 12.399684,
+          "name": "Mariannenpark"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12700,
+          "latitude": 51.35799,
+          "longitude": 12.397938,
+          "name": "Rackwitzer Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12702,
+          "latitude": 51.366192,
+          "longitude": 12.38049,
+          "name": "Kleiststr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12703,
+          "latitude": 51.361695,
+          "longitude": 12.390485,
+          "name": "Hartzstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12704,
+          "latitude": 51.358696,
+          "longitude": 12.427992,
+          "name": "Bertolt-Brecht-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12705,
+          "latitude": 51.343696,
+          "longitude": 12.387288999999999,
+          "name": "Hofmeisterstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12706,
+          "latitude": 51.34547,
+          "longitude": 12.392474,
+          "name": "Friedrich-List-Platz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12707,
+          "latitude": 51.353192,
+          "longitude": 12.303294,
+          "name": "S-Bahnhof Leutzsch"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12709,
+          "latitude": 51.377796,
+          "longitude": 12.421188,
+          "name": "Mockau, Kirche"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12710,
+          "latitude": 51.379292,
+          "longitude": 12.426889,
+          "name": "Thekla, Tauchaer Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12711,
+          "latitude": 51.375194,
+          "longitude": 12.412675,
+          "name": "Mockau, Post"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12712,
+          "latitude": 51.375689,
+          "longitude": 12.418186,
+          "name": "Samuel-Lampel-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12713,
+          "latitude": 51.345994,
+          "longitude": 12.399189,
+          "name": "Einertstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12714,
+          "latitude": 51.345593,
+          "longitude": 12.406194,
+          "name": "Hermann-Liebmann-/Eisenbahnstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12806,
+          "latitude": 51.383196,
+          "longitude": 12.43359,
+          "name": "Waldemar-G\u00f6tze-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12807,
+          "latitude": 51.389697,
+          "longitude": 12.433589,
+          "name": "Teschstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12809,
+          "latitude": 51.393909,
+          "longitude": 12.457304,
+          "name": "Plau\u00dfig, Am Kellerberg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12814,
+          "latitude": 51.391795,
+          "longitude": 12.443893,
+          "name": "Plau\u00dfig, Portitzm\u00fchlweg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12816,
+          "latitude": 51.38429,
+          "longitude": 12.381192,
+          "name": "Klinikum St. Georg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12818,
+          "latitude": 51.37619,
+          "longitude": 12.385494,
+          "name": "Delitzscher/Essener Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12819,
+          "latitude": 51.378989,
+          "longitude": 12.384796,
+          "name": "Hornbach-Baumarkt"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12820,
+          "latitude": 51.367697,
+          "longitude": 12.386289,
+          "name": "Eutritzscher Markt"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12821,
+          "latitude": 51.372597,
+          "longitude": 12.38599,
+          "name": "Mosenthinstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12822,
+          "latitude": 51.36149,
+          "longitude": 12.381393,
+          "name": "Wilhelminenstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12823,
+          "latitude": 51.390097,
+          "longitude": 12.377195,
+          "name": "Dachauer Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12824,
+          "latitude": 51.393396,
+          "longitude": 12.375684,
+          "name": "Wiederitzsch, Mitte"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12825,
+          "latitude": 51.380891,
+          "longitude": 12.401992,
+          "name": "Mockau-West"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12826,
+          "latitude": 51.350993,
+          "longitude": 12.43889,
+          "name": "Elisabeth-Schumacher-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12827,
+          "latitude": 51.35079,
+          "longitude": 12.445495,
+          "name": "Weinbrennerstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12828,
+          "latitude": 51.353697,
+          "longitude": 12.420884,
+          "name": "Volksgartenstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12829,
+          "latitude": 51.352145,
+          "longitude": 12.425694,
+          "name": "Permoser-/Torgauer Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12830,
+          "latitude": 51.354997,
+          "longitude": 12.423192,
+          "name": "Max-Lingner-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12832,
+          "latitude": 51.37799,
+          "longitude": 12.406188,
+          "name": "Otto-Michael-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12833,
+          "latitude": 51.380295,
+          "longitude": 12.434695,
+          "name": "Neutzscher Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12834,
+          "latitude": 51.344196,
+          "longitude": 12.254995,
+          "name": "R\u00fcckmarsdorf, Friedhof"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12835,
+          "latitude": 51.355713,
+          "longitude": 12.265362,
+          "name": "Burghausen"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12836,
+          "latitude": 51.344875,
+          "longitude": 12.266787,
+          "name": "R\u00fcckmarsdorf, Gro\u00dfer Marktweg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12837,
+          "latitude": 51.34789,
+          "longitude": 12.262795,
+          "name": "R\u00fcckmarsdorf, Miltitzer Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12841,
+          "latitude": 51.359696,
+          "longitude": 12.410689,
+          "name": "Rathaus Sch\u00f6nefeld"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12842,
+          "latitude": 51.361294,
+          "longitude": 12.407389,
+          "name": "Sch\u00f6nefeld, Volbedingstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12843,
+          "latitude": 51.359296,
+          "longitude": 12.417596,
+          "name": "Ossietzky-/Gorkistr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12844,
+          "latitude": 51.359428,
+          "longitude": 12.269504,
+          "name": "Gundorf, Friedhof"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12845,
+          "latitude": 51.353993,
+          "longitude": 12.411988,
+          "name": "St\u00f6ckelstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12846,
+          "latitude": 51.356793,
+          "longitude": 12.416189,
+          "name": "L\u00f6bauer Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12848,
+          "latitude": 51.35713,
+          "longitude": 12.288283,
+          "name": "B\u00f6hlitz-Ehrenberg, Heinrich-Heine-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12849,
+          "latitude": 51.351289,
+          "longitude": 12.407895,
+          "name": "Stannebeinplatz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12851,
+          "latitude": 51.345054,
+          "longitude": 12.414195,
+          "name": "Torgauer Platz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12854,
+          "latitude": 51.340569,
+          "longitude": 12.263524,
+          "name": "R\u00fcckmarsdorf, Wachbergallee"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12967,
+          "latitude": 51.375098,
+          "longitude": 12.378187,
+          "name": "Gohlis-Nord"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12968,
+          "latitude": 51.356195,
+          "longitude": 12.376996,
+          "name": "Chausseehaus"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12969,
+          "latitude": 51.363494,
+          "longitude": 12.374287,
+          "name": "S-Bahnhof Gohlis (Bus)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12970,
+          "latitude": 51.368993,
+          "longitude": 12.376588,
+          "name": "Gottschallstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12971,
+          "latitude": 51.357289,
+          "longitude": 12.368991,
+          "name": "Fritz-Seger-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12972,
+          "latitude": 51.361241,
+          "longitude": 12.371033,
+          "name": "Georg-Schumann-/L\u00fctzowstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12973,
+          "latitude": 51.364094,
+          "longitude": 12.358416,
+          "name": "Wiederitzscher Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12974,
+          "latitude": 51.365759,
+          "longitude": 12.351169,
+          "name": "S-Bahnhof M\u00f6ckern (Tram/Bus)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12975,
+          "latitude": 51.378593,
+          "longitude": 12.464396,
+          "name": "Portitz, Teichsiedlung"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12976,
+          "latitude": 51.383992,
+          "longitude": 12.453595,
+          "name": "Portitz, Am langen Teiche"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12977,
+          "latitude": 51.383394,
+          "longitude": 12.463192,
+          "name": "Portitz, Kr\u00e4tzbergstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12978,
+          "latitude": 51.381397,
+          "longitude": 12.442795,
+          "name": "Cleudner Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12979,
+          "latitude": 51.382889,
+          "longitude": 12.447692,
+          "name": "Wodanstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12980,
+          "latitude": 51.379195,
+          "longitude": 12.420085,
+          "name": "Simon-Bolivar-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 12982,
+          "latitude": 51.382893,
+          "longitude": 12.46919,
+          "name": "Portitz, Melker Weg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12992,
+          "latitude": 51.335862,
+          "longitude": 12.375858,
+          "name": "Wilhelm-Leuschner-Platz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12993,
+          "latitude": 51.339296,
+          "longitude": 12.371187,
+          "name": "Thomaskirche"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12994,
+          "latitude": 51.335496,
+          "longitude": 12.371094,
+          "name": "Neues Rathaus"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12995,
+          "latitude": 51.344792,
+          "longitude": 12.378597,
+          "name": "Hauptbahnhof/Westseite"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12996,
+          "latitude": 51.344194,
+          "longitude": 12.370987,
+          "name": "Goerdelerring"
+        },
+        {
+          "city": "Leipzig",
+          "id": 12998,
+          "latitude": 51.33305,
+          "longitude": 12.37357,
+          "name": "M\u00fcnzgasse/LVZ"
+        },
+        {
+          "city": "Leipzig",
+          "id": 13000,
+          "latitude": 51.343951,
+          "longitude": 12.38033,
+          "name": "Hauptbahnhof (Tram/Bus)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 13001,
+          "latitude": 51.336098,
+          "longitude": 12.378589,
+          "name": "Ro\u00dfplatz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 13002,
+          "latitude": 51.338894,
+          "longitude": 12.381996,
+          "name": "Augustusplatz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 13003,
+          "latitude": 51.301712,
+          "longitude": 12.383906,
+          "name": "S-Bahnhof Connewitz (Tram/Bus)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 13004,
+          "latitude": 51.295894,
+          "longitude": 12.386087999999999,
+          "name": "Raschwitzer Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 13005,
+          "latitude": 51.308096,
+          "longitude": 12.377993,
+          "name": "Stockartstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 13006,
+          "latitude": 51.304893,
+          "longitude": 12.381788,
+          "name": "Hildebrandstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 13007,
+          "latitude": 51.310795,
+          "longitude": 12.373284,
+          "name": "Connewitzer Kreuz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 13008,
+          "latitude": 51.324931,
+          "longitude": 12.373576,
+          "name": "S\u00fcdplatz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 13009,
+          "latitude": 51.290543,
+          "longitude": 12.390455,
+          "name": "Friederikenstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 13010,
+          "latitude": 51.287391,
+          "longitude": 12.39279,
+          "name": "Leinestr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 13118,
+          "latitude": 51.354592,
+          "longitude": 12.317683,
+          "name": "Kietzstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 13120,
+          "latitude": 51.319494,
+          "longitude": 12.352184,
+          "name": "Nonnenweg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 13122,
+          "latitude": 51.305598,
+          "longitude": 12.320485,
+          "name": "Klo\u00dfstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 13124,
+          "latitude": 51.318086,
+          "longitude": 12.39477,
+          "name": "An den Tierkliniken"
+        },
+        {
+          "city": "Leipzig",
+          "id": 13125,
+          "latitude": 51.371899,
+          "longitude": 12.428175,
+          "name": "S-Bahnhof Thekla (Bus)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 13131,
+          "latitude": 51.320195,
+          "longitude": 12.292698,
+          "name": "S-Bahnhof Allee-Center (Bus)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 13132,
+          "latitude": 51.313291,
+          "longitude": 12.291988,
+          "name": "Stuttgarter Allee"
+        },
+        {
+          "city": "Leipzig",
+          "id": 13196,
+          "latitude": 51.335798,
+          "longitude": 12.330091,
+          "name": "L\u00fctzner/Merseburger Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 13247,
+          "latitude": 51.314997,
+          "longitude": 12.373191,
+          "name": "Richard-Lehmann-Str./HTWK"
+        },
+        {
+          "city": "Leipzig",
+          "id": 13280,
+          "latitude": 51.327906,
+          "longitude": 12.308449,
+          "name": "Saarl\u00e4nder Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 13282,
+          "latitude": 51.359096,
+          "longitude": 12.440992,
+          "name": "Hohentichelnstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 13283,
+          "latitude": 51.330244,
+          "longitude": 12.314474,
+          "name": "Cred\u00e9str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 13284,
+          "latitude": 51.362494,
+          "longitude": 12.399492,
+          "name": "S-Bahnhof Nord (Bus)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 13285,
+          "latitude": 51.400207,
+          "longitude": 12.392947,
+          "name": "Alte D\u00fcbener Landstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 13286,
+          "latitude": 51.298891,
+          "longitude": 12.332795,
+          "name": "Lauerscher Weg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 13288,
+          "latitude": 51.345691,
+          "longitude": 12.473484,
+          "name": "Schongauerstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 13296,
+          "latitude": 51.291967,
+          "longitude": 12.352614,
+          "name": "Cospudener See/EXPO-Pavillon"
+        },
+        {
+          "city": "Leipzig",
+          "id": 13514,
+          "latitude": 51.354187,
+          "longitude": 12.395732,
+          "name": "Fliederhof"
+        },
+        {
+          "city": "Leipzig",
+          "id": 13537,
+          "latitude": 51.320495,
+          "longitude": 12.326585,
+          "name": "Antonien-/Gie\u00dferstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 13538,
+          "latitude": 51.35699,
+          "longitude": 12.431886,
+          "name": "Bautzner/B\u00e4stleinstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 13539,
+          "latitude": 51.311991,
+          "longitude": 12.307791,
+          "name": "Lausner Weg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 13543,
+          "latitude": 51.295498,
+          "longitude": 12.464397,
+          "name": "Colmbergsiedlung"
+        },
+        {
+          "city": "Leipzig",
+          "id": 13545,
+          "latitude": 51.302496,
+          "longitude": 12.324894,
+          "name": "Gro\u00dfzschocher, Anton-Zickmantel-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 13546,
+          "latitude": 51.313894,
+          "longitude": 12.421994,
+          "name": "Kommandant-Prendel-Allee"
+        },
+        {
+          "city": "Leipzig",
+          "id": 13548,
+          "latitude": 51.35139,
+          "longitude": 12.430591,
+          "name": "Leonhard-Frank-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 13549,
+          "latitude": 51.362395,
+          "longitude": 12.437993,
+          "name": "Leupoldstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 13550,
+          "latitude": 51.310117,
+          "longitude": 12.379633,
+          "name": "Arno-Nitzsche-/Arthur-Hoffmann-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 13551,
+          "latitude": 51.320993,
+          "longitude": 12.428894,
+          "name": "Oberdorfstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 13552,
+          "latitude": 51.355097,
+          "longitude": 12.444296,
+          "name": "Paunsdorf, Friedhof"
+        },
+        {
+          "city": "Leipzig",
+          "id": 13553,
+          "latitude": 51.334792,
+          "longitude": 12.441896999999999,
+          "name": "Paunsdorfer Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 13554,
+          "latitude": 51.35039,
+          "longitude": 12.447188,
+          "name": "Permoser-/Hohentichelnstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 13555,
+          "latitude": 51.316592,
+          "longitude": 12.426887,
+          "name": "Schwimmhalle S\u00fcdost"
+        },
+        {
+          "city": "Leipzig",
+          "id": 13557,
+          "latitude": 51.337194,
+          "longitude": 12.443383,
+          "name": "Uhlandweg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 15735,
+          "latitude": 51.421194,
+          "longitude": 12.476897,
+          "name": "Gottscheina, Siedlung"
+        },
+        {
+          "city": "Leipzig",
+          "id": 15738,
+          "latitude": 51.343297,
+          "longitude": 12.381488,
+          "name": "Hauptbahnhof/Goethestr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 15763,
+          "latitude": 51.41333,
+          "longitude": 12.296502,
+          "name": "GVZ Nord/Porschestr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 15786,
+          "latitude": 51.340696,
+          "longitude": 12.376889,
+          "name": "Reichsstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 15787,
+          "latitude": 51.304593,
+          "longitude": 12.440796,
+          "name": "Russenstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 15811,
+          "latitude": 51.303381,
+          "longitude": 12.400138,
+          "name": "Probstheidaer/Willi-Bredel-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 15823,
+          "latitude": 51.315082,
+          "longitude": 12.368362,
+          "name": "August-Bebel-/Richard-Lehmann-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 15824,
+          "latitude": 51.314895,
+          "longitude": 12.27939,
+          "name": "Alte Salzstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 15825,
+          "latitude": 51.343195,
+          "longitude": 12.406088,
+          "name": "Dornbergerstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 15826,
+          "latitude": 51.33609,
+          "longitude": 12.48549,
+          "name": "Engelsdorf, Kirche"
+        },
+        {
+          "city": "Leipzig",
+          "id": 15827,
+          "latitude": 51.312597,
+          "longitude": 12.368797,
+          "name": "Gustav-Freytag-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 15828,
+          "latitude": 51.317891,
+          "longitude": 12.296593,
+          "name": "Ringstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 15829,
+          "latitude": 51.317895,
+          "longitude": 12.368396,
+          "name": "Steinstr. (\u00c4rztehaus S\u00fcd)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 15861,
+          "latitude": 51.394068,
+          "longitude": 12.292745,
+          "name": "GVZ S\u00fcd/Am Exer"
+        },
+        {
+          "city": "Leipzig",
+          "id": 15873,
+          "latitude": 51.363193,
+          "longitude": 12.396183,
+          "name": "Sch\u00f6nefelder Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 16305,
+          "latitude": 51.34279,
+          "longitude": 12.445095,
+          "name": "Geithainer Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 16881,
+          "latitude": 51.345796,
+          "longitude": 12.465695,
+          "name": "Engelsdorf, G\u00fcterbahnhofstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 17154,
+          "latitude": 51.326893,
+          "longitude": 12.281496,
+          "name": "Weimarer Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 17161,
+          "latitude": 51.324996,
+          "longitude": 12.275089,
+          "name": "Kiewer Str./Kaufland"
+        },
+        {
+          "city": "Leipzig",
+          "id": 19921,
+          "latitude": 51.408663,
+          "longitude": 12.443034,
+          "name": "BMW Zentralgeb\u00e4ude"
+        },
+        {
+          "city": "Leipzig",
+          "id": 19968,
+          "latitude": 51.262797,
+          "longitude": 12.299195,
+          "name": "Azaleenstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 19969,
+          "latitude": 51.405989,
+          "longitude": 12.418895,
+          "name": "Seehausen, Dingolfinger Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 19970,
+          "latitude": 51.361861,
+          "longitude": 12.363237,
+          "name": "Gohlis-S\u00fcd"
+        },
+        {
+          "city": "Leipzig",
+          "id": 20052,
+          "latitude": 51.332592,
+          "longitude": 12.443296,
+          "name": "M\u00f6lkauer Dorfplatz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 20058,
+          "latitude": 51.345027,
+          "longitude": 12.354508,
+          "name": "Sportforum Ost"
+        },
+        {
+          "city": "Leipzig",
+          "id": 20158,
+          "latitude": 51.373395,
+          "longitude": 12.344185,
+          "name": "S-Bahnhof Slevogtstr. (Bus)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 20180,
+          "latitude": 51.304494,
+          "longitude": 12.417793,
+          "name": "Connewitzer Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 20213,
+          "latitude": 51.320263,
+          "longitude": 12.413283999999999,
+          "name": "Sch\u00f6nbachstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 20226,
+          "latitude": 51.333996,
+          "longitude": 12.375994,
+          "name": "Windm\u00fchlenstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 20274,
+          "latitude": 51.40173,
+          "longitude": 12.452475,
+          "name": "BMW/Tor 1"
+        },
+        {
+          "city": "Leipzig",
+          "id": 20282,
+          "latitude": 51.411965,
+          "longitude": 12.449652,
+          "name": "BMW Presswerk"
+        },
+        {
+          "city": "Leipzig",
+          "id": 22361,
+          "latitude": 51.375697,
+          "longitude": 12.405586,
+          "name": "Essener/Friedrichshafner Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 22362,
+          "latitude": 51.372288,
+          "longitude": 12.404715,
+          "name": "Leonhardtstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 22868,
+          "latitude": 51.380226,
+          "longitude": 12.406598,
+          "name": "Schildberger Weg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 22879,
+          "latitude": 51.284661,
+          "longitude": 12.311431,
+          "name": "Albersdorfer Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 22880,
+          "latitude": 51.279965,
+          "longitude": 12.310262,
+          "name": "Fortunabadstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 22934,
+          "latitude": 51.317903,
+          "longitude": 12.378427,
+          "name": "Steinplatz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 22936,
+          "latitude": 51.402398,
+          "longitude": 12.459109,
+          "name": "Future Electronics"
+        },
+        {
+          "city": "Leipzig",
+          "id": 22937,
+          "latitude": 51.402441,
+          "longitude": 12.45917,
+          "name": "Ferag"
+        },
+        {
+          "city": "Leipzig",
+          "id": 23153,
+          "latitude": 51.320531,
+          "longitude": 12.288747,
+          "name": "Allee-Center/Offenburger Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 23154,
+          "latitude": 51.318599,
+          "longitude": 12.290603,
+          "name": "Allee-Center S\u00fcd"
+        },
+        {
+          "city": "Leipzig",
+          "id": 23155,
+          "latitude": 51.31769,
+          "longitude": 12.295761,
+          "name": "Breisgau-/Ringstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 23156,
+          "latitude": 51.317101,
+          "longitude": 12.280538,
+          "name": "Breisgaustr./S-Bahnhof Karlsruher Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 23157,
+          "latitude": 51.315945,
+          "longitude": 12.304704,
+          "name": "Str. am Park"
+        },
+        {
+          "city": "Leipzig",
+          "id": 23158,
+          "latitude": 51.328971,
+          "longitude": 12.283065,
+          "name": "Horburger Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 23161,
+          "latitude": 51.319669,
+          "longitude": 12.302733,
+          "name": "S-Bahnhof Gr\u00fcnauer Allee (Bus)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 23162,
+          "latitude": 51.327727,
+          "longitude": 12.289291,
+          "name": "Sch\u00f6nau, Kirche"
+        },
+        {
+          "city": "Leipzig",
+          "id": 23163,
+          "latitude": 51.313593,
+          "longitude": 12.26419,
+          "name": "Selliner Str./Gesundheitszentrum"
+        },
+        {
+          "city": "Leipzig",
+          "id": 23204,
+          "latitude": 51.316901,
+          "longitude": 12.306825,
+          "name": "G\u00e4rtnerstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 24972,
+          "latitude": 51.341433,
+          "longitude": 12.478201,
+          "name": "Engelsdorf, Opalstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 30004,
+          "latitude": 51.296725,
+          "longitude": 12.390309,
+          "name": "D\u00fcrrstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 30042,
+          "latitude": 51.333161,
+          "longitude": 12.366904,
+          "name": "W\u00e4chterstr. (Grassistr.)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 30043,
+          "latitude": 51.331269,
+          "longitude": 12.367684,
+          "name": "Mozartstr. (Grassistr.)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 30044,
+          "latitude": 51.328719,
+          "longitude": 12.368788,
+          "name": "Robert-Schumann-Str. (Grassistr.)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 30089,
+          "latitude": 51.31519,
+          "longitude": 12.301479,
+          "name": "Robert-Koch-Klinikum"
+        },
+        {
+          "city": "Leipzig",
+          "id": 30268,
+          "latitude": 51.396777,
+          "longitude": 12.450908,
+          "name": "Plau\u00dfig, Am Schenkberg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 30269,
+          "latitude": 51.396982,
+          "longitude": 12.431087,
+          "name": "Dingolfinger Str./Firma Magna"
+        },
+        {
+          "city": "Leipzig",
+          "id": 30317,
+          "latitude": 51.371087,
+          "longitude": 12.376956999999999,
+          "name": "Baaderstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 30495,
+          "latitude": 51.403931,
+          "longitude": 12.43237,
+          "name": "Versorgungszentrum BMW-Allee"
+        },
+        {
+          "city": "Leipzig",
+          "id": 30636,
+          "latitude": 51.332696,
+          "longitude": 12.304086999999999,
+          "name": "Hafentor"
+        },
+        {
+          "city": "Leipzig",
+          "id": 30637,
+          "latitude": 51.330519,
+          "longitude": 12.306657,
+          "name": "Lindenauer Hafen"
+        },
+        {
+          "city": "Leipzig",
+          "id": 30699,
+          "latitude": 51.376583,
+          "longitude": 12.397075,
+          "name": "S-Bahnhof Essener Str. (Bus)"
+        },
+        {
+          "city": "Leipzig",
+          "id": 30724,
+          "latitude": 51.332277,
+          "longitude": 12.342237,
+          "name": "Alte Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 30725,
+          "latitude": 51.325894,
+          "longitude": 12.31439,
+          "name": "Niemeyerstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 30726,
+          "latitude": 51.337846,
+          "longitude": 12.327297,
+          "name": "Queckstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 30727,
+          "latitude": 51.328038,
+          "longitude": 12.319969,
+          "name": "Spinnerei"
+        },
+        {
+          "city": "Leipzig",
+          "id": 30771,
+          "latitude": 51.393634,
+          "longitude": 12.407207,
+          "name": "Messe-Allee/Imperial"
+        },
+        {
+          "city": "Leipzig",
+          "id": 30849,
+          "latitude": 51.411823,
+          "longitude": 12.390501,
+          "name": "Tornauer Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 30850,
+          "latitude": 51.410437,
+          "longitude": 12.392742,
+          "name": "Kossaer Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 30861,
+          "latitude": 51.370594,
+          "longitude": 12.338033,
+          "name": "Bl\u00fccherstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 30898,
+          "latitude": 51.416606,
+          "longitude": 12.390856,
+          "name": "Paul-Beiersdorf-Str."
+        },
+        {
+          "city": "Leipzig",
+          "id": 30908,
+          "latitude": 51.399852,
+          "longitude": 12.437786,
+          "name": "BMW/Tor 2"
+        },
+        {
+          "city": "Leipzig",
+          "id": 30909,
+          "latitude": 51.354541,
+          "longitude": 12.31027,
+          "name": "Hellerstr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 30931,
+          "latitude": 51.301429,
+          "longitude": 12.3064,
+          "name": "Gro\u00dfzschocher, Feuer- und Rettungswache"
+        },
+        {
+          "city": "Leipzig",
+          "id": 95480,
+          "latitude": 51.368797,
+          "longitude": 12.348992,
+          "name": "Faradaystr."
+        },
+        {
+          "city": "Leipzig",
+          "id": 96323,
+          "latitude": 51.387598,
+          "longitude": 12.354692,
+          "name": "Melissenweg"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8010008,
+          "latitude": 51.332433,
+          "longitude": 12.420519,
+          "name": "Anger-Crottendorf"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8010186,
+          "latitude": 51.317236,
+          "longitude": 12.27927,
+          "name": "Karlsruher Str"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8010205,
+          "latitude": 51.345474,
+          "longitude": 12.382064,
+          "name": "Leipzig Hbf"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8010206,
+          "latitude": 51.300716,
+          "longitude": 12.386315,
+          "name": "Leipzig-Connewitz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8010207,
+          "latitude": 51.353998,
+          "longitude": 12.30374,
+          "name": "Leipzig-Leutzsch"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8010208,
+          "latitude": 51.344296,
+          "longitude": 12.444332,
+          "name": "Leipzig-Paunsdorf"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8010209,
+          "latitude": 51.328041,
+          "longitude": 12.322079,
+          "name": "Leipzig-Plagwitz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8011491,
+          "latitude": 51.34395,
+          "longitude": 12.47763,
+          "name": "Leipzig-Engelsdorf"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8011495,
+          "latitude": 51.340602,
+          "longitude": 12.456172,
+          "name": "Leipzig Werkst\u00e4ttenstra\u00dfe"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8011771,
+          "latitude": 51.320902,
+          "longitude": 12.303009,
+          "name": "Leipzig Gr\u00fcnauer Allee"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8011913,
+          "latitude": 51.306043,
+          "longitude": 12.461448,
+          "name": "Leipzig-Holzhausen"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8012181,
+          "latitude": 51.369891,
+          "longitude": 12.353497,
+          "name": "Leipzig Olbrichtstra\u00dfe"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8012183,
+          "latitude": 51.423341,
+          "longitude": 12.22343,
+          "name": "Leipzig/Halle Flughafen"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8012184,
+          "latitude": 51.329265,
+          "longitude": 12.38166,
+          "name": "Leipzig Bayerischer Bahnhof"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8012186,
+          "latitude": 51.340636,
+          "longitude": 12.374616,
+          "name": "Leipzig Markt"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8012187,
+          "latitude": 51.320066,
+          "longitude": 12.38632,
+          "name": "Leipzig MDR"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8012188,
+          "latitude": 51.362857,
+          "longitude": 12.374527,
+          "name": "Leipzig-Gohlis"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8012190,
+          "latitude": 51.369336,
+          "longitude": 12.459976,
+          "name": "Leipzig-Heiterblick"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8012192,
+          "latitude": 51.278181,
+          "longitude": 12.309101,
+          "name": "Leipzig-Knauthain"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8012193,
+          "latitude": 51.364433,
+          "longitude": 12.352265,
+          "name": "Leipzig-M\u00f6ckern"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8012194,
+          "latitude": 51.324516,
+          "longitude": 12.411433,
+          "name": "Leipzig-St\u00f6tteritz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8012195,
+          "latitude": 51.371626,
+          "longitude": 12.430755,
+          "name": "Leipzig-Thekla"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8012196,
+          "latitude": 51.364166,
+          "longitude": 12.401067,
+          "name": "Leipzig Nord"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8012197,
+          "latitude": 51.380686,
+          "longitude": 12.321483,
+          "name": "Leipzig-Wahren"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8012200,
+          "latitude": 51.376361,
+          "longitude": 12.396986,
+          "name": "Essener Stra\u00dfe"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8012202,
+          "latitude": 51.335399,
+          "longitude": 12.375394,
+          "name": "Wilhelm-Leuschner-Platz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8012204,
+          "latitude": 51.372948,
+          "longitude": 12.344411,
+          "name": "Slevogtstra\u00dfe"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8012228,
+          "latitude": 51.28397,
+          "longitude": 12.46925,
+          "name": "Leipzig-Liebertwolkwitz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8012236,
+          "latitude": 51.333758,
+          "longitude": 12.321488,
+          "name": "Leipzig-Lindenau"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8012273,
+          "latitude": 51.373799,
+          "longitude": 12.412097,
+          "name": "Leipzig Mockauer Stra\u00dfe"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8012285,
+          "latitude": 51.390057,
+          "longitude": 12.293089,
+          "name": "Leipzig-L\u00fctzschena"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8012343,
+          "latitude": 51.31874,
+          "longitude": 12.406283,
+          "name": "Leipzig V\u00f6lkerschlachtdenkmal"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8012344,
+          "latitude": 51.315349,
+          "longitude": 12.267342,
+          "name": "Leipzig Miltitzer Allee"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8012355,
+          "latitude": 51.325313,
+          "longitude": 12.255034,
+          "name": "Leipzig-Miltitz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8012375,
+          "latitude": 51.325235,
+          "longitude": 12.459823,
+          "name": "Leipzig-M\u00f6lkau"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8012478,
+          "latitude": 51.396141,
+          "longitude": 12.389283,
+          "name": "Leipzig Messe"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8012817,
+          "latitude": 51.341868,
+          "longitude": 12.282667,
+          "name": "Leipzig-R\u00fcckmarsdorf"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8013070,
+          "latitude": 51.31916,
+          "longitude": 12.291748,
+          "name": "Leipzig Allee-Center"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8071179,
+          "latitude": 51.345068,
+          "longitude": 12.414339,
+          "name": "Leipzig Torgauer Platz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8080840,
+          "latitude": 51.367077,
+          "longitude": 12.366018,
+          "name": "Leipzig Coppiplatz"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8080930,
+          "latitude": 51.345179,
+          "longitude": 12.424671,
+          "name": "Leipzig-Sellerhausen"
+        },
+        {
+          "city": "Leipzig",
+          "id": 8098205,
+          "latitude": 51.345693,
+          "longitude": 12.380429,
+          "name": "Leipzig Hbf (tief)"
+        }
+      ],
+      "getAlignmentBaseline": "center",
+      "getAngle": 0,
+      "getColor": [
+        0,
+        0,
+        0
+      ],
+      "getPosition": "@@=coordinates",
+      "getSize": 8,
+      "getText": "@@=name",
+      "getTextAnchor": "middle",
+      "id": "e0b47eb4-e911-402f-9bef-1a68b8dd2e4f",
+      "pickable": true
+    }
+  ],
+  "mapProvider": "carto",
+  "mapStyle": "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
+  "views": [
+    {
+      "@@type": "MapView",
+      "controller": true
+    }
+  ]
+};
+    const tooltip = {'text': '{name}\n{address}'};
+    const customLibraries = null;
+    const configuration = null;
+
+    const deckInstance = createDeck({
+                  container,
+      jsonInput,
+      tooltip,
+      customLibraries,
+      configuration
+    });
+
+  </script>
+</html>

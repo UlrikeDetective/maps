@@ -652,8 +652,6 @@
 008012355,"Leipzig, Leipzig-Miltitz",51.325313,12.255034
 008012375,"Leipzig, Leipzig-Mölkau",51.325235,12.459823
 008012478,"Leipzig, Leipzig Messe",51.396141,12.389283
-008012656,"Leipzig, Pönitz",51.408537,12.514425
-008012697,"Leipzig, Rackwitz",51.440322,12.375133
 008012817,"Leipzig, Leipzig-Rückmarsdorf",51.341868,12.282667
 008013070,"Leipzig, Leipzig Allee-Center",51.319160,12.291748
 008071179,"Leipzig, Leipzig Torgauer Platz",51.345068,12.414339
