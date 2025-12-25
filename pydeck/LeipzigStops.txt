@@ -1,0 +1,662 @@
+000000145,"Leipzig, Arcus Park",51.361549,12.446576
+000000152,"Leipzig, Bergstr.",51.340535,12.402015
+000000154,"Leipzig, Breitscheidhof",51.351846,12.286913
+000000163,"Leipzig, Bremer Str.",51.376178,12.365034
+000000164,"Leipzig, Dankwartstr.",51.299188,12.392814
+000000165,"Leipzig, S-Bahnhof MDR (Bus)",51.320852,12.385905
+000000170,"Leipzig, Erich-Zeigner-Allee",51.327134,12.337815
+000000192,"Leipzig, Goetheplatz",51.355432,12.286969
+000000223,"Leipzig, Gröpplerstr.",51.334239,12.314676
+000000243,"Leipzig, Lindenau, Nathanaelkirche",51.339061,12.332653
+000000486,"Leipzig, Lise-Meitner-Str.",51.355178,12.305548
+000000613,"Leipzig, Louis-Fürnberg-Str.",51.348684,12.430274
+000000688,"Leipzig, Morgensternstr.",51.335053,12.311965
+000000693,"Leipzig, Reinhardtstr.",51.346746,12.430115
+000000694,"Leipzig, Rosmarinweg",51.346076,12.428112
+000000695,"Leipzig, Schleußig, Karlbrücke",51.326086,12.340523
+000000696,"Leipzig, Schwantesstr.",51.353765,12.430238
+000000697,"Leipzig, Stünz",51.339647,12.433015
+000000698,"Leipzig, Taubestr.",51.357421,12.411295
+000000701,"Leipzig, Rückmarsdorf, Tucholskystr.",51.344313,12.274328
+000000702,"Leipzig, Wilhelm-Winkler-Str.",51.354182,12.289220
+000000703,"Leipzig, Zittauer Str.",51.356100,12.409114
+000000704,"Leipzig, Zweenfurther Str.",51.340216,12.431393
+000000705,"Leipzig, Cunnersdorfer Str.",51.342090,12.429752
+000000712,"Leipzig, Portitz, Schule",51.386147,12.455525
+000000823,"Leipzig, Porsche/Tor 2",51.399007,12.295227
+000000851,"Leipzig, Porsche/Tor 3",51.401040,12.284319
+000000910,"Leipzig, Roßplatz/Grünewaldstr.",51.333358,12.376320
+000003639,"Leipzig, Bästlein-/Schwantesstr.",51.356536,12.430804
+000003744,"Leipzig, Porsche/Tor 1",51.410368,12.295383
+000003780,"Leipzig, Am Viadukt",51.373327,12.327300
+000003862,"Leipzig, Bei der Krähenhütte",51.287308,12.398448
+000003863,"Leipzig, Johannishöhe",51.286673,12.407291
+000003865,"Leipzig, Matzelstr.",51.289398,12.390242
+000003866,"Leipzig, Springerstr.",51.355066,12.370306
+000003867,"Leipzig, Zum Dölitzer Schacht",51.286954,12.401963
+000010688,"Leipzig, Rückmarsdorf, Einkaufspassage",51.344649,12.262938
+000010750,"Leipzig, Lipsiusstr.",51.330789,12.413995
+000010752,"Leipzig, Möckern, Slevogtstr.",51.371091,12.340483
+000010756,"Leipzig, Holsteinstr.",51.331090,12.411391
+000010758,"Leipzig, Liebigstr.",51.330492,12.392386
+000010759,"Leipzig, Schulze-Boysen-Str.",51.332493,12.400586
+000010762,"Leipzig, Fockestr.",51.320893,12.365789
+000010764,"Leipzig, Erika-von-Brockdorff-Str.",51.369797,12.345488
+000010767,"Leipzig, Michael-Kazmierczak-Str.",51.367292,12.372584
+000010786,"Leipzig, Hartmannsdorf, Erikenstr.",51.261695,12.306396
+000010787,"Leipzig, Karl-Heine-/Gießerstr.",51.329790,12.327287
+000010788,"Leipzig, Diezmannstr.",51.320097,12.317788
+000010789,"Leipzig, Adler",51.320293,12.330186
+000010790,"Leipzig, Holbeinstr.",51.328091,12.346195
+000010791,"Leipzig, Stieglitzstr.",51.323897,12.343794
+000010792,"Leipzig, Knautnaundorf, Werkstr.",51.251596,12.262586
+000010793,"Leipzig, Marschnerstr.",51.336498,12.357186
+000010795,"Leipzig, Klingerweg",51.332497,12.350592
+000010796,"Leipzig, Kurt-Kresse-Str.",51.314396,12.315884
+000010797,"Leipzig, Herrmann-Meyer-Str.",51.315391,12.309987
+000010810,"Leipzig, Siemensstr.",51.321792,12.326191
+000010811,"Leipzig, Hauptbahnhof/Ostseite",51.343901,12.382078
+000010813,"Leipzig, Rödelstr.",51.318493,12.340990
+000010814,"Leipzig, S-Bahnhof Plagwitz (Tram/Bus)",51.328273,12.322756
+000010815,"Leipzig, Zollschuppenst.",51.326949,12.324426
+000010817,"Leipzig, Naumburger Str.",51.326490,12.327593
+000010818,"Leipzig, Messegelände",51.396712,12.396570
+000010823,"Leipzig, Georg-Herwegh-Str.",51.394884,12.383024
+000010824,"Leipzig, S-Bahnhof Messe (Tram/Bus)",51.396038,12.388815
+000010827,"Leipzig, Rochlitzstr.",51.318790,12.347885
+000010828,"Leipzig, Rennbahn",51.321190,12.361391
+000010856,"Leipzig, Bahnhof Paunsdorf (Bus)",51.343492,12.445090
+000010861,"Leipzig, Hartmannsdorf, Gasthof",51.267391,12.309085
+000010935,"Leipzig, Gefrierzentrum",51.249993,12.274895
+000010937,"Leipzig, Knautnaundorf, Rundkapellenweg",51.253898,12.271590
+000010939,"Leipzig, Abzweig n. Hartmannsdorf",51.263391,12.292487
+000010980,"Leipzig, Eutritzscher Zentrum",51.365193,12.385185
+000010983,"Leipzig, Bayerischer Bahnhof (Tram/Bus)",51.330510,12.380904
+000010997,"Leipzig, Wildpark",51.300591,12.372593
+000011002,"Leipzig, Mathildenstr.",51.307297,12.373587
+000011003,"Leipzig, Koburger Brücke",51.303395,12.374190
+000011004,"Leipzig, Gottschedstr.",51.341297,12.367587
+000011005,"Leipzig, Westplatz",51.338992,12.362393
+000011059,"Leipzig, Edlichstr.",51.342743,12.414195
+000011060,"Leipzig, Geißlerstr./Bülowviertel",51.344845,12.419190
+000011061,"Leipzig, Reudnitz, Koehlerstr.",51.338894,12.403085
+000011062,"Leipzig, Wiebelstr.",51.340029,12.408279
+000011063,"Leipzig, Johannisplatz",51.338169,12.385014
+000011064,"Leipzig, Gerichtsweg",51.339097,12.395189
+000011069,"Leipzig, Annenstr.",51.343712,12.421661
+000011070,"Leipzig, Sellerhausen, Emmausstr.",51.343839,12.428074
+000011071,"Leipzig, Sportforum Süd",51.340689,12.351190
+000011072,"Leipzig, Angerbrücke/Straßenbahnhof",51.337392,12.340097
+000011073,"Leipzig, Leibnizstr.",51.343296,12.364991
+000011074,"Leipzig, Waldplatz",51.342297,12.359089
+000011076,"Leipzig, Felsenkeller",51.332490,12.338894
+000011077,"Leipzig, Karl-Heine-/Merseburger Str.",51.331394,12.333489
+000011078,"Leipzig, Elster Passage",51.328692,12.336493
+000011079,"Leipzig, Markranstädter Str.",51.325295,12.334194
+000011102,"Leipzig, August-Bebel-/Kurt-Eisner-Str.",51.320893,12.368889
+000011115,"Leipzig, Leopoldstr.",51.304190,12.374090
+000011120,"Leipzig, Grünau-Süd",51.311498,12.278976
+000011121,"Leipzig, Schönauer/Ratzelstr.",51.314396,12.303186
+000011122,"Leipzig, Nonnenstr.",51.332393,12.348891
+000011123,"Leipzig, Hohenheida, Gasthof",51.419989,12.446489
+000011124,"Leipzig, Hohenheida, Am Anger",51.420193,12.452688
+000011126,"Leipzig, Göbschelwitz",51.419597,12.422184
+000011127,"Leipzig, Seehausen, Schule",51.403689,12.413289
+000011128,"Leipzig, Seehausen, Gut Seehausen",51.406094,12.418687
+000011129,"Leipzig, Anemonenweg",51.331693,12.438392
+000011130,"Leipzig, Seehausen, Alte Mühle",51.410017,12.419526
+000011131,"Leipzig Gottscheina, Am Ring",51.425092,12.479192
+000011167,"Leipzig, Bahnhof Holzhausen (Bus)",51.306474,12.462068
+000011176,"Leipzig, GVZ Nord/Deutsche Post AG",51.413579,12.293415
+000011182,"Leipzig, GVZ Nord/Großmarkt Leipzig",51.410586,12.305809
+000011198,"Leipzig, GVZ Nord/Sattlerweg",51.408599,12.302301
+000011199,"Leipzig, Krakauer Str.",51.309294,12.272291
+000011200,"Leipzig, Zschampertaue",51.307297,12.266195
+000011201,"Leipzig, Ratzelbogen",51.311996,12.283688
+000011212,"Leipzig, Arno-Nitzsche-Str.",51.310580,12.374488
+000011228,"Leipzig, GVZ Nord/T&S",51.413130,12.302642
+000011274,"Leipzig, Heisenbergstr.",51.364392,12.465090
+000011276,"Leipzig, Heiterblick, Teslastr.",51.364195,12.451989
+000011277,"Leipzig, Portitzer Allee/S-Bahnhof Heiterblick",51.367393,12.460590
+000011278,"Leipzig, Bautzner Str.",51.355591,12.434194
+000011280,"Leipzig, Volksgarten",51.348312,12.419951
+000011284,"Leipzig, Lausen",51.306594,12.260795
+000011287,"Leipzig, Am Sonneneck",51.301343,12.262387
+000011296,"Leipzig, Lausen, Buswendestelle",51.307409,12.260580
+000011318,"Leipzig, Zschortauer Str.",51.376490,12.394697
+000011319,"Leipzig, Franz-Mehring-Str.",51.376191,12.369891
+000011320,"Leipzig, Gohlis-Nord, Virchowstr.",51.375791,12.379086
+000011321,"Leipzig, Olbrichtstr.",51.374895,12.356492
+000011324,"Leipzig, Sternsiedlung Nord",51.375291,12.346091
+000011325,"Leipzig, Rosenowstr.",51.376192,12.402491
+000011326,"Leipzig, Komarowstr.",51.378891,12.415393
+000011327,"Leipzig, Riebeck-/Stötteritzer Str.",51.327595,12.403596
+000011329,"Leipzig, Breite Str.",51.335703,12.408001
+000011330,"Leipzig, Riebeck-/Oststr.",51.331889,12.405895
+000011331,"Leipzig, Sommerfeld",51.346481,12.479000
+000011332,"Leipzig, Elsastr.",51.342464,12.398769
+000011333,"Leipzig, Paunsdorfer Allee/Permoserstr.",51.352098,12.479095
+000011334,"Leipzig, Paunsdorf Center",51.348856,12.479237
+000011335,"Leipzig, Technisches Rathaus",51.325198,12.400964
+000011336,"Leipzig, S-Bahnhof Stötteritz (Tram/Bus)",51.324889,12.411590
+000011337,"Leipzig, An der Märchenwiese",51.306098,12.396394
+000011338,"Leipzig, Moritz Hof",51.301991,12.396292
+000011339,"Leipzig, Meusdorfer Str.",51.309491,12.386990
+000011340,"Leipzig, Triftweg",51.308894,12.396386
+000011341,"Leipzig, Wiedebachplatz",51.309490,12.377665
+000011342,"Leipzig, Körnerstr.",51.325092,12.378884
+000011343,"Leipzig, Kurt-Eisner-/Arthur-Hoffmann-Str.",51.320691,12.378388
+000011344,"Leipzig, Lößnig",51.296197,12.396093
+000011345,"Leipzig, Hohe Str.",51.329090,12.373408
+000011346,"Leipzig, Siedlerweg",51.388696,12.360291
+000011347,"Leipzig, Rietzschkegrund",51.390090,12.367795
+000011348,"Leipzig, Wiederitzscher Landstr.",51.396596,12.369797
+000011349,"Leipzig, Martinshöhe",51.389495,12.371286
+000011350,"Leipzig, Baalsdorf, Baalsdorfer Str.",51.323390,12.480493
+000011351,"Leipzig, Baalsdorf, Kirchweg",51.322794,12.487796
+000011352,"Leipzig, Lintacherstr.",51.324192,12.467092
+000011353,"Leipzig, Baalsdorf, Brandiser Str.",51.324194,12.472187
+000011354,"Leipzig, Wiederitzsch, Schule",51.393389,12.372795
+000011355,"Leipzig, Wiederitzsch, Bürgerbüro",51.394292,12.373292
+000011388,"Leipzig, Stahmeln",51.378366,12.304648
+000011389,"Leipzig, Lützschena",51.383393,12.281287
+000011390,"Leipzig, Stahmelner Allee",51.380770,12.293068
+000011391,"Leipzig, Pittlerstr.",51.376650,12.312886
+000011392,"Leipzig, Annaberger Str.",51.371994,12.331197
+000011393,"Leipzig, Wahren (Rathaus)",51.374395,12.324231
+000011394,"Leipzig, Dantestr.",51.366842,12.346293
+000011395,"Leipzig, Möckernscher Markt",51.369893,12.337695
+000011396,"Leipzig, Freirodaer Weg",51.385738,12.273996
+000011397,"Leipzig, Hänichen, Bismarckturm",51.386210,12.267722
+000011398,"Leipzig, Dreiecksweg",51.310396,12.310789
+000011399,"Leipzig, Weidenweg",51.304392,12.314187
+000011400,"Leipzig, Schönauer-Lützner Str.",51.323691,12.291155
+000011401,"Leipzig, Schönau, Weißdornstr.",51.324094,12.292791
+000011402,"Leipzig, Lausen, Ärztehaus",51.303090,12.270687
+000011403,"Leipzig, Rathenaustr.",51.354792,12.315386
+000011404,"Leipzig, Wasserturmweg",51.300795,12.314186
+000011405,"Leipzig, Gärtnerei Großzschocher",51.301409,12.306154
+000011407,"Leipzig, Mockauer/Volbedingstr.",51.364137,12.402070
+000011408,"Leipzig, Apelstr./Historischer Betriebshof",51.355092,12.391189
+000011409,"Leipzig, Hamburger Str.",51.358790,12.395785
+000011410,"Leipzig, Wilhelm-Liebknecht-Platz",51.349794,12.377587
+000011411,"Leipzig, Wittenberger Str.",51.353197,12.387387
+000011412,"Leipzig, Hauptbahnhof/Wintergartenstr.",51.343179,12.383388
+000011413,"Leipzig, Friedrichshafner Str.",51.368897,12.406590
+000011414,"Leipzig, Döringstr.",51.372194,12.409794
+000011421,"Leipzig, Wiederitzsch Nord, Salzhandelsstr.",51.403186,12.367320
+000011423,"Leipzig, Schenkendorfstr.",51.324491,12.369497
+000011426,"Leipzig, Dölitz, Straßenbahnhof",51.284791,12.394691
+000011428,"Leipzig, Am Eichwinkel",51.282994,12.395290
+000011524,"Leipzig, Am Sportpark",51.357192,12.315085
+000011525,"Leipzig, Auensee",51.370197,12.314991
+000011526,"Leipzig, Wittestr.",51.347695,12.301491
+000011527,"Leipzig, Ernst-Keil-Str.",51.340494,12.300485
+000011529,"Leipzig, Plaut-/Schomburgkstr.",51.337495,12.297786
+000011531,"Leipzig, Wahren (Am Zuckmantel/Fr.-Bosse-Str.)",51.372997,12.324374
+000011535,"Leipzig, Ahornstr.",51.356192,12.460190
+000011536,"Leipzig, Paunsdorf Nord",51.361256,12.470454
+000011538,"Leipzig, Am Vorwerk",51.352895,12.459195
+000011539,"Leipzig, Barbarastr.",51.345595,12.449987
+000011540,"Leipzig, Paunsdorf, Straßenbahnhof",51.345695,12.457589
+000011541,"Leipzig, Ostheimstr.",51.345594,12.436590
+000011542,"Leipzig, Paunsdorf, Theodor-Heuss-Str.",51.346390,12.444691
+000011543,"Leipzig, Hermelinstr.",51.358790,12.473585
+000011553,"Leipzig, Richard-Lehmann-/Zwickauer Str.",51.314602,12.394283
+000011554,"Leipzig, Altenburger Str.",51.314992,12.382991
+000011555,"Leipzig, Deutscher Platz",51.321591,12.399492
+000011556,"Leipzig, An der Tabaksmühle",51.314095,12.406785
+000011557,"Leipzig, Johannisallee",51.327296,12.388791
+000011558,"Leipzig, Deutsche Nationalbibliothek",51.323562,12.395691
+000011559,"Leipzig, Meusdorf",51.294491,12.439696
+000011563,"Leipzig, Arthur-Hoffmann-/Richard-Lehmann-Str.",51.314997,12.378486
+000011564,"Leipzig, Karl-Liebknecht-/Kurt-Eisner-Str.",51.320698,12.373495
+000011584,"Leipzig, Härtelstr.",51.332792,12.377542
+000011652,"Leipzig, Messeverwaltung",51.395154,12.394499
+000011653,"Leipzig, Am alten Flughafen",51.392118,12.397494
+000011654,"Leipzig, Martin-Herrmann-Str.",51.307297,12.322086
+000011656,"Leipzig, Mühlweg",51.336790,12.466494
+000011657,"Leipzig, Engelsdorf, Arthur-Winkler-Str.",51.337998,12.475485
+000011658,"Leipzig, Engelsdorf, Gymnasium",51.334294,12.482397
+000011659,"Leipzig, Engelsdorf, Ernst-Guhr-Str.",51.336690,12.471984
+000011660,"Leipzig, Einfahrt Sachsenpark",51.399591,12.401484
+000011661,"Leipzig, Sachsenpark",51.401592,12.396989
+000011683,"Leipzig, Lausener Bogen",51.299794,12.261187
+000011685,"Leipzig, Am Silo",51.304591,12.260695
+000011689,"Leipzig, Lausen, Wolkenweg",51.301390,12.269089
+000011692,"Leipzig, Bismarckstr.",51.300397,12.319995
+000011695,"Leipzig, Raiffeisenstr.",51.299592,12.287693
+000011697,"Leipzig, Siedlung Florian Geyer",51.296997,12.289487
+000011699,"Leipzig, S-Bahnhof Karlsruher Str. (Bus)",51.316991,12.278693
+000011702,"Leipzig, Am kleinen Feld",51.316593,12.263987
+000011767,"Leipzig, Rückmarsdorf, Löwen Center",51.345621,12.269683
+000011768,"Leipzig, Rückmarsdorf, Sandberg",51.346691,12.258388
+000011769,"Leipzig, Zur Kaninchenfarm",51.343390,12.295697
+000011770,"Leipzig, Rückmarsdorf, Zum Bahnhof",51.344497,12.281893
+000011771,"Leipzig, Lindenau, Friedhof",51.340692,12.314783
+000011772,"Leipzig, Merseburger/Schomburgkstr.",51.342795,12.301784
+000011775,"Leipzig, Knauthain, Am Weiher",51.272892,12.311086
+000011777,"Leipzig, Knauthain, Schönbergstr.",51.275497,12.311488
+000011782,"Leipzig, Thomas-Müntzer-Siedlung",51.269793,12.302391
+000011783,"Leipzig, Am Klucksgraben",51.266895,12.297697
+000011786,"Leipzig, Pelzgasse",51.401692,12.392583
+000011787,"Leipzig, Zuckelhausen",51.304992,12.452890
+000011788,"Leipzig, Seehausener Allee",51.399174,12.397571
+000011789,"Leipzig, Gypsbergstr.",51.376529,12.399255
+000011790,"Leipzig, Gewerbegebiet Podelwitz",51.409509,12.394039
+000011792,"Leipzig, Siedlung Waldfrieden",51.312891,12.443297
+000011821,"Leipzig, Geschwister-Scholl-Str.",51.320392,12.256092
+000011823,"Leipzig, Miltitz, Friedhof",51.318698,12.247491
+000011826,"Leipzig, Str. am See",51.316193,12.261591
+000011827,"Leipzig, Großmiltitzer Str.",51.320289,12.261394
+000011831,"Leipzig, Pahlenweg",51.292497,12.427987
+000011900,"Leipzig, Pleißenburgwerkstätten",51.370890,12.430384
+000011901,"Leipzig, Telemannstr.",51.327390,12.367485
+000011902,"Leipzig, Seelenbinderstr.",51.366590,12.350095
+000011903,"Leipzig, Südvorstadt, Lößniger Str.",51.320593,12.381796
+000011905,"Leipzig, Congress Center",51.396918,12.399388
+000011906,"Leipzig, Robert-Schumann-Str. (Ferdinand-Rhode-Str.)",51.329625,12.366673
+000011907,"Leipzig, Braun-/Heiterblickstr.",51.368990,12.430788
+000011908,"Leipzig, Lidicestr.",51.377496,12.430189
+000011916,"Leipzig, Schwarzenbergweg",51.286893,12.429591
+000011929,"Leipzig, Handwerkerhof",51.326393,12.436086
+000011950,"Leipzig, S-Bahnhof Anger-Crottendorf (Bus)",51.333390,12.418566
+000011952,"Leipzig, Ostfriedhof",51.332431,12.422442
+000011956,"Leipzig, Stötteritz, Holzhäuser Str.",51.318696,12.431191
+000011958,"Leipzig, Martinstr.",51.334214,12.413101
+000011960,"Leipzig, Rathaus Stötteritz",51.319291,12.420085
+000011962,"Leipzig, Kolmstr.",51.320096,12.426689
+000011964,"Leipzig, Breslauer Str.",51.324190,12.414595
+000011968,"Leipzig, Weißestr.",51.321996,12.418895
+000011970,"Leipzig, Gutenbergplatz",51.334448,12.391788
+000011972,"Leipzig, Ostplatz",51.331676,12.395889
+000012013,"Leipzig, Baalsdorf, Zaucheweg",51.320793,12.493685
+000012015,"Leipzig, Hirschfeld",51.324168,12.525343
+000012016,"Leipzig, Kleinpösna",51.309496,12.518091
+000012017,"Leipzig, Althen, Oertgering",51.346693,12.519392
+000012018,"Leipzig, Althen, Althener Anger",51.338789,12.517896
+000012020,"Leipzig, Althen, Freundschaftsring",51.339898,12.522589
+000012022,"Leipzig, Walter-Heise-Str.",51.302590,12.464487
+000012023,"Leipzig, Feldstr.",51.303194,12.441595
+000012025,"Leipzig, Schweizer Bogen",51.302097,12.437597
+000012026,"Leipzig, Virchow-/Coppistr.",51.366898,12.375988
+000012027,"Leipzig, An den Pferdnerkabeln",51.380096,12.436289
+000012028,"Leipzig, Mathiesenstr.",51.352091,12.322485
+000012031,"Leipzig, Engelsdorf, Arnoldplatz",51.348192,12.493991
+000012032,"Leipzig, Engelsdorf, Hans-Weigel-Str.",51.342794,12.479596
+000012033,"Leipzig, Engelsdorf, Hugo-Aurig-Str.",51.343095,12.486697
+000012034,"Leipzig, Regenbogen",51.300794,12.266293
+000012036,"Leipzig, Strümpellstr.",51.305595,12.436395
+000012038,"Leipzig, Herzzentrum",51.306495,12.438787
+000012040,"Leipzig, Engelsdorf, Klempererstr.",51.340293,12.489284
+000012041,"Leipzig, Engelsdorf, Kirchweg",51.336789,12.487395
+000012046,"Leipzig, Engelsdorf, Sabinenstr.",51.346894,12.492887
+000012049,"Leipzig, Engelsdorf, Sternenstr.",51.346395,12.487895
+000012072,"Leipzig, Prager/Russenstr.",51.307795,12.422085
+000012073,"Leipzig, Probstheida",51.303796,12.426291
+000012075,"Leipzig, Probstheida, Buswendestelle",51.304111,12.424134
+000012076,"Leipzig, Völkerschlachtdenkmal (Tram/Bus)",51.314594,12.411887
+000012078,"Leipzig, Südfriedhof",51.312094,12.416192
+000012079,"Leipzig, Altes Messegelände",51.321045,12.404330
+000012080,"Leipzig, Naunhofer Str.",51.318067,12.407783
+000012083,"Leipzig, Witzgallstr.",51.328243,12.399539
+000012086,"Leipzig, Franzosenallee",51.300790,12.430686
+000012088,"Leipzig, Roseggerstr.",51.297490,12.435589
+000012135,"Leipzig, Höltystr.",51.295308,12.432399
+000012145,"Leipzig, Markt",51.339992,12.374497
+000012146,"Leipzig, Zur Lindenhöhe",51.391491,12.335489
+000012147,"Leipzig, Lindenallee",51.399395,12.341785
+000012148,"Leipzig, Sophienstr.",51.391394,12.322791
+000012149,"Leipzig, An der Schule",51.392393,12.333197
+000012150,"Leipzig, Lindenthal, Kirche",51.394296,12.336785
+000012151,"Leipzig, Lindenthaler Hauptstr.",51.391232,12.327853
+000012152,"Leipzig, Landsberger/Bahnhofstr.",51.386590,12.349387
+000012153,"Leipzig, Lindenthal, An der Windmühle",51.392833,12.339841
+000012155,"Leipzig, Pommernstr.",51.331190,12.428895
+000012166,"Leipzig, Böhlitz-Ehrenberg, Burghausener Str.",51.361692,12.271188
+000012167,"Leipzig, Feuerbachstr.",51.345795,12.357192
+000012168,"Leipzig, Ludwig-Jahn-Str.",51.360297,12.285996
+000012169,"Leipzig, Forstweg",51.360990,12.279885
+000012170,"Leipzig, Barnecker Str.",51.355695,12.299984
+000012171,"Leipzig, Südstr.",51.359291,12.292990
+000012172,"Leipzig, Pfingstweide",51.349995,12.309496
+000012173,"Leipzig, Philipp-Reis-Str.",51.351695,12.305986
+000012174,"Leipzig, Am Mückenschlösschen",51.349794,12.355086
+000012175,"Leipzig, Stallbaumstr.",51.358291,12.359786
+000012199,"Leipzig, Wasserwerk Windorf",51.294393,12.320192
+000012201,"Leipzig, Knauthain, Seumestr.",51.286771,12.313763
+000012202,"Leipzig, Gottfried-Keller-Str.",51.295286,12.434994
+000012203,"Leipzig, Huttenstr.",51.300575,12.327940
+000012205,"Leipzig, Großzschocher, Gerhard-Ellrodt-Str.",51.300390,12.321486
+000012207,"Leipzig, Arthur-Nagel-Str.",51.308392,12.326583
+000012209,"Leipzig, Kunzestr.",51.304691,12.327391
+000012211,"Leipzig, Schwartzestr.",51.315689,12.326093
+000012213,"Leipzig, Kleinzschocher, Kötzschauer Str.",51.312391,12.325697
+000012217,"Leipzig, Knautkleeberg",51.277793,12.309790
+000012250,"Leipzig, Mozartstr. (Ferdinand-Rhode-Str.)",51.331373,12.365940
+000012252,"Leipzig, Willi-Bredel-Str.",51.302991,12.401185
+000012253,"Leipzig, Wächterstr. (Ferdinand-Rhode-Str.)",51.333211,12.365171
+000012263,"Leipzig, An den Platanen",51.326798,12.441584
+000012264,"Leipzig, Hasenheide",51.334492,12.460593
+000012265,"Leipzig, Engelsdorf, Ärztehaus",51.339396,12.461393
+000012266,"Leipzig, Am Bahndamm",51.332498,12.457787
+000012267,"Leipzig, Dr.-Wilhelm-Külz-Str.",51.331494,12.436295
+000012268,"Leipzig, Mölkau, Gemeindeamt",51.331093,12.441390
+000012269,"Leipzig, Gottschalkstr.",51.325790,12.452589
+000012270,"Leipzig, Bahnhof Mölkau (Bus)",51.324597,12.459789
+000012271,"Leipzig, Hohenheida, Lindengasse",51.419790,12.442893
+000012274,"Leipzig, Breitenfeld, Parkring",51.404693,12.347391
+000012276,"Leipzig, Breitenfeld, Gewerbegebiet",51.404624,12.359203
+000012281,"Leipzig, Gohlis, Landsberger Str.",51.381483,12.355336
+000012282,"Leipzig, Lortzingstr.",51.345594,12.371391
+000012283,"Leipzig, Landsberger/Max-Liebermann-Str.",51.375890,12.361292
+000012284,"Leipzig, Beyerleinstr.",51.378995,12.358689
+000012285,"Leipzig, S-Bahnhof Coppiplatz (Tram/Bus)",51.367291,12.366694
+000012286,"Leipzig, Viertelsweg",51.371389,12.364596
+000012287,"Leipzig, Menckestr.",51.359095,12.362488
+000012288,"Leipzig, Georg-Schumann-/Lindenthaler Str.",51.362590,12.365689
+000012289,"Leipzig, Zoo",51.348598,12.371684
+000012290,"Leipzig, Nordplatz",51.352490,12.373592
+000012316,"Leipzig, Henriettenstr.",51.333697,12.324297
+000012318,"Leipzig, Lindenau, Bushof",51.331445,12.318422
+000012320,"Leipzig, Lindenauer Markt",51.336791,12.334986
+000012324,"Leipzig, Rehbach",51.272590,12.276790
+000012327,"Leipzig, Grünauer Allee (Bus/Tram)",51.325996,12.301897
+000012328,"Leipzig, Parkallee",51.324896,12.294987
+000012395,"Leipzig, Holzhausen, Sophienhöhe",51.313589,12.455588
+000012396,"Leipzig, Mölkau Süd",51.325398,12.452789
+000012398,"Leipzig, Kärrnerstr.",51.312792,12.464596
+000012399,"Leipzig, Holzhausen, Sächsisches Haus",51.306575,12.464744
+000012400,"Leipzig, Holzhausen, Hauptstr.",51.309792,12.465087
+000012402,"Leipzig, Mölkauer Str.",51.310195,12.452693
+000012403,"Leipzig, Arthur-Polenz-Str.",51.307692,12.457684
+000012405,"Leipzig, S-Bahnhof Wahren (Bus)",51.380275,12.323925
+000012406,"Leipzig, Zeisigweg",51.379391,12.331289
+000012407,"Leipzig, An den Badeanlagen",51.278992,12.466695
+000012409,"Leipzig, Liebertwolkwitzer Markt",51.282990,12.464085
+000012411,"Leipzig, Portitz, Cradefelder Str.",51.387698,12.462095
+000012412,"Leipzig, Plaußig, Gewerbegebiet",51.396341,12.455633
+000012413,"Leipzig, Plaußig, Grundstr.",51.391295,12.455986
+000012414,"Leipzig, Plaußig, Plaußiger Dorfstr.",51.392089,12.454996
+000012417,"Leipzig, Kiewer Str.",51.318995,12.277789
+000012418,"Leipzig, Plovdiver Str.",51.317193,12.268592
+000012419,"Leipzig, Binzer Str.",51.311893,12.259392
+000012420,"Leipzig, Am Kirschberg",51.321194,12.283686
+000012421,"Leipzig, Siriusweg",51.326292,12.266685
+000012422,"Leipzig, Uranusstr.",51.324991,12.272692
+000012423,"Leipzig, Schönauer Ring",51.322790,12.287388
+000012424,"Leipzig, Grünau-Nord",51.325892,12.282587
+000012425,"Leipzig, Jupiterstr.",51.320896,12.267995
+000012426,"Leipzig, Saturnstr.",51.323391,12.264297
+000012427,"Leipzig, Braun-/Bautzner Str.",51.357790,12.430984
+000012428,"Leipzig, Brahestr.",51.364595,12.438388
+000012429,"Leipzig, Abtnaundorf",51.366096,12.422786
+000012430,"Leipzig, Stöhrer-/Braunstr.",51.365897,12.430786
+000012431,"Leipzig, Heiterblickstr.",51.369094,12.425092
+000012432,"Leipzig, Sosaer Str.",51.377998,12.436692
+000012433,"Leipzig, Freiberger Str.",51.375094,12.432696
+000012434,"Leipzig, Julian-Marchlewski-Str.",51.356795,12.427793
+000012435,"Leipzig, Schönefeld Ost (Verbundnetz Gas AG)",51.361899,12.430674
+000012446,"Leipzig, Plaußig, Fuchsberg",51.395658,12.437298
+000012530,"Leipzig, Rudolf-Breitscheid-Str.",51.389798,12.319787
+000012531,"Leipzig, Lindenthal, Gemeindeamt",51.392290,12.328591
+000012532,"Leipzig, Wilhelmstr.",51.384490,12.322089
+000012533,"Leipzig, Wilhelm-Pfennig-Str.",51.387496,12.321991
+000012534,"Leipzig, Buchfinkenweg",51.379089,12.327991
+000012535,"Leipzig, Schulstr.",51.325997,12.447696
+000012537,"Leipzig, Äußerer Zeisigweg",51.386389,12.331194
+000012539,"Leipzig, Lange Trift",51.386995,12.325389
+000012540,"Leipzig, An der Hufschmiede",51.395029,12.338190
+000012542,"Leipzig, Schwarzes Ross",51.282192,12.461287
+000012543,"Leipzig, Liebertwolkwitz, Störmthaler Str.",51.277497,12.469794
+000012544,"Leipzig, Monarchenhügel",51.291397,12.443996
+000012545,"Leipzig, An der Brauerei",51.283692,12.458589
+000012547,"Leipzig, Zur alten Sandgrube",51.280394,12.463990
+000012550,"Leipzig, Eulengraben",51.270894,12.482297
+000012552,"Leipzig, Diakonissenhaus",51.343792,12.321195
+000012553,"Leipzig, Rathaus Leutzsch",51.347791,12.313990
+000012554,"Leipzig, Wielandstr.",51.341496,12.324489
+000012555,"Leipzig, Georg-Schwarz-/Merseburger Str.",51.337397,12.327293
+000012556,"Leipzig, Miltitz",51.325345,12.263245
+000012561,"Leipzig, Otto-Schmiedt-Str.",51.350196,12.322089
+000012564,"Leipzig, Paul-Michael-Str.",51.350291,12.317789
+000012567,"Leipzig, Demmeringstr.",51.330897,12.310789
+000012568,"Leipzig, Dr.-Hermann-Duncker-Str.",51.333493,12.306096
+000012599,"Leipzig, Brand-/Selnecker Str.",51.309196,12.369494
+000012636,"Leipzig, Karl-Friedrich-Str.",51.323009,12.452996
+000012645,"Leipzig, Roßstr.",51.286893,12.465584
+000012690,"Leipzig, Theresienstr.",51.360495,12.386590
+000012697,"Leipzig, Delitzscher/Theresienstr.",51.359394,12.380491
+000012698,"Leipzig, Mariannenpark",51.352292,12.399684
+000012700,"Leipzig, Rackwitzer Str.",51.357990,12.397938
+000012702,"Leipzig, Kleiststr.",51.366192,12.380490
+000012703,"Leipzig, Hartzstr.",51.361695,12.390485
+000012704,"Leipzig, Bertolt-Brecht-Str.",51.358696,12.427992
+000012705,"Leipzig, Hofmeisterstr.",51.343696,12.387289
+000012706,"Leipzig, Friedrich-List-Platz",51.345470,12.392474
+000012707,"Leipzig, S-Bahnhof Leutzsch",51.353192,12.303294
+000012709,"Leipzig, Mockau, Kirche",51.377796,12.421188
+000012710,"Leipzig, Thekla, Tauchaer Str.",51.379292,12.426889
+000012711,"Leipzig, Mockau, Post",51.375194,12.412675
+000012712,"Leipzig, Samuel-Lampel-Str.",51.375689,12.418186
+000012713,"Leipzig, Einertstr.",51.345994,12.399189
+000012714,"Leipzig, Hermann-Liebmann-/Eisenbahnstr.",51.345593,12.406194
+000012806,"Leipzig, Waldemar-Götze-Str.",51.383196,12.433590
+000012807,"Leipzig, Teschstr.",51.389697,12.433589
+000012809,"Leipzig, Plaußig, Am Kellerberg",51.393909,12.457304
+000012814,"Leipzig, Plaußig, Portitzmühlweg",51.391795,12.443893
+000012816,"Leipzig, Klinikum St. Georg",51.384290,12.381192
+000012818,"Leipzig, Delitzscher/Essener Str.",51.376190,12.385494
+000012819,"Leipzig, Hornbach-Baumarkt",51.378989,12.384796
+000012820,"Leipzig, Eutritzscher Markt",51.367697,12.386289
+000012821,"Leipzig, Mosenthinstr.",51.372597,12.385990
+000012822,"Leipzig, Wilhelminenstr.",51.361490,12.381393
+000012823,"Leipzig, Dachauer Str.",51.390097,12.377195
+000012824,"Leipzig, Wiederitzsch, Mitte",51.393396,12.375684
+000012825,"Leipzig, Mockau-West",51.380891,12.401992
+000012826,"Leipzig, Elisabeth-Schumacher-Str.",51.350993,12.438890
+000012827,"Leipzig, Weinbrennerstr.",51.350790,12.445495
+000012828,"Leipzig, Volksgartenstr.",51.353697,12.420884
+000012829,"Leipzig, Permoser-/Torgauer Str.",51.352145,12.425694
+000012830,"Leipzig, Max-Lingner-Str.",51.354997,12.423192
+000012832,"Leipzig, Otto-Michael-Str.",51.377990,12.406188
+000012833,"Leipzig, Neutzscher Str.",51.380295,12.434695
+000012834,"Leipzig, Rückmarsdorf, Friedhof",51.344196,12.254995
+000012835,"Leipzig, Burghausen",51.355713,12.265362
+000012836,"Leipzig, Rückmarsdorf, Großer Marktweg",51.344875,12.266787
+000012837,"Leipzig, Rückmarsdorf, Miltitzer Str.",51.347890,12.262795
+000012841,"Leipzig, Rathaus Schönefeld",51.359696,12.410689
+000012842,"Leipzig, Schönefeld, Volbedingstr.",51.361294,12.407389
+000012843,"Leipzig, Ossietzky-/Gorkistr.",51.359296,12.417596
+000012844,"Leipzig, Gundorf, Friedhof",51.359428,12.269504
+000012845,"Leipzig, Stöckelstr.",51.353993,12.411988
+000012846,"Leipzig, Löbauer Str.",51.356793,12.416189
+000012848,"Leipzig, Böhlitz-Ehrenberg, Heinrich-Heine-Str.",51.357130,12.288283
+000012849,"Leipzig, Stannebeinplatz",51.351289,12.407895
+000012851,"Leipzig, Torgauer Platz",51.345054,12.414195
+000012854,"Leipzig, Rückmarsdorf, Wachbergallee",51.340569,12.263524
+000012967,"Leipzig, Gohlis-Nord",51.375098,12.378187
+000012968,"Leipzig, Chausseehaus",51.356195,12.376996
+000012969,"Leipzig, S-Bahnhof Gohlis (Bus)",51.363494,12.374287
+000012970,"Leipzig, Gottschallstr.",51.368993,12.376588
+000012971,"Leipzig, Fritz-Seger-Str.",51.357289,12.368991
+000012972,"Leipzig, Georg-Schumann-/Lützowstr.",51.361241,12.371033
+000012973,"Leipzig, Wiederitzscher Str.",51.364094,12.358416
+000012974,"Leipzig, S-Bahnhof Möckern (Tram/Bus)",51.365759,12.351169
+000012975,"Leipzig, Portitz, Teichsiedlung",51.378593,12.464396
+000012976,"Leipzig, Portitz, Am langen Teiche",51.383992,12.453595
+000012977,"Leipzig, Portitz, Krätzbergstr.",51.383394,12.463192
+000012978,"Leipzig, Cleudner Str.",51.381397,12.442795
+000012979,"Leipzig, Wodanstr.",51.382889,12.447692
+000012980,"Leipzig, Simon-Bolivar-Str.",51.379195,12.420085
+000012982,"Leipzig, Portitz, Melker Weg",51.382893,12.469190
+000012992,"Leipzig, Wilhelm-Leuschner-Platz",51.335862,12.375858
+000012993,"Leipzig, Thomaskirche",51.339296,12.371187
+000012994,"Leipzig, Neues Rathaus",51.335496,12.371094
+000012995,"Leipzig, Hauptbahnhof/Westseite",51.344792,12.378597
+000012996,"Leipzig, Goerdelerring",51.344194,12.370987
+000012998,"Leipzig, Münzgasse/LVZ",51.333050,12.373570
+000013000,"Leipzig, Hauptbahnhof (Tram/Bus)",51.343951,12.380330
+000013001,"Leipzig, Roßplatz",51.336098,12.378589
+000013002,"Leipzig, Augustusplatz",51.338894,12.381996
+000013003,"Leipzig, S-Bahnhof Connewitz (Tram/Bus)",51.301712,12.383906
+000013004,"Leipzig, Raschwitzer Str.",51.295894,12.386088
+000013005,"Leipzig, Stockartstr.",51.308096,12.377993
+000013006,"Leipzig, Hildebrandstr.",51.304893,12.381788
+000013007,"Leipzig, Connewitzer Kreuz",51.310795,12.373284
+000013008,"Leipzig, Südplatz",51.324931,12.373576
+000013009,"Leipzig, Friederikenstr.",51.290543,12.390455
+000013010,"Leipzig, Leinestr.",51.287391,12.392790
+000013118,"Leipzig, Kietzstr.",51.354592,12.317683
+000013120,"Leipzig, Nonnenweg",51.319494,12.352184
+000013122,"Leipzig, Kloßstr.",51.305598,12.320485
+000013124,"Leipzig, An den Tierkliniken",51.318086,12.394770
+000013125,"Leipzig, S-Bahnhof Thekla (Bus)",51.371899,12.428175
+000013131,"Leipzig, S-Bahnhof Allee-Center (Bus)",51.320195,12.292698
+000013132,"Leipzig, Stuttgarter Allee",51.313291,12.291988
+000013196,"Leipzig, Lützner/Merseburger Str.",51.335798,12.330091
+000013247,"Leipzig, Richard-Lehmann-Str./HTWK",51.314997,12.373191
+000013280,"Leipzig, Saarländer Str.",51.327906,12.308449
+000013282,"Leipzig, Hohentichelnstr.",51.359096,12.440992
+000013283,"Leipzig, Credéstr.",51.330244,12.314474
+000013284,"Leipzig, S-Bahnhof Nord (Bus)",51.362494,12.399492
+000013285,"Leipzig, Alte Dübener Landstr.",51.400207,12.392947
+000013286,"Leipzig, Lauerscher Weg",51.298891,12.332795
+000013288,"Leipzig, Schongauerstr.",51.345691,12.473484
+000013296,"Leipzig, Cospudener See/EXPO-Pavillon",51.291967,12.352614
+000013514,"Leipzig, Fliederhof",51.354187,12.395732
+000013537,"Leipzig, Antonien-/Gießerstr.",51.320495,12.326585
+000013538,"Leipzig, Bautzner/Bästleinstr.",51.356990,12.431886
+000013539,"Leipzig, Lausner Weg",51.311991,12.307791
+000013543,"Leipzig, Colmbergsiedlung",51.295498,12.464397
+000013545,"Leipzig, Großzschocher, Anton-Zickmantel-Str.",51.302496,12.324894
+000013546,"Leipzig, Kommandant-Prendel-Allee",51.313894,12.421994
+000013548,"Leipzig, Leonhard-Frank-Str.",51.351390,12.430591
+000013549,"Leipzig, Leupoldstr.",51.362395,12.437993
+000013550,"Leipzig, Arno-Nitzsche-/Arthur-Hoffmann-Str.",51.310117,12.379633
+000013551,"Leipzig, Oberdorfstr.",51.320993,12.428894
+000013552,"Leipzig, Paunsdorf, Friedhof",51.355097,12.444296
+000013553,"Leipzig, Paunsdorfer Str.",51.334792,12.441897
+000013554,"Leipzig, Permoser-/Hohentichelnstr.",51.350390,12.447188
+000013555,"Leipzig, Schwimmhalle Südost",51.316592,12.426887
+000013557,"Leipzig, Uhlandweg",51.337194,12.443383
+000015735,"Leipzig, Gottscheina, Siedlung",51.421194,12.476897
+000015738,"Leipzig, Hauptbahnhof/Goethestr.",51.343297,12.381488
+000015763,"Leipzig, GVZ Nord/Porschestr.",51.413330,12.296502
+000015786,"Leipzig, Reichsstr.",51.340696,12.376889
+000015787,"Leipzig, Russenstr.",51.304593,12.440796
+000015811,"Leipzig, Probstheidaer/Willi-Bredel-Str.",51.303381,12.400138
+000015823,"Leipzig, August-Bebel-/Richard-Lehmann-Str.",51.315082,12.368362
+000015824,"Leipzig, Alte Salzstr.",51.314895,12.279390
+000015825,"Leipzig, Dornbergerstr.",51.343195,12.406088
+000015826,"Leipzig, Engelsdorf, Kirche",51.336090,12.485490
+000015827,"Leipzig, Gustav-Freytag-Str.",51.312597,12.368797
+000015828,"Leipzig, Ringstr.",51.317891,12.296593
+000015829,"Leipzig, Steinstr. (Ärztehaus Süd)",51.317895,12.368396
+000015861,"Leipzig, GVZ Süd/Am Exer",51.394068,12.292745
+000015873,"Leipzig, Schönefelder Str.",51.363193,12.396183
+000016305,"Leipzig, Geithainer Str.",51.342790,12.445095
+000016881,"Leipzig, Engelsdorf, Güterbahnhofstr.",51.345796,12.465695
+000017154,"Leipzig, Weimarer Str.",51.326893,12.281496
+000017161,"Leipzig, Kiewer Str./Kaufland",51.324996,12.275089
+000019921,"Leipzig, BMW Zentralgebäude",51.408663,12.443034
+000019968,"Leipzig, Azaleenstr.",51.262797,12.299195
+000019969,"Leipzig, Seehausen, Dingolfinger Str.",51.405989,12.418895
+000019970,"Leipzig, Gohlis-Süd",51.361861,12.363237
+000020052,"Leipzig, Mölkauer Dorfplatz",51.332592,12.443296
+000020058,"Leipzig, Sportforum Ost",51.345027,12.354508
+000020158,"Leipzig, S-Bahnhof Slevogtstr. (Bus)",51.373395,12.344185
+000020180,"Leipzig, Connewitzer Str.",51.304494,12.417793
+000020213,"Leipzig, Schönbachstr.",51.320263,12.413284
+000020226,"Leipzig, Windmühlenstr.",51.333996,12.375994
+000020274,"Leipzig, BMW/Tor 1",51.401730,12.452475
+000020282,"Leipzig, BMW Presswerk",51.411965,12.449652
+000022361,"Leipzig, Essener/Friedrichshafner Str.",51.375697,12.405586
+000022362,"Leipzig, Leonhardtstr.",51.372288,12.404715
+000022868,"Leipzig, Schildberger Weg",51.380226,12.406598
+000022879,"Leipzig, Albersdorfer Str.",51.284661,12.311431
+000022880,"Leipzig, Fortunabadstr.",51.279965,12.310262
+000022934,"Leipzig, Steinplatz",51.317903,12.378427
+000022936,"Leipzig, Future Electronics",51.402398,12.459109
+000022937,"Leipzig, Ferag",51.402441,12.459170
+000023153,"Leipzig, Allee-Center/Offenburger Str.",51.320531,12.288747
+000023154,"Leipzig, Allee-Center Süd",51.318599,12.290603
+000023155,"Leipzig, Breisgau-/Ringstr.",51.317690,12.295761
+000023156,"Leipzig, Breisgaustr./S-Bahnhof Karlsruher Str.",51.317101,12.280538
+000023157,"Leipzig, Str. am Park",51.315945,12.304704
+000023158,"Leipzig, Horburger Str.",51.328971,12.283065
+000023161,"Leipzig, S-Bahnhof Grünauer Allee (Bus)",51.319669,12.302733
+000023162,"Leipzig, Schönau, Kirche",51.327727,12.289291
+000023163,"Leipzig, Selliner Str./Gesundheitszentrum",51.313593,12.264190
+000023204,"Leipzig, Gärtnerstr.",51.316901,12.306825
+000024972,"Leipzig, Engelsdorf, Opalstr.",51.341433,12.478201
+000030004,"Leipzig, Dürrstr.",51.296725,12.390309
+000030042,"Leipzig, Wächterstr. (Grassistr.)",51.333161,12.366904
+000030043,"Leipzig, Mozartstr. (Grassistr.)",51.331269,12.367684
+000030044,"Leipzig, Robert-Schumann-Str. (Grassistr.)",51.328719,12.368788
+000030089,"Leipzig, Robert-Koch-Klinikum",51.315190,12.301479
+000030268,"Leipzig, Plaußig, Am Schenkberg",51.396777,12.450908
+000030269,"Leipzig, Dingolfinger Str./Firma Magna",51.396982,12.431087
+000030317,"Leipzig, Baaderstr.",51.371087,12.376957
+000030495,"Leipzig, Versorgungszentrum BMW-Allee",51.403931,12.432370
+000030636,"Leipzig, Hafentor",51.332696,12.304087
+000030637,"Leipzig, Lindenauer Hafen",51.330519,12.306657
+000030699,"Leipzig, S-Bahnhof Essener Str. (Bus)",51.376583,12.397075
+000030724,"Leipzig, Alte Str.",51.332277,12.342237
+000030725,"Leipzig, Niemeyerstr.",51.325894,12.314390
+000030726,"Leipzig, Queckstr.",51.337846,12.327297
+000030727,"Leipzig, Spinnerei",51.328038,12.319969
+000030771,"Leipzig, Messe-Allee/Imperial",51.393634,12.407207
+000030849,"Leipzig, Tornauer Str.",51.411823,12.390501
+000030850,"Leipzig, Kossaer Str.",51.410437,12.392742
+000030861,"Leipzig, Blücherstr.",51.370594,12.338033
+000030898,"Leipzig, Paul-Beiersdorf-Str.",51.416606,12.390856
+000030908,"Leipzig, BMW/Tor 2",51.399852,12.437786
+000030909,"Leipzig, Hellerstr.",51.354541,12.310270
+000030931,"Leipzig, Großzschocher, Feuer- und Rettungswache",51.301429,12.306400
+000095480,"Leipzig, Faradaystr.",51.368797,12.348992
+000096323,"Leipzig, Melissenweg",51.387598,12.354692
+008010008,"Leipzig, Anger-Crottendorf",51.332433,12.420519
+008010186,"Leipzig, Karlsruher Str",51.317236,12.279270
+008010205,"Leipzig, Leipzig Hbf",51.345474,12.382064
+008010206,"Leipzig, Leipzig-Connewitz",51.300716,12.386315
+008010207,"Leipzig, Leipzig-Leutzsch",51.353998,12.303740
+008010208,"Leipzig, Leipzig-Paunsdorf",51.344296,12.444332
+008010209,"Leipzig, Leipzig-Plagwitz",51.328041,12.322079
+008011491,"Leipzig, Leipzig-Engelsdorf",51.343950,12.477630
+008011495,"Leipzig, Leipzig Werkstättenstraße",51.340602,12.456172
+008011771,"Leipzig, Leipzig Grünauer Allee",51.320902,12.303009
+008011913,"Leipzig, Leipzig-Holzhausen",51.306043,12.461448
+008012181,"Leipzig, Leipzig Olbrichtstraße",51.369891,12.353497
+008012183,"Leipzig, Leipzig/Halle Flughafen",51.423341,12.223430
+008012184,"Leipzig, Leipzig Bayerischer Bahnhof",51.329265,12.381660
+008012186,"Leipzig, Leipzig Markt",51.340636,12.374616
+008012187,"Leipzig, Leipzig MDR",51.320066,12.386320
+008012188,"Leipzig, Leipzig-Gohlis",51.362857,12.374527
+008012190,"Leipzig, Leipzig-Heiterblick",51.369336,12.459976
+008012192,"Leipzig, Leipzig-Knauthain",51.278181,12.309101
+008012193,"Leipzig, Leipzig-Möckern",51.364433,12.352265
+008012194,"Leipzig, Leipzig-Stötteritz",51.324516,12.411433
+008012195,"Leipzig, Leipzig-Thekla",51.371626,12.430755
+008012196,"Leipzig, Leipzig Nord",51.364166,12.401067
+008012197,"Leipzig, Leipzig-Wahren",51.380686,12.321483
+008012200,"Leipzig, Essener Straße",51.376361,12.396986
+008012202,"Leipzig, Wilhelm-Leuschner-Platz",51.335399,12.375394
+008012204,"Leipzig, Slevogtstraße",51.372948,12.344411
+008012228,"Leipzig, Leipzig-Liebertwolkwitz",51.283970,12.469250
+008012236,"Leipzig, Leipzig-Lindenau",51.333758,12.321488
+008012273,"Leipzig, Leipzig Mockauer Straße",51.373799,12.412097
+008012285,"Leipzig, Leipzig-Lützschena",51.390057,12.293089
+008012343,"Leipzig, Leipzig Völkerschlachtdenkmal",51.318740,12.406283
+008012344,"Leipzig, Leipzig Miltitzer Allee",51.315349,12.267342
+008012355,"Leipzig, Leipzig-Miltitz",51.325313,12.255034
+008012375,"Leipzig, Leipzig-Mölkau",51.325235,12.459823
+008012478,"Leipzig, Leipzig Messe",51.396141,12.389283
+008012656,"Leipzig, Pönitz",51.408537,12.514425
+008012697,"Leipzig, Rackwitz",51.440322,12.375133
+008012817,"Leipzig, Leipzig-Rückmarsdorf",51.341868,12.282667
+008013070,"Leipzig, Leipzig Allee-Center",51.319160,12.291748
+008071179,"Leipzig, Leipzig Torgauer Platz",51.345068,12.414339
+008080840,"Leipzig, Leipzig Coppiplatz",51.367077,12.366018
+008080930,"Leipzig, Leipzig-Sellerhausen",51.345179,12.424671
+008098205,"Leipzig, Leipzig Hbf (tief)",51.345693,12.380429
