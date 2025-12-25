@@ -17,4 +17,4 @@ def map_view():
     return render_template('map.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
