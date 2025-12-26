@@ -1,0 +1,8660 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>pydeck</title>
+        <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.13.0/mapbox-gl.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <script src='https://cdn.jsdelivr.net/npm/@deck.gl/jupyter-widget@~8.8.*/dist/index.js'></script>
+    <style>
+    body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#deck-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#deck-container canvas {
+  z-index: 1;
+  background: none;
+}
+    </style>
+  </head>
+  <body>
+    <div id="deck-container">
+    </div>
+  </body>
+  <script>
+    const container = document.getElementById('deck-container');
+    const jsonInput = {
+  "initialViewState": {
+    "latitude": 51.345693,
+    "longitude": 12.380429,
+    "zoom": 10
+  },
+  "layers": [
+    {
+      "@@type": "PathLayer",
+      "data": [
+        {
+          "name": "Arcus Park to Hohentichelnstr.",
+          "path": [
+            [
+              12.446576,
+              51.361549
+            ],
+            [
+              12.440992,
+              51.359096
+            ]
+          ]
+        },
+        {
+          "name": "Bergstr. to Reudnitz, Koehlerstr.",
+          "path": [
+            [
+              12.402015,
+              51.340535
+            ],
+            [
+              12.403085,
+              51.338894
+            ]
+          ]
+        },
+        {
+          "name": "Breitscheidhof to Wilhelm-Winkler-Str.",
+          "path": [
+            [
+              12.286913,
+              51.351846
+            ],
+            [
+              12.28922,
+              51.354182
+            ]
+          ]
+        },
+        {
+          "name": "Bremer Str. to Landsberger/Max-Liebermann-Str.",
+          "path": [
+            [
+              12.365034,
+              51.376178
+            ],
+            [
+              12.361292,
+              51.37589
+            ]
+          ]
+        },
+        {
+          "name": "Dankwartstr. to D\u00fcrrstr.",
+          "path": [
+            [
+              12.392814,
+              51.299188
+            ],
+            [
+              12.390309,
+              51.296725
+            ]
+          ]
+        },
+        {
+          "name": "S-Bahnhof MDR (Bus) to Leipzig MDR",
+          "path": [
+            [
+              12.385905,
+              51.320852
+            ],
+            [
+              12.38632,
+              51.320066
+            ]
+          ]
+        },
+        {
+          "name": "Erich-Zeigner-Allee to Elster Passage",
+          "path": [
+            [
+              12.337815,
+              51.327134
+            ],
+            [
+              12.336493,
+              51.328692
+            ]
+          ]
+        },
+        {
+          "name": "Goetheplatz to Wilhelm-Winkler-Str.",
+          "path": [
+            [
+              12.286969,
+              51.355432
+            ],
+            [
+              12.28922,
+              51.354182
+            ]
+          ]
+        },
+        {
+          "name": "Gr\u00f6pplerstr. to Morgensternstr.",
+          "path": [
+            [
+              12.314676,
+              51.334239
+            ],
+            [
+              12.311965,
+              51.335053
+            ]
+          ]
+        },
+        {
+          "name": "Lindenau, Nathanaelkirche to Lindenauer Markt",
+          "path": [
+            [
+              12.332653,
+              51.339061
+            ],
+            [
+              12.334986,
+              51.336791
+            ]
+          ]
+        },
+        {
+          "name": "Lise-Meitner-Str. to Leipzig-Leutzsch",
+          "path": [
+            [
+              12.305548,
+              51.355178
+            ],
+            [
+              12.30374,
+              51.353998
+            ]
+          ]
+        },
+        {
+          "name": "Louis-F\u00fcrnberg-Str. to Reinhardtstr.",
+          "path": [
+            [
+              12.430274,
+              51.348684
+            ],
+            [
+              12.430115,
+              51.346746
+            ]
+          ]
+        },
+        {
+          "name": "Morgensternstr. to Gr\u00f6pplerstr.",
+          "path": [
+            [
+              12.311965,
+              51.335053
+            ],
+            [
+              12.314676,
+              51.334239
+            ]
+          ]
+        },
+        {
+          "name": "Reinhardtstr. to Rosmarinweg",
+          "path": [
+            [
+              12.430115,
+              51.346746
+            ],
+            [
+              12.428112,
+              51.346076
+            ]
+          ]
+        },
+        {
+          "name": "Rosmarinweg to Reinhardtstr.",
+          "path": [
+            [
+              12.428112,
+              51.346076
+            ],
+            [
+              12.430115,
+              51.346746
+            ]
+          ]
+        },
+        {
+          "name": "Schleu\u00dfig, Karlbr\u00fccke to Erich-Zeigner-Allee",
+          "path": [
+            [
+              12.340523,
+              51.326086
+            ],
+            [
+              12.337815,
+              51.327134
+            ]
+          ]
+        },
+        {
+          "name": "Schwantesstr. to Leonhard-Frank-Str.",
+          "path": [
+            [
+              12.430238,
+              51.353765
+            ],
+            [
+              12.430591,
+              51.35139
+            ]
+          ]
+        },
+        {
+          "name": "St\u00fcnz to Zweenfurther Str.",
+          "path": [
+            [
+              12.433015,
+              51.339647
+            ],
+            [
+              12.431393,
+              51.340216
+            ]
+          ]
+        },
+        {
+          "name": "Taubestr. to Zittauer Str.",
+          "path": [
+            [
+              12.411295,
+              51.357421
+            ],
+            [
+              12.409114,
+              51.3561
+            ]
+          ]
+        },
+        {
+          "name": "R\u00fcckmarsdorf, Tucholskystr. to R\u00fcckmarsdorf, L\u00f6wen Center",
+          "path": [
+            [
+              12.274328,
+              51.344313
+            ],
+            [
+              12.269683,
+              51.345621
+            ]
+          ]
+        },
+        {
+          "name": "Wilhelm-Winkler-Str. to Goetheplatz",
+          "path": [
+            [
+              12.28922,
+              51.354182
+            ],
+            [
+              12.286969,
+              51.355432
+            ]
+          ]
+        },
+        {
+          "name": "Zittauer Str. to Taubestr.",
+          "path": [
+            [
+              12.409114,
+              51.3561
+            ],
+            [
+              12.411295,
+              51.357421
+            ]
+          ]
+        },
+        {
+          "name": "Zweenfurther Str. to St\u00fcnz",
+          "path": [
+            [
+              12.431393,
+              51.340216
+            ],
+            [
+              12.433015,
+              51.339647
+            ]
+          ]
+        },
+        {
+          "name": "Cunnersdorfer Str. to Sellerhausen, Emmausstr.",
+          "path": [
+            [
+              12.429752,
+              51.34209
+            ],
+            [
+              12.428074,
+              51.343839
+            ]
+          ]
+        },
+        {
+          "name": "Portitz, Schule to Portitz, Am langen Teiche",
+          "path": [
+            [
+              12.455525,
+              51.386147
+            ],
+            [
+              12.453595,
+              51.383992
+            ]
+          ]
+        },
+        {
+          "name": "Porsche/Tor 2 to GVZ S\u00fcd/Am Exer",
+          "path": [
+            [
+              12.295227,
+              51.399007
+            ],
+            [
+              12.292745,
+              51.394068
+            ]
+          ]
+        },
+        {
+          "name": "Porsche/Tor 3 to Porsche/Tor 2",
+          "path": [
+            [
+              12.284319,
+              51.40104
+            ],
+            [
+              12.295227,
+              51.399007
+            ]
+          ]
+        },
+        {
+          "name": "Ro\u00dfplatz/Gr\u00fcnewaldstr. to Windm\u00fchlenstr.",
+          "path": [
+            [
+              12.37632,
+              51.333358
+            ],
+            [
+              12.375994,
+              51.333996
+            ]
+          ]
+        },
+        {
+          "name": "B\u00e4stlein-/Schwantesstr. to Bautzner/B\u00e4stleinstr.",
+          "path": [
+            [
+              12.430804,
+              51.356536
+            ],
+            [
+              12.431886,
+              51.35699
+            ]
+          ]
+        },
+        {
+          "name": "Porsche/Tor 1 to GVZ Nord/Porschestr.",
+          "path": [
+            [
+              12.295383,
+              51.410368
+            ],
+            [
+              12.296502,
+              51.41333
+            ]
+          ]
+        },
+        {
+          "name": "Am Viadukt to Wahren (Am Zuckmantel/Fr.-Bosse-Str.)",
+          "path": [
+            [
+              12.3273,
+              51.373327
+            ],
+            [
+              12.324374,
+              51.372997
+            ]
+          ]
+        },
+        {
+          "name": "Bei der Kr\u00e4henh\u00fctte to Zum D\u00f6litzer Schacht",
+          "path": [
+            [
+              12.398448,
+              51.287308
+            ],
+            [
+              12.401963,
+              51.286954
+            ]
+          ]
+        },
+        {
+          "name": "Johannish\u00f6he to Zum D\u00f6litzer Schacht",
+          "path": [
+            [
+              12.407291,
+              51.286673
+            ],
+            [
+              12.401963,
+              51.286954
+            ]
+          ]
+        },
+        {
+          "name": "Matzelstr. to Friederikenstr.",
+          "path": [
+            [
+              12.390242,
+              51.289398
+            ],
+            [
+              12.390455,
+              51.290543
+            ]
+          ]
+        },
+        {
+          "name": "Springerstr. to Fritz-Seger-Str.",
+          "path": [
+            [
+              12.370306,
+              51.355066
+            ],
+            [
+              12.368991,
+              51.357289
+            ]
+          ]
+        },
+        {
+          "name": "Zum D\u00f6litzer Schacht to Bei der Kr\u00e4henh\u00fctte",
+          "path": [
+            [
+              12.401963,
+              51.286954
+            ],
+            [
+              12.398448,
+              51.287308
+            ]
+          ]
+        },
+        {
+          "name": "R\u00fcckmarsdorf, Einkaufspassage to R\u00fcckmarsdorf, Gro\u00dfer Marktweg",
+          "path": [
+            [
+              12.262938,
+              51.344649
+            ],
+            [
+              12.266787,
+              51.344875
+            ]
+          ]
+        },
+        {
+          "name": "Lipsiusstr. to Holsteinstr.",
+          "path": [
+            [
+              12.413995,
+              51.330789
+            ],
+            [
+              12.411391,
+              51.33109
+            ]
+          ]
+        },
+        {
+          "name": "M\u00f6ckern, Slevogtstr. to Bl\u00fccherstr.",
+          "path": [
+            [
+              12.340483,
+              51.371091
+            ],
+            [
+              12.338033,
+              51.370594
+            ]
+          ]
+        },
+        {
+          "name": "Holsteinstr. to Lipsiusstr.",
+          "path": [
+            [
+              12.411391,
+              51.33109
+            ],
+            [
+              12.413995,
+              51.330789
+            ]
+          ]
+        },
+        {
+          "name": "Liebigstr. to Ostplatz",
+          "path": [
+            [
+              12.392386,
+              51.330492
+            ],
+            [
+              12.395889,
+              51.331676
+            ]
+          ]
+        },
+        {
+          "name": "Schulze-Boysen-Str. to Ostplatz",
+          "path": [
+            [
+              12.400586,
+              51.332493
+            ],
+            [
+              12.395889,
+              51.331676
+            ]
+          ]
+        },
+        {
+          "name": "Fockestr. to August-Bebel-/Kurt-Eisner-Str.",
+          "path": [
+            [
+              12.365789,
+              51.320893
+            ],
+            [
+              12.368889,
+              51.320893
+            ]
+          ]
+        },
+        {
+          "name": "Erika-von-Brockdorff-Str. to Faradaystr.",
+          "path": [
+            [
+              12.345488,
+              51.369797
+            ],
+            [
+              12.348992,
+              51.368797
+            ]
+          ]
+        },
+        {
+          "name": "Michael-Kazmierczak-Str. to Virchow-/Coppistr.",
+          "path": [
+            [
+              12.372584,
+              51.367292
+            ],
+            [
+              12.375988,
+              51.366898
+            ]
+          ]
+        },
+        {
+          "name": "Hartmannsdorf, Erikenstr. to Azaleenstr.",
+          "path": [
+            [
+              12.306396,
+              51.261695
+            ],
+            [
+              12.299195,
+              51.262797
+            ]
+          ]
+        },
+        {
+          "name": "Karl-Heine-/Gie\u00dferstr. to S-Bahnhof Plagwitz (Tram/Bus)",
+          "path": [
+            [
+              12.327287,
+              51.32979
+            ],
+            [
+              12.322756,
+              51.328273
+            ]
+          ]
+        },
+        {
+          "name": "Diezmannstr. to Antonien-/Gie\u00dferstr.",
+          "path": [
+            [
+              12.317788,
+              51.320097
+            ],
+            [
+              12.326585,
+              51.320495
+            ]
+          ]
+        },
+        {
+          "name": "Adler to Antonien-/Gie\u00dferstr.",
+          "path": [
+            [
+              12.330186,
+              51.320293
+            ],
+            [
+              12.326585,
+              51.320495
+            ]
+          ]
+        },
+        {
+          "name": "Holbeinstr. to Schleu\u00dfig, Karlbr\u00fccke",
+          "path": [
+            [
+              12.346195,
+              51.328091
+            ],
+            [
+              12.340523,
+              51.326086
+            ]
+          ]
+        },
+        {
+          "name": "Stieglitzstr. to Schleu\u00dfig, Karlbr\u00fccke",
+          "path": [
+            [
+              12.343794,
+              51.323897
+            ],
+            [
+              12.340523,
+              51.326086
+            ]
+          ]
+        },
+        {
+          "name": "Knautnaundorf, Werkstr. to Knautnaundorf, Rundkapellenweg",
+          "path": [
+            [
+              12.262586,
+              51.251596
+            ],
+            [
+              12.27159,
+              51.253898
+            ]
+          ]
+        },
+        {
+          "name": "Marschnerstr. to Westplatz",
+          "path": [
+            [
+              12.357186,
+              51.336498
+            ],
+            [
+              12.362393,
+              51.338992
+            ]
+          ]
+        },
+        {
+          "name": "Klingerweg to Nonnenstr.",
+          "path": [
+            [
+              12.350592,
+              51.332497
+            ],
+            [
+              12.348891,
+              51.332393
+            ]
+          ]
+        },
+        {
+          "name": "Kurt-Kresse-Str. to Herrmann-Meyer-Str.",
+          "path": [
+            [
+              12.315884,
+              51.314396
+            ],
+            [
+              12.309987,
+              51.315391
+            ]
+          ]
+        },
+        {
+          "name": "Herrmann-Meyer-Str. to G\u00e4rtnerstr.",
+          "path": [
+            [
+              12.309987,
+              51.315391
+            ],
+            [
+              12.306825,
+              51.316901
+            ]
+          ]
+        },
+        {
+          "name": "Siemensstr. to Antonien-/Gie\u00dferstr.",
+          "path": [
+            [
+              12.326191,
+              51.321792
+            ],
+            [
+              12.326585,
+              51.320495
+            ]
+          ]
+        },
+        {
+          "name": "Hauptbahnhof/Ostseite to Hauptbahnhof/Goethestr.",
+          "path": [
+            [
+              12.382078,
+              51.343901
+            ],
+            [
+              12.381488,
+              51.343297
+            ]
+          ]
+        },
+        {
+          "name": "R\u00f6delstr. to Rochlitzstr.",
+          "path": [
+            [
+              12.34099,
+              51.318493
+            ],
+            [
+              12.347885,
+              51.31879
+            ]
+          ]
+        },
+        {
+          "name": "S-Bahnhof Plagwitz (Tram/Bus) to Leipzig-Plagwitz",
+          "path": [
+            [
+              12.322756,
+              51.328273
+            ],
+            [
+              12.322079,
+              51.328041
+            ]
+          ]
+        },
+        {
+          "name": "Zollschuppenst. to S-Bahnhof Plagwitz (Tram/Bus)",
+          "path": [
+            [
+              12.324426,
+              51.326949
+            ],
+            [
+              12.322756,
+              51.328273
+            ]
+          ]
+        },
+        {
+          "name": "Naumburger Str. to Zollschuppenst.",
+          "path": [
+            [
+              12.327593,
+              51.32649
+            ],
+            [
+              12.324426,
+              51.326949
+            ]
+          ]
+        },
+        {
+          "name": "Messegel\u00e4nde to Congress Center",
+          "path": [
+            [
+              12.39657,
+              51.396712
+            ],
+            [
+              12.399388,
+              51.396918
+            ]
+          ]
+        },
+        {
+          "name": "Georg-Herwegh-Str. to S-Bahnhof Messe (Tram/Bus)",
+          "path": [
+            [
+              12.383024,
+              51.394884
+            ],
+            [
+              12.388815,
+              51.396038
+            ]
+          ]
+        },
+        {
+          "name": "S-Bahnhof Messe (Tram/Bus) to Leipzig Messe",
+          "path": [
+            [
+              12.388815,
+              51.396038
+            ],
+            [
+              12.389283,
+              51.396141
+            ]
+          ]
+        },
+        {
+          "name": "Rochlitzstr. to Nonnenweg",
+          "path": [
+            [
+              12.347885,
+              51.31879
+            ],
+            [
+              12.352184,
+              51.319494
+            ]
+          ]
+        },
+        {
+          "name": "Rennbahn to Fockestr.",
+          "path": [
+            [
+              12.361391,
+              51.32119
+            ],
+            [
+              12.365789,
+              51.320893
+            ]
+          ]
+        },
+        {
+          "name": "Bahnhof Paunsdorf (Bus) to Geithainer Str.",
+          "path": [
+            [
+              12.44509,
+              51.343492
+            ],
+            [
+              12.445095,
+              51.34279
+            ]
+          ]
+        },
+        {
+          "name": "Hartmannsdorf, Gasthof to Thomas-M\u00fcntzer-Siedlung",
+          "path": [
+            [
+              12.309085,
+              51.267391
+            ],
+            [
+              12.302391,
+              51.269793
+            ]
+          ]
+        },
+        {
+          "name": "Gefrierzentrum to Knautnaundorf, Rundkapellenweg",
+          "path": [
+            [
+              12.274895,
+              51.249993
+            ],
+            [
+              12.27159,
+              51.253898
+            ]
+          ]
+        },
+        {
+          "name": "Knautnaundorf, Rundkapellenweg to Gefrierzentrum",
+          "path": [
+            [
+              12.27159,
+              51.253898
+            ],
+            [
+              12.274895,
+              51.249993
+            ]
+          ]
+        },
+        {
+          "name": "Abzweig n. Hartmannsdorf to Azaleenstr.",
+          "path": [
+            [
+              12.292487,
+              51.263391
+            ],
+            [
+              12.299195,
+              51.262797
+            ]
+          ]
+        },
+        {
+          "name": "Eutritzscher Zentrum to Eutritzscher Markt",
+          "path": [
+            [
+              12.385185,
+              51.365193
+            ],
+            [
+              12.386289,
+              51.367697
+            ]
+          ]
+        },
+        {
+          "name": "Bayerischer Bahnhof (Tram/Bus) to Leipzig Bayerischer Bahnhof",
+          "path": [
+            [
+              12.380904,
+              51.33051
+            ],
+            [
+              12.38166,
+              51.329265
+            ]
+          ]
+        },
+        {
+          "name": "Wildpark to Koburger Br\u00fccke",
+          "path": [
+            [
+              12.372593,
+              51.300591
+            ],
+            [
+              12.37419,
+              51.303395
+            ]
+          ]
+        },
+        {
+          "name": "Mathildenstr. to Stockartstr.",
+          "path": [
+            [
+              12.373587,
+              51.307297
+            ],
+            [
+              12.377993,
+              51.308096
+            ]
+          ]
+        },
+        {
+          "name": "Koburger Br\u00fccke to Leopoldstr.",
+          "path": [
+            [
+              12.37419,
+              51.303395
+            ],
+            [
+              12.37409,
+              51.30419
+            ]
+          ]
+        },
+        {
+          "name": "Gottschedstr. to Leibnizstr.",
+          "path": [
+            [
+              12.367587,
+              51.341297
+            ],
+            [
+              12.364991,
+              51.343296
+            ]
+          ]
+        },
+        {
+          "name": "Westplatz to Waldplatz",
+          "path": [
+            [
+              12.362393,
+              51.338992
+            ],
+            [
+              12.359088999999999,
+              51.342297
+            ]
+          ]
+        },
+        {
+          "name": "Edlichstr. to Torgauer Platz",
+          "path": [
+            [
+              12.414195,
+              51.342743
+            ],
+            [
+              12.414195,
+              51.345054
+            ]
+          ]
+        },
+        {
+          "name": "Gei\u00dflerstr./B\u00fclowviertel to Annenstr.",
+          "path": [
+            [
+              12.41919,
+              51.344845
+            ],
+            [
+              12.421661,
+              51.343712
+            ]
+          ]
+        },
+        {
+          "name": "Reudnitz, Koehlerstr. to Bergstr.",
+          "path": [
+            [
+              12.403085,
+              51.338894
+            ],
+            [
+              12.402015,
+              51.340535
+            ]
+          ]
+        },
+        {
+          "name": "Wiebelstr. to Reudnitz, Koehlerstr.",
+          "path": [
+            [
+              12.408279,
+              51.340029
+            ],
+            [
+              12.403085,
+              51.338894
+            ]
+          ]
+        },
+        {
+          "name": "Johannisplatz to Augustusplatz",
+          "path": [
+            [
+              12.385014,
+              51.338169
+            ],
+            [
+              12.381996,
+              51.338894
+            ]
+          ]
+        },
+        {
+          "name": "Gerichtsweg to Elsastr.",
+          "path": [
+            [
+              12.395189,
+              51.339097
+            ],
+            [
+              12.398769,
+              51.342464
+            ]
+          ]
+        },
+        {
+          "name": "Annenstr. to Gei\u00dflerstr./B\u00fclowviertel",
+          "path": [
+            [
+              12.421661,
+              51.343712
+            ],
+            [
+              12.41919,
+              51.344845
+            ]
+          ]
+        },
+        {
+          "name": "Sellerhausen, Emmausstr. to Cunnersdorfer Str.",
+          "path": [
+            [
+              12.428074,
+              51.343839
+            ],
+            [
+              12.429752,
+              51.34209
+            ]
+          ]
+        },
+        {
+          "name": "Sportforum S\u00fcd to Sportforum Ost",
+          "path": [
+            [
+              12.35119,
+              51.340689
+            ],
+            [
+              12.354508,
+              51.345027
+            ]
+          ]
+        },
+        {
+          "name": "Angerbr\u00fccke/Stra\u00dfenbahnhof to Lindenauer Markt",
+          "path": [
+            [
+              12.340097,
+              51.337392
+            ],
+            [
+              12.334986,
+              51.336791
+            ]
+          ]
+        },
+        {
+          "name": "Leibnizstr. to Gottschedstr.",
+          "path": [
+            [
+              12.364991,
+              51.343296
+            ],
+            [
+              12.367587,
+              51.341297
+            ]
+          ]
+        },
+        {
+          "name": "Waldplatz to Feuerbachstr.",
+          "path": [
+            [
+              12.359088999999999,
+              51.342297
+            ],
+            [
+              12.357192,
+              51.345795
+            ]
+          ]
+        },
+        {
+          "name": "Felsenkeller to Alte Str.",
+          "path": [
+            [
+              12.338894,
+              51.33249
+            ],
+            [
+              12.342237,
+              51.332277
+            ]
+          ]
+        },
+        {
+          "name": "Karl-Heine-/Merseburger Str. to Elster Passage",
+          "path": [
+            [
+              12.333489,
+              51.331394
+            ],
+            [
+              12.336493,
+              51.328692
+            ]
+          ]
+        },
+        {
+          "name": "Elster Passage to Erich-Zeigner-Allee",
+          "path": [
+            [
+              12.336493,
+              51.328692
+            ],
+            [
+              12.337815,
+              51.327134
+            ]
+          ]
+        },
+        {
+          "name": "Markranst\u00e4dter Str. to Erich-Zeigner-Allee",
+          "path": [
+            [
+              12.334194,
+              51.325295
+            ],
+            [
+              12.337815,
+              51.327134
+            ]
+          ]
+        },
+        {
+          "name": "August-Bebel-/Kurt-Eisner-Str. to Fockestr.",
+          "path": [
+            [
+              12.368889,
+              51.320893
+            ],
+            [
+              12.365789,
+              51.320893
+            ]
+          ]
+        },
+        {
+          "name": "Leopoldstr. to Koburger Br\u00fccke",
+          "path": [
+            [
+              12.37409,
+              51.30419
+            ],
+            [
+              12.37419,
+              51.303395
+            ]
+          ]
+        },
+        {
+          "name": "Gr\u00fcnau-S\u00fcd to Ratzelbogen",
+          "path": [
+            [
+              12.278976,
+              51.311498
+            ],
+            [
+              12.283688,
+              51.311996
+            ]
+          ]
+        },
+        {
+          "name": "Sch\u00f6nauer/Ratzelstr. to Robert-Koch-Klinikum",
+          "path": [
+            [
+              12.303186,
+              51.314396
+            ],
+            [
+              12.301479,
+              51.31519
+            ]
+          ]
+        },
+        {
+          "name": "Nonnenstr. to Klingerweg",
+          "path": [
+            [
+              12.348891,
+              51.332393
+            ],
+            [
+              12.350592,
+              51.332497
+            ]
+          ]
+        },
+        {
+          "name": "Hohenheida, Gasthof to Hohenheida, Lindengasse",
+          "path": [
+            [
+              12.446489,
+              51.419989
+            ],
+            [
+              12.442893,
+              51.41979
+            ]
+          ]
+        },
+        {
+          "name": "Hohenheida, Am Anger to Hohenheida, Gasthof",
+          "path": [
+            [
+              12.452688,
+              51.420193
+            ],
+            [
+              12.446489,
+              51.419989
+            ]
+          ]
+        },
+        {
+          "name": "G\u00f6bschelwitz to Seehausen, Alte M\u00fchle",
+          "path": [
+            [
+              12.422184,
+              51.419597
+            ],
+            [
+              12.419526,
+              51.410017
+            ]
+          ]
+        },
+        {
+          "name": "Seehausen, Schule to Seehausen, Gut Seehausen",
+          "path": [
+            [
+              12.413289,
+              51.403689
+            ],
+            [
+              12.418687,
+              51.406094
+            ]
+          ]
+        },
+        {
+          "name": "Seehausen, Gut Seehausen to Seehausen, Dingolfinger Str.",
+          "path": [
+            [
+              12.418687,
+              51.406094
+            ],
+            [
+              12.418895,
+              51.405989
+            ]
+          ]
+        },
+        {
+          "name": "Anemonenweg to Dr.-Wilhelm-K\u00fclz-Str.",
+          "path": [
+            [
+              12.438392,
+              51.331693
+            ],
+            [
+              12.436295,
+              51.331494
+            ]
+          ]
+        },
+        {
+          "name": "Seehausen, Alte M\u00fchle to Seehausen, Gut Seehausen",
+          "path": [
+            [
+              12.419526,
+              51.410017
+            ],
+            [
+              12.418687,
+              51.406094
+            ]
+          ]
+        },
+        {
+          "name": "Am Ring to Gottscheina, Siedlung",
+          "path": [
+            [
+              12.479192,
+              51.425092
+            ],
+            [
+              12.476897,
+              51.421194
+            ]
+          ]
+        },
+        {
+          "name": "Bahnhof Holzhausen (Bus) to Leipzig-Holzhausen",
+          "path": [
+            [
+              12.462068,
+              51.306474
+            ],
+            [
+              12.461448,
+              51.306043
+            ]
+          ]
+        },
+        {
+          "name": "GVZ Nord/Deutsche Post AG to GVZ Nord/Porschestr.",
+          "path": [
+            [
+              12.293415,
+              51.413579
+            ],
+            [
+              12.296502,
+              51.41333
+            ]
+          ]
+        },
+        {
+          "name": "GVZ Nord/Gro\u00dfmarkt Leipzig to GVZ Nord/Sattlerweg",
+          "path": [
+            [
+              12.305809,
+              51.410586
+            ],
+            [
+              12.302301,
+              51.408599
+            ]
+          ]
+        },
+        {
+          "name": "GVZ Nord/Sattlerweg to GVZ Nord/Gro\u00dfmarkt Leipzig",
+          "path": [
+            [
+              12.302301,
+              51.408599
+            ],
+            [
+              12.305809,
+              51.410586
+            ]
+          ]
+        },
+        {
+          "name": "Krakauer Str. to Zschampertaue",
+          "path": [
+            [
+              12.272291,
+              51.309294
+            ],
+            [
+              12.266195,
+              51.307297
+            ]
+          ]
+        },
+        {
+          "name": "Zschampertaue to Lausen",
+          "path": [
+            [
+              12.266195,
+              51.307297
+            ],
+            [
+              12.260795,
+              51.306594
+            ]
+          ]
+        },
+        {
+          "name": "Ratzelbogen to Gr\u00fcnau-S\u00fcd",
+          "path": [
+            [
+              12.283688,
+              51.311996
+            ],
+            [
+              12.278976,
+              51.311498
+            ]
+          ]
+        },
+        {
+          "name": "Arno-Nitzsche-Str. to Connewitzer Kreuz",
+          "path": [
+            [
+              12.374488,
+              51.31058
+            ],
+            [
+              12.373284,
+              51.310795
+            ]
+          ]
+        },
+        {
+          "name": "GVZ Nord/T&S to GVZ Nord/Gro\u00dfmarkt Leipzig",
+          "path": [
+            [
+              12.302642,
+              51.41313
+            ],
+            [
+              12.305809,
+              51.410586
+            ]
+          ]
+        },
+        {
+          "name": "Heisenbergstr. to Portitzer Allee/S-Bahnhof Heiterblick",
+          "path": [
+            [
+              12.46509,
+              51.364392
+            ],
+            [
+              12.46059,
+              51.367393
+            ]
+          ]
+        },
+        {
+          "name": "Heiterblick, Teslastr. to Arcus Park",
+          "path": [
+            [
+              12.451989,
+              51.364195
+            ],
+            [
+              12.446576,
+              51.361549
+            ]
+          ]
+        },
+        {
+          "name": "Portitzer Allee/S-Bahnhof Heiterblick to Leipzig-Heiterblick",
+          "path": [
+            [
+              12.46059,
+              51.367393
+            ],
+            [
+              12.459976,
+              51.369336
+            ]
+          ]
+        },
+        {
+          "name": "Bautzner Str. to Bautzner/B\u00e4stleinstr.",
+          "path": [
+            [
+              12.434194,
+              51.355591
+            ],
+            [
+              12.431886,
+              51.35699
+            ]
+          ]
+        },
+        {
+          "name": "Volksgarten to Gei\u00dflerstr./B\u00fclowviertel",
+          "path": [
+            [
+              12.419951,
+              51.348312
+            ],
+            [
+              12.41919,
+              51.344845
+            ]
+          ]
+        },
+        {
+          "name": "Lausen to Lausen, Buswendestelle",
+          "path": [
+            [
+              12.260795,
+              51.306594
+            ],
+            [
+              12.26058,
+              51.307409
+            ]
+          ]
+        },
+        {
+          "name": "Am Sonneneck to Lausener Bogen",
+          "path": [
+            [
+              12.262387,
+              51.301343
+            ],
+            [
+              12.261187,
+              51.299794
+            ]
+          ]
+        },
+        {
+          "name": "Lausen, Buswendestelle to Lausen",
+          "path": [
+            [
+              12.26058,
+              51.307409
+            ],
+            [
+              12.260795,
+              51.306594
+            ]
+          ]
+        },
+        {
+          "name": "Zschortauer Str. to Essener Stra\u00dfe",
+          "path": [
+            [
+              12.394697,
+              51.37649
+            ],
+            [
+              12.396986,
+              51.376361
+            ]
+          ]
+        },
+        {
+          "name": "Franz-Mehring-Str. to Bremer Str.",
+          "path": [
+            [
+              12.369891,
+              51.376191
+            ],
+            [
+              12.365034,
+              51.376178
+            ]
+          ]
+        },
+        {
+          "name": "Gohlis-Nord, Virchowstr. to Gohlis-Nord",
+          "path": [
+            [
+              12.379086,
+              51.375791
+            ],
+            [
+              12.378187,
+              51.375098
+            ]
+          ]
+        },
+        {
+          "name": "Olbrichtstr. to Landsberger/Max-Liebermann-Str.",
+          "path": [
+            [
+              12.356492,
+              51.374895
+            ],
+            [
+              12.361292,
+              51.37589
+            ]
+          ]
+        },
+        {
+          "name": "Sternsiedlung Nord to S-Bahnhof Slevogtstr. (Bus)",
+          "path": [
+            [
+              12.346091,
+              51.375291
+            ],
+            [
+              12.344185,
+              51.373395
+            ]
+          ]
+        },
+        {
+          "name": "Rosenowstr. to Essener/Friedrichshafner Str.",
+          "path": [
+            [
+              12.402491,
+              51.376192
+            ],
+            [
+              12.405586,
+              51.375697
+            ]
+          ]
+        },
+        {
+          "name": "Komarowstr. to Simon-Bolivar-Str.",
+          "path": [
+            [
+              12.415393,
+              51.378891
+            ],
+            [
+              12.420085,
+              51.379195
+            ]
+          ]
+        },
+        {
+          "name": "Riebeck-/St\u00f6tteritzer Str. to Witzgallstr.",
+          "path": [
+            [
+              12.403596,
+              51.327595
+            ],
+            [
+              12.399539,
+              51.328243
+            ]
+          ]
+        },
+        {
+          "name": "Breite Str. to Martinstr.",
+          "path": [
+            [
+              12.408001,
+              51.335703
+            ],
+            [
+              12.413101,
+              51.334214
+            ]
+          ]
+        },
+        {
+          "name": "Riebeck-/Oststr. to Schulze-Boysen-Str.",
+          "path": [
+            [
+              12.405895,
+              51.331889
+            ],
+            [
+              12.400586,
+              51.332493
+            ]
+          ]
+        },
+        {
+          "name": "Sommerfeld to Paunsdorf Center",
+          "path": [
+            [
+              12.479,
+              51.346481
+            ],
+            [
+              12.479237,
+              51.348856
+            ]
+          ]
+        },
+        {
+          "name": "Elsastr. to Bergstr.",
+          "path": [
+            [
+              12.398769,
+              51.342464
+            ],
+            [
+              12.402015,
+              51.340535
+            ]
+          ]
+        },
+        {
+          "name": "Paunsdorfer Allee/Permoserstr. to Paunsdorf Center",
+          "path": [
+            [
+              12.479095,
+              51.352098
+            ],
+            [
+              12.479237,
+              51.348856
+            ]
+          ]
+        },
+        {
+          "name": "Paunsdorf Center to Sommerfeld",
+          "path": [
+            [
+              12.479237,
+              51.348856
+            ],
+            [
+              12.479,
+              51.346481
+            ]
+          ]
+        },
+        {
+          "name": "Technisches Rathaus to Riebeck-/St\u00f6tteritzer Str.",
+          "path": [
+            [
+              12.400964,
+              51.325198
+            ],
+            [
+              12.403596,
+              51.327595
+            ]
+          ]
+        },
+        {
+          "name": "S-Bahnhof St\u00f6tteritz (Tram/Bus) to Leipzig-St\u00f6tteritz",
+          "path": [
+            [
+              12.41159,
+              51.324889
+            ],
+            [
+              12.411433,
+              51.324516
+            ]
+          ]
+        },
+        {
+          "name": "An der M\u00e4rchenwiese to Triftweg",
+          "path": [
+            [
+              12.396394,
+              51.306098
+            ],
+            [
+              12.396386,
+              51.308894
+            ]
+          ]
+        },
+        {
+          "name": "Moritz Hof to Probstheidaer/Willi-Bredel-Str.",
+          "path": [
+            [
+              12.396292,
+              51.301991
+            ],
+            [
+              12.400138,
+              51.303381
+            ]
+          ]
+        },
+        {
+          "name": "Meusdorfer Str. to Arno-Nitzsche-/Arthur-Hoffmann-Str.",
+          "path": [
+            [
+              12.38699,
+              51.309491
+            ],
+            [
+              12.379633,
+              51.310117
+            ]
+          ]
+        },
+        {
+          "name": "Triftweg to An der M\u00e4rchenwiese",
+          "path": [
+            [
+              12.396386,
+              51.308894
+            ],
+            [
+              12.396394,
+              51.306098
+            ]
+          ]
+        },
+        {
+          "name": "Wiedebachplatz to Arno-Nitzsche-/Arthur-Hoffmann-Str.",
+          "path": [
+            [
+              12.377665,
+              51.30949
+            ],
+            [
+              12.379633,
+              51.310117
+            ]
+          ]
+        },
+        {
+          "name": "K\u00f6rnerstr. to S\u00fcdplatz",
+          "path": [
+            [
+              12.378884,
+              51.325092
+            ],
+            [
+              12.373576,
+              51.324931
+            ]
+          ]
+        },
+        {
+          "name": "Kurt-Eisner-/Arthur-Hoffmann-Str. to S\u00fcdvorstadt, L\u00f6\u00dfniger Str.",
+          "path": [
+            [
+              12.378388,
+              51.320691
+            ],
+            [
+              12.381796,
+              51.320593
+            ]
+          ]
+        },
+        {
+          "name": "L\u00f6\u00dfnig to Dankwartstr.",
+          "path": [
+            [
+              12.396093,
+              51.296197
+            ],
+            [
+              12.392814,
+              51.299188
+            ]
+          ]
+        },
+        {
+          "name": "Hohe Str. to Robert-Schumann-Str. (Grassistr.)",
+          "path": [
+            [
+              12.373408,
+              51.32909
+            ],
+            [
+              12.368788,
+              51.328719
+            ]
+          ]
+        },
+        {
+          "name": "Siedlerweg to Melissenweg",
+          "path": [
+            [
+              12.360291,
+              51.388696
+            ],
+            [
+              12.354692,
+              51.387598
+            ]
+          ]
+        },
+        {
+          "name": "Rietzschkegrund to Martinsh\u00f6he",
+          "path": [
+            [
+              12.367795,
+              51.39009
+            ],
+            [
+              12.371286,
+              51.389495
+            ]
+          ]
+        },
+        {
+          "name": "Wiederitzscher Landstr. to Wiederitzsch, B\u00fcrgerb\u00fcro",
+          "path": [
+            [
+              12.369797,
+              51.396596
+            ],
+            [
+              12.373292,
+              51.394292
+            ]
+          ]
+        },
+        {
+          "name": "Martinsh\u00f6he to Rietzschkegrund",
+          "path": [
+            [
+              12.371286,
+              51.389495
+            ],
+            [
+              12.367795,
+              51.39009
+            ]
+          ]
+        },
+        {
+          "name": "Baalsdorf, Baalsdorfer Str. to Baalsdorf, Kirchweg",
+          "path": [
+            [
+              12.480493,
+              51.32339
+            ],
+            [
+              12.487796,
+              51.322794
+            ]
+          ]
+        },
+        {
+          "name": "Baalsdorf, Kirchweg to Baalsdorf, Zaucheweg",
+          "path": [
+            [
+              12.487796,
+              51.322794
+            ],
+            [
+              12.493685,
+              51.320793
+            ]
+          ]
+        },
+        {
+          "name": "Lintacherstr. to Baalsdorf, Brandiser Str.",
+          "path": [
+            [
+              12.467092,
+              51.324192
+            ],
+            [
+              12.472187,
+              51.324194
+            ]
+          ]
+        },
+        {
+          "name": "Baalsdorf, Brandiser Str. to Lintacherstr.",
+          "path": [
+            [
+              12.472187,
+              51.324194
+            ],
+            [
+              12.467092,
+              51.324192
+            ]
+          ]
+        },
+        {
+          "name": "Wiederitzsch, Schule to Wiederitzsch, B\u00fcrgerb\u00fcro",
+          "path": [
+            [
+              12.372795,
+              51.393389
+            ],
+            [
+              12.373292,
+              51.394292
+            ]
+          ]
+        },
+        {
+          "name": "Wiederitzsch, B\u00fcrgerb\u00fcro to Wiederitzsch, Schule",
+          "path": [
+            [
+              12.373292,
+              51.394292
+            ],
+            [
+              12.372795,
+              51.393389
+            ]
+          ]
+        },
+        {
+          "name": "Stahmeln to Pittlerstr.",
+          "path": [
+            [
+              12.304648,
+              51.378366
+            ],
+            [
+              12.312886,
+              51.37665
+            ]
+          ]
+        },
+        {
+          "name": "L\u00fctzschena to Freirodaer Weg",
+          "path": [
+            [
+              12.281287,
+              51.383393
+            ],
+            [
+              12.273996,
+              51.385738
+            ]
+          ]
+        },
+        {
+          "name": "Stahmelner Allee to Stahmeln",
+          "path": [
+            [
+              12.293068,
+              51.38077
+            ],
+            [
+              12.304648,
+              51.378366
+            ]
+          ]
+        },
+        {
+          "name": "Pittlerstr. to Stahmeln",
+          "path": [
+            [
+              12.312886,
+              51.37665
+            ],
+            [
+              12.304648,
+              51.378366
+            ]
+          ]
+        },
+        {
+          "name": "Annaberger Str. to Am Viadukt",
+          "path": [
+            [
+              12.331197,
+              51.371994
+            ],
+            [
+              12.3273,
+              51.373327
+            ]
+          ]
+        },
+        {
+          "name": "Wahren (Rathaus) to Wahren (Am Zuckmantel/Fr.-Bosse-Str.)",
+          "path": [
+            [
+              12.324231,
+              51.374395
+            ],
+            [
+              12.324374,
+              51.372997
+            ]
+          ]
+        },
+        {
+          "name": "Dantestr. to Seelenbinderstr.",
+          "path": [
+            [
+              12.346293,
+              51.366842
+            ],
+            [
+              12.350095,
+              51.36659
+            ]
+          ]
+        },
+        {
+          "name": "M\u00f6ckernscher Markt to Bl\u00fccherstr.",
+          "path": [
+            [
+              12.337695,
+              51.369893
+            ],
+            [
+              12.338033,
+              51.370594
+            ]
+          ]
+        },
+        {
+          "name": "Freirodaer Weg to H\u00e4nichen, Bismarckturm",
+          "path": [
+            [
+              12.273996,
+              51.385738
+            ],
+            [
+              12.267722,
+              51.38621
+            ]
+          ]
+        },
+        {
+          "name": "H\u00e4nichen, Bismarckturm to Freirodaer Weg",
+          "path": [
+            [
+              12.267722,
+              51.38621
+            ],
+            [
+              12.273996,
+              51.385738
+            ]
+          ]
+        },
+        {
+          "name": "Dreiecksweg to Lausner Weg",
+          "path": [
+            [
+              12.310789,
+              51.310396
+            ],
+            [
+              12.307791,
+              51.311991
+            ]
+          ]
+        },
+        {
+          "name": "Weidenweg to Wasserturmweg",
+          "path": [
+            [
+              12.314187,
+              51.304392
+            ],
+            [
+              12.314186,
+              51.300795
+            ]
+          ]
+        },
+        {
+          "name": "Sch\u00f6nauer-L\u00fctzner Str. to Sch\u00f6nau, Wei\u00dfdornstr.",
+          "path": [
+            [
+              12.291155,
+              51.323691
+            ],
+            [
+              12.292791,
+              51.324094
+            ]
+          ]
+        },
+        {
+          "name": "Sch\u00f6nau, Wei\u00dfdornstr. to Sch\u00f6nauer-L\u00fctzner Str.",
+          "path": [
+            [
+              12.292791,
+              51.324094
+            ],
+            [
+              12.291155,
+              51.323691
+            ]
+          ]
+        },
+        {
+          "name": "Lausen, \u00c4rztehaus to Lausen, Wolkenweg",
+          "path": [
+            [
+              12.270687,
+              51.30309
+            ],
+            [
+              12.269089,
+              51.30139
+            ]
+          ]
+        },
+        {
+          "name": "Rathenaustr. to Kietzstr.",
+          "path": [
+            [
+              12.315386,
+              51.354792
+            ],
+            [
+              12.317683,
+              51.354592
+            ]
+          ]
+        },
+        {
+          "name": "Wasserturmweg to Weidenweg",
+          "path": [
+            [
+              12.314186,
+              51.300795
+            ],
+            [
+              12.314187,
+              51.304392
+            ]
+          ]
+        },
+        {
+          "name": "G\u00e4rtnerei Gro\u00dfzschocher to Gro\u00dfzschocher, Feuer- und Rettungswache",
+          "path": [
+            [
+              12.306154,
+              51.301409
+            ],
+            [
+              12.3064,
+              51.301429
+            ]
+          ]
+        },
+        {
+          "name": "Mockauer/Volbedingstr. to Leipzig Nord",
+          "path": [
+            [
+              12.40207,
+              51.364137
+            ],
+            [
+              12.401067,
+              51.364166
+            ]
+          ]
+        },
+        {
+          "name": "Apelstr./Historischer Betriebshof to Fliederhof",
+          "path": [
+            [
+              12.391189,
+              51.355092
+            ],
+            [
+              12.395732,
+              51.354187
+            ]
+          ]
+        },
+        {
+          "name": "Hamburger Str. to Rackwitzer Str.",
+          "path": [
+            [
+              12.395785,
+              51.35879
+            ],
+            [
+              12.397938,
+              51.35799
+            ]
+          ]
+        },
+        {
+          "name": "Wilhelm-Liebknecht-Platz to Nordplatz",
+          "path": [
+            [
+              12.377587,
+              51.349794
+            ],
+            [
+              12.373592,
+              51.35249
+            ]
+          ]
+        },
+        {
+          "name": "Wittenberger Str. to Apelstr./Historischer Betriebshof",
+          "path": [
+            [
+              12.387387,
+              51.353197
+            ],
+            [
+              12.391189,
+              51.355092
+            ]
+          ]
+        },
+        {
+          "name": "Hauptbahnhof/Wintergartenstr. to Hauptbahnhof/Ostseite",
+          "path": [
+            [
+              12.383388,
+              51.343179
+            ],
+            [
+              12.382078,
+              51.343901
+            ]
+          ]
+        },
+        {
+          "name": "Friedrichshafner Str. to Leonhardtstr.",
+          "path": [
+            [
+              12.40659,
+              51.368897
+            ],
+            [
+              12.404715,
+              51.372288
+            ]
+          ]
+        },
+        {
+          "name": "D\u00f6ringstr. to Leipzig Mockauer Stra\u00dfe",
+          "path": [
+            [
+              12.409794,
+              51.372194
+            ],
+            [
+              12.412097,
+              51.373799
+            ]
+          ]
+        },
+        {
+          "name": "Wiederitzsch Nord, Salzhandelsstr. to Breitenfeld, Gewerbegebiet",
+          "path": [
+            [
+              12.36732,
+              51.403186
+            ],
+            [
+              12.359203,
+              51.404624
+            ]
+          ]
+        },
+        {
+          "name": "Schenkendorfstr. to S\u00fcdplatz",
+          "path": [
+            [
+              12.369497,
+              51.324491
+            ],
+            [
+              12.373576,
+              51.324931
+            ]
+          ]
+        },
+        {
+          "name": "D\u00f6litz, Stra\u00dfenbahnhof to Am Eichwinkel",
+          "path": [
+            [
+              12.394691,
+              51.284791
+            ],
+            [
+              12.39529,
+              51.282994
+            ]
+          ]
+        },
+        {
+          "name": "Am Eichwinkel to D\u00f6litz, Stra\u00dfenbahnhof",
+          "path": [
+            [
+              12.39529,
+              51.282994
+            ],
+            [
+              12.394691,
+              51.284791
+            ]
+          ]
+        },
+        {
+          "name": "Am Sportpark to Rathenaustr.",
+          "path": [
+            [
+              12.315085,
+              51.357192
+            ],
+            [
+              12.315386,
+              51.354792
+            ]
+          ]
+        },
+        {
+          "name": "Auensee to Wahren (Am Zuckmantel/Fr.-Bosse-Str.)",
+          "path": [
+            [
+              12.314991,
+              51.370197
+            ],
+            [
+              12.324374,
+              51.372997
+            ]
+          ]
+        },
+        {
+          "name": "Wittestr. to Philipp-Reis-Str.",
+          "path": [
+            [
+              12.301491,
+              51.347695
+            ],
+            [
+              12.305986,
+              51.351695
+            ]
+          ]
+        },
+        {
+          "name": "Ernst-Keil-Str. to Merseburger/Schomburgkstr.",
+          "path": [
+            [
+              12.300485,
+              51.340494
+            ],
+            [
+              12.301784,
+              51.342795
+            ]
+          ]
+        },
+        {
+          "name": "Plaut-/Schomburgkstr. to Ernst-Keil-Str.",
+          "path": [
+            [
+              12.297786,
+              51.337495
+            ],
+            [
+              12.300485,
+              51.340494
+            ]
+          ]
+        },
+        {
+          "name": "Wahren (Am Zuckmantel/Fr.-Bosse-Str.) to Wahren (Rathaus)",
+          "path": [
+            [
+              12.324374,
+              51.372997
+            ],
+            [
+              12.324231,
+              51.374395
+            ]
+          ]
+        },
+        {
+          "name": "Ahornstr. to Am Vorwerk",
+          "path": [
+            [
+              12.46019,
+              51.356192
+            ],
+            [
+              12.459195,
+              51.352895
+            ]
+          ]
+        },
+        {
+          "name": "Paunsdorf Nord to Hermelinstr.",
+          "path": [
+            [
+              12.470454,
+              51.361256
+            ],
+            [
+              12.473585,
+              51.35879
+            ]
+          ]
+        },
+        {
+          "name": "Am Vorwerk to Ahornstr.",
+          "path": [
+            [
+              12.459195,
+              51.352895
+            ],
+            [
+              12.46019,
+              51.356192
+            ]
+          ]
+        },
+        {
+          "name": "Barbarastr. to Paunsdorf, Theodor-Heuss-Str.",
+          "path": [
+            [
+              12.449987,
+              51.345595
+            ],
+            [
+              12.444691,
+              51.34639
+            ]
+          ]
+        },
+        {
+          "name": "Paunsdorf, Stra\u00dfenbahnhof to Barbarastr.",
+          "path": [
+            [
+              12.457589,
+              51.345695
+            ],
+            [
+              12.449987,
+              51.345595
+            ]
+          ]
+        },
+        {
+          "name": "Ostheimstr. to Reinhardtstr.",
+          "path": [
+            [
+              12.43659,
+              51.345594
+            ],
+            [
+              12.430115,
+              51.346746
+            ]
+          ]
+        },
+        {
+          "name": "Paunsdorf, Theodor-Heuss-Str. to Leipzig-Paunsdorf",
+          "path": [
+            [
+              12.444691,
+              51.34639
+            ],
+            [
+              12.444332,
+              51.344296
+            ]
+          ]
+        },
+        {
+          "name": "Hermelinstr. to Paunsdorf Nord",
+          "path": [
+            [
+              12.473585,
+              51.35879
+            ],
+            [
+              12.470454,
+              51.361256
+            ]
+          ]
+        },
+        {
+          "name": "Richard-Lehmann-/Zwickauer Str. to An den Tierkliniken",
+          "path": [
+            [
+              12.394283,
+              51.314602
+            ],
+            [
+              12.39477,
+              51.318086
+            ]
+          ]
+        },
+        {
+          "name": "Altenburger Str. to Arthur-Hoffmann-/Richard-Lehmann-Str.",
+          "path": [
+            [
+              12.382991,
+              51.314992
+            ],
+            [
+              12.378486,
+              51.314997
+            ]
+          ]
+        },
+        {
+          "name": "Deutscher Platz to Altes Messegel\u00e4nde",
+          "path": [
+            [
+              12.399492,
+              51.321591
+            ],
+            [
+              12.40433,
+              51.321045
+            ]
+          ]
+        },
+        {
+          "name": "An der Tabaksm\u00fchle to V\u00f6lkerschlachtdenkmal (Tram/Bus)",
+          "path": [
+            [
+              12.406785,
+              51.314095
+            ],
+            [
+              12.411887,
+              51.314594
+            ]
+          ]
+        },
+        {
+          "name": "Johannisallee to Liebigstr.",
+          "path": [
+            [
+              12.388791,
+              51.327296
+            ],
+            [
+              12.392386,
+              51.330492
+            ]
+          ]
+        },
+        {
+          "name": "Deutsche Nationalbibliothek to Deutscher Platz",
+          "path": [
+            [
+              12.395691,
+              51.323562
+            ],
+            [
+              12.399492,
+              51.321591
+            ]
+          ]
+        },
+        {
+          "name": "Meusdorf to Gottfried-Keller-Str.",
+          "path": [
+            [
+              12.439696,
+              51.294491
+            ],
+            [
+              12.434994,
+              51.295286
+            ]
+          ]
+        },
+        {
+          "name": "Arthur-Hoffmann-/Richard-Lehmann-Str. to Altenburger Str.",
+          "path": [
+            [
+              12.378486,
+              51.314997
+            ],
+            [
+              12.382991,
+              51.314992
+            ]
+          ]
+        },
+        {
+          "name": "Karl-Liebknecht-/Kurt-Eisner-Str. to August-Bebel-/Kurt-Eisner-Str.",
+          "path": [
+            [
+              12.373495,
+              51.320698
+            ],
+            [
+              12.368889,
+              51.320893
+            ]
+          ]
+        },
+        {
+          "name": "H\u00e4rtelstr. to Ro\u00dfplatz/Gr\u00fcnewaldstr.",
+          "path": [
+            [
+              12.377542,
+              51.332792
+            ],
+            [
+              12.37632,
+              51.333358
+            ]
+          ]
+        },
+        {
+          "name": "Messeverwaltung to Messegel\u00e4nde",
+          "path": [
+            [
+              12.394499,
+              51.395154
+            ],
+            [
+              12.39657,
+              51.396712
+            ]
+          ]
+        },
+        {
+          "name": "Am alten Flughafen to Messeverwaltung",
+          "path": [
+            [
+              12.397494,
+              51.392118
+            ],
+            [
+              12.394499,
+              51.395154
+            ]
+          ]
+        },
+        {
+          "name": "Martin-Herrmann-Str. to Klo\u00dfstr.",
+          "path": [
+            [
+              12.322086,
+              51.307297
+            ],
+            [
+              12.320485,
+              51.305598
+            ]
+          ]
+        },
+        {
+          "name": "M\u00fchlweg to Engelsdorf, Ernst-Guhr-Str.",
+          "path": [
+            [
+              12.466494,
+              51.33679
+            ],
+            [
+              12.471984,
+              51.33669
+            ]
+          ]
+        },
+        {
+          "name": "Engelsdorf, Arthur-Winkler-Str. to Engelsdorf, Ernst-Guhr-Str.",
+          "path": [
+            [
+              12.475485,
+              51.337998
+            ],
+            [
+              12.471984,
+              51.33669
+            ]
+          ]
+        },
+        {
+          "name": "Engelsdorf, Gymnasium to Engelsdorf, Kirche",
+          "path": [
+            [
+              12.482397,
+              51.334294
+            ],
+            [
+              12.48549,
+              51.33609
+            ]
+          ]
+        },
+        {
+          "name": "Engelsdorf, Ernst-Guhr-Str. to Engelsdorf, Arthur-Winkler-Str.",
+          "path": [
+            [
+              12.471984,
+              51.33669
+            ],
+            [
+              12.475485,
+              51.337998
+            ]
+          ]
+        },
+        {
+          "name": "Einfahrt Sachsenpark to Seehausener Allee",
+          "path": [
+            [
+              12.401484,
+              51.399591
+            ],
+            [
+              12.397571,
+              51.399174
+            ]
+          ]
+        },
+        {
+          "name": "Sachsenpark to Seehausener Allee",
+          "path": [
+            [
+              12.396989,
+              51.401592
+            ],
+            [
+              12.397571,
+              51.399174
+            ]
+          ]
+        },
+        {
+          "name": "Lausener Bogen to Am Sonneneck",
+          "path": [
+            [
+              12.261187,
+              51.299794
+            ],
+            [
+              12.262387,
+              51.301343
+            ]
+          ]
+        },
+        {
+          "name": "Am Silo to Lausen",
+          "path": [
+            [
+              12.260695,
+              51.304591
+            ],
+            [
+              12.260795,
+              51.306594
+            ]
+          ]
+        },
+        {
+          "name": "Lausen, Wolkenweg to Regenbogen",
+          "path": [
+            [
+              12.269089,
+              51.30139
+            ],
+            [
+              12.266293,
+              51.300794
+            ]
+          ]
+        },
+        {
+          "name": "Bismarckstr. to Gro\u00dfzschocher, Gerhard-Ellrodt-Str.",
+          "path": [
+            [
+              12.319995,
+              51.300397
+            ],
+            [
+              12.321486,
+              51.30039
+            ]
+          ]
+        },
+        {
+          "name": "Raiffeisenstr. to Siedlung Florian Geyer",
+          "path": [
+            [
+              12.287693,
+              51.299592
+            ],
+            [
+              12.289487,
+              51.296997
+            ]
+          ]
+        },
+        {
+          "name": "Siedlung Florian Geyer to Raiffeisenstr.",
+          "path": [
+            [
+              12.289487,
+              51.296997
+            ],
+            [
+              12.287693,
+              51.299592
+            ]
+          ]
+        },
+        {
+          "name": "S-Bahnhof Karlsruher Str. (Bus) to Karlsruher Str",
+          "path": [
+            [
+              12.278693,
+              51.316991
+            ],
+            [
+              12.27927,
+              51.317236
+            ]
+          ]
+        },
+        {
+          "name": "Am kleinen Feld to Str. am See",
+          "path": [
+            [
+              12.263987,
+              51.316593
+            ],
+            [
+              12.261591,
+              51.316193
+            ]
+          ]
+        },
+        {
+          "name": "R\u00fcckmarsdorf, L\u00f6wen Center to R\u00fcckmarsdorf, Gro\u00dfer Marktweg",
+          "path": [
+            [
+              12.269683,
+              51.345621
+            ],
+            [
+              12.266787,
+              51.344875
+            ]
+          ]
+        },
+        {
+          "name": "R\u00fcckmarsdorf, Sandberg to R\u00fcckmarsdorf, Miltitzer Str.",
+          "path": [
+            [
+              12.258388,
+              51.346691
+            ],
+            [
+              12.262795,
+              51.34789
+            ]
+          ]
+        },
+        {
+          "name": "Zur Kaninchenfarm to Merseburger/Schomburgkstr.",
+          "path": [
+            [
+              12.295697,
+              51.34339
+            ],
+            [
+              12.301784,
+              51.342795
+            ]
+          ]
+        },
+        {
+          "name": "R\u00fcckmarsdorf, Zum Bahnhof to Leipzig-R\u00fcckmarsdorf",
+          "path": [
+            [
+              12.281893,
+              51.344497
+            ],
+            [
+              12.282667,
+              51.341868
+            ]
+          ]
+        },
+        {
+          "name": "Lindenau, Friedhof to Diakonissenhaus",
+          "path": [
+            [
+              12.314783,
+              51.340692
+            ],
+            [
+              12.321195,
+              51.343792
+            ]
+          ]
+        },
+        {
+          "name": "Merseburger/Schomburgkstr. to Ernst-Keil-Str.",
+          "path": [
+            [
+              12.301784,
+              51.342795
+            ],
+            [
+              12.300485,
+              51.340494
+            ]
+          ]
+        },
+        {
+          "name": "Knauthain, Am Weiher to Knauthain, Sch\u00f6nbergstr.",
+          "path": [
+            [
+              12.311086,
+              51.272892
+            ],
+            [
+              12.311488,
+              51.275497
+            ]
+          ]
+        },
+        {
+          "name": "Knauthain, Sch\u00f6nbergstr. to Knautkleeberg",
+          "path": [
+            [
+              12.311488,
+              51.275497
+            ],
+            [
+              12.30979,
+              51.277793
+            ]
+          ]
+        },
+        {
+          "name": "Thomas-M\u00fcntzer-Siedlung to Am Klucksgraben",
+          "path": [
+            [
+              12.302391,
+              51.269793
+            ],
+            [
+              12.297697,
+              51.266895
+            ]
+          ]
+        },
+        {
+          "name": "Am Klucksgraben to Thomas-M\u00fcntzer-Siedlung",
+          "path": [
+            [
+              12.297697,
+              51.266895
+            ],
+            [
+              12.302391,
+              51.269793
+            ]
+          ]
+        },
+        {
+          "name": "Pelzgasse to Alte D\u00fcbener Landstr.",
+          "path": [
+            [
+              12.392583,
+              51.401692
+            ],
+            [
+              12.392947,
+              51.400207
+            ]
+          ]
+        },
+        {
+          "name": "Zuckelhausen to Arthur-Polenz-Str.",
+          "path": [
+            [
+              12.45289,
+              51.304992
+            ],
+            [
+              12.457684,
+              51.307692
+            ]
+          ]
+        },
+        {
+          "name": "Seehausener Allee to Sachsenpark",
+          "path": [
+            [
+              12.397571,
+              51.399174
+            ],
+            [
+              12.396989,
+              51.401592
+            ]
+          ]
+        },
+        {
+          "name": "Gypsbergstr. to S-Bahnhof Essener Str. (Bus)",
+          "path": [
+            [
+              12.399255,
+              51.376529
+            ],
+            [
+              12.397075,
+              51.376583
+            ]
+          ]
+        },
+        {
+          "name": "Gewerbegebiet Podelwitz to Kossaer Str.",
+          "path": [
+            [
+              12.394039,
+              51.409509
+            ],
+            [
+              12.392742,
+              51.410437
+            ]
+          ]
+        },
+        {
+          "name": "Siedlung Waldfrieden to M\u00f6lkauer Str.",
+          "path": [
+            [
+              12.443297,
+              51.312891
+            ],
+            [
+              12.452693,
+              51.310195
+            ]
+          ]
+        },
+        {
+          "name": "Geschwister-Scholl-Str. to Gro\u00dfmiltitzer Str.",
+          "path": [
+            [
+              12.256092,
+              51.320392
+            ],
+            [
+              12.261394,
+              51.320289
+            ]
+          ]
+        },
+        {
+          "name": "Miltitz, Friedhof to Geschwister-Scholl-Str.",
+          "path": [
+            [
+              12.247491,
+              51.318698
+            ],
+            [
+              12.256092,
+              51.320392
+            ]
+          ]
+        },
+        {
+          "name": "Str. am See to Am kleinen Feld",
+          "path": [
+            [
+              12.261591,
+              51.316193
+            ],
+            [
+              12.263987,
+              51.316593
+            ]
+          ]
+        },
+        {
+          "name": "Gro\u00dfmiltitzer Str. to Geschwister-Scholl-Str.",
+          "path": [
+            [
+              12.261394,
+              51.320289
+            ],
+            [
+              12.256092,
+              51.320392
+            ]
+          ]
+        },
+        {
+          "name": "Pahlenweg to H\u00f6ltystr.",
+          "path": [
+            [
+              12.427987,
+              51.292497
+            ],
+            [
+              12.432399,
+              51.295308
+            ]
+          ]
+        },
+        {
+          "name": "Plei\u00dfenburgwerkst\u00e4tten to Leipzig-Thekla",
+          "path": [
+            [
+              12.430384,
+              51.37089
+            ],
+            [
+              12.430755,
+              51.371626
+            ]
+          ]
+        },
+        {
+          "name": "Telemannstr. to Robert-Schumann-Str. (Grassistr.)",
+          "path": [
+            [
+              12.367485,
+              51.32739
+            ],
+            [
+              12.368788,
+              51.328719
+            ]
+          ]
+        },
+        {
+          "name": "Seelenbinderstr. to S-Bahnhof M\u00f6ckern (Tram/Bus)",
+          "path": [
+            [
+              12.350095,
+              51.36659
+            ],
+            [
+              12.351169,
+              51.365759
+            ]
+          ]
+        },
+        {
+          "name": "S\u00fcdvorstadt, L\u00f6\u00dfniger Str. to Kurt-Eisner-/Arthur-Hoffmann-Str.",
+          "path": [
+            [
+              12.381796,
+              51.320593
+            ],
+            [
+              12.378388,
+              51.320691
+            ]
+          ]
+        },
+        {
+          "name": "Congress Center to Messegel\u00e4nde",
+          "path": [
+            [
+              12.399388,
+              51.396918
+            ],
+            [
+              12.39657,
+              51.396712
+            ]
+          ]
+        },
+        {
+          "name": "Robert-Schumann-Str. (Ferdinand-Rhode-Str.) to Robert-Schumann-Str. (Grassistr.)",
+          "path": [
+            [
+              12.366673,
+              51.329625
+            ],
+            [
+              12.368788,
+              51.328719
+            ]
+          ]
+        },
+        {
+          "name": "Braun-/Heiterblickstr. to Plei\u00dfenburgwerkst\u00e4tten",
+          "path": [
+            [
+              12.430788,
+              51.36899
+            ],
+            [
+              12.430384,
+              51.37089
+            ]
+          ]
+        },
+        {
+          "name": "Lidicestr. to Thekla, Tauchaer Str.",
+          "path": [
+            [
+              12.430189,
+              51.377496
+            ],
+            [
+              12.426889,
+              51.379292
+            ]
+          ]
+        },
+        {
+          "name": "Schwarzenbergweg to Pahlenweg",
+          "path": [
+            [
+              12.429591,
+              51.286893
+            ],
+            [
+              12.427987,
+              51.292497
+            ]
+          ]
+        },
+        {
+          "name": "Handwerkerhof to An den Platanen",
+          "path": [
+            [
+              12.436086,
+              51.326393
+            ],
+            [
+              12.441584,
+              51.326798
+            ]
+          ]
+        },
+        {
+          "name": "S-Bahnhof Anger-Crottendorf (Bus) to Anger-Crottendorf",
+          "path": [
+            [
+              12.418566,
+              51.33339
+            ],
+            [
+              12.420519,
+              51.332433
+            ]
+          ]
+        },
+        {
+          "name": "Ostfriedhof to Anger-Crottendorf",
+          "path": [
+            [
+              12.422442,
+              51.332431
+            ],
+            [
+              12.420519,
+              51.332433
+            ]
+          ]
+        },
+        {
+          "name": "St\u00f6tteritz, Holzh\u00e4user Str. to Oberdorfstr.",
+          "path": [
+            [
+              12.431191,
+              51.318696
+            ],
+            [
+              12.428894,
+              51.320993
+            ]
+          ]
+        },
+        {
+          "name": "Martinstr. to Holsteinstr.",
+          "path": [
+            [
+              12.413101,
+              51.334214
+            ],
+            [
+              12.411391,
+              51.33109
+            ]
+          ]
+        },
+        {
+          "name": "Rathaus St\u00f6tteritz to Wei\u00dfestr.",
+          "path": [
+            [
+              12.420085,
+              51.319291
+            ],
+            [
+              12.418895,
+              51.321996
+            ]
+          ]
+        },
+        {
+          "name": "Kolmstr. to Oberdorfstr.",
+          "path": [
+            [
+              12.426689,
+              51.320096
+            ],
+            [
+              12.428894,
+              51.320993
+            ]
+          ]
+        },
+        {
+          "name": "Breslauer Str. to Leipzig-St\u00f6tteritz",
+          "path": [
+            [
+              12.414595,
+              51.32419
+            ],
+            [
+              12.411433,
+              51.324516
+            ]
+          ]
+        },
+        {
+          "name": "Wei\u00dfestr. to Rathaus St\u00f6tteritz",
+          "path": [
+            [
+              12.418895,
+              51.321996
+            ],
+            [
+              12.420085,
+              51.319291
+            ]
+          ]
+        },
+        {
+          "name": "Gutenbergplatz to Ostplatz",
+          "path": [
+            [
+              12.391788,
+              51.334448
+            ],
+            [
+              12.395889,
+              51.331676
+            ]
+          ]
+        },
+        {
+          "name": "Ostplatz to Liebigstr.",
+          "path": [
+            [
+              12.395889,
+              51.331676
+            ],
+            [
+              12.392386,
+              51.330492
+            ]
+          ]
+        },
+        {
+          "name": "Baalsdorf, Zaucheweg to Baalsdorf, Kirchweg",
+          "path": [
+            [
+              12.493685,
+              51.320793
+            ],
+            [
+              12.487796,
+              51.322794
+            ]
+          ]
+        },
+        {
+          "name": "Hirschfeld to Althen, Althener Anger",
+          "path": [
+            [
+              12.525343,
+              51.324168
+            ],
+            [
+              12.517896,
+              51.338789
+            ]
+          ]
+        },
+        {
+          "name": "Kleinp\u00f6sna to Hirschfeld",
+          "path": [
+            [
+              12.518091,
+              51.309496
+            ],
+            [
+              12.525343,
+              51.324168
+            ]
+          ]
+        },
+        {
+          "name": "Althen, Oertgering to Althen, Freundschaftsring",
+          "path": [
+            [
+              12.519392,
+              51.346693
+            ],
+            [
+              12.522589,
+              51.339898
+            ]
+          ]
+        },
+        {
+          "name": "Althen, Althener Anger to Althen, Freundschaftsring",
+          "path": [
+            [
+              12.517896,
+              51.338789
+            ],
+            [
+              12.522589,
+              51.339898
+            ]
+          ]
+        },
+        {
+          "name": "Althen, Freundschaftsring to Althen, Althener Anger",
+          "path": [
+            [
+              12.522589,
+              51.339898
+            ],
+            [
+              12.517896,
+              51.338789
+            ]
+          ]
+        },
+        {
+          "name": "Walter-Heise-Str. to Leipzig-Holzhausen",
+          "path": [
+            [
+              12.464487,
+              51.30259
+            ],
+            [
+              12.461448,
+              51.306043
+            ]
+          ]
+        },
+        {
+          "name": "Feldstr. to Russenstr.",
+          "path": [
+            [
+              12.441595,
+              51.303194
+            ],
+            [
+              12.440796,
+              51.304593
+            ]
+          ]
+        },
+        {
+          "name": "Schweizer Bogen to Feldstr.",
+          "path": [
+            [
+              12.437597,
+              51.302097
+            ],
+            [
+              12.441595,
+              51.303194
+            ]
+          ]
+        },
+        {
+          "name": "Virchow-/Coppistr. to Gottschallstr.",
+          "path": [
+            [
+              12.375988,
+              51.366898
+            ],
+            [
+              12.376588,
+              51.368993
+            ]
+          ]
+        },
+        {
+          "name": "An den Pferdnerkabeln to Neutzscher Str.",
+          "path": [
+            [
+              12.436289,
+              51.380096
+            ],
+            [
+              12.434695,
+              51.380295
+            ]
+          ]
+        },
+        {
+          "name": "Mathiesenstr. to Otto-Schmiedt-Str.",
+          "path": [
+            [
+              12.322485,
+              51.352091
+            ],
+            [
+              12.322089,
+              51.350196
+            ]
+          ]
+        },
+        {
+          "name": "Engelsdorf, Arnoldplatz to Engelsdorf, Sabinenstr.",
+          "path": [
+            [
+              12.493991,
+              51.348192
+            ],
+            [
+              12.492887,
+              51.346894
+            ]
+          ]
+        },
+        {
+          "name": "Engelsdorf, Hans-Weigel-Str. to Engelsdorf, Opalstr.",
+          "path": [
+            [
+              12.479596,
+              51.342794
+            ],
+            [
+              12.478201,
+              51.341433
+            ]
+          ]
+        },
+        {
+          "name": "Engelsdorf, Hugo-Aurig-Str. to Engelsdorf, Klempererstr.",
+          "path": [
+            [
+              12.486697,
+              51.343095
+            ],
+            [
+              12.489284,
+              51.340293
+            ]
+          ]
+        },
+        {
+          "name": "Regenbogen to Lausen, Wolkenweg",
+          "path": [
+            [
+              12.266293,
+              51.300794
+            ],
+            [
+              12.269089,
+              51.30139
+            ]
+          ]
+        },
+        {
+          "name": "Str\u00fcmpellstr. to Herzzentrum",
+          "path": [
+            [
+              12.436395,
+              51.305595
+            ],
+            [
+              12.438787,
+              51.306495
+            ]
+          ]
+        },
+        {
+          "name": "Herzzentrum to Str\u00fcmpellstr.",
+          "path": [
+            [
+              12.438787,
+              51.306495
+            ],
+            [
+              12.436395,
+              51.305595
+            ]
+          ]
+        },
+        {
+          "name": "Engelsdorf, Klempererstr. to Engelsdorf, Hugo-Aurig-Str.",
+          "path": [
+            [
+              12.489284,
+              51.340293
+            ],
+            [
+              12.486697,
+              51.343095
+            ]
+          ]
+        },
+        {
+          "name": "Engelsdorf, Kirchweg to Engelsdorf, Kirche",
+          "path": [
+            [
+              12.487395,
+              51.336789
+            ],
+            [
+              12.48549,
+              51.33609
+            ]
+          ]
+        },
+        {
+          "name": "Engelsdorf, Sabinenstr. to Engelsdorf, Arnoldplatz",
+          "path": [
+            [
+              12.492887,
+              51.346894
+            ],
+            [
+              12.493991,
+              51.348192
+            ]
+          ]
+        },
+        {
+          "name": "Engelsdorf, Sternenstr. to Engelsdorf, Sabinenstr.",
+          "path": [
+            [
+              12.487895,
+              51.346395
+            ],
+            [
+              12.492887,
+              51.346894
+            ]
+          ]
+        },
+        {
+          "name": "Prager/Russenstr. to Probstheida, Buswendestelle",
+          "path": [
+            [
+              12.422085,
+              51.307795
+            ],
+            [
+              12.424134,
+              51.304111
+            ]
+          ]
+        },
+        {
+          "name": "Probstheida to Probstheida, Buswendestelle",
+          "path": [
+            [
+              12.426291,
+              51.303796
+            ],
+            [
+              12.424134,
+              51.304111
+            ]
+          ]
+        },
+        {
+          "name": "Probstheida, Buswendestelle to Probstheida",
+          "path": [
+            [
+              12.424134,
+              51.304111
+            ],
+            [
+              12.426291,
+              51.303796
+            ]
+          ]
+        },
+        {
+          "name": "V\u00f6lkerschlachtdenkmal (Tram/Bus) to An der Tabaksm\u00fchle",
+          "path": [
+            [
+              12.411887,
+              51.314594
+            ],
+            [
+              12.406785,
+              51.314095
+            ]
+          ]
+        },
+        {
+          "name": "S\u00fcdfriedhof to V\u00f6lkerschlachtdenkmal (Tram/Bus)",
+          "path": [
+            [
+              12.416192,
+              51.312094
+            ],
+            [
+              12.411887,
+              51.314594
+            ]
+          ]
+        },
+        {
+          "name": "Altes Messegel\u00e4nde to Leipzig V\u00f6lkerschlachtdenkmal",
+          "path": [
+            [
+              12.40433,
+              51.321045
+            ],
+            [
+              12.406283,
+              51.31874
+            ]
+          ]
+        },
+        {
+          "name": "Naunhofer Str. to Leipzig V\u00f6lkerschlachtdenkmal",
+          "path": [
+            [
+              12.407783,
+              51.318067
+            ],
+            [
+              12.406283,
+              51.31874
+            ]
+          ]
+        },
+        {
+          "name": "Witzgallstr. to Riebeck-/St\u00f6tteritzer Str.",
+          "path": [
+            [
+              12.399539,
+              51.328243
+            ],
+            [
+              12.403596,
+              51.327595
+            ]
+          ]
+        },
+        {
+          "name": "Franzosenallee to Probstheida",
+          "path": [
+            [
+              12.430686,
+              51.30079
+            ],
+            [
+              12.426291,
+              51.303796
+            ]
+          ]
+        },
+        {
+          "name": "Roseggerstr. to Gottfried-Keller-Str.",
+          "path": [
+            [
+              12.435589,
+              51.29749
+            ],
+            [
+              12.434994,
+              51.295286
+            ]
+          ]
+        },
+        {
+          "name": "H\u00f6ltystr. to Gottfried-Keller-Str.",
+          "path": [
+            [
+              12.432399,
+              51.295308
+            ],
+            [
+              12.434994,
+              51.295286
+            ]
+          ]
+        },
+        {
+          "name": "Markt to Leipzig Markt",
+          "path": [
+            [
+              12.374497,
+              51.339992
+            ],
+            [
+              12.374616,
+              51.340636
+            ]
+          ]
+        },
+        {
+          "name": "Zur Lindenh\u00f6he to An der Schule",
+          "path": [
+            [
+              12.335489,
+              51.391491
+            ],
+            [
+              12.333197,
+              51.392393
+            ]
+          ]
+        },
+        {
+          "name": "Lindenallee to An der Hufschmiede",
+          "path": [
+            [
+              12.341785,
+              51.399395
+            ],
+            [
+              12.33819,
+              51.395029
+            ]
+          ]
+        },
+        {
+          "name": "Sophienstr. to Rudolf-Breitscheid-Str.",
+          "path": [
+            [
+              12.322791,
+              51.391394
+            ],
+            [
+              12.319787,
+              51.389798
+            ]
+          ]
+        },
+        {
+          "name": "An der Schule to Zur Lindenh\u00f6he",
+          "path": [
+            [
+              12.333197,
+              51.392393
+            ],
+            [
+              12.335489,
+              51.391491
+            ]
+          ]
+        },
+        {
+          "name": "Lindenthal, Kirche to An der Hufschmiede",
+          "path": [
+            [
+              12.336785,
+              51.394296
+            ],
+            [
+              12.33819,
+              51.395029
+            ]
+          ]
+        },
+        {
+          "name": "Lindenthaler Hauptstr. to Lindenthal, Gemeindeamt",
+          "path": [
+            [
+              12.327853,
+              51.391232
+            ],
+            [
+              12.328591,
+              51.39229
+            ]
+          ]
+        },
+        {
+          "name": "Landsberger/Bahnhofstr. to Melissenweg",
+          "path": [
+            [
+              12.349387,
+              51.38659
+            ],
+            [
+              12.354692,
+              51.387598
+            ]
+          ]
+        },
+        {
+          "name": "Lindenthal, An der Windm\u00fchle to Lindenthal, Kirche",
+          "path": [
+            [
+              12.339841,
+              51.392833
+            ],
+            [
+              12.336785,
+              51.394296
+            ]
+          ]
+        },
+        {
+          "name": "Pommernstr. to Ostfriedhof",
+          "path": [
+            [
+              12.428895,
+              51.33119
+            ],
+            [
+              12.422442,
+              51.332431
+            ]
+          ]
+        },
+        {
+          "name": "B\u00f6hlitz-Ehrenberg, Burghausener Str. to Gundorf, Friedhof",
+          "path": [
+            [
+              12.271188,
+              51.361692
+            ],
+            [
+              12.269504,
+              51.359428
+            ]
+          ]
+        },
+        {
+          "name": "Feuerbachstr. to Sportforum Ost",
+          "path": [
+            [
+              12.357192,
+              51.345795
+            ],
+            [
+              12.354508,
+              51.345027
+            ]
+          ]
+        },
+        {
+          "name": "Ludwig-Jahn-Str. to B\u00f6hlitz-Ehrenberg, Heinrich-Heine-Str.",
+          "path": [
+            [
+              12.285996,
+              51.360297
+            ],
+            [
+              12.288283,
+              51.35713
+            ]
+          ]
+        },
+        {
+          "name": "Forstweg to Ludwig-Jahn-Str.",
+          "path": [
+            [
+              12.279885,
+              51.36099
+            ],
+            [
+              12.285996,
+              51.360297
+            ]
+          ]
+        },
+        {
+          "name": "Barnecker Str. to Leipzig-Leutzsch",
+          "path": [
+            [
+              12.299984,
+              51.355695
+            ],
+            [
+              12.30374,
+              51.353998
+            ]
+          ]
+        },
+        {
+          "name": "S\u00fcdstr. to B\u00f6hlitz-Ehrenberg, Heinrich-Heine-Str.",
+          "path": [
+            [
+              12.29299,
+              51.359291
+            ],
+            [
+              12.288283,
+              51.35713
+            ]
+          ]
+        },
+        {
+          "name": "Pfingstweide to Philipp-Reis-Str.",
+          "path": [
+            [
+              12.309496,
+              51.349995
+            ],
+            [
+              12.305986,
+              51.351695
+            ]
+          ]
+        },
+        {
+          "name": "Philipp-Reis-Str. to S-Bahnhof Leutzsch",
+          "path": [
+            [
+              12.305986,
+              51.351695
+            ],
+            [
+              12.303294,
+              51.353192
+            ]
+          ]
+        },
+        {
+          "name": "Am M\u00fcckenschl\u00f6sschen to Feuerbachstr.",
+          "path": [
+            [
+              12.355086,
+              51.349794
+            ],
+            [
+              12.357192,
+              51.345795
+            ]
+          ]
+        },
+        {
+          "name": "Stallbaumstr. to Menckestr.",
+          "path": [
+            [
+              12.359786,
+              51.358291
+            ],
+            [
+              12.362488,
+              51.359095
+            ]
+          ]
+        },
+        {
+          "name": "Wasserwerk Windorf to Bismarckstr.",
+          "path": [
+            [
+              12.320192,
+              51.294393
+            ],
+            [
+              12.319995,
+              51.300397
+            ]
+          ]
+        },
+        {
+          "name": "Knauthain, Seumestr. to Albersdorfer Str.",
+          "path": [
+            [
+              12.313763,
+              51.286771
+            ],
+            [
+              12.311431,
+              51.284661
+            ]
+          ]
+        },
+        {
+          "name": "Gottfried-Keller-Str. to H\u00f6ltystr.",
+          "path": [
+            [
+              12.434994,
+              51.295286
+            ],
+            [
+              12.432399,
+              51.295308
+            ]
+          ]
+        },
+        {
+          "name": "Huttenstr. to Gro\u00dfzschocher, Anton-Zickmantel-Str.",
+          "path": [
+            [
+              12.32794,
+              51.300575
+            ],
+            [
+              12.324894,
+              51.302496
+            ]
+          ]
+        },
+        {
+          "name": "Gro\u00dfzschocher, Gerhard-Ellrodt-Str. to Bismarckstr.",
+          "path": [
+            [
+              12.321486,
+              51.30039
+            ],
+            [
+              12.319995,
+              51.300397
+            ]
+          ]
+        },
+        {
+          "name": "Arthur-Nagel-Str. to Martin-Herrmann-Str.",
+          "path": [
+            [
+              12.326583,
+              51.308392
+            ],
+            [
+              12.322086,
+              51.307297
+            ]
+          ]
+        },
+        {
+          "name": "Kunzestr. to Gro\u00dfzschocher, Anton-Zickmantel-Str.",
+          "path": [
+            [
+              12.327391,
+              51.304691
+            ],
+            [
+              12.324894,
+              51.302496
+            ]
+          ]
+        },
+        {
+          "name": "Schwartzestr. to Kleinzschocher, K\u00f6tzschauer Str.",
+          "path": [
+            [
+              12.326093,
+              51.315689
+            ],
+            [
+              12.325697,
+              51.312391
+            ]
+          ]
+        },
+        {
+          "name": "Kleinzschocher, K\u00f6tzschauer Str. to Schwartzestr.",
+          "path": [
+            [
+              12.325697,
+              51.312391
+            ],
+            [
+              12.326093,
+              51.315689
+            ]
+          ]
+        },
+        {
+          "name": "Knautkleeberg to Leipzig-Knauthain",
+          "path": [
+            [
+              12.30979,
+              51.277793
+            ],
+            [
+              12.309101,
+              51.278181
+            ]
+          ]
+        },
+        {
+          "name": "Mozartstr. (Ferdinand-Rhode-Str.) to Mozartstr. (Grassistr.)",
+          "path": [
+            [
+              12.36594,
+              51.331373
+            ],
+            [
+              12.367684,
+              51.331269
+            ]
+          ]
+        },
+        {
+          "name": "Willi-Bredel-Str. to Probstheidaer/Willi-Bredel-Str.",
+          "path": [
+            [
+              12.401185,
+              51.302991
+            ],
+            [
+              12.400138,
+              51.303381
+            ]
+          ]
+        },
+        {
+          "name": "W\u00e4chterstr. (Ferdinand-Rhode-Str.) to W\u00e4chterstr. (Grassistr.)",
+          "path": [
+            [
+              12.365171,
+              51.333211
+            ],
+            [
+              12.366904,
+              51.333161
+            ]
+          ]
+        },
+        {
+          "name": "An den Platanen to Handwerkerhof",
+          "path": [
+            [
+              12.441584,
+              51.326798
+            ],
+            [
+              12.436086,
+              51.326393
+            ]
+          ]
+        },
+        {
+          "name": "Hasenheide to Am Bahndamm",
+          "path": [
+            [
+              12.460593,
+              51.334492
+            ],
+            [
+              12.457787,
+              51.332498
+            ]
+          ]
+        },
+        {
+          "name": "Engelsdorf, \u00c4rztehaus to Leipzig Werkst\u00e4ttenstra\u00dfe",
+          "path": [
+            [
+              12.461393,
+              51.339396
+            ],
+            [
+              12.456172,
+              51.340602
+            ]
+          ]
+        },
+        {
+          "name": "Am Bahndamm to Hasenheide",
+          "path": [
+            [
+              12.457787,
+              51.332498
+            ],
+            [
+              12.460593,
+              51.334492
+            ]
+          ]
+        },
+        {
+          "name": "Dr.-Wilhelm-K\u00fclz-Str. to Anemonenweg",
+          "path": [
+            [
+              12.436295,
+              51.331494
+            ],
+            [
+              12.438392,
+              51.331693
+            ]
+          ]
+        },
+        {
+          "name": "M\u00f6lkau, Gemeindeamt to M\u00f6lkauer Dorfplatz",
+          "path": [
+            [
+              12.44139,
+              51.331093
+            ],
+            [
+              12.443296,
+              51.332592
+            ]
+          ]
+        },
+        {
+          "name": "Gottschalkstr. to M\u00f6lkau S\u00fcd",
+          "path": [
+            [
+              12.452589,
+              51.32579
+            ],
+            [
+              12.452789,
+              51.325398
+            ]
+          ]
+        },
+        {
+          "name": "Bahnhof M\u00f6lkau (Bus) to Leipzig-M\u00f6lkau",
+          "path": [
+            [
+              12.459789,
+              51.324597
+            ],
+            [
+              12.459823,
+              51.325235
+            ]
+          ]
+        },
+        {
+          "name": "Hohenheida, Lindengasse to Hohenheida, Gasthof",
+          "path": [
+            [
+              12.442893,
+              51.41979
+            ],
+            [
+              12.446489,
+              51.419989
+            ]
+          ]
+        },
+        {
+          "name": "Breitenfeld, Parkring to Lindenallee",
+          "path": [
+            [
+              12.347391,
+              51.404693
+            ],
+            [
+              12.341785,
+              51.399395
+            ]
+          ]
+        },
+        {
+          "name": "Breitenfeld, Gewerbegebiet to Wiederitzsch Nord, Salzhandelsstr.",
+          "path": [
+            [
+              12.359203,
+              51.404624
+            ],
+            [
+              12.36732,
+              51.403186
+            ]
+          ]
+        },
+        {
+          "name": "Gohlis, Landsberger Str. to Beyerleinstr.",
+          "path": [
+            [
+              12.355336,
+              51.381483
+            ],
+            [
+              12.358689,
+              51.378995
+            ]
+          ]
+        },
+        {
+          "name": "Lortzingstr. to Goerdelerring",
+          "path": [
+            [
+              12.371391,
+              51.345594
+            ],
+            [
+              12.370987,
+              51.344194
+            ]
+          ]
+        },
+        {
+          "name": "Landsberger/Max-Liebermann-Str. to Bremer Str.",
+          "path": [
+            [
+              12.361292,
+              51.37589
+            ],
+            [
+              12.365034,
+              51.376178
+            ]
+          ]
+        },
+        {
+          "name": "Beyerleinstr. to Gohlis, Landsberger Str.",
+          "path": [
+            [
+              12.358689,
+              51.378995
+            ],
+            [
+              12.355336,
+              51.381483
+            ]
+          ]
+        },
+        {
+          "name": "S-Bahnhof Coppiplatz (Tram/Bus) to Leipzig Coppiplatz",
+          "path": [
+            [
+              12.366694,
+              51.367291
+            ],
+            [
+              12.366018,
+              51.367077
+            ]
+          ]
+        },
+        {
+          "name": "Viertelsweg to S-Bahnhof Coppiplatz (Tram/Bus)",
+          "path": [
+            [
+              12.364596,
+              51.371389
+            ],
+            [
+              12.366694,
+              51.367291
+            ]
+          ]
+        },
+        {
+          "name": "Menckestr. to Stallbaumstr.",
+          "path": [
+            [
+              12.362488,
+              51.359095
+            ],
+            [
+              12.359786,
+              51.358291
+            ]
+          ]
+        },
+        {
+          "name": "Georg-Schumann-/Lindenthaler Str. to Gohlis-S\u00fcd",
+          "path": [
+            [
+              12.365689,
+              51.36259
+            ],
+            [
+              12.363237,
+              51.361861
+            ]
+          ]
+        },
+        {
+          "name": "Zoo to Lortzingstr.",
+          "path": [
+            [
+              12.371684,
+              51.348598
+            ],
+            [
+              12.371391,
+              51.345594
+            ]
+          ]
+        },
+        {
+          "name": "Nordplatz to Springerstr.",
+          "path": [
+            [
+              12.373592,
+              51.35249
+            ],
+            [
+              12.370306,
+              51.355066
+            ]
+          ]
+        },
+        {
+          "name": "Henriettenstr. to Leipzig-Lindenau",
+          "path": [
+            [
+              12.324297,
+              51.333697
+            ],
+            [
+              12.321488,
+              51.333758
+            ]
+          ]
+        },
+        {
+          "name": "Lindenau, Bushof to Cred\u00e9str.",
+          "path": [
+            [
+              12.318422,
+              51.331445
+            ],
+            [
+              12.314474,
+              51.330244
+            ]
+          ]
+        },
+        {
+          "name": "Lindenauer Markt to Lindenau, Nathanaelkirche",
+          "path": [
+            [
+              12.334986,
+              51.336791
+            ],
+            [
+              12.332653,
+              51.339061
+            ]
+          ]
+        },
+        {
+          "name": "Rehbach to Abzweig n. Hartmannsdorf",
+          "path": [
+            [
+              12.27679,
+              51.27259
+            ],
+            [
+              12.292487,
+              51.263391
+            ]
+          ]
+        },
+        {
+          "name": "Gr\u00fcnauer Allee (Bus/Tram) to Parkallee",
+          "path": [
+            [
+              12.301897,
+              51.325996
+            ],
+            [
+              12.294987,
+              51.324896
+            ]
+          ]
+        },
+        {
+          "name": "Parkallee to Sch\u00f6nau, Wei\u00dfdornstr.",
+          "path": [
+            [
+              12.294987,
+              51.324896
+            ],
+            [
+              12.292791,
+              51.324094
+            ]
+          ]
+        },
+        {
+          "name": "Holzhausen, Sophienh\u00f6he to M\u00f6lkauer Str.",
+          "path": [
+            [
+              12.455588,
+              51.313589
+            ],
+            [
+              12.452693,
+              51.310195
+            ]
+          ]
+        },
+        {
+          "name": "M\u00f6lkau S\u00fcd to Gottschalkstr.",
+          "path": [
+            [
+              12.452789,
+              51.325398
+            ],
+            [
+              12.452589,
+              51.32579
+            ]
+          ]
+        },
+        {
+          "name": "K\u00e4rrnerstr. to Holzhausen, Hauptstr.",
+          "path": [
+            [
+              12.464596,
+              51.312792
+            ],
+            [
+              12.465087,
+              51.309792
+            ]
+          ]
+        },
+        {
+          "name": "Holzhausen, S\u00e4chsisches Haus to Bahnhof Holzhausen (Bus)",
+          "path": [
+            [
+              12.464744,
+              51.306575
+            ],
+            [
+              12.462068,
+              51.306474
+            ]
+          ]
+        },
+        {
+          "name": "Holzhausen, Hauptstr. to K\u00e4rrnerstr.",
+          "path": [
+            [
+              12.465087,
+              51.309792
+            ],
+            [
+              12.464596,
+              51.312792
+            ]
+          ]
+        },
+        {
+          "name": "M\u00f6lkauer Str. to Holzhausen, Sophienh\u00f6he",
+          "path": [
+            [
+              12.452693,
+              51.310195
+            ],
+            [
+              12.455588,
+              51.313589
+            ]
+          ]
+        },
+        {
+          "name": "Arthur-Polenz-Str. to Leipzig-Holzhausen",
+          "path": [
+            [
+              12.457684,
+              51.307692
+            ],
+            [
+              12.461448,
+              51.306043
+            ]
+          ]
+        },
+        {
+          "name": "S-Bahnhof Wahren (Bus) to Leipzig-Wahren",
+          "path": [
+            [
+              12.323925,
+              51.380275
+            ],
+            [
+              12.321483,
+              51.380686
+            ]
+          ]
+        },
+        {
+          "name": "Zeisigweg to Buchfinkenweg",
+          "path": [
+            [
+              12.331289,
+              51.379391
+            ],
+            [
+              12.327991,
+              51.379089
+            ]
+          ]
+        },
+        {
+          "name": "An den Badeanlagen to Zur alten Sandgrube",
+          "path": [
+            [
+              12.466695,
+              51.278992
+            ],
+            [
+              12.46399,
+              51.280394
+            ]
+          ]
+        },
+        {
+          "name": "Liebertwolkwitzer Markt to Schwarzes Ross",
+          "path": [
+            [
+              12.464085,
+              51.28299
+            ],
+            [
+              12.461287,
+              51.282192
+            ]
+          ]
+        },
+        {
+          "name": "Portitz, Cradefelder Str. to Portitz, Kr\u00e4tzbergstr.",
+          "path": [
+            [
+              12.462095,
+              51.387698
+            ],
+            [
+              12.463192,
+              51.383394
+            ]
+          ]
+        },
+        {
+          "name": "Plau\u00dfig, Gewerbegebiet to Plau\u00dfig, Am Kellerberg",
+          "path": [
+            [
+              12.455633,
+              51.396341
+            ],
+            [
+              12.457304,
+              51.393909
+            ]
+          ]
+        },
+        {
+          "name": "Plau\u00dfig, Grundstr. to Plau\u00dfig, Plau\u00dfiger Dorfstr.",
+          "path": [
+            [
+              12.455986,
+              51.391295
+            ],
+            [
+              12.454996,
+              51.392089
+            ]
+          ]
+        },
+        {
+          "name": "Plau\u00dfig, Plau\u00dfiger Dorfstr. to Plau\u00dfig, Grundstr.",
+          "path": [
+            [
+              12.454996,
+              51.392089
+            ],
+            [
+              12.455986,
+              51.391295
+            ]
+          ]
+        },
+        {
+          "name": "Kiewer Str. to Karlsruher Str",
+          "path": [
+            [
+              12.277789,
+              51.318995
+            ],
+            [
+              12.27927,
+              51.317236
+            ]
+          ]
+        },
+        {
+          "name": "Plovdiver Str. to Leipzig Miltitzer Allee",
+          "path": [
+            [
+              12.268592,
+              51.317193
+            ],
+            [
+              12.267342,
+              51.315349
+            ]
+          ]
+        },
+        {
+          "name": "Binzer Str. to Selliner Str./Gesundheitszentrum",
+          "path": [
+            [
+              12.259392,
+              51.311893
+            ],
+            [
+              12.26419,
+              51.313593
+            ]
+          ]
+        },
+        {
+          "name": "Am Kirschberg to Sch\u00f6nauer Ring",
+          "path": [
+            [
+              12.283686,
+              51.321194
+            ],
+            [
+              12.287388,
+              51.32279
+            ]
+          ]
+        },
+        {
+          "name": "Siriusweg to Miltitz",
+          "path": [
+            [
+              12.266685,
+              51.326292
+            ],
+            [
+              12.263245,
+              51.325345
+            ]
+          ]
+        },
+        {
+          "name": "Uranusstr. to Kiewer Str./Kaufland",
+          "path": [
+            [
+              12.272692,
+              51.324991
+            ],
+            [
+              12.275089,
+              51.324996
+            ]
+          ]
+        },
+        {
+          "name": "Sch\u00f6nauer Ring to Allee-Center/Offenburger Str.",
+          "path": [
+            [
+              12.287388,
+              51.32279
+            ],
+            [
+              12.288747,
+              51.320531
+            ]
+          ]
+        },
+        {
+          "name": "Gr\u00fcnau-Nord to Weimarer Str.",
+          "path": [
+            [
+              12.282587,
+              51.325892
+            ],
+            [
+              12.281496,
+              51.326893
+            ]
+          ]
+        },
+        {
+          "name": "Jupiterstr. to Saturnstr.",
+          "path": [
+            [
+              12.267995,
+              51.320896
+            ],
+            [
+              12.264297,
+              51.323391
+            ]
+          ]
+        },
+        {
+          "name": "Saturnstr. to Miltitz",
+          "path": [
+            [
+              12.264297,
+              51.323391
+            ],
+            [
+              12.263245,
+              51.325345
+            ]
+          ]
+        },
+        {
+          "name": "Braun-/Bautzner Str. to Bautzner/B\u00e4stleinstr.",
+          "path": [
+            [
+              12.430984,
+              51.35779
+            ],
+            [
+              12.431886,
+              51.35699
+            ]
+          ]
+        },
+        {
+          "name": "Brahestr. to Leupoldstr.",
+          "path": [
+            [
+              12.438388,
+              51.364595
+            ],
+            [
+              12.437993,
+              51.362395
+            ]
+          ]
+        },
+        {
+          "name": "Abtnaundorf to Heiterblickstr.",
+          "path": [
+            [
+              12.422786,
+              51.366096
+            ],
+            [
+              12.425092,
+              51.369094
+            ]
+          ]
+        },
+        {
+          "name": "St\u00f6hrer-/Braunstr. to Braun-/Heiterblickstr.",
+          "path": [
+            [
+              12.430786,
+              51.365897
+            ],
+            [
+              12.430788,
+              51.36899
+            ]
+          ]
+        },
+        {
+          "name": "Heiterblickstr. to Abtnaundorf",
+          "path": [
+            [
+              12.425092,
+              51.369094
+            ],
+            [
+              12.422786,
+              51.366096
+            ]
+          ]
+        },
+        {
+          "name": "Sosaer Str. to An den Pferdnerkabeln",
+          "path": [
+            [
+              12.436692,
+              51.377998
+            ],
+            [
+              12.436289,
+              51.380096
+            ]
+          ]
+        },
+        {
+          "name": "Freiberger Str. to Lidicestr.",
+          "path": [
+            [
+              12.432696,
+              51.375094
+            ],
+            [
+              12.430189,
+              51.377496
+            ]
+          ]
+        },
+        {
+          "name": "Julian-Marchlewski-Str. to B\u00e4stlein-/Schwantesstr.",
+          "path": [
+            [
+              12.427793,
+              51.356795
+            ],
+            [
+              12.430804,
+              51.356536
+            ]
+          ]
+        },
+        {
+          "name": "Sch\u00f6nefeld Ost (Verbundnetz Gas AG) to Bertolt-Brecht-Str.",
+          "path": [
+            [
+              12.430674,
+              51.361899
+            ],
+            [
+              12.427992,
+              51.358696
+            ]
+          ]
+        },
+        {
+          "name": "Plau\u00dfig, Fuchsberg to Dingolfinger Str./Firma Magna",
+          "path": [
+            [
+              12.437298,
+              51.395658
+            ],
+            [
+              12.431087,
+              51.396982
+            ]
+          ]
+        },
+        {
+          "name": "Rudolf-Breitscheid-Str. to Sophienstr.",
+          "path": [
+            [
+              12.319787,
+              51.389798
+            ],
+            [
+              12.322791,
+              51.391394
+            ]
+          ]
+        },
+        {
+          "name": "Lindenthal, Gemeindeamt to Lindenthaler Hauptstr.",
+          "path": [
+            [
+              12.328591,
+              51.39229
+            ],
+            [
+              12.327853,
+              51.391232
+            ]
+          ]
+        },
+        {
+          "name": "Wilhelmstr. to Wilhelm-Pfennig-Str.",
+          "path": [
+            [
+              12.322089,
+              51.38449
+            ],
+            [
+              12.321991,
+              51.387496
+            ]
+          ]
+        },
+        {
+          "name": "Wilhelm-Pfennig-Str. to Lange Trift",
+          "path": [
+            [
+              12.321991,
+              51.387496
+            ],
+            [
+              12.325389,
+              51.386995
+            ]
+          ]
+        },
+        {
+          "name": "Buchfinkenweg to Zeisigweg",
+          "path": [
+            [
+              12.327991,
+              51.379089
+            ],
+            [
+              12.331289,
+              51.379391
+            ]
+          ]
+        },
+        {
+          "name": "Schulstr. to Gottschalkstr.",
+          "path": [
+            [
+              12.447696,
+              51.325997
+            ],
+            [
+              12.452589,
+              51.32579
+            ]
+          ]
+        },
+        {
+          "name": "\u00c4u\u00dferer Zeisigweg to Lange Trift",
+          "path": [
+            [
+              12.331194,
+              51.386389
+            ],
+            [
+              12.325389,
+              51.386995
+            ]
+          ]
+        },
+        {
+          "name": "Lange Trift to Wilhelm-Pfennig-Str.",
+          "path": [
+            [
+              12.325389,
+              51.386995
+            ],
+            [
+              12.321991,
+              51.387496
+            ]
+          ]
+        },
+        {
+          "name": "An der Hufschmiede to Lindenthal, Kirche",
+          "path": [
+            [
+              12.33819,
+              51.395029
+            ],
+            [
+              12.336785,
+              51.394296
+            ]
+          ]
+        },
+        {
+          "name": "Schwarzes Ross to Liebertwolkwitzer Markt",
+          "path": [
+            [
+              12.461287,
+              51.282192
+            ],
+            [
+              12.464085,
+              51.28299
+            ]
+          ]
+        },
+        {
+          "name": "Liebertwolkwitz, St\u00f6rmthaler Str. to An den Badeanlagen",
+          "path": [
+            [
+              12.469794,
+              51.277497
+            ],
+            [
+              12.466695,
+              51.278992
+            ]
+          ]
+        },
+        {
+          "name": "Monarchenh\u00fcgel to Meusdorf",
+          "path": [
+            [
+              12.443996,
+              51.291397
+            ],
+            [
+              12.439696,
+              51.294491
+            ]
+          ]
+        },
+        {
+          "name": "An der Brauerei to Schwarzes Ross",
+          "path": [
+            [
+              12.458589,
+              51.283692
+            ],
+            [
+              12.461287,
+              51.282192
+            ]
+          ]
+        },
+        {
+          "name": "Zur alten Sandgrube to An den Badeanlagen",
+          "path": [
+            [
+              12.46399,
+              51.280394
+            ],
+            [
+              12.466695,
+              51.278992
+            ]
+          ]
+        },
+        {
+          "name": "Eulengraben to Liebertwolkwitz, St\u00f6rmthaler Str.",
+          "path": [
+            [
+              12.482297,
+              51.270894
+            ],
+            [
+              12.469794,
+              51.277497
+            ]
+          ]
+        },
+        {
+          "name": "Diakonissenhaus to Wielandstr.",
+          "path": [
+            [
+              12.321195,
+              51.343792
+            ],
+            [
+              12.324489,
+              51.341496
+            ]
+          ]
+        },
+        {
+          "name": "Rathaus Leutzsch to Paul-Michael-Str.",
+          "path": [
+            [
+              12.31399,
+              51.347791
+            ],
+            [
+              12.317789,
+              51.350291
+            ]
+          ]
+        },
+        {
+          "name": "Wielandstr. to Diakonissenhaus",
+          "path": [
+            [
+              12.324489,
+              51.341496
+            ],
+            [
+              12.321195,
+              51.343792
+            ]
+          ]
+        },
+        {
+          "name": "Georg-Schwarz-/Merseburger Str. to Queckstr.",
+          "path": [
+            [
+              12.327293,
+              51.337397
+            ],
+            [
+              12.327297,
+              51.337846
+            ]
+          ]
+        },
+        {
+          "name": "Miltitz to Saturnstr.",
+          "path": [
+            [
+              12.263245,
+              51.325345
+            ],
+            [
+              12.264297,
+              51.323391
+            ]
+          ]
+        },
+        {
+          "name": "Otto-Schmiedt-Str. to Mathiesenstr.",
+          "path": [
+            [
+              12.322089,
+              51.350196
+            ],
+            [
+              12.322485,
+              51.352091
+            ]
+          ]
+        },
+        {
+          "name": "Paul-Michael-Str. to Otto-Schmiedt-Str.",
+          "path": [
+            [
+              12.317789,
+              51.350291
+            ],
+            [
+              12.322089,
+              51.350196
+            ]
+          ]
+        },
+        {
+          "name": "Demmeringstr. to Cred\u00e9str.",
+          "path": [
+            [
+              12.310789,
+              51.330897
+            ],
+            [
+              12.314474,
+              51.330244
+            ]
+          ]
+        },
+        {
+          "name": "Dr.-Hermann-Duncker-Str. to Hafentor",
+          "path": [
+            [
+              12.306096,
+              51.333493
+            ],
+            [
+              12.304086999999999,
+              51.332696
+            ]
+          ]
+        },
+        {
+          "name": "Brand-/Selnecker Str. to Connewitzer Kreuz",
+          "path": [
+            [
+              12.369494,
+              51.309196
+            ],
+            [
+              12.373284,
+              51.310795
+            ]
+          ]
+        },
+        {
+          "name": "Karl-Friedrich-Str. to M\u00f6lkau S\u00fcd",
+          "path": [
+            [
+              12.452996,
+              51.323009
+            ],
+            [
+              12.452789,
+              51.325398
+            ]
+          ]
+        },
+        {
+          "name": "Ro\u00dfstr. to Leipzig-Liebertwolkwitz",
+          "path": [
+            [
+              12.465584,
+              51.286893
+            ],
+            [
+              12.46925,
+              51.28397
+            ]
+          ]
+        },
+        {
+          "name": "Theresienstr. to Hartzstr.",
+          "path": [
+            [
+              12.38659,
+              51.360495
+            ],
+            [
+              12.390485,
+              51.361695
+            ]
+          ]
+        },
+        {
+          "name": "Delitzscher/Theresienstr. to Wilhelminenstr.",
+          "path": [
+            [
+              12.380491,
+              51.359394
+            ],
+            [
+              12.381393,
+              51.36149
+            ]
+          ]
+        },
+        {
+          "name": "Mariannenpark to Fliederhof",
+          "path": [
+            [
+              12.399684,
+              51.352292
+            ],
+            [
+              12.395732,
+              51.354187
+            ]
+          ]
+        },
+        {
+          "name": "Rackwitzer Str. to Hamburger Str.",
+          "path": [
+            [
+              12.397938,
+              51.35799
+            ],
+            [
+              12.395785,
+              51.35879
+            ]
+          ]
+        },
+        {
+          "name": "Kleiststr. to Virchow-/Coppistr.",
+          "path": [
+            [
+              12.38049,
+              51.366192
+            ],
+            [
+              12.375988,
+              51.366898
+            ]
+          ]
+        },
+        {
+          "name": "Hartzstr. to Theresienstr.",
+          "path": [
+            [
+              12.390485,
+              51.361695
+            ],
+            [
+              12.38659,
+              51.360495
+            ]
+          ]
+        },
+        {
+          "name": "Bertolt-Brecht-Str. to Julian-Marchlewski-Str.",
+          "path": [
+            [
+              12.427992,
+              51.358696
+            ],
+            [
+              12.427793,
+              51.356795
+            ]
+          ]
+        },
+        {
+          "name": "Hofmeisterstr. to Hauptbahnhof/Wintergartenstr.",
+          "path": [
+            [
+              12.387288999999999,
+              51.343696
+            ],
+            [
+              12.383388,
+              51.343179
+            ]
+          ]
+        },
+        {
+          "name": "Friedrich-List-Platz to Hofmeisterstr.",
+          "path": [
+            [
+              12.392474,
+              51.34547
+            ],
+            [
+              12.387288999999999,
+              51.343696
+            ]
+          ]
+        },
+        {
+          "name": "S-Bahnhof Leutzsch to Leipzig-Leutzsch",
+          "path": [
+            [
+              12.303294,
+              51.353192
+            ],
+            [
+              12.30374,
+              51.353998
+            ]
+          ]
+        },
+        {
+          "name": "Mockau, Kirche to Simon-Bolivar-Str.",
+          "path": [
+            [
+              12.421188,
+              51.377796
+            ],
+            [
+              12.420085,
+              51.379195
+            ]
+          ]
+        },
+        {
+          "name": "Thekla, Tauchaer Str. to Lidicestr.",
+          "path": [
+            [
+              12.426889,
+              51.379292
+            ],
+            [
+              12.430189,
+              51.377496
+            ]
+          ]
+        },
+        {
+          "name": "Mockau, Post to Leipzig Mockauer Stra\u00dfe",
+          "path": [
+            [
+              12.412675,
+              51.375194
+            ],
+            [
+              12.412097,
+              51.373799
+            ]
+          ]
+        },
+        {
+          "name": "Samuel-Lampel-Str. to Mockau, Kirche",
+          "path": [
+            [
+              12.418186,
+              51.375689
+            ],
+            [
+              12.421188,
+              51.377796
+            ]
+          ]
+        },
+        {
+          "name": "Einertstr. to Elsastr.",
+          "path": [
+            [
+              12.399189,
+              51.345994
+            ],
+            [
+              12.398769,
+              51.342464
+            ]
+          ]
+        },
+        {
+          "name": "Hermann-Liebmann-/Eisenbahnstr. to Dornbergerstr.",
+          "path": [
+            [
+              12.406194,
+              51.345593
+            ],
+            [
+              12.406088,
+              51.343195
+            ]
+          ]
+        },
+        {
+          "name": "Waldemar-G\u00f6tze-Str. to Neutzscher Str.",
+          "path": [
+            [
+              12.43359,
+              51.383196
+            ],
+            [
+              12.434695,
+              51.380295
+            ]
+          ]
+        },
+        {
+          "name": "Teschstr. to Plau\u00dfig, Fuchsberg",
+          "path": [
+            [
+              12.433589,
+              51.389697
+            ],
+            [
+              12.437298,
+              51.395658
+            ]
+          ]
+        },
+        {
+          "name": "Plau\u00dfig, Am Kellerberg to Plau\u00dfig, Plau\u00dfiger Dorfstr.",
+          "path": [
+            [
+              12.457304,
+              51.393909
+            ],
+            [
+              12.454996,
+              51.392089
+            ]
+          ]
+        },
+        {
+          "name": "Plau\u00dfig, Portitzm\u00fchlweg to Plau\u00dfig, Fuchsberg",
+          "path": [
+            [
+              12.443893,
+              51.391795
+            ],
+            [
+              12.437298,
+              51.395658
+            ]
+          ]
+        },
+        {
+          "name": "Klinikum St. Georg to Hornbach-Baumarkt",
+          "path": [
+            [
+              12.381192,
+              51.38429
+            ],
+            [
+              12.384796,
+              51.378989
+            ]
+          ]
+        },
+        {
+          "name": "Delitzscher/Essener Str. to Hornbach-Baumarkt",
+          "path": [
+            [
+              12.385494,
+              51.37619
+            ],
+            [
+              12.384796,
+              51.378989
+            ]
+          ]
+        },
+        {
+          "name": "Hornbach-Baumarkt to Delitzscher/Essener Str.",
+          "path": [
+            [
+              12.384796,
+              51.378989
+            ],
+            [
+              12.385494,
+              51.37619
+            ]
+          ]
+        },
+        {
+          "name": "Eutritzscher Markt to Eutritzscher Zentrum",
+          "path": [
+            [
+              12.386289,
+              51.367697
+            ],
+            [
+              12.385185,
+              51.365193
+            ]
+          ]
+        },
+        {
+          "name": "Mosenthinstr. to Delitzscher/Essener Str.",
+          "path": [
+            [
+              12.38599,
+              51.372597
+            ],
+            [
+              12.385494,
+              51.37619
+            ]
+          ]
+        },
+        {
+          "name": "Wilhelminenstr. to Delitzscher/Theresienstr.",
+          "path": [
+            [
+              12.381393,
+              51.36149
+            ],
+            [
+              12.380491,
+              51.359394
+            ]
+          ]
+        },
+        {
+          "name": "Dachauer Str. to Wiederitzsch, Mitte",
+          "path": [
+            [
+              12.377195,
+              51.390097
+            ],
+            [
+              12.375684,
+              51.393396
+            ]
+          ]
+        },
+        {
+          "name": "Wiederitzsch, Mitte to Wiederitzsch, B\u00fcrgerb\u00fcro",
+          "path": [
+            [
+              12.375684,
+              51.393396
+            ],
+            [
+              12.373292,
+              51.394292
+            ]
+          ]
+        },
+        {
+          "name": "Mockau-West to Schildberger Weg",
+          "path": [
+            [
+              12.401992,
+              51.380891
+            ],
+            [
+              12.406598,
+              51.380226
+            ]
+          ]
+        },
+        {
+          "name": "Elisabeth-Schumacher-Str. to Weinbrennerstr.",
+          "path": [
+            [
+              12.43889,
+              51.350993
+            ],
+            [
+              12.445495,
+              51.35079
+            ]
+          ]
+        },
+        {
+          "name": "Weinbrennerstr. to Permoser-/Hohentichelnstr.",
+          "path": [
+            [
+              12.445495,
+              51.35079
+            ],
+            [
+              12.447188,
+              51.35039
+            ]
+          ]
+        },
+        {
+          "name": "Volksgartenstr. to Max-Lingner-Str.",
+          "path": [
+            [
+              12.420884,
+              51.353697
+            ],
+            [
+              12.423192,
+              51.354997
+            ]
+          ]
+        },
+        {
+          "name": "Permoser-/Torgauer Str. to Leonhard-Frank-Str.",
+          "path": [
+            [
+              12.425694,
+              51.352145
+            ],
+            [
+              12.430591,
+              51.35139
+            ]
+          ]
+        },
+        {
+          "name": "Max-Lingner-Str. to Volksgartenstr.",
+          "path": [
+            [
+              12.423192,
+              51.354997
+            ],
+            [
+              12.420884,
+              51.353697
+            ]
+          ]
+        },
+        {
+          "name": "Otto-Michael-Str. to Schildberger Weg",
+          "path": [
+            [
+              12.406188,
+              51.37799
+            ],
+            [
+              12.406598,
+              51.380226
+            ]
+          ]
+        },
+        {
+          "name": "Neutzscher Str. to An den Pferdnerkabeln",
+          "path": [
+            [
+              12.434695,
+              51.380295
+            ],
+            [
+              12.436289,
+              51.380096
+            ]
+          ]
+        },
+        {
+          "name": "R\u00fcckmarsdorf, Friedhof to R\u00fcckmarsdorf, Sandberg",
+          "path": [
+            [
+              12.254995,
+              51.344196
+            ],
+            [
+              12.258388,
+              51.346691
+            ]
+          ]
+        },
+        {
+          "name": "Burghausen to Gundorf, Friedhof",
+          "path": [
+            [
+              12.265362,
+              51.355713
+            ],
+            [
+              12.269504,
+              51.359428
+            ]
+          ]
+        },
+        {
+          "name": "R\u00fcckmarsdorf, Gro\u00dfer Marktweg to R\u00fcckmarsdorf, L\u00f6wen Center",
+          "path": [
+            [
+              12.266787,
+              51.344875
+            ],
+            [
+              12.269683,
+              51.345621
+            ]
+          ]
+        },
+        {
+          "name": "R\u00fcckmarsdorf, Miltitzer Str. to R\u00fcckmarsdorf, Sandberg",
+          "path": [
+            [
+              12.262795,
+              51.34789
+            ],
+            [
+              12.258388,
+              51.346691
+            ]
+          ]
+        },
+        {
+          "name": "Rathaus Sch\u00f6nefeld to Taubestr.",
+          "path": [
+            [
+              12.410689,
+              51.359696
+            ],
+            [
+              12.411295,
+              51.357421
+            ]
+          ]
+        },
+        {
+          "name": "Sch\u00f6nefeld, Volbedingstr. to Rathaus Sch\u00f6nefeld",
+          "path": [
+            [
+              12.407389,
+              51.361294
+            ],
+            [
+              12.410689,
+              51.359696
+            ]
+          ]
+        },
+        {
+          "name": "Ossietzky-/Gorkistr. to L\u00f6bauer Str.",
+          "path": [
+            [
+              12.417596,
+              51.359296
+            ],
+            [
+              12.416189,
+              51.356793
+            ]
+          ]
+        },
+        {
+          "name": "Gundorf, Friedhof to B\u00f6hlitz-Ehrenberg, Burghausener Str.",
+          "path": [
+            [
+              12.269504,
+              51.359428
+            ],
+            [
+              12.271188,
+              51.361692
+            ]
+          ]
+        },
+        {
+          "name": "St\u00f6ckelstr. to Zittauer Str.",
+          "path": [
+            [
+              12.411988,
+              51.353993
+            ],
+            [
+              12.409114,
+              51.3561
+            ]
+          ]
+        },
+        {
+          "name": "L\u00f6bauer Str. to Ossietzky-/Gorkistr.",
+          "path": [
+            [
+              12.416189,
+              51.356793
+            ],
+            [
+              12.417596,
+              51.359296
+            ]
+          ]
+        },
+        {
+          "name": "B\u00f6hlitz-Ehrenberg, Heinrich-Heine-Str. to Goetheplatz",
+          "path": [
+            [
+              12.288283,
+              51.35713
+            ],
+            [
+              12.286969,
+              51.355432
+            ]
+          ]
+        },
+        {
+          "name": "Stannebeinplatz to St\u00f6ckelstr.",
+          "path": [
+            [
+              12.407895,
+              51.351289
+            ],
+            [
+              12.411988,
+              51.353993
+            ]
+          ]
+        },
+        {
+          "name": "Torgauer Platz to Leipzig Torgauer Platz",
+          "path": [
+            [
+              12.414195,
+              51.345054
+            ],
+            [
+              12.414339,
+              51.345068
+            ]
+          ]
+        },
+        {
+          "name": "R\u00fcckmarsdorf, Wachbergallee to R\u00fcckmarsdorf, Einkaufspassage",
+          "path": [
+            [
+              12.263524,
+              51.340569
+            ],
+            [
+              12.262938,
+              51.344649
+            ]
+          ]
+        },
+        {
+          "name": "Gohlis-Nord to Gohlis-Nord, Virchowstr.",
+          "path": [
+            [
+              12.378187,
+              51.375098
+            ],
+            [
+              12.379086,
+              51.375791
+            ]
+          ]
+        },
+        {
+          "name": "Chausseehaus to Delitzscher/Theresienstr.",
+          "path": [
+            [
+              12.376996,
+              51.356195
+            ],
+            [
+              12.380491,
+              51.359394
+            ]
+          ]
+        },
+        {
+          "name": "S-Bahnhof Gohlis (Bus) to Leipzig-Gohlis",
+          "path": [
+            [
+              12.374287,
+              51.363494
+            ],
+            [
+              12.374527,
+              51.362857
+            ]
+          ]
+        },
+        {
+          "name": "Gottschallstr. to Baaderstr.",
+          "path": [
+            [
+              12.376588,
+              51.368993
+            ],
+            [
+              12.376956999999999,
+              51.371087
+            ]
+          ]
+        },
+        {
+          "name": "Fritz-Seger-Str. to Springerstr.",
+          "path": [
+            [
+              12.368991,
+              51.357289
+            ],
+            [
+              12.370306,
+              51.355066
+            ]
+          ]
+        },
+        {
+          "name": "Georg-Schumann-/L\u00fctzowstr. to Leipzig-Gohlis",
+          "path": [
+            [
+              12.371033,
+              51.361241
+            ],
+            [
+              12.374527,
+              51.362857
+            ]
+          ]
+        },
+        {
+          "name": "Wiederitzscher Str. to Gohlis-S\u00fcd",
+          "path": [
+            [
+              12.358416,
+              51.364094
+            ],
+            [
+              12.363237,
+              51.361861
+            ]
+          ]
+        },
+        {
+          "name": "S-Bahnhof M\u00f6ckern (Tram/Bus) to Seelenbinderstr.",
+          "path": [
+            [
+              12.351169,
+              51.365759
+            ],
+            [
+              12.350095,
+              51.36659
+            ]
+          ]
+        },
+        {
+          "name": "Portitz, Teichsiedlung to Portitz, Kr\u00e4tzbergstr.",
+          "path": [
+            [
+              12.464396,
+              51.378593
+            ],
+            [
+              12.463192,
+              51.383394
+            ]
+          ]
+        },
+        {
+          "name": "Portitz, Am langen Teiche to Portitz, Schule",
+          "path": [
+            [
+              12.453595,
+              51.383992
+            ],
+            [
+              12.455525,
+              51.386147
+            ]
+          ]
+        },
+        {
+          "name": "Portitz, Kr\u00e4tzbergstr. to Portitz, Melker Weg",
+          "path": [
+            [
+              12.463192,
+              51.383394
+            ],
+            [
+              12.46919,
+              51.382893
+            ]
+          ]
+        },
+        {
+          "name": "Cleudner Str. to Wodanstr.",
+          "path": [
+            [
+              12.442795,
+              51.381397
+            ],
+            [
+              12.447692,
+              51.382889
+            ]
+          ]
+        },
+        {
+          "name": "Wodanstr. to Cleudner Str.",
+          "path": [
+            [
+              12.447692,
+              51.382889
+            ],
+            [
+              12.442795,
+              51.381397
+            ]
+          ]
+        },
+        {
+          "name": "Simon-Bolivar-Str. to Mockau, Kirche",
+          "path": [
+            [
+              12.420085,
+              51.379195
+            ],
+            [
+              12.421188,
+              51.377796
+            ]
+          ]
+        },
+        {
+          "name": "Portitz, Melker Weg to Portitz, Kr\u00e4tzbergstr.",
+          "path": [
+            [
+              12.46919,
+              51.382893
+            ],
+            [
+              12.463192,
+              51.383394
+            ]
+          ]
+        },
+        {
+          "name": "Wilhelm-Leuschner-Platz to Wilhelm-Leuschner-Platz",
+          "path": [
+            [
+              12.375858,
+              51.335862
+            ],
+            [
+              12.375394,
+              51.335399
+            ]
+          ]
+        },
+        {
+          "name": "Thomaskirche to Markt",
+          "path": [
+            [
+              12.371187,
+              51.339296
+            ],
+            [
+              12.374497,
+              51.339992
+            ]
+          ]
+        },
+        {
+          "name": "Neues Rathaus to Wilhelm-Leuschner-Platz",
+          "path": [
+            [
+              12.371094,
+              51.335496
+            ],
+            [
+              12.375394,
+              51.335399
+            ]
+          ]
+        },
+        {
+          "name": "Hauptbahnhof/Westseite to Hauptbahnhof (Tram/Bus)",
+          "path": [
+            [
+              12.378597,
+              51.344792
+            ],
+            [
+              12.38033,
+              51.343951
+            ]
+          ]
+        },
+        {
+          "name": "Goerdelerring to Lortzingstr.",
+          "path": [
+            [
+              12.370987,
+              51.344194
+            ],
+            [
+              12.371391,
+              51.345594
+            ]
+          ]
+        },
+        {
+          "name": "M\u00fcnzgasse/LVZ to Ro\u00dfplatz/Gr\u00fcnewaldstr.",
+          "path": [
+            [
+              12.37357,
+              51.33305
+            ],
+            [
+              12.37632,
+              51.333358
+            ]
+          ]
+        },
+        {
+          "name": "Hauptbahnhof (Tram/Bus) to Hauptbahnhof/Goethestr.",
+          "path": [
+            [
+              12.38033,
+              51.343951
+            ],
+            [
+              12.381488,
+              51.343297
+            ]
+          ]
+        },
+        {
+          "name": "Ro\u00dfplatz to Wilhelm-Leuschner-Platz",
+          "path": [
+            [
+              12.378589,
+              51.336098
+            ],
+            [
+              12.375858,
+              51.335862
+            ]
+          ]
+        },
+        {
+          "name": "Augustusplatz to Johannisplatz",
+          "path": [
+            [
+              12.381996,
+              51.338894
+            ],
+            [
+              12.385014,
+              51.338169
+            ]
+          ]
+        },
+        {
+          "name": "S-Bahnhof Connewitz (Tram/Bus) to Leipzig-Connewitz",
+          "path": [
+            [
+              12.383906,
+              51.301712
+            ],
+            [
+              12.386315,
+              51.300716
+            ]
+          ]
+        },
+        {
+          "name": "Raschwitzer Str. to D\u00fcrrstr.",
+          "path": [
+            [
+              12.386087999999999,
+              51.295894
+            ],
+            [
+              12.390309,
+              51.296725
+            ]
+          ]
+        },
+        {
+          "name": "Stockartstr. to Wiedebachplatz",
+          "path": [
+            [
+              12.377993,
+              51.308096
+            ],
+            [
+              12.377665,
+              51.30949
+            ]
+          ]
+        },
+        {
+          "name": "Hildebrandstr. to S-Bahnhof Connewitz (Tram/Bus)",
+          "path": [
+            [
+              12.381788,
+              51.304893
+            ],
+            [
+              12.383906,
+              51.301712
+            ]
+          ]
+        },
+        {
+          "name": "Connewitzer Kreuz to Arno-Nitzsche-Str.",
+          "path": [
+            [
+              12.373284,
+              51.310795
+            ],
+            [
+              12.374488,
+              51.31058
+            ]
+          ]
+        },
+        {
+          "name": "S\u00fcdplatz to Schenkendorfstr.",
+          "path": [
+            [
+              12.373576,
+              51.324931
+            ],
+            [
+              12.369497,
+              51.324491
+            ]
+          ]
+        },
+        {
+          "name": "Friederikenstr. to Matzelstr.",
+          "path": [
+            [
+              12.390455,
+              51.290543
+            ],
+            [
+              12.390242,
+              51.289398
+            ]
+          ]
+        },
+        {
+          "name": "Leinestr. to Matzelstr.",
+          "path": [
+            [
+              12.39279,
+              51.287391
+            ],
+            [
+              12.390242,
+              51.289398
+            ]
+          ]
+        },
+        {
+          "name": "Kietzstr. to Rathenaustr.",
+          "path": [
+            [
+              12.317683,
+              51.354592
+            ],
+            [
+              12.315386,
+              51.354792
+            ]
+          ]
+        },
+        {
+          "name": "Nonnenweg to Rochlitzstr.",
+          "path": [
+            [
+              12.352184,
+              51.319494
+            ],
+            [
+              12.347885,
+              51.31879
+            ]
+          ]
+        },
+        {
+          "name": "Klo\u00dfstr. to Martin-Herrmann-Str.",
+          "path": [
+            [
+              12.320485,
+              51.305598
+            ],
+            [
+              12.322086,
+              51.307297
+            ]
+          ]
+        },
+        {
+          "name": "An den Tierkliniken to Richard-Lehmann-/Zwickauer Str.",
+          "path": [
+            [
+              12.39477,
+              51.318086
+            ],
+            [
+              12.394283,
+              51.314602
+            ]
+          ]
+        },
+        {
+          "name": "S-Bahnhof Thekla (Bus) to Leipzig-Thekla",
+          "path": [
+            [
+              12.428175,
+              51.371899
+            ],
+            [
+              12.430755,
+              51.371626
+            ]
+          ]
+        },
+        {
+          "name": "S-Bahnhof Allee-Center (Bus) to Leipzig Allee-Center",
+          "path": [
+            [
+              12.292698,
+              51.320195
+            ],
+            [
+              12.291748,
+              51.31916
+            ]
+          ]
+        },
+        {
+          "name": "Stuttgarter Allee to Breisgau-/Ringstr.",
+          "path": [
+            [
+              12.291988,
+              51.313291
+            ],
+            [
+              12.295761,
+              51.31769
+            ]
+          ]
+        },
+        {
+          "name": "L\u00fctzner/Merseburger Str. to Georg-Schwarz-/Merseburger Str.",
+          "path": [
+            [
+              12.330091,
+              51.335798
+            ],
+            [
+              12.327293,
+              51.337397
+            ]
+          ]
+        },
+        {
+          "name": "Richard-Lehmann-Str./HTWK to August-Bebel-/Richard-Lehmann-Str.",
+          "path": [
+            [
+              12.373191,
+              51.314997
+            ],
+            [
+              12.368362,
+              51.315082
+            ]
+          ]
+        },
+        {
+          "name": "Saarl\u00e4nder Str. to Lindenauer Hafen",
+          "path": [
+            [
+              12.308449,
+              51.327906
+            ],
+            [
+              12.306657,
+              51.330519
+            ]
+          ]
+        },
+        {
+          "name": "Hohentichelnstr. to Leupoldstr.",
+          "path": [
+            [
+              12.440992,
+              51.359096
+            ],
+            [
+              12.437993,
+              51.362395
+            ]
+          ]
+        },
+        {
+          "name": "Cred\u00e9str. to Demmeringstr.",
+          "path": [
+            [
+              12.314474,
+              51.330244
+            ],
+            [
+              12.310789,
+              51.330897
+            ]
+          ]
+        },
+        {
+          "name": "S-Bahnhof Nord (Bus) to Leipzig Nord",
+          "path": [
+            [
+              12.399492,
+              51.362494
+            ],
+            [
+              12.401067,
+              51.364166
+            ]
+          ]
+        },
+        {
+          "name": "Alte D\u00fcbener Landstr. to Pelzgasse",
+          "path": [
+            [
+              12.392947,
+              51.400207
+            ],
+            [
+              12.392583,
+              51.401692
+            ]
+          ]
+        },
+        {
+          "name": "Lauerscher Weg to Huttenstr.",
+          "path": [
+            [
+              12.332795,
+              51.298891
+            ],
+            [
+              12.32794,
+              51.300575
+            ]
+          ]
+        },
+        {
+          "name": "Schongauerstr. to Leipzig-Engelsdorf",
+          "path": [
+            [
+              12.473484,
+              51.345691
+            ],
+            [
+              12.47763,
+              51.34395
+            ]
+          ]
+        },
+        {
+          "name": "Cospudener See/EXPO-Pavillon to Lauerscher Weg",
+          "path": [
+            [
+              12.352614,
+              51.291967
+            ],
+            [
+              12.332795,
+              51.298891
+            ]
+          ]
+        },
+        {
+          "name": "Fliederhof to Apelstr./Historischer Betriebshof",
+          "path": [
+            [
+              12.395732,
+              51.354187
+            ],
+            [
+              12.391189,
+              51.355092
+            ]
+          ]
+        },
+        {
+          "name": "Antonien-/Gie\u00dferstr. to Siemensstr.",
+          "path": [
+            [
+              12.326585,
+              51.320495
+            ],
+            [
+              12.326191,
+              51.321792
+            ]
+          ]
+        },
+        {
+          "name": "Bautzner/B\u00e4stleinstr. to B\u00e4stlein-/Schwantesstr.",
+          "path": [
+            [
+              12.431886,
+              51.35699
+            ],
+            [
+              12.430804,
+              51.356536
+            ]
+          ]
+        },
+        {
+          "name": "Lausner Weg to Dreiecksweg",
+          "path": [
+            [
+              12.307791,
+              51.311991
+            ],
+            [
+              12.310789,
+              51.310396
+            ]
+          ]
+        },
+        {
+          "name": "Colmbergsiedlung to Walter-Heise-Str.",
+          "path": [
+            [
+              12.464397,
+              51.295498
+            ],
+            [
+              12.464487,
+              51.30259
+            ]
+          ]
+        },
+        {
+          "name": "Gro\u00dfzschocher, Anton-Zickmantel-Str. to Kunzestr.",
+          "path": [
+            [
+              12.324894,
+              51.302496
+            ],
+            [
+              12.327391,
+              51.304691
+            ]
+          ]
+        },
+        {
+          "name": "Kommandant-Prendel-Allee to S\u00fcdfriedhof",
+          "path": [
+            [
+              12.421994,
+              51.313894
+            ],
+            [
+              12.416192,
+              51.312094
+            ]
+          ]
+        },
+        {
+          "name": "Leonhard-Frank-Str. to Schwantesstr.",
+          "path": [
+            [
+              12.430591,
+              51.35139
+            ],
+            [
+              12.430238,
+              51.353765
+            ]
+          ]
+        },
+        {
+          "name": "Leupoldstr. to Brahestr.",
+          "path": [
+            [
+              12.437993,
+              51.362395
+            ],
+            [
+              12.438388,
+              51.364595
+            ]
+          ]
+        },
+        {
+          "name": "Arno-Nitzsche-/Arthur-Hoffmann-Str. to Wiedebachplatz",
+          "path": [
+            [
+              12.379633,
+              51.310117
+            ],
+            [
+              12.377665,
+              51.30949
+            ]
+          ]
+        },
+        {
+          "name": "Oberdorfstr. to Kolmstr.",
+          "path": [
+            [
+              12.428894,
+              51.320993
+            ],
+            [
+              12.426689,
+              51.320096
+            ]
+          ]
+        },
+        {
+          "name": "Paunsdorf, Friedhof to Weinbrennerstr.",
+          "path": [
+            [
+              12.444296,
+              51.355097
+            ],
+            [
+              12.445495,
+              51.35079
+            ]
+          ]
+        },
+        {
+          "name": "Paunsdorfer Str. to M\u00f6lkauer Dorfplatz",
+          "path": [
+            [
+              12.441896999999999,
+              51.334792
+            ],
+            [
+              12.443296,
+              51.332592
+            ]
+          ]
+        },
+        {
+          "name": "Permoser-/Hohentichelnstr. to Weinbrennerstr.",
+          "path": [
+            [
+              12.447188,
+              51.35039
+            ],
+            [
+              12.445495,
+              51.35079
+            ]
+          ]
+        },
+        {
+          "name": "Schwimmhalle S\u00fcdost to St\u00f6tteritz, Holzh\u00e4user Str.",
+          "path": [
+            [
+              12.426887,
+              51.316592
+            ],
+            [
+              12.431191,
+              51.318696
+            ]
+          ]
+        },
+        {
+          "name": "Uhlandweg to Paunsdorfer Str.",
+          "path": [
+            [
+              12.443383,
+              51.337194
+            ],
+            [
+              12.441896999999999,
+              51.334792
+            ]
+          ]
+        },
+        {
+          "name": "Gottscheina, Siedlung to Am Ring",
+          "path": [
+            [
+              12.476897,
+              51.421194
+            ],
+            [
+              12.479192,
+              51.425092
+            ]
+          ]
+        },
+        {
+          "name": "Hauptbahnhof/Goethestr. to Hauptbahnhof/Ostseite",
+          "path": [
+            [
+              12.381488,
+              51.343297
+            ],
+            [
+              12.382078,
+              51.343901
+            ]
+          ]
+        },
+        {
+          "name": "GVZ Nord/Porschestr. to GVZ Nord/Deutsche Post AG",
+          "path": [
+            [
+              12.296502,
+              51.41333
+            ],
+            [
+              12.293415,
+              51.413579
+            ]
+          ]
+        },
+        {
+          "name": "Reichsstr. to Leipzig Markt",
+          "path": [
+            [
+              12.376889,
+              51.340696
+            ],
+            [
+              12.374616,
+              51.340636
+            ]
+          ]
+        },
+        {
+          "name": "Russenstr. to Feldstr.",
+          "path": [
+            [
+              12.440796,
+              51.304593
+            ],
+            [
+              12.441595,
+              51.303194
+            ]
+          ]
+        },
+        {
+          "name": "Probstheidaer/Willi-Bredel-Str. to Willi-Bredel-Str.",
+          "path": [
+            [
+              12.400138,
+              51.303381
+            ],
+            [
+              12.401185,
+              51.302991
+            ]
+          ]
+        },
+        {
+          "name": "August-Bebel-/Richard-Lehmann-Str. to Gustav-Freytag-Str.",
+          "path": [
+            [
+              12.368362,
+              51.315082
+            ],
+            [
+              12.368797,
+              51.312597
+            ]
+          ]
+        },
+        {
+          "name": "Alte Salzstr. to S-Bahnhof Karlsruher Str. (Bus)",
+          "path": [
+            [
+              12.27939,
+              51.314895
+            ],
+            [
+              12.278693,
+              51.316991
+            ]
+          ]
+        },
+        {
+          "name": "Dornbergerstr. to Hermann-Liebmann-/Eisenbahnstr.",
+          "path": [
+            [
+              12.406088,
+              51.343195
+            ],
+            [
+              12.406194,
+              51.345593
+            ]
+          ]
+        },
+        {
+          "name": "Engelsdorf, Kirche to Engelsdorf, Kirchweg",
+          "path": [
+            [
+              12.48549,
+              51.33609
+            ],
+            [
+              12.487395,
+              51.336789
+            ]
+          ]
+        },
+        {
+          "name": "Gustav-Freytag-Str. to August-Bebel-/Richard-Lehmann-Str.",
+          "path": [
+            [
+              12.368797,
+              51.312597
+            ],
+            [
+              12.368362,
+              51.315082
+            ]
+          ]
+        },
+        {
+          "name": "Ringstr. to Breisgau-/Ringstr.",
+          "path": [
+            [
+              12.296593,
+              51.317891
+            ],
+            [
+              12.295761,
+              51.31769
+            ]
+          ]
+        },
+        {
+          "name": "Steinstr. (\u00c4rztehaus S\u00fcd) to August-Bebel-/Richard-Lehmann-Str.",
+          "path": [
+            [
+              12.368396,
+              51.317895
+            ],
+            [
+              12.368362,
+              51.315082
+            ]
+          ]
+        },
+        {
+          "name": "GVZ S\u00fcd/Am Exer to Leipzig-L\u00fctzschena",
+          "path": [
+            [
+              12.292745,
+              51.394068
+            ],
+            [
+              12.293089,
+              51.390057
+            ]
+          ]
+        },
+        {
+          "name": "Sch\u00f6nefelder Str. to S-Bahnhof Nord (Bus)",
+          "path": [
+            [
+              12.396183,
+              51.363193
+            ],
+            [
+              12.399492,
+              51.362494
+            ]
+          ]
+        },
+        {
+          "name": "Geithainer Str. to Bahnhof Paunsdorf (Bus)",
+          "path": [
+            [
+              12.445095,
+              51.34279
+            ],
+            [
+              12.44509,
+              51.343492
+            ]
+          ]
+        },
+        {
+          "name": "Engelsdorf, G\u00fcterbahnhofstr. to Schongauerstr.",
+          "path": [
+            [
+              12.465695,
+              51.345796
+            ],
+            [
+              12.473484,
+              51.345691
+            ]
+          ]
+        },
+        {
+          "name": "Weimarer Str. to Gr\u00fcnau-Nord",
+          "path": [
+            [
+              12.281496,
+              51.326893
+            ],
+            [
+              12.282587,
+              51.325892
+            ]
+          ]
+        },
+        {
+          "name": "Kiewer Str./Kaufland to Uranusstr.",
+          "path": [
+            [
+              12.275089,
+              51.324996
+            ],
+            [
+              12.272692,
+              51.324991
+            ]
+          ]
+        },
+        {
+          "name": "BMW Zentralgeb\u00e4ude to BMW Presswerk",
+          "path": [
+            [
+              12.443034,
+              51.408663
+            ],
+            [
+              12.449652,
+              51.411965
+            ]
+          ]
+        },
+        {
+          "name": "Azaleenstr. to Am Klucksgraben",
+          "path": [
+            [
+              12.299195,
+              51.262797
+            ],
+            [
+              12.297697,
+              51.266895
+            ]
+          ]
+        },
+        {
+          "name": "Seehausen, Dingolfinger Str. to Seehausen, Gut Seehausen",
+          "path": [
+            [
+              12.418895,
+              51.405989
+            ],
+            [
+              12.418687,
+              51.406094
+            ]
+          ]
+        },
+        {
+          "name": "Gohlis-S\u00fcd to Georg-Schumann-/Lindenthaler Str.",
+          "path": [
+            [
+              12.363237,
+              51.361861
+            ],
+            [
+              12.365689,
+              51.36259
+            ]
+          ]
+        },
+        {
+          "name": "M\u00f6lkauer Dorfplatz to M\u00f6lkau, Gemeindeamt",
+          "path": [
+            [
+              12.443296,
+              51.332592
+            ],
+            [
+              12.44139,
+              51.331093
+            ]
+          ]
+        },
+        {
+          "name": "Sportforum Ost to Feuerbachstr.",
+          "path": [
+            [
+              12.354508,
+              51.345027
+            ],
+            [
+              12.357192,
+              51.345795
+            ]
+          ]
+        },
+        {
+          "name": "S-Bahnhof Slevogtstr. (Bus) to Slevogtstra\u00dfe",
+          "path": [
+            [
+              12.344185,
+              51.373395
+            ],
+            [
+              12.344411,
+              51.372948
+            ]
+          ]
+        },
+        {
+          "name": "Connewitzer Str. to Probstheida, Buswendestelle",
+          "path": [
+            [
+              12.417793,
+              51.304494
+            ],
+            [
+              12.424134,
+              51.304111
+            ]
+          ]
+        },
+        {
+          "name": "Sch\u00f6nbachstr. to Wei\u00dfestr.",
+          "path": [
+            [
+              12.413283999999999,
+              51.320263
+            ],
+            [
+              12.418895,
+              51.321996
+            ]
+          ]
+        },
+        {
+          "name": "Windm\u00fchlenstr. to Ro\u00dfplatz/Gr\u00fcnewaldstr.",
+          "path": [
+            [
+              12.375994,
+              51.333996
+            ],
+            [
+              12.37632,
+              51.333358
+            ]
+          ]
+        },
+        {
+          "name": "BMW/Tor 1 to Future Electronics",
+          "path": [
+            [
+              12.452475,
+              51.40173
+            ],
+            [
+              12.459109,
+              51.402398
+            ]
+          ]
+        },
+        {
+          "name": "BMW Presswerk to BMW Zentralgeb\u00e4ude",
+          "path": [
+            [
+              12.449652,
+              51.411965
+            ],
+            [
+              12.443034,
+              51.408663
+            ]
+          ]
+        },
+        {
+          "name": "Essener/Friedrichshafner Str. to Rosenowstr.",
+          "path": [
+            [
+              12.405586,
+              51.375697
+            ],
+            [
+              12.402491,
+              51.376192
+            ]
+          ]
+        },
+        {
+          "name": "Leonhardtstr. to D\u00f6ringstr.",
+          "path": [
+            [
+              12.404715,
+              51.372288
+            ],
+            [
+              12.409794,
+              51.372194
+            ]
+          ]
+        },
+        {
+          "name": "Schildberger Weg to Otto-Michael-Str.",
+          "path": [
+            [
+              12.406598,
+              51.380226
+            ],
+            [
+              12.406188,
+              51.37799
+            ]
+          ]
+        },
+        {
+          "name": "Albersdorfer Str. to Knauthain, Seumestr.",
+          "path": [
+            [
+              12.311431,
+              51.284661
+            ],
+            [
+              12.313763,
+              51.286771
+            ]
+          ]
+        },
+        {
+          "name": "Fortunabadstr. to Leipzig-Knauthain",
+          "path": [
+            [
+              12.310262,
+              51.279965
+            ],
+            [
+              12.309101,
+              51.278181
+            ]
+          ]
+        },
+        {
+          "name": "Steinplatz to Kurt-Eisner-/Arthur-Hoffmann-Str.",
+          "path": [
+            [
+              12.378427,
+              51.317903
+            ],
+            [
+              12.378388,
+              51.320691
+            ]
+          ]
+        },
+        {
+          "name": "Future Electronics to Ferag",
+          "path": [
+            [
+              12.459109,
+              51.402398
+            ],
+            [
+              12.45917,
+              51.402441
+            ]
+          ]
+        },
+        {
+          "name": "Ferag to Future Electronics",
+          "path": [
+            [
+              12.45917,
+              51.402441
+            ],
+            [
+              12.459109,
+              51.402398
+            ]
+          ]
+        },
+        {
+          "name": "Allee-Center/Offenburger Str. to Allee-Center S\u00fcd",
+          "path": [
+            [
+              12.288747,
+              51.320531
+            ],
+            [
+              12.290603,
+              51.318599
+            ]
+          ]
+        },
+        {
+          "name": "Allee-Center S\u00fcd to Leipzig Allee-Center",
+          "path": [
+            [
+              12.290603,
+              51.318599
+            ],
+            [
+              12.291748,
+              51.31916
+            ]
+          ]
+        },
+        {
+          "name": "Breisgau-/Ringstr. to Ringstr.",
+          "path": [
+            [
+              12.295761,
+              51.31769
+            ],
+            [
+              12.296593,
+              51.317891
+            ]
+          ]
+        },
+        {
+          "name": "Breisgaustr./S-Bahnhof Karlsruher Str. to Karlsruher Str",
+          "path": [
+            [
+              12.280538,
+              51.317101
+            ],
+            [
+              12.27927,
+              51.317236
+            ]
+          ]
+        },
+        {
+          "name": "Str. am Park to G\u00e4rtnerstr.",
+          "path": [
+            [
+              12.304704,
+              51.315945
+            ],
+            [
+              12.306825,
+              51.316901
+            ]
+          ]
+        },
+        {
+          "name": "Horburger Str. to Weimarer Str.",
+          "path": [
+            [
+              12.283065,
+              51.328971
+            ],
+            [
+              12.281496,
+              51.326893
+            ]
+          ]
+        },
+        {
+          "name": "S-Bahnhof Gr\u00fcnauer Allee (Bus) to Leipzig Gr\u00fcnauer Allee",
+          "path": [
+            [
+              12.302733,
+              51.319669
+            ],
+            [
+              12.303009,
+              51.320902
+            ]
+          ]
+        },
+        {
+          "name": "Sch\u00f6nau, Kirche to Horburger Str.",
+          "path": [
+            [
+              12.289291,
+              51.327727
+            ],
+            [
+              12.283065,
+              51.328971
+            ]
+          ]
+        },
+        {
+          "name": "Selliner Str./Gesundheitszentrum to Leipzig Miltitzer Allee",
+          "path": [
+            [
+              12.26419,
+              51.313593
+            ],
+            [
+              12.267342,
+              51.315349
+            ]
+          ]
+        },
+        {
+          "name": "G\u00e4rtnerstr. to Str. am Park",
+          "path": [
+            [
+              12.306825,
+              51.316901
+            ],
+            [
+              12.304704,
+              51.315945
+            ]
+          ]
+        },
+        {
+          "name": "Engelsdorf, Opalstr. to Engelsdorf, Hans-Weigel-Str.",
+          "path": [
+            [
+              12.478201,
+              51.341433
+            ],
+            [
+              12.479596,
+              51.342794
+            ]
+          ]
+        },
+        {
+          "name": "D\u00fcrrstr. to Raschwitzer Str.",
+          "path": [
+            [
+              12.390309,
+              51.296725
+            ],
+            [
+              12.386087999999999,
+              51.295894
+            ]
+          ]
+        },
+        {
+          "name": "W\u00e4chterstr. (Grassistr.) to W\u00e4chterstr. (Ferdinand-Rhode-Str.)",
+          "path": [
+            [
+              12.366904,
+              51.333161
+            ],
+            [
+              12.365171,
+              51.333211
+            ]
+          ]
+        },
+        {
+          "name": "Mozartstr. (Grassistr.) to Mozartstr. (Ferdinand-Rhode-Str.)",
+          "path": [
+            [
+              12.367684,
+              51.331269
+            ],
+            [
+              12.36594,
+              51.331373
+            ]
+          ]
+        },
+        {
+          "name": "Robert-Schumann-Str. (Grassistr.) to Telemannstr.",
+          "path": [
+            [
+              12.368788,
+              51.328719
+            ],
+            [
+              12.367485,
+              51.32739
+            ]
+          ]
+        },
+        {
+          "name": "Robert-Koch-Klinikum to Sch\u00f6nauer/Ratzelstr.",
+          "path": [
+            [
+              12.301479,
+              51.31519
+            ],
+            [
+              12.303186,
+              51.314396
+            ]
+          ]
+        },
+        {
+          "name": "Plau\u00dfig, Am Schenkberg to Plau\u00dfig, Gewerbegebiet",
+          "path": [
+            [
+              12.450908,
+              51.396777
+            ],
+            [
+              12.455633,
+              51.396341
+            ]
+          ]
+        },
+        {
+          "name": "Dingolfinger Str./Firma Magna to Plau\u00dfig, Fuchsberg",
+          "path": [
+            [
+              12.431087,
+              51.396982
+            ],
+            [
+              12.437298,
+              51.395658
+            ]
+          ]
+        },
+        {
+          "name": "Baaderstr. to Gottschallstr.",
+          "path": [
+            [
+              12.376956999999999,
+              51.371087
+            ],
+            [
+              12.376588,
+              51.368993
+            ]
+          ]
+        },
+        {
+          "name": "Versorgungszentrum BMW-Allee to BMW/Tor 2",
+          "path": [
+            [
+              12.43237,
+              51.403931
+            ],
+            [
+              12.437786,
+              51.399852
+            ]
+          ]
+        },
+        {
+          "name": "Hafentor to Dr.-Hermann-Duncker-Str.",
+          "path": [
+            [
+              12.304086999999999,
+              51.332696
+            ],
+            [
+              12.306096,
+              51.333493
+            ]
+          ]
+        },
+        {
+          "name": "Lindenauer Hafen to Demmeringstr.",
+          "path": [
+            [
+              12.306657,
+              51.330519
+            ],
+            [
+              12.310789,
+              51.330897
+            ]
+          ]
+        },
+        {
+          "name": "S-Bahnhof Essener Str. (Bus) to Essener Stra\u00dfe",
+          "path": [
+            [
+              12.397075,
+              51.376583
+            ],
+            [
+              12.396986,
+              51.376361
+            ]
+          ]
+        },
+        {
+          "name": "Alte Str. to Felsenkeller",
+          "path": [
+            [
+              12.342237,
+              51.332277
+            ],
+            [
+              12.338894,
+              51.33249
+            ]
+          ]
+        },
+        {
+          "name": "Niemeyerstr. to Spinnerei",
+          "path": [
+            [
+              12.31439,
+              51.325894
+            ],
+            [
+              12.319969,
+              51.328038
+            ]
+          ]
+        },
+        {
+          "name": "Queckstr. to Georg-Schwarz-/Merseburger Str.",
+          "path": [
+            [
+              12.327297,
+              51.337846
+            ],
+            [
+              12.327293,
+              51.337397
+            ]
+          ]
+        },
+        {
+          "name": "Spinnerei to Leipzig-Plagwitz",
+          "path": [
+            [
+              12.319969,
+              51.328038
+            ],
+            [
+              12.322079,
+              51.328041
+            ]
+          ]
+        },
+        {
+          "name": "Messe-Allee/Imperial to Congress Center",
+          "path": [
+            [
+              12.407207,
+              51.393634
+            ],
+            [
+              12.399388,
+              51.396918
+            ]
+          ]
+        },
+        {
+          "name": "Tornauer Str. to Kossaer Str.",
+          "path": [
+            [
+              12.390501,
+              51.411823
+            ],
+            [
+              12.392742,
+              51.410437
+            ]
+          ]
+        },
+        {
+          "name": "Kossaer Str. to Gewerbegebiet Podelwitz",
+          "path": [
+            [
+              12.392742,
+              51.410437
+            ],
+            [
+              12.394039,
+              51.409509
+            ]
+          ]
+        },
+        {
+          "name": "Bl\u00fccherstr. to M\u00f6ckernscher Markt",
+          "path": [
+            [
+              12.338033,
+              51.370594
+            ],
+            [
+              12.337695,
+              51.369893
+            ]
+          ]
+        },
+        {
+          "name": "Paul-Beiersdorf-Str. to Tornauer Str.",
+          "path": [
+            [
+              12.390856,
+              51.416606
+            ],
+            [
+              12.390501,
+              51.411823
+            ]
+          ]
+        },
+        {
+          "name": "BMW/Tor 2 to Plau\u00dfig, Fuchsberg",
+          "path": [
+            [
+              12.437786,
+              51.399852
+            ],
+            [
+              12.437298,
+              51.395658
+            ]
+          ]
+        },
+        {
+          "name": "Hellerstr. to Lise-Meitner-Str.",
+          "path": [
+            [
+              12.31027,
+              51.354541
+            ],
+            [
+              12.305548,
+              51.355178
+            ]
+          ]
+        },
+        {
+          "name": "Gro\u00dfzschocher, Feuer- und Rettungswache to G\u00e4rtnerei Gro\u00dfzschocher",
+          "path": [
+            [
+              12.3064,
+              51.301429
+            ],
+            [
+              12.306154,
+              51.301409
+            ]
+          ]
+        },
+        {
+          "name": "Faradaystr. to Seelenbinderstr.",
+          "path": [
+            [
+              12.348992,
+              51.368797
+            ],
+            [
+              12.350095,
+              51.36659
+            ]
+          ]
+        },
+        {
+          "name": "Melissenweg to Landsberger/Bahnhofstr.",
+          "path": [
+            [
+              12.354692,
+              51.387598
+            ],
+            [
+              12.349387,
+              51.38659
+            ]
+          ]
+        },
+        {
+          "name": "Anger-Crottendorf to Ostfriedhof",
+          "path": [
+            [
+              12.420519,
+              51.332433
+            ],
+            [
+              12.422442,
+              51.332431
+            ]
+          ]
+        },
+        {
+          "name": "Karlsruher Str to S-Bahnhof Karlsruher Str. (Bus)",
+          "path": [
+            [
+              12.27927,
+              51.317236
+            ],
+            [
+              12.278693,
+              51.316991
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig Hbf to Leipzig Hbf (tief)",
+          "path": [
+            [
+              12.382064,
+              51.345474
+            ],
+            [
+              12.380429,
+              51.345693
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig-Connewitz to S-Bahnhof Connewitz (Tram/Bus)",
+          "path": [
+            [
+              12.386315,
+              51.300716
+            ],
+            [
+              12.383906,
+              51.301712
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig-Leutzsch to S-Bahnhof Leutzsch",
+          "path": [
+            [
+              12.30374,
+              51.353998
+            ],
+            [
+              12.303294,
+              51.353192
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig-Paunsdorf to Bahnhof Paunsdorf (Bus)",
+          "path": [
+            [
+              12.444332,
+              51.344296
+            ],
+            [
+              12.44509,
+              51.343492
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig-Plagwitz to S-Bahnhof Plagwitz (Tram/Bus)",
+          "path": [
+            [
+              12.322079,
+              51.328041
+            ],
+            [
+              12.322756,
+              51.328273
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig-Engelsdorf to Engelsdorf, Hans-Weigel-Str.",
+          "path": [
+            [
+              12.47763,
+              51.34395
+            ],
+            [
+              12.479596,
+              51.342794
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig Werkst\u00e4ttenstra\u00dfe to Engelsdorf, \u00c4rztehaus",
+          "path": [
+            [
+              12.456172,
+              51.340602
+            ],
+            [
+              12.461393,
+              51.339396
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig Gr\u00fcnauer Allee to S-Bahnhof Gr\u00fcnauer Allee (Bus)",
+          "path": [
+            [
+              12.303009,
+              51.320902
+            ],
+            [
+              12.302733,
+              51.319669
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig-Holzhausen to Bahnhof Holzhausen (Bus)",
+          "path": [
+            [
+              12.461448,
+              51.306043
+            ],
+            [
+              12.462068,
+              51.306474
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig Olbrichtstra\u00dfe to Faradaystr.",
+          "path": [
+            [
+              12.353497,
+              51.369891
+            ],
+            [
+              12.348992,
+              51.368797
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig/Halle Flughafen to Porsche/Tor 3",
+          "path": [
+            [
+              12.22343,
+              51.423341
+            ],
+            [
+              12.284319,
+              51.40104
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig Bayerischer Bahnhof to Bayerischer Bahnhof (Tram/Bus)",
+          "path": [
+            [
+              12.38166,
+              51.329265
+            ],
+            [
+              12.380904,
+              51.33051
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig Markt to Markt",
+          "path": [
+            [
+              12.374616,
+              51.340636
+            ],
+            [
+              12.374497,
+              51.339992
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig MDR to S-Bahnhof MDR (Bus)",
+          "path": [
+            [
+              12.38632,
+              51.320066
+            ],
+            [
+              12.385905,
+              51.320852
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig-Gohlis to S-Bahnhof Gohlis (Bus)",
+          "path": [
+            [
+              12.374527,
+              51.362857
+            ],
+            [
+              12.374287,
+              51.363494
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig-Heiterblick to Portitzer Allee/S-Bahnhof Heiterblick",
+          "path": [
+            [
+              12.459976,
+              51.369336
+            ],
+            [
+              12.46059,
+              51.367393
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig-Knauthain to Knautkleeberg",
+          "path": [
+            [
+              12.309101,
+              51.278181
+            ],
+            [
+              12.30979,
+              51.277793
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig-M\u00f6ckern to S-Bahnhof M\u00f6ckern (Tram/Bus)",
+          "path": [
+            [
+              12.352265,
+              51.364433
+            ],
+            [
+              12.351169,
+              51.365759
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig-St\u00f6tteritz to S-Bahnhof St\u00f6tteritz (Tram/Bus)",
+          "path": [
+            [
+              12.411433,
+              51.324516
+            ],
+            [
+              12.41159,
+              51.324889
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig-Thekla to Plei\u00dfenburgwerkst\u00e4tten",
+          "path": [
+            [
+              12.430755,
+              51.371626
+            ],
+            [
+              12.430384,
+              51.37089
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig Nord to Mockauer/Volbedingstr.",
+          "path": [
+            [
+              12.401067,
+              51.364166
+            ],
+            [
+              12.40207,
+              51.364137
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig-Wahren to S-Bahnhof Wahren (Bus)",
+          "path": [
+            [
+              12.321483,
+              51.380686
+            ],
+            [
+              12.323925,
+              51.380275
+            ]
+          ]
+        },
+        {
+          "name": "Essener Stra\u00dfe to S-Bahnhof Essener Str. (Bus)",
+          "path": [
+            [
+              12.396986,
+              51.376361
+            ],
+            [
+              12.397075,
+              51.376583
+            ]
+          ]
+        },
+        {
+          "name": "Wilhelm-Leuschner-Platz to Wilhelm-Leuschner-Platz",
+          "path": [
+            [
+              12.375394,
+              51.335399
+            ],
+            [
+              12.375858,
+              51.335862
+            ]
+          ]
+        },
+        {
+          "name": "Slevogtstra\u00dfe to S-Bahnhof Slevogtstr. (Bus)",
+          "path": [
+            [
+              12.344411,
+              51.372948
+            ],
+            [
+              12.344185,
+              51.373395
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig-Liebertwolkwitz to Liebertwolkwitzer Markt",
+          "path": [
+            [
+              12.46925,
+              51.28397
+            ],
+            [
+              12.464085,
+              51.28299
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig-Lindenau to Henriettenstr.",
+          "path": [
+            [
+              12.321488,
+              51.333758
+            ],
+            [
+              12.324297,
+              51.333697
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig Mockauer Stra\u00dfe to Mockau, Post",
+          "path": [
+            [
+              12.412097,
+              51.373799
+            ],
+            [
+              12.412675,
+              51.375194
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig-L\u00fctzschena to GVZ S\u00fcd/Am Exer",
+          "path": [
+            [
+              12.293089,
+              51.390057
+            ],
+            [
+              12.292745,
+              51.394068
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig V\u00f6lkerschlachtdenkmal to Naunhofer Str.",
+          "path": [
+            [
+              12.406283,
+              51.31874
+            ],
+            [
+              12.407783,
+              51.318067
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig Miltitzer Allee to Plovdiver Str.",
+          "path": [
+            [
+              12.267342,
+              51.315349
+            ],
+            [
+              12.268592,
+              51.317193
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig-Miltitz to Geschwister-Scholl-Str.",
+          "path": [
+            [
+              12.255034,
+              51.325313
+            ],
+            [
+              12.256092,
+              51.320392
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig-M\u00f6lkau to Bahnhof M\u00f6lkau (Bus)",
+          "path": [
+            [
+              12.459823,
+              51.325235
+            ],
+            [
+              12.459789,
+              51.324597
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig Messe to S-Bahnhof Messe (Tram/Bus)",
+          "path": [
+            [
+              12.389283,
+              51.396141
+            ],
+            [
+              12.388815,
+              51.396038
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig-R\u00fcckmarsdorf to R\u00fcckmarsdorf, Zum Bahnhof",
+          "path": [
+            [
+              12.282667,
+              51.341868
+            ],
+            [
+              12.281893,
+              51.344497
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig Allee-Center to Allee-Center S\u00fcd",
+          "path": [
+            [
+              12.291748,
+              51.31916
+            ],
+            [
+              12.290603,
+              51.318599
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig Torgauer Platz to Torgauer Platz",
+          "path": [
+            [
+              12.414339,
+              51.345068
+            ],
+            [
+              12.414195,
+              51.345054
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig Coppiplatz to S-Bahnhof Coppiplatz (Tram/Bus)",
+          "path": [
+            [
+              12.366018,
+              51.367077
+            ],
+            [
+              12.366694,
+              51.367291
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig-Sellerhausen to Rosmarinweg",
+          "path": [
+            [
+              12.424671,
+              51.345179
+            ],
+            [
+              12.428112,
+              51.346076
+            ]
+          ]
+        },
+        {
+          "name": "Leipzig Hbf (tief) to Leipzig Hbf",
+          "path": [
+            [
+              12.380429,
+              51.345693
+            ],
+            [
+              12.382064,
+              51.345474
+            ]
+          ]
+        }
+      ],
+      "getColor": [
+        255,
+        0,
+        0
+      ],
+      "getPath": "@@=path",
+      "getWidth": 5,
+      "id": "31bec9ae-a09c-49a5-8d04-4eed52c28c83",
+      "pickable": true,
+      "widthMinPixels": 2,
+      "widthScale": 20
+    }
+  ],
+  "mapProvider": "carto",
+  "mapStyle": "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json",
+  "views": [
+    {
+      "@@type": "MapView",
+      "controller": true
+    }
+  ]
+};
+    const tooltip = {'text': '{name}'};
+    const customLibraries = null;
+    const configuration = null;
+
+    const deckInstance = createDeck({
+                  container,
+      jsonInput,
+      tooltip,
+      customLibraries,
+      configuration
+    });
+
+  </script>
+</html>
