@@ -1,0 +1,37 @@
+osmnx.plot.plot_footprints(gdf, ax=None, figsize=(8, 8), color='orange', edge_color='none', edge_linewidth=0, alpha=None, bgcolor='#111111', bbox=None, save=False, show=True, close=False, filepath=None, dpi=600)
+Visualize a GeoDataFrame of geospatial features’ footprints.
+
+PARAMETERS:
+gdf (geopandas.GeoDataFrame) – GeoDataFrame of footprints (shapely Polygons and MultiPolygons)
+
+ax (axis) – if not None, plot on this preexisting axis
+
+figsize (tuple) – if ax is None, create new figure with size (width, height)
+
+color (string) – color of the footprints
+
+edge_color (string) – color of the edge of the footprints
+
+edge_linewidth (float) – width of the edge of the footprints
+
+alpha (float) – opacity of the footprints
+
+bgcolor (string) – background color of the plot
+
+bbox (tuple) – bounding box as (north, south, east, west). if None, will calculate from the spatial extents of the geometries in gdf
+
+save (bool) – if True, save the figure to disk at filepath
+
+show (bool) – if True, call pyplot.show() to show the figure
+
+close (bool) – if True, call pyplot.close() to close the figure
+
+filepath (string) – if save is True, the path to the file. file format determined from extension. if None, use settings.imgs_folder/image.png
+
+dpi (int) – if save is True, the resolution of saved file
+
+RETURNS:
+fig, ax – matplotlib figure, axis
+
+RETURN TYPE:
+tuple

@@ -1,0 +1,46 @@
+osmnx.plot.plot_graph(G, ax=None, figsize=(8, 8), bgcolor='#111111', node_color='w', node_size=15, node_alpha=None, node_edgecolor='none', node_zorder=1, edge_color='#999999', edge_linewidth=1, edge_alpha=None, show=True, close=False, save=False, filepath=None, dpi=300, bbox=None)
+Visualize a graph.
+
+PARAMETERS:
+G (networkx.MultiDiGraph) – input graph
+
+ax (matplotlib axis) – if not None, plot on this preexisting axis
+
+figsize (tuple) – if ax is None, create new figure with size (width, height)
+
+bgcolor (string) – background color of plot
+
+node_color (string or list) – color(s) of the nodes
+
+node_size (int) – size of the nodes: if 0, then skip plotting the nodes
+
+node_alpha (float) – opacity of the nodes, note: if you passed RGBA values to node_color, set node_alpha=None to use the alpha channel in node_color
+
+node_edgecolor (string) – color of the nodes’ markers’ borders
+
+node_zorder (int) – zorder to plot nodes: edges are always 1, so set node_zorder=0 to plot nodes below edges
+
+edge_color (string or list) – color(s) of the edges’ lines
+
+edge_linewidth (float) – width of the edges’ lines: if 0, then skip plotting the edges
+
+edge_alpha (float) – opacity of the edges, note: if you passed RGBA values to edge_color, set edge_alpha=None to use the alpha channel in edge_color
+
+show (bool) – if True, call pyplot.show() to show the figure
+
+close (bool) – if True, call pyplot.close() to close the figure
+
+save (bool) – if True, save the figure to disk at filepath
+
+filepath (string) – if save is True, the path to the file. file format determined from extension. if None, use settings.imgs_folder/image.png
+
+dpi (int) – if save is True, the resolution of saved file
+
+bbox (tuple) – bounding box as (north, south, east, west). if None, will calculate from spatial extents of plotted geometries.
+
+RETURNS:
+fig, ax – matplotlib figure, axis
+
+RETURN TYPE:
+tuple
+
