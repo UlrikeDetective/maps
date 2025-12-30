@@ -64,11 +64,7 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
-__pycache__/
-*.py[cod]      # Python compiled files
-*$py.class
-*.so
-.Python
+
 env/
 .env           # Where database passwords are stored
 venv/          # Virtual environment for testing
@@ -102,7 +98,6 @@ coverage.xml
 *.cover
 *.py,cover
 .hypothesis/
-.pytest_cache/
 cover/
 
 # Translations
@@ -158,11 +153,6 @@ celerybeat.pid
 # SageMath parsed files
 *.sage.py
 
-# Environments
-.env
-.venv
-env/
-venv/
 ENV/
 env.bak/
 venv.bak/
@@ -190,7 +180,6 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
-.DS_Store
 # Additional files to ignore
 activate*
 cmark
@@ -236,7 +225,6 @@ duckdbtryouts/urbanGreenSpaces/data/Leipzig_roads_highways.geojson
 *.egg-info/
 *.pyc
 .ipynb_checkpoints
-.pytest_cache
 build/
 dist/
 docs/index.html
@@ -260,11 +248,7 @@ miniconda.sh
 latest_logs/
 *.nbconvert.ipynb
 folium/_version.py
-.vscode/
-venv/
-.venv
 
-.DS_Store
 python
 
 # projects
@@ -275,7 +259,6 @@ python
 .vscode
 
 *.py~
-.DS_Store
 
 examples/nybb_*.zip
 
@@ -291,4 +274,3 @@ geopandas/datasets/ne_110m_admin_0_countries.zip
 doc/source/getting_started/my_file.geojson
 
 .ruff_cache
-.env
