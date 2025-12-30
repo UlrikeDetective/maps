@@ -7,6 +7,7 @@
 *.code-workspace
 # Local History for <a href="https://www.jcchouinard.com/python-with-vscode/">Visual Studio Code</a>
 .history/
+.idea/
 
 # Common credential files
 **/credentials.json
@@ -32,6 +33,9 @@ creds.js
 
 # Mac/OSX
 .DS_Store
+
+#Windows
+Thumbs.db
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -60,6 +64,21 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+__pycache__/
+*.py[cod]      # Python compiled files
+*$py.class
+*.so
+.Python
+env/
+.env           # Where database passwords are stored
+venv/          # Virtual environment for testing
+.venv
+
+# Local development & testing
+instance/
+.pytest_cache/
+.coverage      # Test coverage reports
+htmlcov/
 
 # PyInstaller
 #  Usually these files are written by a <a href="https://www.jcchouinard.com/learn-python/">python</a> script from a template
