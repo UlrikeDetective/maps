@@ -16,7 +16,7 @@ def save_image(coordinates, cities):
 
     # Route + points
     ax.scatter(lon, lat, color="#B77651", zorder=5)
-    ax.plot(lon, lat, color="#01393D", linewidth=3, linestyle=":", zorder=3)
+    ax.plot(lon, lat, color="#01393D", linewidth=2, linestyle=":", zorder=3)
 
     texts = []
 
@@ -32,7 +32,7 @@ def save_image(coordinates, cities):
             bbox=dict(
                 facecolor="#58989F",
                 edgecolor="none",
-                alpha=0.85,
+                alpha=0.75,
                 pad=0.3
             ),
             arrowprops=dict(
@@ -49,7 +49,7 @@ def save_image(coordinates, cities):
         texts,
         ax=ax,
         only_move={"points": "y", "text": "xy"},
-        force_text=13.3
+        force_text=8.3
     )
 
     ax.set_facecolor("#58989F")
@@ -65,8 +65,9 @@ def save_image(coordinates, cities):
 
 
 cities = [
-    "Barcelona, Spain",
-    "Valencia, Spain",
+    "Malaga, Spain",
+    "Almeria, Spain",
+    "Granada, Spain",
     "Tarifa, Spain",
     "Sevilla, Spain",
     "Cadiz, Spain"
