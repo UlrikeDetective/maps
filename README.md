@@ -23,9 +23,9 @@ This section explores the skeletal structure of islands and cities. By stripping
 - **Key Scripts:** `OSMnx/`, `GIS_project/`
 - **Gallery:** `urban_travel_graphs/`
 
-|                                      Oahu, Hawaii                                       |                         Tampere, Finland                          |                          Seattle, USA                           | Europe Map |
-| :-------------------------------------------------------------------------------------: | :---------------------------------------------------------------: | :-------------------------------------------------------------: | ---------- |
-| <img src="urban_travel_graphs/hawaii_shapes_Oahu_Hawaii_USA_V04_walk.png" width="300"/> | <img src="urban_travel_graphs/maps/tampere_map.png" width="300"/> | <img src="MyTravelMap/pics/MyTravelMapEurope.jpg" width="300"/> |
+|                                      Oahu, Hawaii                                       |                         Tampere, Finland                          |                 Seattle, USA                 |
+| :-------------------------------------------------------------------------------------: | :---------------------------------------------------------------: | :------------------------------------------: |
+| <img src="urban_travel_graphs/hawaii_shapes_Oahu_Hawaii_USA_V04_walk.png" width="300"/> | <img src="urban_travel_graphs/maps/tampere_map.png" width="300"/> | <img src="urban_travel_graphs/seattle.png"/> |
 
 ### 🧭 Interactive Journeys
 
