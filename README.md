@@ -1,6 +1,6 @@
 # Maps
 
-*A quiet exploration of space and place through code.*
+_A quiet exploration of space and place through code._
 
 ---
 
@@ -15,41 +15,45 @@ This repository serves as a curated collection of cartographic experiments and t
 A breakdown of the diverse mapping projects housed within.
 
 ### 🏝️ Boundaries & Networks
-*Focus: OSMnx, Urban Form*
+
+_Focus: OSMnx, Urban Form_
 
 This section explores the skeletal structure of islands and cities. By stripping away the noise, we visualize the organic growth of road networks and coastlines. The `urban_travel_graphs` folder contains a gallery of these generated "portraits" of places.
 
-*   **Key Scripts:** `OSMnx/`, `GIS_project/`
-*   **Gallery:** `urban_travel_graphs/`
+- **Key Scripts:** `OSMnx/`, `GIS_project/`
+- **Gallery:** `urban_travel_graphs/`
 
-| Oahu, Hawaii | Fuerteventura, Spain |
-| :---: | :---: |
-| <img src="urban_travel_graphs/hawaii_shapes_Oahu_Hawaii_USA_V04_walk.png" width="300"/> | <img src="urban_travel_graphs/europeanIsland_shapes_Fuerteventura_Spain_V04.png" width="300"/> |
+|                                      Oahu, Hawaii                                       |                         Tampere, Finland                          |                          Seattle, USA                           | Europe Map |
+| :-------------------------------------------------------------------------------------: | :---------------------------------------------------------------: | :-------------------------------------------------------------: | ---------- |
+| <img src="urban_travel_graphs/hawaii_shapes_Oahu_Hawaii_USA_V04_walk.png" width="300"/> | <img src="urban_travel_graphs/maps/tampere_map.png" width="300"/> | <img src="MyTravelMap/pics/MyTravelMapEurope.jpg" width="300"/> |
 
 ### 🧭 Interactive Journeys
-*Focus: Folium, Web Maps*
+
+_Focus: Folium, Web Maps_
 
 Web-based maps designed for exploration. These projects range from personal travel histories (`MyTravelMap`) to detailed, region-specific guides like the Fuerteventura project (`travelMapsProject`). They utilize `Folium` to create interactive markers, popups, and layers.
 
-*   **Projects:** `MyTravelMap/`, `travelMapsProject/`
-*   **Code:** `Folium/`, `tryouts/`
+- **Projects:** `MyTravelMap/`, `travelMapsProject/`
+- **Code:** `Folium/`, `tryouts/`
 
 <img src="MyTravelMap/pics/MyTravelMapEurope.jpg" alt="Europe Travel Map" width="600"/>
 
 ### 📐 The Analysis
-*Focus: Geopandas, DuckDB, QGIS*
+
+_Focus: Geopandas, DuckDB, QGIS_
 
 The analytical engine. Here, we move beyond visualization to computation. Scripts in `GIS_project` and `geopandas` calculate metrics like walkability scores, analyze urban growth patterns, and manipulate administrative boundaries (`Shapefiles`).
 
-*   **Core Logic:** `GIS_project/WalkabilityScoreCalculator.py`, `UrbanGrothPattern.py`
-*   **Data:** `GeospatialDataAnalysisUsingDuckDB/`
+- **Core Logic:** `GIS_project/WalkabilityScoreCalculator.py`, `UrbanGrothPattern.py`
+- **Data:** `GeospatialDataAnalysisUsingDuckDB/`
 
 ### 🎞️ Motion
-*Focus: Matplotlib Animation*
+
+_Focus: Matplotlib Animation_
 
 Capturing the dimension of time. This module uses `matplotlib` to generate animated visualizations, such as earthquake scatterplots, bringing static data to life.
 
-*   **See:** `matplotlibs/`
+- **See:** `matplotlibs/`
 
 ---
 
@@ -78,6 +82,7 @@ A simplified view of the workspace structure.
 To begin your cartographic journey, establish a quiet environment.
 
 1.  **Create the environment**
+
     ```bash
     python3 -m venv maps_env
     source maps_env/bin/activate
@@ -92,4 +97,4 @@ To begin your cartographic journey, establish a quiet environment.
 
 ---
 
-*“Map making is the writing of the earth.”*
+_“Map making is the writing of the earth.”_
