@@ -185,6 +185,7 @@ folium/_version.py
 
 .asv
 .ruff_cache
+*cache
 
 
 ############################
