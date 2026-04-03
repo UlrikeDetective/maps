@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_53c5fb0af0f34205acd67ed7f1414955 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_53c5fb0af0f34205acd67ed7f1414955" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_53c5fb0af0f34205acd67ed7f1414955 = L.map(
+                "map_53c5fb0af0f34205acd67ed7f1414955",
+                {
+                    center: [20.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_023170a16f3f16fb50d34c63f07ce726 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_023170a16f3f16fb50d34c63f07ce726.addTo(map_53c5fb0af0f34205acd67ed7f1414955);
+        
+    
+        function geo_json_90ecb163ee111527f3d5ae207d3e84a0_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "red", "fillColor": "red", "fillOpacity": 0.2, "weight": 2};
+            }
+        }
+
+        function geo_json_90ecb163ee111527f3d5ae207d3e84a0_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_90ecb163ee111527f3d5ae207d3e84a0 = L.geoJson(null, {
+                onEachFeature: geo_json_90ecb163ee111527f3d5ae207d3e84a0_onEachFeature,
+            
+                style: geo_json_90ecb163ee111527f3d5ae207d3e84a0_styler,
+            ...{
+}
+        });
+
+        function geo_json_90ecb163ee111527f3d5ae207d3e84a0_add (data) {
+            geo_json_90ecb163ee111527f3d5ae207d3e84a0
+                .addData(data);
+        }
+            geo_json_90ecb163ee111527f3d5ae207d3e84a0_add({"features": [{"geometry": {"coordinates": [[[-122.2814578, 37.6403143], [-122.2814578, 37.9296678], [-123.173825, 37.9296678], [-123.173825, 37.6403143], [-122.2814578, 37.6403143]]], "type": "Polygon"}, "id": "0", "properties": {"Name": "San Francisco"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_90ecb163ee111527f3d5ae207d3e84a0.bindTooltip(
+                `<div>
+                     San Francisco, California, United States
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_90ecb163ee111527f3d5ae207d3e84a0.addTo(map_53c5fb0af0f34205acd67ed7f1414955);
+        
+    
+            var marker_a41c589a51cd85b73866c28e1546acc4 = L.marker(
+                [37.78499105, -122.7276414],
+                {
+}
+            ).addTo(map_53c5fb0af0f34205acd67ed7f1414955);
+        
+    
+            var div_icon_05fbbd54e9d65a755467aba8804e82b6 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 14pt; font-weight: bold; color: red;\"\u003eSan Francisco\u003c/div\u003e",
+  "iconSize": [150, 36],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+            marker_a41c589a51cd85b73866c28e1546acc4.bindTooltip(
+                `<div>
+                     San Francisco, California, United States
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a41c589a51cd85b73866c28e1546acc4.setIcon(div_icon_05fbbd54e9d65a755467aba8804e82b6);
+            
+    
+        function geo_json_d2532711c427baf9236a1fddb63a4767_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.2, "weight": 2};
+            }
+        }
+
+        function geo_json_d2532711c427baf9236a1fddb63a4767_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_d2532711c427baf9236a1fddb63a4767 = L.geoJson(null, {
+                onEachFeature: geo_json_d2532711c427baf9236a1fddb63a4767_onEachFeature,
+            
+                style: geo_json_d2532711c427baf9236a1fddb63a4767_styler,
+            ...{
+}
+        });
+
+        function geo_json_d2532711c427baf9236a1fddb63a4767_add (data) {
+            geo_json_d2532711c427baf9236a1fddb63a4767
+                .addData(data);
+        }
+            geo_json_d2532711c427baf9236a1fddb63a4767_add({"features": [{"geometry": {"coordinates": [[[135.5991702, 34.586154], [135.5991702, 34.768849], [135.3099784, 34.768849], [135.3099784, 34.586154], [135.5991702, 34.586154]]], "type": "Polygon"}, "id": "0", "properties": {"Name": "Osaka"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_d2532711c427baf9236a1fddb63a4767.bindTooltip(
+                `<div>
+                     Osaka, Osaka Prefecture, Japan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_d2532711c427baf9236a1fddb63a4767.addTo(map_53c5fb0af0f34205acd67ed7f1414955);
+        
+    
+            var marker_3a0f5b317eb79a31eee3cea667dea16b = L.marker(
+                [34.677501500000005, 135.4545743],
+                {
+}
+            ).addTo(map_53c5fb0af0f34205acd67ed7f1414955);
+        
+    
+            var div_icon_fcb7b39a0a1cc047be4ca55152b33351 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 14pt; font-weight: bold; color: blue;\"\u003eOsaka\u003c/div\u003e",
+  "iconSize": [150, 36],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+            marker_3a0f5b317eb79a31eee3cea667dea16b.bindTooltip(
+                `<div>
+                     Osaka, Osaka Prefecture, Japan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3a0f5b317eb79a31eee3cea667dea16b.setIcon(div_icon_fcb7b39a0a1cc047be4ca55152b33351);
+            
+    
+        function geo_json_f96097b4f31d1f02f97a26076a974909_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "green", "fillColor": "green", "fillOpacity": 0.2, "weight": 2};
+            }
+        }
+
+        function geo_json_f96097b4f31d1f02f97a26076a974909_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_f96097b4f31d1f02f97a26076a974909 = L.geoJson(null, {
+                onEachFeature: geo_json_f96097b4f31d1f02f97a26076a974909_onEachFeature,
+            
+                style: geo_json_f96097b4f31d1f02f97a26076a974909_styler,
+            ...{
+}
+        });
+
+        function geo_json_f96097b4f31d1f02f97a26076a974909_add (data) {
+            geo_json_f96097b4f31d1f02f97a26076a974909
+                .addData(data);
+        }
+            geo_json_f96097b4f31d1f02f97a26076a974909_add({"features": [{"geometry": {"coordinates": [[[12.5425373, 51.2381704], [12.5425373, 51.4481145], [12.2366519, 51.4481145], [12.2366519, 51.2381704], [12.5425373, 51.2381704]]], "type": "Polygon"}, "id": "0", "properties": {"Name": "Leipzig"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_f96097b4f31d1f02f97a26076a974909.bindTooltip(
+                `<div>
+                     Leipzig, Saxony, Germany
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_f96097b4f31d1f02f97a26076a974909.addTo(map_53c5fb0af0f34205acd67ed7f1414955);
+        
+    
+            var marker_d44fa5004cf9b382ae2cc323b7a27549 = L.marker(
+                [51.34314245, 12.389594599999999],
+                {
+}
+            ).addTo(map_53c5fb0af0f34205acd67ed7f1414955);
+        
+    
+            var div_icon_5fdc3e4945c66e75ac0121b894294093 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 14pt; font-weight: bold; color: green;\"\u003eLeipzig\u003c/div\u003e",
+  "iconSize": [150, 36],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+            marker_d44fa5004cf9b382ae2cc323b7a27549.bindTooltip(
+                `<div>
+                     Leipzig, Saxony, Germany
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d44fa5004cf9b382ae2cc323b7a27549.setIcon(div_icon_5fdc3e4945c66e75ac0121b894294093);
+            
+    
+        function geo_json_23aa29ff905138b152b175ba4e99c4ee_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "purple", "fillColor": "purple", "fillOpacity": 0.2, "weight": 2};
+            }
+        }
+
+        function geo_json_23aa29ff905138b152b175ba4e99c4ee_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_23aa29ff905138b152b175ba4e99c4ee = L.geoJson(null, {
+                onEachFeature: geo_json_23aa29ff905138b152b175ba4e99c4ee_onEachFeature,
+            
+                style: geo_json_23aa29ff905138b152b175ba4e99c4ee_styler,
+            ...{
+}
+        });
+
+        function geo_json_23aa29ff905138b152b175ba4e99c4ee_add (data) {
+            geo_json_23aa29ff905138b152b175ba4e99c4ee
+                .addData(data);
+        }
+            geo_json_23aa29ff905138b152b175ba4e99c4ee_add({"features": [{"geometry": {"coordinates": [[[38.0033183, -46.9819432], [38.0033183, -33.471276], [18.30722, -33.471276], [18.30722, -46.9819432], [38.0033183, -46.9819432]]], "type": "Polygon"}, "id": "0", "properties": {"Name": "City of Cape Town"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_23aa29ff905138b152b175ba4e99c4ee.bindTooltip(
+                `<div>
+                     City of Cape Town, Western Cape, South Africa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_23aa29ff905138b152b175ba4e99c4ee.addTo(map_53c5fb0af0f34205acd67ed7f1414955);
+        
+    
+            var marker_f67adb906a3741a8945f4dee837ead8f = L.marker(
+                [-40.2266096, 28.15526915],
+                {
+}
+            ).addTo(map_53c5fb0af0f34205acd67ed7f1414955);
+        
+    
+            var div_icon_75ef25eb621d9df0c6e51c8b5ba995bc = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 14pt; font-weight: bold; color: purple;\"\u003eCity of Cape Town\u003c/div\u003e",
+  "iconSize": [150, 36],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+            marker_f67adb906a3741a8945f4dee837ead8f.bindTooltip(
+                `<div>
+                     City of Cape Town, Western Cape, South Africa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f67adb906a3741a8945f4dee837ead8f.setIcon(div_icon_75ef25eb621d9df0c6e51c8b5ba995bc);
+            
+    
+        function geo_json_f70bb88f6812321bcbcbdaac108bdfee_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "orange", "fillColor": "orange", "fillOpacity": 0.2, "weight": 2};
+            }
+        }
+
+        function geo_json_f70bb88f6812321bcbcbdaac108bdfee_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_f70bb88f6812321bcbcbdaac108bdfee = L.geoJson(null, {
+                onEachFeature: geo_json_f70bb88f6812321bcbcbdaac108bdfee_onEachFeature,
+            
+                style: geo_json_f70bb88f6812321bcbcbdaac108bdfee_styler,
+            ...{
+}
+        });
+
+        function geo_json_f70bb88f6812321bcbcbdaac108bdfee_add (data) {
+            geo_json_f70bb88f6812321bcbcbdaac108bdfee
+                .addData(data);
+        }
+            geo_json_f70bb88f6812321bcbcbdaac108bdfee_add({"features": [{"geometry": {"coordinates": [[[23.7904386, 37.9488434], [23.7904386, 38.03276], [23.6870046, 38.03276], [23.6870046, 37.9488434], [23.7904386, 37.9488434]]], "type": "Polygon"}, "id": "0", "properties": {"Name": "Municipality of Athens"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_f70bb88f6812321bcbcbdaac108bdfee.bindTooltip(
+                `<div>
+                     Municipality of Athens, Regional Unit of Central Athens, Attica, Greece
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_f70bb88f6812321bcbcbdaac108bdfee.addTo(map_53c5fb0af0f34205acd67ed7f1414955);
+        
+    
+            var marker_5d2ac3407db292156e76b485530b66e2 = L.marker(
+                [37.990801700000006, 23.7387216],
+                {
+}
+            ).addTo(map_53c5fb0af0f34205acd67ed7f1414955);
+        
+    
+            var div_icon_72503e15774d8049c428600ddc4ca057 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 14pt; font-weight: bold; color: orange;\"\u003eMunicipality of Athens\u003c/div\u003e",
+  "iconSize": [150, 36],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+            marker_5d2ac3407db292156e76b485530b66e2.bindTooltip(
+                `<div>
+                     Municipality of Athens, Regional Unit of Central Athens, Attica, Greece
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5d2ac3407db292156e76b485530b66e2.setIcon(div_icon_72503e15774d8049c428600ddc4ca057);
+            
+    
+        function geo_json_bca4a2d0ad48b64c86891a52f6889920_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkred", "fillColor": "darkred", "fillOpacity": 0.2, "weight": 2};
+            }
+        }
+
+        function geo_json_bca4a2d0ad48b64c86891a52f6889920_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_bca4a2d0ad48b64c86891a52f6889920 = L.geoJson(null, {
+                onEachFeature: geo_json_bca4a2d0ad48b64c86891a52f6889920_onEachFeature,
+            
+                style: geo_json_bca4a2d0ad48b64c86891a52f6889920_styler,
+            ...{
+}
+        });
+
+        function geo_json_bca4a2d0ad48b64c86891a52f6889920_add (data) {
+            geo_json_bca4a2d0ad48b64c86891a52f6889920
+                .addData(data);
+        }
+            geo_json_bca4a2d0ad48b64c86891a52f6889920_add({"features": [{"geometry": {"coordinates": [[[-1.5343915, 43.4475698], [-1.5343915, 43.4945381], [-1.5773906, 43.4945381], [-1.5773906, 43.4475698], [-1.5343915, 43.4475698]]], "type": "Polygon"}, "id": "0", "properties": {"Name": "Biarritz"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_bca4a2d0ad48b64c86891a52f6889920.bindTooltip(
+                `<div>
+                     Biarritz, Bayonne, Pyrénées-Atlantiques, Nouvelle-Aquitaine, Metropolitan France, 64200, France
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_bca4a2d0ad48b64c86891a52f6889920.addTo(map_53c5fb0af0f34205acd67ed7f1414955);
+        
+    
+            var marker_5b99123f0f313fecb139d4bcebffb1a1 = L.marker(
+                [43.47105395, -1.55589105],
+                {
+}
+            ).addTo(map_53c5fb0af0f34205acd67ed7f1414955);
+        
+    
+            var div_icon_597ee71a2b4f03d4edc635fa083d0af0 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 14pt; font-weight: bold; color: darkred;\"\u003eBiarritz\u003c/div\u003e",
+  "iconSize": [150, 36],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+            marker_5b99123f0f313fecb139d4bcebffb1a1.bindTooltip(
+                `<div>
+                     Biarritz, Bayonne, Pyrénées-Atlantiques, Nouvelle-Aquitaine, Metropolitan France, 64200, France
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5b99123f0f313fecb139d4bcebffb1a1.setIcon(div_icon_597ee71a2b4f03d4edc635fa083d0af0);
+            
+    
+        function geo_json_6f26148e4067a4e1e025293c091ed659_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "darkblue", "fillOpacity": 0.2, "weight": 2};
+            }
+        }
+
+        function geo_json_6f26148e4067a4e1e025293c091ed659_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_6f26148e4067a4e1e025293c091ed659 = L.geoJson(null, {
+                onEachFeature: geo_json_6f26148e4067a4e1e025293c091ed659_onEachFeature,
+            
+                style: geo_json_6f26148e4067a4e1e025293c091ed659_styler,
+            ...{
+}
+        });
+
+        function geo_json_6f26148e4067a4e1e025293c091ed659_add (data) {
+            geo_json_6f26148e4067a4e1e025293c091ed659
+                .addData(data);
+        }
+            geo_json_6f26148e4067a4e1e025293c091ed659_add({"features": [{"geometry": {"coordinates": [[[100.9386039, 13.2191019], [100.9386039, 13.9551693], [100.3278772, 13.9551693], [100.3278772, 13.2191019], [100.9386039, 13.2191019]]], "type": "Polygon"}, "id": "0", "properties": {"Name": "Bangkok"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_6f26148e4067a4e1e025293c091ed659.bindTooltip(
+                `<div>
+                     Bangkok, Thailand
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_6f26148e4067a4e1e025293c091ed659.addTo(map_53c5fb0af0f34205acd67ed7f1414955);
+        
+    
+            var marker_f95b8e1fdb847135910b25cf23fbfbac = L.marker(
+                [13.5871356, 100.63324055000001],
+                {
+}
+            ).addTo(map_53c5fb0af0f34205acd67ed7f1414955);
+        
+    
+            var div_icon_a151e242de4ce123e4bbee1dbaa2a5a2 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 14pt; font-weight: bold; color: darkblue;\"\u003eBangkok\u003c/div\u003e",
+  "iconSize": [150, 36],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+            marker_f95b8e1fdb847135910b25cf23fbfbac.bindTooltip(
+                `<div>
+                     Bangkok, Thailand
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f95b8e1fdb847135910b25cf23fbfbac.setIcon(div_icon_a151e242de4ce123e4bbee1dbaa2a5a2);
+            
+    
+        function geo_json_921d72cb7ac3e7837acbec38660686ef_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "cadetblue", "fillColor": "cadetblue", "fillOpacity": 0.2, "weight": 2};
+            }
+        }
+
+        function geo_json_921d72cb7ac3e7837acbec38660686ef_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_921d72cb7ac3e7837acbec38660686ef = L.geoJson(null, {
+                onEachFeature: geo_json_921d72cb7ac3e7837acbec38660686ef_onEachFeature,
+            
+                style: geo_json_921d72cb7ac3e7837acbec38660686ef_styler,
+            ...{
+}
+        });
+
+        function geo_json_921d72cb7ac3e7837acbec38660686ef_add (data) {
+            geo_json_921d72cb7ac3e7837acbec38660686ef
+                .addData(data);
+        }
+            geo_json_921d72cb7ac3e7837acbec38660686ef_add({"features": [{"geometry": {"coordinates": [[[-98.9403028, 19.0487187], [-98.9403028, 19.5927573], [-99.3649242, 19.5927573], [-99.3649242, 19.0487187], [-98.9403028, 19.0487187]]], "type": "Polygon"}, "id": "0", "properties": {"Name": "Mexico City"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_921d72cb7ac3e7837acbec38660686ef.bindTooltip(
+                `<div>
+                     Mexico City, Mexico
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_921d72cb7ac3e7837acbec38660686ef.addTo(map_53c5fb0af0f34205acd67ed7f1414955);
+        
+    
+            var marker_e8c658fb94809ba7389c629251a3a180 = L.marker(
+                [19.320738, -99.1526135],
+                {
+}
+            ).addTo(map_53c5fb0af0f34205acd67ed7f1414955);
+        
+    
+            var div_icon_e66530bb15333e1691bd93eda10138c7 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 14pt; font-weight: bold; color: cadetblue;\"\u003eMexico City\u003c/div\u003e",
+  "iconSize": [150, 36],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+            marker_e8c658fb94809ba7389c629251a3a180.bindTooltip(
+                `<div>
+                     Mexico City, Mexico
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e8c658fb94809ba7389c629251a3a180.setIcon(div_icon_e66530bb15333e1691bd93eda10138c7);
+            
+    
+            var layer_control_14826bd89d7a7c5d7de7bfaf7987f78f_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_023170a16f3f16fb50d34c63f07ce726,
+                },
+                overlays :  {
+                    "San Francisco Boundary" : geo_json_90ecb163ee111527f3d5ae207d3e84a0,
+                    "Osaka Boundary" : geo_json_d2532711c427baf9236a1fddb63a4767,
+                    "Leipzig Boundary" : geo_json_f96097b4f31d1f02f97a26076a974909,
+                    "City of Cape Town Boundary" : geo_json_23aa29ff905138b152b175ba4e99c4ee,
+                    "Municipality of Athens Boundary" : geo_json_f70bb88f6812321bcbcbdaac108bdfee,
+                    "Biarritz Boundary" : geo_json_bca4a2d0ad48b64c86891a52f6889920,
+                    "Bangkok Boundary" : geo_json_6f26148e4067a4e1e025293c091ed659,
+                    "Mexico City Boundary" : geo_json_921d72cb7ac3e7837acbec38660686ef,
+                },
+            };
+            let layer_control_14826bd89d7a7c5d7de7bfaf7987f78f = L.control.layers(
+                layer_control_14826bd89d7a7c5d7de7bfaf7987f78f_layers.base_layers,
+                layer_control_14826bd89d7a7c5d7de7bfaf7987f78f_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_53c5fb0af0f34205acd67ed7f1414955);
+
+        
+</script>
+</html>
