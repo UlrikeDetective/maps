@@ -1,0 +1,14 @@
+{
+  "last_release": "2026-04-15.0",
+  "last_run": "2026-04-30T19:00:19.749852+00:00",
+  "theme": "buildings",
+  "type": "building",
+  "bbox": {
+    "xmin": -71.068,
+    "ymin": 42.353,
+    "xmax": -71.058,
+    "ymax": 42.363
+  },
+  "backend": "geojson",
+  "output": "/Users/ulrike_imac_air/projects/maps/OvertureMaps/Tutorial/boston_buildings.geojson"
+}
