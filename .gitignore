@@ -194,3 +194,5 @@ folium/_version.py
 
 *.py~
 python
+
+.DS_Store
